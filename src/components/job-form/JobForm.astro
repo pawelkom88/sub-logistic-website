@@ -1,0 +1,182 @@
+---
+import "./jobform.css";
+---
+
+<!-- <label for="name" class="cs-label">
+  Imie
+  <input
+    class="cs-input"
+    required
+    type="text"
+    id="name"
+    name="name"
+    placeholder="Jan Kowalski"
+  />
+</label>
+<label for="email" class="cs-label">
+  Email
+  <input
+    class="cs-input"
+    required
+    type="email"
+    id="email"
+    name="email"
+    placeholder="jakkowalski@firma.pl"
+  /></label
+>
+<label for="phone" class="cs-label">
+  Telefony
+  <input
+    class="cs-input"
+    required
+    type="tel"
+    id="phone"
+    name="phone"
+    placeholder="+48 600123234"
+  /></label
+>
+<label for="date" class="cs-label">
+  <input id="date" type="date" name="date" id="date" class="cs-input" required />
+</label>
+
+<label for="wiadomosc" class="cs-label">
+  Nazwa firmy
+  <textarea id="wiadomosc" class="cs-textarea" name="wiadomosc" placeholder="Nazwa firmy"
+  ></textarea></label
+>
+
+<button class="submit-btn">Prosze o wycene</button> --><!-- <form class="cs-form" id="cs-form-569" name="Contact Form" method="post"> -->
+<form
+  class="cs-form"
+  id="contact-569"
+  name="Job Form"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+>
+  <input
+    aria-hidden="true"
+    type="hidden"
+    name="access_key"
+    value="YOUR_ACCESS_KEY_HERE"
+  />
+  <input aria-hidden="true" type="hidden" name="subject" value="Wycena transportu" />
+  <input aria-hidden="true" type="checkbox" name="botcheck" style="display: none;" />
+  <!-- <div class="h-captcha" data-captcha="true"></div> -->
+  <div>
+    <label for="name-569" class="cs-label"> Imie </label>
+    <input
+      autocomplete="name"
+      class="cs-input"
+      required
+      type="text"
+      id="name-569"
+      name="name"
+      placeholder="Jan Kowalski"
+      required
+    />
+  </div>
+  <div>
+    <label for="phone-569" class="cs-label"> Telefon</label>
+    <input
+      autocomplete="tel"
+      class="cs-input"
+      required
+      type="tel"
+      id="phone-569"
+      name="phone"
+      placeholder="604342567"
+      required
+    />
+  </div>
+
+  <div>
+    <label for="email-569" class="cs-label"> Email</label>
+    <input
+      autocomplete="email"
+      class="cs-input"
+      required
+      type="email"
+      id="email-569"
+      name="email"
+      placeholder="firma@firma.com.pl"
+      required
+    />
+  </div>
+
+  <div>
+    <label for="waga-towaru" class="cs-label">
+      Waga towarów do przewiezienia ( kg )</label
+    >
+    <input
+      class="cs-input"
+      required
+      type="number"
+      id="waga-towaru"
+      name="Waga towarów do przewiezienia"
+      placeholder="ul. Kowalska 1, 00-000 Gdanów"
+      required
+    />
+  </div>
+
+  <div>
+    <label for="date-load" class="cs-label"> Data załadunku</label>
+    <input
+      class="cs-input"
+      required
+      type="date"
+      id="date-load"
+      name="Data załadunku"
+      required
+    />
+  </div>
+
+  <div>
+    <label for="date-unload" class="cs-label"> Data rozładunku</label>
+    <input
+      class="cs-input"
+      required
+      type="date"
+      id="date-unload"
+      name="Data rozładunku"
+      required
+    />
+  </div>
+
+  <div>
+    <label for="date-569" class="cs-label"> Adres załadunku</label>
+    <input
+      class="cs-input"
+      required
+      type="text"
+      id="date-569"
+      name="Adres załadunku"
+      placeholder="ul. Kowalska 1, 00-000 Gdanów"
+      required
+    />
+  </div>
+
+  <div>
+    <label for="hear-569" class="cs-label"> Adres rozładunku</label>
+    <input
+      class="cs-input"
+      required
+      type="text"
+      id="hear-569"
+      name="Adres rozładunku"
+      placeholder="ul. Kowalska 1, 00-000 Gdanów"
+      required
+    />
+  </div>
+
+  <div class="cs-textarea-column">
+    <label for="message-569" class="cs-label cs-message"> Opis towarów</label>
+    <textarea
+      class="cs-input cs-textarea"
+      required
+      name="Opis towarów"
+      id="message-569"
+      placeholder="Paleta..."></textarea>
+  </div>
+  <button class="submit-btn">Wyślij</button>
+</form>
+<!-- <button class="cs-submit" type="submit">Wyceń</button> -->

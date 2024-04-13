@@ -1,0 +1,30 @@
+---
+import ContactForm from "../components/contact-form/ContactForm.astro";
+import Cta from "../components/cta/Cta.astro";
+import Hero from "../components/hero/Hero.astro";
+import Reviews from "../components/reviews/Reviews.astro";
+import Service from "../components/service/Service.astro";
+import Team from "../components/team/Team.astro";
+import WhyUs from "../components/why-us/WhyUs.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Sub-Logistic Gdańsk: Spedycja Drogowa w Polsce i Europie | Twój Partner w Logistyce"
+  description="Sub-Logistic Gdańsk zapewnia profesjonalną spedycję drogową w Polsce i Europie. Jako Twój partner w logistyce, oferujemy szybki i bezpieczny transport."
+>
+  <Hero />
+  <br />
+  <Service />
+  <br />
+  <WhyUs />
+  <br />
+  <!-- <Faq /> -->
+  <Reviews />
+  <Team />
+  <br />
+  <Cta />
+  <br />
+  <ContactForm />
+  <br />
+</Layout>

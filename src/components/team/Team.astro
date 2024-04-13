@@ -1,0 +1,41 @@
+---
+import { Picture } from "astro:assets";
+import "./team.css";
+---
+
+<section id="meet-team-860">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Nasz Zespół</span>
+        <h2 class="cs-title">Zaangażowanie i pasja<br /> Poznaj Piotra</h2>
+        <p class="cs-text">
+          Jako jednoosobowy zespół, Piotr łączy pasję do logistyki z głębokim zrozumieniem
+          potrzeb rynku, dostarczając rozwiązania dostosowane do indywidualnych wymagań
+          każdego zlecenia. Jego zaangażowanie w zapewnienie niezawodności i efektywności
+          w każdym elemencie łańcucha dostaw gwarantuje, że każdy klient Sub Logistic
+          czuje się wartościowy i wyjątkowy.
+        </p>
+      </div>
+      <a href="/onas" class="cs-button-solid">Poznaj mnie bliżej</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <Picture
+          width="305"
+          height="407"
+          src="https://scontent-waw2-1.xx.fbcdn.net/v/t1.6435-9/37626263_1309748129160660_6060351691067228160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ye4hXLUccj0Ab7lLPon&_nc_ht=scontent-waw2-1.xx&oh=00_AfCU5QKHHGEgDXnPU5AgeWI1P-jr4M-pzu3zNRIDyVoQCA&oe=6637BB3F"
+          class="cs-picture"
+          alt="Piotr Subotowicz - owner of Sub Trans"
+          formats={["avif", "webp"]}
+          loading="lazy"
+        />
+
+        <div class="cs-info">
+          <span class="cs-name">Piotr Subotowicz</span>
+          <span class="cs-job">Twój Specjalista od logistyki i transportu</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

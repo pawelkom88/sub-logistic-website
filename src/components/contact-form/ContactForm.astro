@@ -1,0 +1,113 @@
+---
+import "../contact-form/contact-form.css";
+
+export const contactInfo = {
+  address: "ul. Marynarki Polskiej 136A/47,",
+  postCode: "80-865 Gdańsk",
+  email: "sub-trans@something.pl",
+  phone: "+48 600123234",
+};
+
+export const googleMapsLink =
+  "https://www.google.pl/maps/place/Marynarki+Polskiej+136A%2F47,+80-865+Gda%C5%84sk/@54.3787535,18.6284272,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd74a1ec7664fb:0x4a47f05d5bd9227a!8m2!3d54.3787535!4d18.6310021?entry=ttu";
+---
+
+<section id="cs-contact-490">
+  <div class="cs-container">
+    <!-- Contact Info -->
+    <div class="cs-content">
+      <span class="cs-topper">Zainteresowany ?</span>
+      <h2 class="cs-title">Zapraszamy do kontaktu</h2>
+      <p class="cs-text">
+        Z nami możesz liczyć na profesjonalne wsparcie i szybką odpowiedź. Nasz zespół
+        jest gotowy, aby pomóc Ci osiągnąć cele. Skontaktuj się z nami już dziś!
+      </p>
+
+      <!--Address-->
+      <div class="cs-address">
+        <span class="cs-header">Adres</span>
+        <a
+          href={googleMapsLink}
+          class="cs-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {contactInfo.address}
+          <br />{contactInfo.postCode}
+        </a>
+        <span aria-hidden="true" class="cs-tooltip">Kliknij w link aby zobaczyć mape</span
+        >
+      </div>
+      <br />
+      <!--Email-->
+      <span class="cs-header">Email</span>
+      <a href=`mailto:${contactInfo.email}` class="cs-link">{contactInfo.email}</a>
+
+      <!--Phone-->
+      <span class="cs-header">Telefon</span>
+      <a href=`tel:${contactInfo.phone}` class="cs-link">{contactInfo.phone}</a>
+    </div>
+    <!-- Form -->
+    <form id="cs-form-490" name="Contact Form" method="post">
+      <label for="name-490" class="cs-label">
+        Imię
+        <input
+          class="cs-input"
+          required
+          type="text"
+          id="name-490"
+          name="name"
+          placeholder="Jan Kowalski"
+        />
+      </label>
+      <label for="email-490" class="cs-label">
+        Email
+        <input
+          class="cs-input"
+          required
+          type="text"
+          id="email-490"
+          name="email"
+          placeholder="jakkowalski@firma.pl"
+        />
+      </label>
+      <label for="phone-490" class="cs-label">
+        Telefon
+        <input
+          class="cs-input"
+          required
+          type="text"
+          id="phone-490"
+          name="phone"
+          placeholder="0621345123"
+        />
+      </label>
+      <label for="message-490" class="cs-label -label-message">
+        Wiadomość
+        <textarea
+          class="cs-input"
+          required
+          name="Message"
+          id="message-490"
+          placeholder="Witam, jestem zainteresowany wspłópraca..."></textarea>
+      </label>
+      <button class="cs-button-solid" type="submit">Wyślij wiadomość</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  const tooltip = document.querySelector(".cs-tooltip") as HTMLElement;
+  const address = document.querySelector(".cs-address .cs-link") as HTMLElement;
+
+  address?.addEventListener("mouseover", () => {
+    tooltip.style.opacity = "1";
+    tooltip.style.transform = "translateY(0)";
+    tooltip.style.transition = "all 0.3s ease-in-out";
+  });
+  address?.addEventListener("mouseout", () => {
+    tooltip.style.opacity = "0";
+    tooltip.style.transform = "translateY(10px)";
+    tooltip.style.transition = "all 0.3s ease-in-out";
+  });
+</script>

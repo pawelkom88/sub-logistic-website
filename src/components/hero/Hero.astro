@@ -1,0 +1,164 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "../../assets/images/port-full-of-containers.jpeg";
+import "./hero.css";
+import JobForm from "../job-form/JobForm.astro";
+---
+
+<section id="hero-219">
+  <div class="cs-container">
+    <h1 class="cs-title">
+      Sub Logistic Gdańsk - <br /> Twój Partner w Spedycji Drogowej w Polsce i Europie
+    </h1>
+    <p class="cs-text">
+      W Sub-Logistic łączymy pasję do transportu z nowoczesnymi rozwiązaniami
+      logistycznymi, oferując naszym klientom kompleksowe usługi spedycyjne drogowe.
+      Dzięki naszemu strategicznemu położeniu w Gdańsku, jesteśmy bramą do Polski i
+      Europy, gwarantując płynność Twoich dostaw na każdym etapie drogi
+    </p>
+    <button type="button" class="cs-button-solid transport-offer-btn"
+      >Wyceń transport</button
+    >
+  </div>
+  <Picture
+    src={heroImage}
+    formats={["avif", "webp"]}
+    class="cs-background"
+    alt="lorry driving on a road between forest"
+    loading="eager"
+  />
+  <dialog id="cs-dialog">
+    <button type="button" autofocus class="close-btn" aria-label="Zamknij dialog"
+      >zamknij</button
+    >
+    <ol class="cs-stepper">
+      <li class="active">Informacje ogólne</li>
+      <li>Formularz przesyłki</li>
+      <li>Potwierdzenie</li>
+    </ol>
+    <!-- component -->
+    <div class="cs-dialog-content">
+      <h1 class="cs-dialog-title">Znajdź idealne rozwiązanie dla swojej przesyłki.</h1>
+
+      <p class="cs-dialog-text">
+        Niezależnie od tego, czy potrzebujesz zapełnić całą ciężarówkę, czy tylko małą
+        przestrzeń, mamy rozwiązanie dla Ciebie rozwiązanie. Posiadamy szeroką gamę
+        pojazdów, dzięki czemu możemy dopasować się do Twoich unikalnych potrzeb. Nasza
+        oferta obejmuje transport FTL i LTL, szybkie dostawy dedykowane, a także
+        bezpieczny przewóz materiałów niebezpiecznych (ADR) i ładunków specjalnych. Z nami
+        Twoja przesyłka jest zawsze bezpieczna, monitorowana w czasie rzeczywistym i
+        odpowiednio ubezpieczona.
+      </p>
+      <p class="cs-dialog-text">
+        Przejdź do naszego formularza i w kilku prostych krokach uzyskaj wycenę dla swojej
+        przesyłki. Nie czekaj, zaplanuj swój transport już dziś i doświadcz najwyższej
+        jakości usług logistycznych.
+      </p>
+    </div>
+
+    <!-- <form class="cs-form"></form> -->
+    <!-- <form id="cs-form" style="display: none;"> -->
+    <div style="display: none;" class="form-container">
+      <JobForm />
+    </div>
+    <!-- component -->
+
+    <button type="button" class="next-btn">Kliknij, aby przejść do formularza</button>
+
+    <!-- component -->
+    <!-- <div class="cs-buttons">
+      <button class="next-btn">Kliknij, aby przejść do formularza</button>
+      <button class="submit-btn">Wyślij</button>
+    </div> -->
+    <!-- component -->
+  </dialog>
+  <div class="overlay"></div>
+</section>
+
+<script>
+  // Initialize UI Elements
+  const ui = {
+    transportOfferBtn: document.querySelector(
+      ".transport-offer-btn"
+    ) as HTMLButtonElement,
+    dialog: document.querySelector("#cs-dialog") as HTMLDialogElement,
+    closeButton: document.querySelector(".close-btn") as HTMLButtonElement,
+    nextButton: document.querySelector(".next-btn") as HTMLButtonElement,
+    prevButton: document.querySelector(".submit-btn") as HTMLButtonElement,
+    dialogContent: document.querySelector(".cs-dialog-content") as HTMLDivElement,
+    form: document.querySelector(".cs-form") as HTMLFormElement,
+    steps: document.querySelectorAll(".cs-stepper li") as NodeListOf<HTMLLIElement>,
+    formContainer: document.querySelector(".form-container") as HTMLDivElement,
+  };
+
+  // Initial Setup
+  let currentStep = 1;
+  ui.prevButton.style.display = "none";
+
+  // Event Listeners
+  ui.transportOfferBtn.addEventListener("click", () =>
+    openDialogWithTransition(ui.dialog)
+  );
+  ui.closeButton.addEventListener("click", () => closeDialogWithTransition(ui.dialog));
+  ui.nextButton.addEventListener("click", handleNextStep);
+  ui.prevButton.addEventListener("click", handlePrevStep);
+
+  function handleNextStep() {
+    if (currentStep < 3) {
+      currentStep++;
+      updateStepperUI();
+    }
+  }
+
+  function handlePrevStep() {
+    if (currentStep > 1) {
+      currentStep--;
+      updateStepperUI();
+    }
+  }
+
+  function updateStepperUI() {
+    ui.prevButton.style.display = currentStep === 2 ? "block" : "none";
+    ui.nextButton.style.display = currentStep === 1 ? "block" : "none";
+    updateActiveStepIndicator();
+    toggleFormVisibility(currentStep);
+  }
+
+  function updateActiveStepIndicator() {
+    ui.steps.forEach((step, index) => {
+      step.classList.toggle("active", index + 1 === currentStep);
+    });
+  }
+
+  function toggleFormVisibility(currentStep: number) {
+    ui.dialogContent.style.display = currentStep === 1 ? "block" : "none";
+    ui.formContainer.style.display = currentStep === 2 ? "block" : "none";
+    ui.prevButton.style.display = currentStep > 1 ? "block" : "none";
+    ui.nextButton.style.display = currentStep === 2 ? "none" : "block";
+
+    if (currentStep === 3) {
+      ui.prevButton.style.display = "none";
+      ui.nextButton.style.display = "none";
+    }
+
+    updateActiveStepIndicator();
+  }
+
+  function closeDialogWithDelayedTransition(dialog: HTMLDialogElement) {
+    setTimeout(() => {
+      dialog.close();
+    }, 300);
+  }
+
+  function closeDialogWithTransition(dialog: HTMLDialogElement) {
+    dialog.classList.add("closed-dialog");
+    dialog.classList.remove("opened-dialog");
+    closeDialogWithDelayedTransition(dialog);
+  }
+
+  function openDialogWithTransition(dialog: HTMLDialogElement) {
+    dialog.showModal();
+    dialog.classList.add("opened-dialog");
+    dialog.classList.remove("closed-dialog");
+  }
+</script>

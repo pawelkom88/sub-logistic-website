@@ -1,0 +1,127 @@
+---
+import { Image, Picture } from "astro:assets";
+import icon2 from "../../assets/icons/plane.svg";
+import icon1 from "../../assets/icons/ship-icon.svg";
+import icon3 from "../../assets/icons/truck.svg";
+import whyUsImage from "../../assets/images/dron-view-warehouse.jpg";
+import whyUsImage3 from "../../assets/images/loads-of-containers-at-port.jpg";
+import whyUsImage2 from "../../assets/images/lorries-parked-in-warehouse-yard.jpg";
+import "./whyus.css";
+---
+
+<section id="sbsr-516">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Dostosowane rozwiązania dla każdej przesyłki.</span>
+      <h2 class="cs-title">Transport Krajowy i Międzynarodowy</h2>
+      <p class="cs-text">
+        W Sub Logistic, rozumiemy, że potrzeby transportowe mogą znacznie się różnić – od
+        prostego transportu drobnicowego, który wymaga szybkiej i sprawnej dostawy, po
+        złożone projekty logistyczne obejmujące transport całopojazdowy z wieloma punktami
+        załadunku i rozładunku. Właśnie dlatego nasz zespół ekspertów logistycznych jest
+        zaangażowany w ciągłe analizowanie i optymalizowanie tras oraz metod transportu,
+        aby zapewnić, że Twoje towary zostaną dostarczone w najbardziej efektywny i
+        ekonomiczny sposób.
+      </p>
+      <p class="cs-text">
+        Kluczowe jest tutaj indywidualne podejście do każdego zlecenia. Nasz zespół nie
+        tylko dopasowuje usługi do konkretnych wymagań i specyfikacji towarów, ale także
+        proaktywnie szuka sposobów na redukcję kosztów i czasu transportu. Dzięki temu
+        klient otrzymuje nie tylko usługę transportową najwyższej jakości, ale także
+        partnera biznesowego, który realnie przyczynia się do optymalizacji jego łańcucha
+        dostaw.
+      </p>
+      <p class="cs-text">
+        To właśnie zaangażowanie w dostarczanie spersonalizowanych rozwiązań
+        transportowych i logistycznych, połączone z ciągłym dążeniem do doskonałości
+        operacyjnej, wyróżnia Sub-Logistic na rynku jako lidera w branży. Każde zadanie,
+        niezależnie od jego rozmiaru, jest dla nas szansą na pokazanie, że zaufanie
+        klienta jest dla nas najważniejsze, a ich sukces jest również naszym sukcesem.
+      </p>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <Image
+            class="cm-icon"
+            src={icon3}
+            alt="icon"
+            width="40"
+            height="40"
+            loading="lazy"
+          />
+          Spedycja drogowa
+        </li>
+        <li class="cs-li">
+          <Image
+            class="cm-icon"
+            src={icon1}
+            alt="icon"
+            width="40"
+            height="40"
+            loading="lazy"
+          />
+          Spedycja morska
+        </li>
+        <li class="cs-li">
+          <Image
+            class="cm-icon"
+            src={icon2}
+            alt="icon"
+            width="40"
+            height="40"
+            loading="lazy"
+          />
+          Spedycja lotnicza
+        </li>
+      </ul>
+      <a href="/oferta" class="cs-button-solid">Nasza oferta</a>
+    </div>
+    <!--Image Group-->
+    <div class="cs-image-group">
+      <ul class="cs-stat-group">
+        <li class="cs-stat">
+          <span class="cs-number">200+</span>
+          <span class="cs-desc">Zadowolonych klientów</span>
+        </li>
+        <li class="cs-stat">
+          <span class="cs-number">100%</span>
+          <span class="cs-desc">Skutcznosc dostaw</span>
+        </li>
+      </ul>
+      <div class="grid">
+        <div class="cs-picture-1">
+          <Picture
+            width="630"
+            height="461"
+            src={whyUsImage}
+            class="cs-picture"
+            alt="Dron view warehouse"
+            formats={["avif", "webp"]}
+            loading="lazy"
+          />
+        </div>
+        <div class="cs-picture-2">
+          <Picture
+            width="630"
+            height="461"
+            src={whyUsImage2}
+            class="cs-picture"
+            alt="Dron view warehouse"
+            formats={["avif", "webp"]}
+            loading="lazy"
+          />
+        </div>
+        <div class="cs-picture-3">
+          <Picture
+            width="630"
+            height="461"
+            src={whyUsImage3}
+            class="cs-picture"
+            alt="Dron view warehouse"
+            formats={["avif", "webp"]}
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

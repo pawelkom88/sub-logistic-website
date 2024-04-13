@@ -1,0 +1,152 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../assets/images/sub-logistic-logo.png";
+import "./nav.css";
+
+export const navLink = [
+  {
+    name: "Strona główna",
+    link: "/",
+  },
+  {
+    name: "O nas",
+    link: "/onas",
+  },
+  {
+    name: "Oferta",
+    link: "/oferta",
+  },
+];
+---
+
+<header id="cs-navigation">
+  <div class="cs-top-bar">
+    <div class="cs-top-container">
+      <div class="cs-top-contact">
+        <a href="tel:+48510482468" class="cs-top-link">
+          <Image
+            class="cs-link-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/phone-grey.svg"
+            alt="logo"
+            width="16"
+            height="16"
+            aria-hidden="true"
+            decoding="async"
+          />
+          Zadzwoń: +48 510 482 468
+        </a>
+        <div class="working-hours">
+          <Image
+            class="cs-link-icon"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/clock-grey.svg"
+            alt="logo"
+            width="20"
+            height="20"
+            aria-hidden="true"
+            decoding="async"
+          />
+          Pracujemy: Poniedziałek - Piatek: 8:00 - 17:00
+        </div>
+      </div>
+      <div class="cs-top-social">
+        <!-- <LanguageSelector showFlag={true} class="language-selector" /> -->
+      </div>
+    </div>
+  </div>
+  <div class="cs-container">
+    <!--Nav Logo-->
+    <a href="/" class="cs-logo" aria-label="back to home">
+      <Image
+        format={"webp"}
+        src={logo}
+        alt="sub logistic logo"
+        width="261"
+        height="152"
+      />
+    </a>
+    <!--Navigation List-->
+    <nav class="cs-nav" role="navigation">
+      <!--Mobile Nav Toggle-->
+      <button class="cs-toggle" aria-label="mobile menu toggle">
+        <div class="cs-box" aria-hidden="true">
+          <span class="cs-line cs-line1" aria-hidden="true"></span>
+          <span class="cs-line cs-line2" aria-hidden="true"></span>
+          <span class="cs-line cs-line3" aria-hidden="true"></span>
+        </div>
+      </button>
+      <div class="cs-ul-wrapper">
+        <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+          {
+            navLink.map(({ link, name }) => {
+              return (
+                <li class="cs-li">
+                  <a href={link} class="cs-li-link">
+                    {name}
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    </nav>
+    <a href="#cs-contact-490" class="cs-button-solid cs-nav-button">Kontakt</a>
+  </div>
+</header>
+
+<script>
+  // const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  // const languageSelector = document.querySelector(".language-selector") as HTMLElement;
+
+  // if (isMobile) {
+  //   languageSelector.style.display = "none";
+  // }
+  // add classes for mobile navigation toggling
+  const CSbody = document.querySelector("body") as HTMLBodyElement;
+  const CSnavbarMenu = document.querySelector("#cs-navigation") as HTMLElement;
+  const CShamburgerMenu = document.querySelector(
+    "#cs-navigation .cs-toggle"
+  ) as HTMLElement;
+  const logo = document.querySelector(".cs-logo") as HTMLImageElement;
+
+  CShamburgerMenu.addEventListener("click", function () {
+    CShamburgerMenu.classList.toggle("cs-active");
+    CSnavbarMenu.classList.toggle("cs-active");
+    CSbody.classList.toggle("cs-open");
+    // run the function to check the aria-expanded value
+    ariaExpanded();
+  });
+
+  // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not
+  function ariaExpanded() {
+    const csUL = document.querySelector("#cs-expanded");
+    const csExpanded = csUL?.getAttribute("aria-expanded");
+
+    if (csExpanded === "false") {
+      csUL?.setAttribute("aria-expanded", "true");
+    } else {
+      csUL?.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  document.addEventListener("scroll", () => {
+    const transition = (logo.style.transition = "all 0.3s ease-in-out");
+
+    const scroll = document.documentElement.scrollTop;
+    if (scroll >= 100) {
+      document.querySelector("body")?.classList.add("scroll");
+      logo.style.height = "clamp(3.6rem, 5.76vw, 3.96rem";
+      transition;
+    } else {
+      document.querySelector("body")?.classList.remove("scroll");
+      logo.style.height = "clamp(4.32rem, 6.912vw, 4.752rem)";
+      transition;
+    }
+  });
+
+  // mobile nav toggle code
+  const dropDowns = Array.from(document.querySelectorAll("#cs-navigation .cs-dropdown"));
+  for (const item of dropDowns) {
+    item.addEventListener("click", () => item.classList.toggle("cs-active"));
+  }
+</script>

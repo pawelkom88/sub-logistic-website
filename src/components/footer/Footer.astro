@@ -1,0 +1,140 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../assets/images/sub-logistic-logo.png";
+
+import { contactInfo, googleMapsLink } from "../contact-form/ContactForm.astro";
+import { navLink } from "../nav/Nav.astro";
+import "./footer.css";
+const todaysDate = new Date().getFullYear();
+---
+
+<footer id="cs-footer-1185">
+  <!-- Subscribe Form -->
+  <div id="cta-1185"></div>
+  <div class="cs-container">
+    <!-- Logo Group -->
+    <div class="cs-logo-group">
+      <a aria-label="go back to home" class="cs-logo" href="/">
+        <Image
+          class="cs-logo-img"
+          format="webp"
+          src={logo}
+          alt="logo"
+          width="197"
+          height="43"
+          loading="lazy"
+        />
+      </a>
+      <p class="cs-text">
+        Zapraszamy do kontaktu i współpracy. Niezależnie od tego, czy szukasz partnera do
+        stałej współpracy, czy potrzebujesz wsparcia przy jednorazowym zleceniu,
+        Sub Logistic jest gotowy, aby wspierać Twój biznes na drogach Polski, Europy i
+        świata.
+      </p>
+    </div>
+    <!-- Links -->
+    <ul class="cs-nav">
+      <li class="cs-nav-li">
+        <span class="cs-header">Linki</span>
+      </li>
+      {
+        navLink.map(({ link, name }) => {
+          return (
+            <li class="cs-nav-li">
+              <a class="cs-nav-link" href={link}>
+                {name}
+              </a>
+            </li>
+          );
+        })
+      }
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="">Polityka prywatnosci</a>
+      </li>
+    </ul>
+    <!-- Contact Info -->
+    <ul class="cs-nav">
+      <li class="cs-nav-li">
+        <span class="cs-header">Kontakt</span>
+      </li>
+      <li class="cs-nav-li">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-stroke.svg"
+          alt="phone"
+          width="24"
+          height="24"
+        />
+        <a class="cs-nav-link cs-phone" href=`tel:${contactInfo.phone}`
+          >{contactInfo.phone}</a
+        >
+      </li>
+      <li class="cs-nav-li">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/email-stroke.svg"
+          alt="email"
+          width="24"
+          height="24"
+        />
+        <a class="cs-nav-link cs-email" href=`mailto:${contactInfo.email}`
+          >{contactInfo.email}</a
+        >
+      </li>
+      <li class="cs-nav-li">
+        <img
+          class="cs-icon"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-stroke.svg"
+          alt="pin"
+          width="24"
+          height="24"
+        />
+        <a
+          class="cs-nav-link cs-address"
+          href={googleMapsLink}
+          target="_blank"
+          rel="noopener"
+        >
+          {contactInfo.address}<br />
+          {contactInfo.postCode}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="cs-bottom">
+    <span class="cs-copyright"
+      >© Copyright {todaysDate} - <a class="cs-copyright-link" href="/">Sub Logistic</a
+      ></span
+    >
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source
+      media="(max-width: 600px)"
+      srcset="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+    <!--Tablet and above Image-->
+    <source
+      media="(min-width: 601px)"
+      srcset="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="wheels"
+      width="1280"
+      height="568"
+    />
+  </picture>
+</footer>

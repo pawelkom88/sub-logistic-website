@@ -1,0 +1,19 @@
+{
+  "name": "sub-logistic",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.9",
+    "@fontsource/ibm-plex-sans": "^5.0.19",
+    "astro": "^4.5.4",
+    "sharp": "^0.33.3",
+    "typescript": "^5.4.2"
+  }
+}

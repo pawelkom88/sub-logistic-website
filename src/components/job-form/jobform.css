@@ -1,0 +1,113 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .cs-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #contact-569 .cs-label {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    width: 100%;
+    color: var(--headerColor);
+  }
+
+  #contact-569 .cs-label:after {
+    content: "*";
+    color: var(--secondary);
+    padding-left: 0.2rem;
+  }
+  #contact-569 .cs-input {
+    font-size: 1rem;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--headerColor);
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  #contact-569 .cs-input:hover {
+    border-color: var(--secondary);
+  }
+  #contact-569 .cs-input:focus {
+    outline: 1px solid var(--secondary);
+  }
+  #contact-569 .cs-input::placeholder {
+    color: #7d799c;
+    opacity: 0.6;
+    font-size: 0.875rem;
+  }
+  #contact-569 .cs-textarea {
+    /* 120px - 140px */
+    min-height: clamp(7.5rem, 28vw, 8.75rem);
+    padding-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-family: inherit;
+  }
+
+  .next-btn,
+  .submit-btn {
+    display: block;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: auto;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.8rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+
+  .next-btn {
+    background-color: var(--primary);
+    margin-top: 5rem;
+  }
+
+  .submit-btn {
+    background-color: var(--secondary);
+  }
+}
+/* Tablet - 650px */
+@media only screen and (min-width: 40.625rem) {
+  .cs-form {
+    /* max-width: 20rem; */
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
+  #contact-569 .cs-label {
+    width: 48.4%;
+  }
+  #contact-569 .cs-message {
+    width: 100%;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .cs-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
+
+  .cs-textarea-column {
+    grid-column: span 2;
+  }
+
+  .submit-btn {
+    grid-column: span 2;
+  }
+
+  #contact-569 .cs-submit {
+    width: 15rem;
+  }
+}

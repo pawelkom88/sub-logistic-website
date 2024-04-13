@@ -1,0 +1,51 @@
+---
+import { Image, Picture } from "astro:assets";
+import reviewImage from "../../assets/images/port-full-containers-cranes-in-the-background.jpg";
+import "./reviews.css";
+---
+
+<section id="reviews-211">
+  <div class="cs-container">
+    <!-- Left section -->
+    <div class="cs-card">
+      <Picture
+        src={reviewImage}
+        width="828"
+        height="700"
+        aria-hidden="true"
+        alt="port full of containers during sunset"
+        class="cs-picture"
+      />
+      <div class="cs-content">
+        <span class="cs-topper">Twoja Opinia, Nasza Motywacja</span>
+        <h2 class="cs-title">Wspólnie budujemy lepsze usługi</h2>
+        <p class="cs-text">
+          Pracujemy nad tym, by dostarczać Ci niezawodne rozwiązania dostosowane do Twoich
+          potrzeb. Dlatego zachęcamy Cię do dzielenia się swoją opinią. Twoje słowa mają
+          realny wpływ na nasze działania i pomagają nam stale się rozwijać.
+        </p>
+      </div>
+    </div>
+    <!-- Right Section -->
+    <div class="cs-review">
+      <Image
+        class="cs-review-img"
+        aria-hidden="true"
+        src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
+        alt="5 stars"
+        width="112"
+        height="20"
+        loading="lazy"
+      />
+      <span class="cs-review-title">Profesjonalna obsługa i niezawodność</span>
+      <p class="cs-review-p">
+        Od momentu, gdy zaczęliśmy korzystać z usług Sub Logistic, nasze zlecenia
+        spedycyjne stają się prostsze i bardziej efektywne. Ich profesjonalna obsługa oraz
+        niezawodność w dostarczaniu naszych produktów do klientów są niezrównane. Zespół
+        Sub Logistic działa sprawnie, zapewniając terminowe dostawy i śledząc nasze
+        przesyłki na każdym etapie transportu.
+      </p>
+      <span class="cs-review-name">⎯ Marek Kowalski</span>
+    </div>
+  </div>
+</section>
