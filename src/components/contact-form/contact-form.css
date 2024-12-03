@@ -173,6 +173,13 @@
   #cs-contact-490 .cs-button-solid:hover:before {
     width: 100%;
   }
+
+  #cs-contact-490 .cs-captcha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 /* Tablet - 700px */
 @media only screen and (min-width: 43.75rem) {

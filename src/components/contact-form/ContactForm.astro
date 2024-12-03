@@ -1,11 +1,12 @@
 ---
 import "../contact-form/contact-form.css";
 
+// content collection !!!
 export const contactInfo = {
   address: "ul. Marynarki Polskiej 136A/47,",
   postCode: "80-865 Gdańsk",
-  email: "sub-trans@something.pl",
-  phone: "+48 600123234",
+  email: "piotr.subotowicz@sublog.com.pl",
+  phone: "+48 510 482 468",
 };
 
 export const googleMapsLink =
@@ -48,12 +49,22 @@ export const googleMapsLink =
       <a href=`tel:${contactInfo.phone}` class="cs-link">{contactInfo.phone}</a>
     </div>
     <!-- Form -->
-    <form id="cs-form-490" name="Contact Form" method="post">
+    <form
+      id="cs-form-490"
+      name="Contact Form"
+      method="post"
+      action="https://api.web3forms.com/submit"
+    >
+      <!-- HIDDEN -->
+      <!-- <input type="hidden" name="redirect" value="wiadomosc-wyslana" /> -->
+      <input type="hidden" name="apikey" value="e63617a1-6b8c-4a8f-adf8-03aba92d5110" />
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+      <input type="hidden" name="subject" value="Nowa wiadomość ze strony" />
+      <!-- HIDDEN -->
       <label for="name-490" class="cs-label">
-        Imię
-        <input
+        Imię <input
           class="cs-input"
-          required
+          required=""
           type="text"
           id="name-490"
           name="name"
@@ -61,38 +72,50 @@ export const googleMapsLink =
         />
       </label>
       <label for="email-490" class="cs-label">
-        Email
-        <input
+        Email <input
           class="cs-input"
           required
-          type="text"
+          type="email"
           id="email-490"
           name="email"
           placeholder="jakkowalski@firma.pl"
         />
       </label>
       <label for="phone-490" class="cs-label">
-        Telefon
-        <input
+        Telefon <input
           class="cs-input"
           required
-          type="text"
+          type="tel"
           id="phone-490"
           name="phone"
           placeholder="0621345123"
         />
       </label>
       <label for="message-490" class="cs-label -label-message">
-        Wiadomość
-        <textarea
+        Wiadomość <textarea
           class="cs-input"
           required
           name="Message"
           id="message-490"
           placeholder="Witam, jestem zainteresowany wspłópraca..."></textarea>
       </label>
+      <div class="cs-captcha">
+        <div
+          class="h-captcha"
+          data-captcha="true"
+          data-lang="pl"
+          data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+        >
+        </div>
+        <div class="error-message"></div>
+      </div>
+      <br />
       <button class="cs-button-solid" type="submit">Wyślij wiadomość</button>
     </form>
+    <div class="lds-spinner"></div>
+    <div class="success-component">Wiadomość została wysłana pomyślnie!</div>
+    <div class="error-component">Wystąpił błąd, spróbuj ponownie później.</div>
+    <a href="/" class="back-to-home">Powrót do strony głównej</a>
   </div>
 </section>
 
@@ -110,4 +133,83 @@ export const googleMapsLink =
     tooltip.style.transform = "translateY(10px)";
     tooltip.style.transition = "all 0.3s ease-in-out";
   });
+</script>
+
+<script>
+  function h() {
+    document.addEventListener("DOMContentLoaded", function () {
+      const spinner = document.querySelector(".lds-spinner") as HTMLElement;
+      const successComponent = document.querySelector(
+        ".success-component"
+      ) as HTMLElement;
+      const errorComponent = document.querySelector(".error-component") as HTMLElement;
+      const submitButton = document.querySelector(".submit-btn") as HTMLElement;
+      const contactForm = document.getElementById("contact-569") as HTMLFormElement;
+      const errorMessage = document.querySelector(".error-message") as HTMLElement;
+      const backToHome = document.querySelector(".back-to-home") as HTMLElement;
+
+      // needed ?
+      spinner.style.display = "none";
+      successComponent.style.display = "none";
+      errorComponent.style.display = "none";
+      backToHome.style.display = "none";
+
+      let errorText;
+      switch (document.documentElement.lang) {
+        case "pl":
+          errorText = "* Zaznacz pole";
+          break;
+        case "en":
+          errorText = "* Check the box";
+          break;
+        case "de":
+          errorText = "* Bitte auswählen";
+          break;
+        default:
+          errorText = "* Zaznacz pole";
+      }
+
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!contactForm.querySelector("textarea[name=h-captcha-response]")?.value) {
+          errorMessage.textContent = errorText;
+          return;
+        }
+
+        const formData = new FormData(contactForm);
+        const formJSON = JSON.stringify(Object.fromEntries(formData));
+
+        spinner.style.display = "block";
+        submitButton.style.display = "none";
+
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: formJSON,
+        })
+          .then(async (response) => {
+            if (response.status == 200) {
+              console.log(response.status);
+              contactForm.style.display = "none";
+              spinner.style.display = "none";
+              successComponent.style.display = "block";
+              backToHome.style.display = "block";
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            } else {
+              console.log(response);
+              submitButton.style.display = "block";
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            errorComponent.style.display = "block";
+          });
+      });
+    });
+  }
+
+  h();
 </script>
