@@ -5,23 +5,16 @@ import polishFlag from "../../assets/images/pl-PL.png";
 import germanFlag from "../../assets/images/de-DE.png";
 import ukFlag from "../../assets/images/en-GB.png";
 import "./nav.css";
+import { type SelectedTranslation } from "../../pages/pl/index.astro";
+import type { Lang } from "../../utils/utils";
 
-const { links } = Astro.props;
-//  TODO: collection ?
-export const navLink = [
-  {
-    name: "Strona główna",
-    link: "/",
-  },
-  {
-    name: "O nas",
-    link: "/onas",
-  },
-  {
-    name: "Oferta",
-    link: "/oferta",
-  },
-];
+interface Props {
+  links: SelectedTranslation["nav"]["links"] | undefined;
+}
+
+const currentLang = Astro.url.pathname.split("/")[1] as Lang;
+
+const { links = [] } = Astro.props;
 ---
 
 <header id="cs-navigation">
@@ -110,10 +103,10 @@ export const navLink = [
       <div class="cs-ul-wrapper">
         <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
           {
-            navLink.map(({ link, name }) => {
+            links?.map(({ url, name }) => {
               return (
                 <li class="cs-li">
-                  <a href={link} class="cs-li-link">
+                  <a href={`${currentLang}${url}`} class="cs-li-link">
                     {name}
                   </a>
                 </li>
