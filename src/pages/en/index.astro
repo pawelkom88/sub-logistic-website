@@ -1,0 +1,53 @@
+---
+import { getCollection } from "astro:content";
+import ContactForm from "../../components/contact-form/ContactForm.astro";
+import Cta from "../../components/cta/Cta.astro";
+import Hero from "../../components/hero/Hero.astro";
+import Reviews from "../../components/reviews/Reviews.astro";
+import Service from "../../components/service/Service.astro";
+import Team from "../../components/team/Team.astro";
+import WhyUs from "../../components/why-us/WhyUs.astro";
+import Layout from "../../layouts/Layout.astro";
+
+// TODO: duplication !
+function getLangCode(lang: string) {
+  switch (lang) {
+    case "en":
+      return "en-GB";
+    case "de":
+      return "de-DE";
+    case "pl":
+      return "pl-PL";
+    default:
+      return "en-GB";
+  }
+}
+
+const allTranslations = await getCollection("translations");
+const currentLang = Astro.url.pathname.split("/")[1];
+const { translations } = allTranslations.find(
+  (t: any) => t.data.languageCode === getLangCode(currentLang)
+)?.data;
+---
+
+<Layout
+  links={translations?.nav}
+  footer={translations?.footer}
+  title="ANG"
+  description="ANG"
+>
+  <Hero hero={translations?.hero} />
+  <br />
+  <Service />
+  <br />
+  <WhyUs />
+  <br />
+  <!-- <Faq /> -->
+  <Reviews />
+  <Team />
+  <br />
+  <Cta />
+  <br />
+  <ContactForm />
+  <br />
+</Layout>

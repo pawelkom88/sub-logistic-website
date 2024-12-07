@@ -3,12 +3,15 @@ import { Picture } from "astro:assets";
 import heroImage from "../../assets/images/port-full-of-containers.jpeg";
 import "./hero.css";
 import JobForm from "../job-form/JobForm.astro";
+
+const { hero } = Astro.props;
 ---
 
 <section id="hero-219">
   <div class="cs-container">
     <h1 class="cs-title">
-      Sub Logistic Gdańsk - <br /> Twój Partner w Spedycji Drogowej w Polsce i Europie
+      <!-- Sub Logistic Gdańsk - <br /> Twój Partner w Spedycji Drogowej w Polsce i Europie -->
+      {hero}
     </h1>
     <p class="cs-text">
       W Sub-Logistic łączymy pasję do transportu z nowoczesnymi rozwiązaniami

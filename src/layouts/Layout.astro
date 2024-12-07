@@ -3,12 +3,14 @@ import "@fontsource/ibm-plex-sans/300.css";
 import "@fontsource/ibm-plex-sans/400.css";
 import "@fontsource/ibm-plex-sans/500.css";
 import "@fontsource/ibm-plex-sans/700.css";
-
 import Footer from "../components/footer/Footer.astro";
 import Nav from "../components/nav/Nav.astro";
 import Seo from "../seo/Seo.astro";
 
 interface Props {
+  // TODO: generete types from schema
+  footer: any;
+  links: { link: string; name: string }[];
   title: string;
   description: string;
   image?: {
@@ -17,7 +19,7 @@ interface Props {
   };
 }
 
-const { title, description, image } = Astro.props;
+const { links, footer, title, description, image } = Astro.props;
 ---
 
 <!doctype html>
@@ -32,9 +34,9 @@ const { title, description, image } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <Nav />
+    <Nav links={links} />
     <slot />
-    <Footer />
+    <Footer footer={footer} />
     <style is:global>
       :root {
         --primary: #004990;

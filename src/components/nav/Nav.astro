@@ -1,8 +1,13 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../../assets/images/sub-logistics-logo.webp";
+import polishFlag from "../../assets/images/pl-PL.png";
+import germanFlag from "../../assets/images/de-DE.png";
+import ukFlag from "../../assets/images/en-GB.png";
 import "./nav.css";
 
+const { links } = Astro.props;
+//  TODO: collection ?
 export const navLink = [
   {
     name: "Strona główna",
@@ -48,8 +53,36 @@ export const navLink = [
           Pracujemy: Poniedziałek - Piatek: 8:00 - 17:00
         </div>
       </div>
-      <div class="cs-top-social">
-        <!-- <LanguageSelector showFlag={true} class="language-selector" /> -->
+      <!-- TODO: dynamically translate based on url -->
+      <div class="language-selector" tabindex="0">
+        <button
+          id="language-selector-btn"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          class="language-selector-button"
+        >
+          <span id="selected-language">Language</span>
+          <span class="arrow-down"></span>
+        </button>
+        <ul
+          id="language-selector-content"
+          class="language-selector-content"
+          role="listbox"
+          aria-labelledby="language-selector-btn"
+        >
+          <li role="option" tabindex="-1" data-lang="pl-PL">
+            <Image src={polishFlag} alt="Polish flag" />
+            Polski
+          </li>
+          <li role="option" tabindex="-1" data-lang="en-GB">
+            <Image src={ukFlag} alt="English flag" />
+            Angielski
+          </li>
+          <li role="option" tabindex="-1" data-lang="de-DE">
+            <Image src={germanFlag} alt="German flag" />
+            Niemiecki
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -93,6 +126,61 @@ export const navLink = [
     <a href="#cs-contact-490" class="cs-button-solid cs-nav-button">Kontakt</a>
   </div>
 </header>
+
+<style>
+  .language-selector {
+    position: relative;
+    display: inline-block;
+  }
+
+  .language-selector-button {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .arrow-down {
+    width: 10px;
+    height: 10px;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: var(--white) transparent transparent transparent;
+  }
+
+  .language-selector-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 10;
+    min-width: 150px;
+  }
+
+  .language-selector-content[aria-hidden="false"] {
+    display: block;
+  }
+
+  .language-selector-content li {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .language-selector-content li:hover,
+  .language-selector-content li:focus {
+    background-color: var(--hover);
+    color: var(--white);
+  }
+</style>
 
 <script>
   // const isMobile = window.matchMedia("(max-width: 768px)").matches;
@@ -149,4 +237,114 @@ export const navLink = [
   for (const item of dropDowns) {
     item.addEventListener("click", () => item.classList.toggle("cs-active"));
   }
+</script>
+
+<!-- LANGUAGE SELECTOR -->
+<!-- <script is:inline define:vars={{ currentLanguage }}>
+  console.log("currentLanguage, bottom", currentLanguage);
+
+  import polishFlag from "../../assets/images/pl-PL.png";
+  import germanFlag from "../../assets/images/de-DE.png";
+  import ukFlag from "../../assets/images/en-GB.png";
+
+  function getFlag(lang) {
+    switch (lang) {
+      case "en-GB":
+        return ukFlag;
+      case "de-DE":
+        return germanFlag;
+      case "pl-PL":
+        return polishFlag;
+      default:
+        return ukFlag;
+    }
+  }
+
+  const locales = ["en-GB", "de-DE", "pl-PL"];
+  const dropdownBtn = document.getElementById("language-selector-btn");
+  const dropdownContent = document.getElementById("language-selector-content");
+
+  dropdownBtn.addEventListener("click", () => {
+    dropdownContent.classList.toggle("cs-active");
+  });
+
+  function setFlags() {
+    const listItem = document.createElement("li");
+    listItem.textContent = "123";
+    const flag = document.createElement("img");
+    flag.src = getFlag(currentLanguage);
+    listItem.appendChild(flag);
+    dropdownContent.appendChild(listItem);
+  }
+
+  setFlags();
+</script> -->
+
+<script>
+  function init() {
+    type LangCode = "en-GB" | "de-DE" | "pl-PL";
+
+    const dropdownBtn = document.getElementById("language-selector-btn") as HTMLElement;
+    const dropdownContent = document.getElementById(
+      "language-selector-content"
+    ) as HTMLElement;
+    const options = dropdownContent?.querySelectorAll("li") as NodeListOf<HTMLElement>;
+
+    function initializeDropdown() {
+      // Event listener to toggle dropdown visibility
+      dropdownBtn?.addEventListener("click", () => {
+        const expanded = dropdownBtn.getAttribute("aria-expanded") === "true";
+        dropdownBtn.setAttribute("aria-expanded", "" + !expanded);
+        dropdownContent?.setAttribute("aria-hidden", "" + expanded);
+      });
+
+      // Close dropdown on outside click
+      document.addEventListener("click", (event) => {
+        if (
+          !dropdownBtn?.contains(event.target as Node) &&
+          !dropdownContent?.contains(event.target as Node)
+        ) {
+          dropdownBtn?.setAttribute("aria-expanded", "false");
+          dropdownContent?.setAttribute("aria-hidden", "true");
+        }
+      });
+
+      // Keyboard navigation
+      dropdownBtn?.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowDown") {
+          event.preventDefault();
+          options?.[0].focus();
+        }
+      });
+
+      options?.forEach((option, index) => {
+        option.addEventListener("click", () => {
+          const selectedLang = option.getAttribute("data-lang") as LangCode;
+          window.location.pathname = `/${selectedLang.split("-")[0]}`;
+          dropdownBtn?.setAttribute("aria-expanded", "false");
+          dropdownContent?.setAttribute("aria-hidden", "true");
+        });
+
+        option.addEventListener("keydown", (event) => {
+          if (event.key === "ArrowDown") {
+            event.preventDefault();
+            if (index < options.length - 1) options[index + 1].focus();
+          } else if (event.key === "ArrowUp") {
+            event.preventDefault();
+            if (index > 0) options[index - 1].focus();
+          } else if (event.key === "Enter" || event.key === "Space") {
+            event.preventDefault();
+            option.click();
+          } else if (event.key === "Escape") {
+            dropdownBtn?.focus();
+            dropdownBtn?.setAttribute("aria-expanded", "false");
+            dropdownContent?.setAttribute("aria-hidden", "true");
+          }
+        });
+      });
+    }
+
+    initializeDropdown();
+  }
+  init();
 </script>
