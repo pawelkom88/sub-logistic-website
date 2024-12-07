@@ -1,4 +1,5 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import ContactForm from "../../components/contact-form/ContactForm.astro";
 import Cta from "../../components/cta/Cta.astro";
@@ -10,15 +11,20 @@ import WhyUs from "../../components/why-us/WhyUs.astro";
 import Layout from "../../layouts/Layout.astro";
 import { getLangCode, type Lang } from "../../utils/utils";
 
+type TranslationEntry = CollectionEntry<"translations">;
+
 const allTranslations = await getCollection("translations");
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;
-const { translations } = allTranslations.find(
-  (t: any) => t.data.languageCode === getLangCode(currentLang)
-)?.data;
+const translationEntry = allTranslations.find(
+  (t) => t.data.languageCode === getLangCode(currentLang)
+) as TranslationEntry | undefined;
+
+const { translations } = translationEntry?.data || {};
+export type SelectedTranslation = TranslationEntry["data"]["translations"];
 ---
 
 <Layout
-  links={translations?.nav}
+  links={translations?.nav.links}
   footer={translations?.footer}
   title="GER"
   description="GER"
