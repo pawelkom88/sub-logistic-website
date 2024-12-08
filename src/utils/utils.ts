@@ -1,4 +1,10 @@
+import deDE from "../assets/images/de-DE.png";
+import enGB from "../assets/images/en-GB.png";
+import plPL from "../assets/images/pl-PL.png";
+
 export type Lang = "en" | "de" | "pl";
+
+export type LangCode = "en-GB" | "de-DE" | "pl-PL";
 
 export function getLangCode(lang: Lang) {
   switch (lang) {
@@ -15,4 +21,15 @@ export function getLangCode(lang: Lang) {
 
 export function splitString(string: string, el = 0) {
   return string.split("-")[el];
+}
+
+export function getFlagSrc(lang: LangCode) {
+  switch (lang) {
+    case "pl-PL":
+      return plPL;
+    case "de-DE":
+      return deDE;
+    case "en-GB":
+      return enGB;
+  }
 }

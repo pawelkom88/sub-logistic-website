@@ -1,17 +1,37 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../../assets/images/sub-logistics-logo.webp";
-import polishFlag from "../../assets/images/pl-PL.png";
-import germanFlag from "../../assets/images/de-DE.png";
-import ukFlag from "../../assets/images/en-GB.png";
+import plPL from "../../assets/images/pl-PL.png";
+import deDE from "../../assets/images/de-DE.png";
+import enGB from "../../assets/images/en-GB.png";
 import "./nav.css";
 import { type SelectedTranslation } from "../../pages/pl/index.astro";
-import type { Lang } from "../../utils/utils";
+import { getFlagSrc, getLangCode, type Lang, type LangCode } from "../../utils/utils";
 
 interface Props {
   contact: SelectedTranslation["contact"];
   links: SelectedTranslation["nav"]["links"];
 }
+
+function getLangFullName(lang: Lang) {
+  switch (lang) {
+    case "pl":
+      return "Polski";
+    case "de":
+      return "Deutsch";
+    case "en":
+      return "English";
+  }
+}
+
+const languagesConfig = {
+  "pl-PL": { flag: plPL, translations: { pl: "Polski", en: "Polish", de: "Polnisch" } },
+  "en-GB": {
+    flag: enGB,
+    translations: { pl: "Angielski", en: "English", de: "Englisch" },
+  },
+  "de-DE": { flag: deDE, translations: { pl: "Niemiecki", en: "German", de: "Deutsch" } },
+};
 
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;
 
@@ -49,13 +69,14 @@ const { contact, links = [] } = Astro.props;
       </div>
       <!-- TODO: dynamically translate based on url -->
       <div class="language-selector" tabindex="0">
-        <button
-          id="language-selector-btn"
-          aria-haspopup="listbox"
-          aria-expanded="false"
-          class="language-selector-button"
-        >
-          <span id="selected-language">Language</span>
+        <button id="language-selector-btn" aria-haspopup="listbox" aria-expanded="false">
+          <Image
+            width="20"
+            height="20"
+            src={getFlagSrc(getLangCode(currentLang))}
+            alt={`${languagesConfig[getLangCode(currentLang)].translations[currentLang]} flag`}
+          />
+          <p>{getLangFullName(currentLang)}</p>
           <span class="arrow-down"></span>
         </button>
         <ul
@@ -64,18 +85,23 @@ const { contact, links = [] } = Astro.props;
           role="listbox"
           aria-labelledby="language-selector-btn"
         >
-          <li role="option" tabindex="-1" data-lang="pl-PL">
-            <Image width="20" height="20" src={polishFlag} alt="Polish flag" />
-            Polski
-          </li>
-          <li role="option" tabindex="-1" data-lang="en-GB">
-            <Image width="20" height="20" src={ukFlag} alt="English flag" />
-            Angielski
-          </li>
-          <li role="option" tabindex="-1" data-lang="de-DE">
-            <Image width="20" height="20" src={germanFlag} alt="German flag" />
-            Niemiecki
-          </li>
+          {
+            Object.entries(languagesConfig)
+              .filter(([lang]) => lang !== getLangCode(currentLang))
+              .map(([lang, { translations }]) => {
+                return (
+                  <li role="option" tabindex="-1" data-lang={lang}>
+                    <Image
+                      width="20"
+                      height="20"
+                      src={getFlagSrc(lang as LangCode)}
+                      alt={`${translations[currentLang]} flag`}
+                    />
+                    {translations[currentLang]}
+                  </li>
+                );
+              })
+          }
         </ul>
       </div>
     </div>
@@ -123,20 +149,25 @@ const { contact, links = [] } = Astro.props;
 
 <style>
   .language-selector {
-    min-width: 100px;
     position: relative;
     display: inline-block;
   }
-  .language-selector-button {
+
+  #language-selector-btn {
+    min-width: 7rem;
     background-color: var(--primary);
     border: none;
     border-radius: 5px;
     color: var(--white);
-    padding: 10px;
+    padding-inline: 0.5rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  #language-selector-btn:hover {
+    background-color: var(--hover);
   }
 
   .arrow-down {
@@ -150,7 +181,7 @@ const { contact, links = [] } = Astro.props;
   .language-selector-content {
     display: none;
     position: absolute;
-    left: -0.6rem;
+    left: -0.2rem;
     background-color: var(--white);
     list-style: none;
     margin: 0;
@@ -240,7 +271,7 @@ const { contact, links = [] } = Astro.props;
 </script>
 
 <script>
-  function init() {
+  document.addEventListener("DOMContentLoaded", () => {
     type LangCode = "en-GB" | "de-DE" | "pl-PL";
 
     const dropdownBtn = document.getElementById("language-selector-btn") as HTMLElement;
@@ -251,27 +282,16 @@ const { contact, links = [] } = Astro.props;
 
     function initializeDropdown() {
       // Event listener to toggle dropdown visibility
-      dropdownBtn?.addEventListener("click", () => {
-        const expanded = dropdownBtn.getAttribute("aria-expanded") === "true";
-        dropdownBtn.setAttribute("aria-expanded", "" + !expanded);
-        dropdownContent?.setAttribute("aria-hidden", "" + expanded);
-      });
+      dropdownBtn?.addEventListener("click", toggleDropdown);
 
       // Close dropdown on outside click
-      document.addEventListener("click", (event) => {
-        if (
-          !dropdownBtn?.contains(event.target as Node) &&
-          !dropdownContent?.contains(event.target as Node)
-        ) {
-          dropdownBtn?.setAttribute("aria-expanded", "false");
-          dropdownContent?.setAttribute("aria-hidden", "true");
-        }
-      });
+      clickOutside();
 
       // Keyboard navigation
       dropdownBtn?.addEventListener("keydown", (event) => {
-        if (event.key === "ArrowDown") {
+        if (event.key === "Enter") {
           event.preventDefault();
+          toggleDropdown();
           options?.[0].focus();
         }
       });
@@ -280,6 +300,7 @@ const { contact, links = [] } = Astro.props;
         option.addEventListener("click", () => {
           const selectedLang = option.getAttribute("data-lang") as LangCode;
           window.location.pathname = `/${selectedLang.split("-")[0]}`;
+
           dropdownBtn?.setAttribute("aria-expanded", "false");
           dropdownContent?.setAttribute("aria-hidden", "true");
         });
@@ -303,7 +324,24 @@ const { contact, links = [] } = Astro.props;
       });
     }
 
+    function toggleDropdown() {
+      const expanded = dropdownBtn.getAttribute("aria-expanded") === "true";
+      dropdownBtn.setAttribute("aria-expanded", (!expanded).toString());
+      dropdownContent?.setAttribute("aria-hidden", expanded.toString());
+    }
+
+    function clickOutside() {
+      document.addEventListener("click", (event) => {
+        if (
+          !dropdownBtn?.contains(event.target as Node) &&
+          !dropdownContent?.contains(event.target as Node)
+        ) {
+          dropdownBtn?.setAttribute("aria-expanded", "false");
+          dropdownContent?.setAttribute("aria-hidden", "true");
+        }
+      });
+    }
+
     initializeDropdown();
-  }
-  init();
+  });
 </script>
