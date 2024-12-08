@@ -7,6 +7,8 @@ const translations = defineCollection({
     languageCode: z.string(),
     languageName: z.string(),
     translations: z.object({
+      seoTitle: z.string(),
+      seoDescription: z.string(),
       nav: z.object({
         links: z.array(
           z.object({
@@ -15,8 +17,17 @@ const translations = defineCollection({
           })
         ),
       }),
-      hero: z.string(),
+      hero: z.object({
+        title: z.string(),
+        body: z.string(),
+        button: z.string(),
+      }),
       footer: z.string(),
+      contact: z.object({
+        phone: z.string(),
+        email: z.string(),
+        openingTimes: z.string(),
+      }),
     }),
   }),
 });

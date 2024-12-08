@@ -3,24 +3,30 @@ import { Picture } from "astro:assets";
 import heroImage from "../../assets/images/port-full-of-containers.jpeg";
 import "./hero.css";
 import JobForm from "../job-form/JobForm.astro";
+import type { SelectedTranslation } from "../../pages/pl/index.astro";
+import { splitString } from "../../utils/utils";
+
+interface Props {
+  hero: SelectedTranslation["hero"];
+}
 
 const { hero } = Astro.props;
+const formattedHero = splitString(hero.title);
+const formattedHeroAfter = splitString(hero.title, 1);
 ---
 
 <section id="hero-219">
   <div class="cs-container">
     <h1 class="cs-title">
-      <!-- Sub Logistic Gdańsk - <br /> Twój Partner w Spedycji Drogowej w Polsce i Europie -->
-      {hero}
+      {formattedHero}{"-"}
+      <br />
+      {formattedHeroAfter}
     </h1>
     <p class="cs-text">
-      W Sub-Logistic łączymy pasję do transportu z nowoczesnymi rozwiązaniami
-      logistycznymi, oferując naszym klientom kompleksowe usługi spedycyjne drogowe.
-      Dzięki naszemu strategicznemu położeniu w Gdańsku, jesteśmy bramą do Polski i
-      Europy, gwarantując płynność Twoich dostaw na każdym etapie drogi
+      {hero.body}
     </p>
     <button type="button" class="cs-button-solid transport-offer-btn"
-      >Wyceń transport</button
+      >{hero.button}</button
     >
   </div>
   <Picture
@@ -30,6 +36,7 @@ const { hero } = Astro.props;
     alt="lorry driving on a road between forest"
     loading="eager"
   />
+  <!-- new route !!! -->
   <dialog id="cs-dialog">
     <button type="button" autofocus class="close-btn" aria-label="Zamknij dialog"
       >zamknij</button

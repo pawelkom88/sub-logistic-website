@@ -9,8 +9,8 @@ import type { SelectedTranslation } from "../pages/pl/index.astro";
 import Seo from "../seo/Seo.astro";
 
 interface Props {
-  footer?: SelectedTranslation["footer"] | undefined;
-  links?: SelectedTranslation["nav"]["links"] | undefined;
+  footer: SelectedTranslation["footer"];
+  links: SelectedTranslation["nav"]["links"];
   title: string;
   description: string;
   image?: {
@@ -36,7 +36,7 @@ const { links, footer, title, description, image } = Astro.props;
   <body>
     <Nav links={links} />
     <slot />
-    <Footer footer={footer} links={links}/>
+    <Footer footer={footer} links={links} />
     <style is:global>
       :root {
         --primary: #004990;

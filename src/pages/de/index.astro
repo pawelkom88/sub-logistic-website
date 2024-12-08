@@ -15,21 +15,22 @@ type TranslationEntry = CollectionEntry<"translations">;
 
 const allTranslations = await getCollection("translations");
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;
+
 const translationEntry = allTranslations.find(
   (t) => t.data.languageCode === getLangCode(currentLang)
-) as TranslationEntry | undefined;
+) as TranslationEntry;
 
-const { translations } = translationEntry?.data || {};
+const { translations } = translationEntry.data || {};
 export type SelectedTranslation = TranslationEntry["data"]["translations"];
 ---
 
 <Layout
-  links={translations?.nav.links}
-  footer={translations?.footer}
-  title="GER"
-  description="GER"
+  links={translations.nav.links}
+  footer={translations.footer}
+  title={translations.seoTitle}
+  description={translations.seoDescription}
 >
-  <Hero hero={translations?.hero} />
+  <Hero hero={translations.hero} />
   <br />
   <Service />
   <br />

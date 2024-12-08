@@ -12,3 +12,7 @@ export function getLangCode(lang: Lang) {
       return "en-GB";
   }
 }
+
+export function splitString(string: string, el = 0) {
+  return string.split("-")[el];
+}
