@@ -6,9 +6,9 @@ import { googleMapsLink } from "../contact-form/ContactForm.astro";
 import "./footer.css";
 
 interface Props {
-  contact: SelectedTranslation["contact"];
-  footer: SelectedTranslation["footer"];
-  links: SelectedTranslation["nav"]["links"];
+  contact?: SelectedTranslation["contact"];
+  footer?: SelectedTranslation["footer"];
+  links?: SelectedTranslation["nav"]["links"];
 }
 
 const { contact, footer, links } = Astro.props;
@@ -34,7 +34,7 @@ const todaysDate = new Date().getFullYear();
         />
       </a>
       <p class="cs-text">
-        {footer.body}
+        {footer?.body}
       </p>
     </div>
     <!-- Links -->
@@ -43,7 +43,7 @@ const todaysDate = new Date().getFullYear();
         <span class="cs-header">Linki</span>
       </li>
       {
-        links.map(({ url, name }) => {
+        links?.map(({ url, name }) => {
           return (
             <li class="cs-nav-li">
               <a class="cs-nav-link" href={url}>
@@ -73,7 +73,7 @@ const todaysDate = new Date().getFullYear();
           width="24"
           height="24"
         />
-        <a class="cs-nav-link cs-phone" href=`tel:${contact.phone}`>{contact.phone}</a>
+        <a class="cs-nav-link cs-phone" href=`tel:${contact?.phone}`>{contact?.phone}</a>
       </li>
       <li class="cs-nav-li">
         <img
@@ -86,7 +86,7 @@ const todaysDate = new Date().getFullYear();
           width="24"
           height="24"
         />
-        <a class="cs-nav-link cs-email" href=`mailto:${contact.email}`>{contact.email}</a>
+        <a class="cs-nav-link cs-email" href=`mailto:${contact?.email}`>{contact?.email}</a>
       </li>
       <li class="cs-nav-li">
         <img
@@ -105,14 +105,14 @@ const todaysDate = new Date().getFullYear();
           target="_blank"
           rel="noopener"
         >
-          {contact.address}
+          {contact?.address}
         </a>
       </li>
     </ul>
   </div>
   <div class="cs-bottom">
     <span class="cs-copyright"
-      >© {footer.copyright}
+      >© {footer?.copyright}
       {todaysDate} - <a class="cs-copyright-link" href="/">Sub Logistic</a></span
     >
   </div>

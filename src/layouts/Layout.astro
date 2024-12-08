@@ -9,9 +9,9 @@ import type { SelectedTranslation } from "../pages/pl/index.astro";
 import Seo from "../seo/Seo.astro";
 
 interface Props {
-  contact: SelectedTranslation["contact"];
-  footer: SelectedTranslation["footer"];
-  links: SelectedTranslation["nav"]["links"];
+  contact?: SelectedTranslation["contact"] | undefined;
+  footer?: SelectedTranslation["footer"] | undefined;
+  links?: SelectedTranslation["nav"]["links"] | undefined;
   title: string;
   description: string;
   image?: {

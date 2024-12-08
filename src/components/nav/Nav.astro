@@ -15,8 +15,8 @@ import {
 } from "../../utils/utils";
 
 interface Props {
-  contact: SelectedTranslation["contact"];
-  links: SelectedTranslation["nav"]["links"];
+  contact?: SelectedTranslation["contact"];
+  links?: SelectedTranslation["nav"]["links"];
 }
 
 function getLangFullName(lang: Lang) {
@@ -58,7 +58,7 @@ const { contact, links = [] } = Astro.props;
             aria-hidden="true"
             decoding="async"
           />
-          {contact.phone}
+          {contact?.phone}
         </a>
         <div class="working-hours">
           <Image
@@ -70,7 +70,7 @@ const { contact, links = [] } = Astro.props;
             aria-hidden="true"
             decoding="async"
           />
-          {contact.openingTimes}
+          {contact?.openingTimes}
         </div>
       </div>
       <div
