@@ -6,7 +6,13 @@ import deDE from "../../assets/images/de-DE.png";
 import enGB from "../../assets/images/en-GB.png";
 import "./nav.css";
 import { type SelectedTranslation } from "../../pages/pl/index.astro";
-import { getFlagSrc, getLangCode, type Lang, type LangCode } from "../../utils/utils";
+import {
+  getFlagSrc,
+  getLangCode,
+  translateAriaLabel,
+  type Lang,
+  type LangCode,
+} from "../../utils/utils";
 
 interface Props {
   contact: SelectedTranslation["contact"];
@@ -67,16 +73,20 @@ const { contact, links = [] } = Astro.props;
           {contact.openingTimes}
         </div>
       </div>
-      <!-- TODO: dynamically translate based on url -->
-      <div class="language-selector" tabindex="0">
+      <div
+        class="language-selector"
+        tabindex="-1"
+        aria-label={translateAriaLabel(currentLang)}
+      >
         <button id="language-selector-btn" aria-haspopup="listbox" aria-expanded="false">
           <Image
+            aria-hidden="true"
             width="20"
             height="20"
             src={getFlagSrc(getLangCode(currentLang))}
             alt={`${languagesConfig[getLangCode(currentLang)].translations[currentLang]} flag`}
           />
-          <p>{getLangFullName(currentLang)}</p>
+          <p aria-hidden="true">{getLangFullName(currentLang)}</p>
           <span class="arrow-down"></span>
         </button>
         <ul
@@ -90,8 +100,14 @@ const { contact, links = [] } = Astro.props;
               .filter(([lang]) => lang !== getLangCode(currentLang))
               .map(([lang, { translations }]) => {
                 return (
-                  <li role="option" tabindex="-1" data-lang={lang}>
+                  <li
+                    aria-label={translations[currentLang]}
+                    role="option"
+                    tabindex="-1"
+                    data-lang={lang}
+                  >
                     <Image
+                      aria-hidden="true"
                       width="20"
                       height="20"
                       src={getFlagSrc(lang as LangCode)}
@@ -274,7 +290,9 @@ const { contact, links = [] } = Astro.props;
   document.addEventListener("DOMContentLoaded", () => {
     type LangCode = "en-GB" | "de-DE" | "pl-PL";
 
-    const dropdownBtn = document.getElementById("language-selector-btn") as HTMLElement;
+    const dropdownBtn = document.getElementById(
+      "language-selector-btn"
+    ) as HTMLButtonElement;
     const dropdownContent = document.getElementById(
       "language-selector-content"
     ) as HTMLElement;

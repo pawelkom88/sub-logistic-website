@@ -33,3 +33,16 @@ export function getFlagSrc(lang: LangCode) {
       return enGB;
   }
 }
+
+export function translateAriaLabel(lang: Lang) {
+  switch (lang) {
+    case "en":
+      return "Language selector";
+    case "de":
+      return "Sprachauswahl";
+    case "pl":
+      return "Wybierz język";
+    default:
+      return "Language selector";
+  }
+}
