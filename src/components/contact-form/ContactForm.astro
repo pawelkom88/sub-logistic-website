@@ -1,14 +1,11 @@
 ---
+import type { SelectedTranslation } from "../../pages/pl/index.astro";
 import "../contact-form/contact-form.css";
+interface Props {
+  contact?: SelectedTranslation["contact"] | undefined;
+}
 
-// content collection !!!
-const contactInfo = {
-  address: "ul. Marynarki Polskiej 136A/47,",
-  postCode: "80-865 Gdańsk",
-  email: "piotr.subotowicz@sublog.com.pl",
-  phone: "+48 510 482 468",
-};
-
+const { contact } = Astro.props;
 export const googleMapsLink =
   "https://www.google.pl/maps/place/Marynarki+Polskiej+136A%2F47,+80-865+Gda%C5%84sk/@54.3787535,18.6284272,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd74a1ec7664fb:0x4a47f05d5bd9227a!8m2!3d54.3787535!4d18.6310021?entry=ttu";
 ---
@@ -33,8 +30,7 @@ export const googleMapsLink =
           target="_blank"
           rel="noopener noreferrer"
         >
-          {contactInfo.address}
-          <br />{contactInfo.postCode}
+          {contact.address}
         </a>
         <span aria-hidden="true" class="cs-tooltip">Kliknij w link aby zobaczyć mape</span
         >
@@ -42,13 +38,14 @@ export const googleMapsLink =
       <br />
       <!--Email-->
       <span class="cs-header">Email</span>
-      <a href=`mailto:${contactInfo.email}` class="cs-link">{contactInfo.email}</a>
+      <a href=`mailto:${contact.email}` class="cs-link">{contact.email}</a>
 
       <!--Phone-->
       <span class="cs-header">Telefon</span>
-      <a href=`tel:${contactInfo.phone}` class="cs-link">{contactInfo.phone}</a>
+      <a href=`tel:${contact.phone}` class="cs-link">{contact.phone}</a>
     </div>
     <!-- Form -->
+    <!-- TODO: check docs -->
     <form
       id="cs-form-490"
       name="Contact Form"
@@ -57,8 +54,7 @@ export const googleMapsLink =
     >
       <!-- HIDDEN -->
       <!-- <input type="hidden" name="redirect" value="wiadomosc-wyslana" /> -->
-      <!--  TODO: env var -->
-      <input type="hidden" name="apikey" value="e63617a1-6b8c-4a8f-adf8-03aba92d5110" />
+      <input type="hidden" name="apikey" value={import.meta.env.VITE_API_KEY} />
       <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
       <input type="hidden" name="subject" value="Nowa wiadomość ze strony" />
       <!-- HIDDEN -->
@@ -100,23 +96,14 @@ export const googleMapsLink =
           id="message-490"
           placeholder="Witam, jestem zainteresowany wspłópraca..."></textarea>
       </label>
-      <div class="cs-captcha">
-        <div
-          class="h-captcha"
-          data-captcha="true"
-          data-lang="pl"
-          data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-        >
-        </div>
-        <div class="error-message"></div>
-      </div>
       <br />
       <button class="cs-button-solid" type="submit">Wyślij wiadomość</button>
     </form>
-    <div class="lds-spinner"></div>
+    <!-- !! FOR JS -->
+    <!-- <div class="lds-spinner"></div>
     <div class="success-component">Wiadomość została wysłana pomyślnie!</div>
     <div class="error-component">Wystąpił błąd, spróbuj ponownie później.</div>
-    <a href="/" class="back-to-home">Powrót do strony głównej</a>
+    <a href="/" class="back-to-home">Powrót do strony głównej</a> -->
   </div>
 </section>
 
@@ -136,7 +123,7 @@ export const googleMapsLink =
   });
 </script>
 
-<script>
+<!-- <script>
   function h() {
     document.addEventListener("DOMContentLoaded", function () {
       const spinner = document.querySelector(".lds-spinner") as HTMLElement;
@@ -213,4 +200,7 @@ export const googleMapsLink =
   }
 
   h();
-</script>
+</script> -->
+
+<!-- TODO: CUSTOM FORM LOGIC  -->
+<script></script>

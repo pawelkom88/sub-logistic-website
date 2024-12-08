@@ -17,7 +17,7 @@ const allTranslations = await getCollection("translations");
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;
 
 const translationEntry = allTranslations.find(
-  (t) => t.data.languageCode === getLangCode(currentLang)
+  (t: TranslationEntry) => t.data.languageCode === getLangCode(currentLang)
 ) as TranslationEntry;
 
 const { translations } = translationEntry.data || {};
@@ -43,6 +43,6 @@ export type SelectedTranslation = TranslationEntry["data"]["translations"];
   <br />
   <Cta />
   <br />
-  <ContactForm />
+  <ContactForm contact={translations.contact} />
   <br />
 </Layout>
