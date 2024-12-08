@@ -30,7 +30,9 @@
     right: 0;
     z-index: -1100;
     opacity: 0;
-    transition: height 0.5s, opacity 0.5s;
+    transition:
+      height 0.5s,
+      opacity 0.5s;
   }
   #cs-navigation.cs-active:before {
     height: 150vh;
@@ -181,7 +183,10 @@
   #cs-navigation .cs-line1 {
     top: 0;
     transform-origin: center;
-    transition: transform 0.5s, top 0.3s, left 0.3s;
+    transition:
+      transform 0.5s,
+      top 0.3s,
+      left 0.3s;
     animation-duration: 0.7s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
@@ -190,7 +195,10 @@
   #cs-navigation .cs-line2 {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-    transition: top 0.3s, left 0.3s, transform 0.5s;
+    transition:
+      top 0.3s,
+      left 0.3s,
+      transform 0.5s;
     animation-duration: 0.7s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
@@ -198,7 +206,9 @@
   }
   #cs-navigation .cs-line3 {
     bottom: 0;
-    transition: bottom 0.3s, opacity 0.3s;
+    transition:
+      bottom 0.3s,
+      opacity 0.3s;
   }
   #cs-navigation .cs-ul-wrapper {
     width: 100%;
@@ -214,7 +224,9 @@
     z-index: -1;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 0.4s, opacity 0.3s;
+    transition:
+      transform 0.4s,
+      opacity 0.3s;
   }
   #cs-navigation .cs-ul {
     margin: 0;
@@ -237,7 +249,9 @@
     /* transition from these values */
     transform: translateY(-4.375rem);
     opacity: 0;
-    transition: transform 0.6s, opacity 0.9s;
+    transition:
+      transform 0.6s,
+      opacity 0.9s;
   }
   #cs-navigation .cs-li:nth-of-type(1) {
     transition-delay: 0.05s;
@@ -326,8 +340,8 @@
     font-size: 0.875rem;
   }
   body.scroll #cs-navigation {
-    /* 53px, the ssme height as the cs-top-container */
-    transform: translateY(-3.3125rem);
+    /* 53px, the same height as the cs-top-container */
+    transform: translateY(-4rem);
   }
   #cs-navigation {
     width: 100%;
@@ -527,4 +541,3 @@
     margin-left: 1.5rem;
   }
 }
-

@@ -65,15 +65,15 @@ const { contact, links = [] } = Astro.props;
           aria-labelledby="language-selector-btn"
         >
           <li role="option" tabindex="-1" data-lang="pl-PL">
-            <Image src={polishFlag} alt="Polish flag" />
+            <Image width="20" height="20" src={polishFlag} alt="Polish flag" />
             Polski
           </li>
           <li role="option" tabindex="-1" data-lang="en-GB">
-            <Image src={ukFlag} alt="English flag" />
+            <Image width="20" height="20" src={ukFlag} alt="English flag" />
             Angielski
           </li>
           <li role="option" tabindex="-1" data-lang="de-DE">
-            <Image src={germanFlag} alt="German flag" />
+            <Image width="20" height="20" src={germanFlag} alt="German flag" />
             Niemiecki
           </li>
         </ul>
@@ -123,10 +123,10 @@ const { contact, links = [] } = Astro.props;
 
 <style>
   .language-selector {
+    min-width: 100px;
     position: relative;
     display: inline-block;
   }
-
   .language-selector-button {
     background-color: var(--primary);
     border: none;
@@ -150,14 +150,16 @@ const { contact, links = [] } = Astro.props;
   .language-selector-content {
     display: none;
     position: absolute;
+    left: -0.6rem;
     background-color: var(--white);
     list-style: none;
     margin: 0;
+    margin-top: 5px;
     padding: 0;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     z-index: 10;
-    min-width: 150px;
+    min-width: 120px;
   }
 
   .language-selector-content[aria-hidden="false"] {
@@ -166,6 +168,10 @@ const { contact, links = [] } = Astro.props;
 
   .language-selector-content li {
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
     cursor: pointer;
   }
 
@@ -177,102 +183,61 @@ const { contact, links = [] } = Astro.props;
 </style>
 
 <script>
-  // const isMobile = window.matchMedia("(max-width: 768px)").matches;
-  // const languageSelector = document.querySelector(".language-selector") as HTMLElement;
+  function init() {
+    // add classes for mobile navigation toggling
+    const CSbody = document.querySelector("body") as HTMLBodyElement;
+    const CSnavbarMenu = document.querySelector("#cs-navigation") as HTMLElement;
+    const CShamburgerMenu = document.querySelector(
+      "#cs-navigation .cs-toggle"
+    ) as HTMLElement;
+    const logo = document.querySelector(".cs-logo") as HTMLImageElement;
 
-  // if (isMobile) {
-  //   languageSelector.style.display = "none";
-  // }
-  // add classes for mobile navigation toggling
-  const CSbody = document.querySelector("body") as HTMLBodyElement;
-  const CSnavbarMenu = document.querySelector("#cs-navigation") as HTMLElement;
-  const CShamburgerMenu = document.querySelector(
-    "#cs-navigation .cs-toggle"
-  ) as HTMLElement;
-  const logo = document.querySelector(".cs-logo") as HTMLImageElement;
+    CShamburgerMenu.addEventListener("click", function () {
+      CShamburgerMenu.classList.toggle("cs-active");
+      CSnavbarMenu.classList.toggle("cs-active");
+      CSbody.classList.toggle("cs-open");
+      // run the function to check the aria-expanded value
+      ariaExpanded();
+    });
 
-  CShamburgerMenu.addEventListener("click", function () {
-    CShamburgerMenu.classList.toggle("cs-active");
-    CSnavbarMenu.classList.toggle("cs-active");
-    CSbody.classList.toggle("cs-open");
-    // run the function to check the aria-expanded value
-    ariaExpanded();
-  });
+    // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not
+    function ariaExpanded() {
+      const csUL = document.querySelector("#cs-expanded");
+      const csExpanded = csUL?.getAttribute("aria-expanded");
 
-  // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not
-  function ariaExpanded() {
-    const csUL = document.querySelector("#cs-expanded");
-    const csExpanded = csUL?.getAttribute("aria-expanded");
+      if (csExpanded === "false") {
+        csUL?.setAttribute("aria-expanded", "true");
+      } else {
+        csUL?.setAttribute("aria-expanded", "false");
+      }
+    }
 
-    if (csExpanded === "false") {
-      csUL?.setAttribute("aria-expanded", "true");
-    } else {
-      csUL?.setAttribute("aria-expanded", "false");
+    document.addEventListener("scroll", () => {
+      const transition = (logo.style.transition = "all 0.3s ease-in-out");
+
+      const scroll = document.documentElement.scrollTop;
+      if (scroll >= 100) {
+        document.querySelector("body")?.classList.add("scroll");
+        logo.style.height = "clamp(3.6rem, 5.76vw, 3.96rem";
+        transition;
+      } else {
+        document.querySelector("body")?.classList.remove("scroll");
+        logo.style.height = "clamp(4.32rem, 6.912vw, 4.752rem)";
+        transition;
+      }
+    });
+
+    // mobile nav toggle code
+    const dropDowns = Array.from(
+      document.querySelectorAll("#cs-navigation .cs-dropdown")
+    );
+    for (const item of dropDowns) {
+      item.addEventListener("click", () => item.classList.toggle("cs-active"));
     }
   }
 
-  document.addEventListener("scroll", () => {
-    const transition = (logo.style.transition = "all 0.3s ease-in-out");
-
-    const scroll = document.documentElement.scrollTop;
-    if (scroll >= 100) {
-      document.querySelector("body")?.classList.add("scroll");
-      logo.style.height = "clamp(3.6rem, 5.76vw, 3.96rem";
-      transition;
-    } else {
-      document.querySelector("body")?.classList.remove("scroll");
-      logo.style.height = "clamp(4.32rem, 6.912vw, 4.752rem)";
-      transition;
-    }
-  });
-
-  // mobile nav toggle code
-  const dropDowns = Array.from(document.querySelectorAll("#cs-navigation .cs-dropdown"));
-  for (const item of dropDowns) {
-    item.addEventListener("click", () => item.classList.toggle("cs-active"));
-  }
+  init();
 </script>
-
-<!-- LANGUAGE SELECTOR -->
-<!-- <script is:inline define:vars={{ currentLanguage }}>
-  console.log("currentLanguage, bottom", currentLanguage);
-
-  import polishFlag from "../../assets/images/pl-PL.png";
-  import germanFlag from "../../assets/images/de-DE.png";
-  import ukFlag from "../../assets/images/en-GB.png";
-
-  function getFlag(lang) {
-    switch (lang) {
-      case "en-GB":
-        return ukFlag;
-      case "de-DE":
-        return germanFlag;
-      case "pl-PL":
-        return polishFlag;
-      default:
-        return ukFlag;
-    }
-  }
-
-  const locales = ["en-GB", "de-DE", "pl-PL"];
-  const dropdownBtn = document.getElementById("language-selector-btn");
-  const dropdownContent = document.getElementById("language-selector-content");
-
-  dropdownBtn.addEventListener("click", () => {
-    dropdownContent.classList.toggle("cs-active");
-  });
-
-  function setFlags() {
-    const listItem = document.createElement("li");
-    listItem.textContent = "123";
-    const flag = document.createElement("img");
-    flag.src = getFlag(currentLanguage);
-    listItem.appendChild(flag);
-    dropdownContent.appendChild(listItem);
-  }
-
-  setFlags();
-</script> -->
 
 <script>
   function init() {
