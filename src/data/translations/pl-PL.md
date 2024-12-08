@@ -20,10 +20,13 @@ translations:
       Dzięki naszemu strategicznemu położeniu w Gdańsku, jesteśmy bramą do Polski i
       Europy, gwarantując płynność Twoich dostaw na każdym etapie drogi.
     button: "Wyceń transport"
-  footer: "Wszelkie prawa zastrzeżone."
+  footer:
+    body: >
+      Zapraszamy do kontaktu i współpracy. Niezależnie od tego, czy szukasz partnera do stałej współpracy, czy potrzebujesz wsparcia przy jednorazowym zleceniu, Sub Logistic jest gotowy, aby wspierać Twój biznes na drogach Polski, Europy i świata.
+    copyright: "Wszelkie prawa zastrzeżone."
   contact:
-    phone: "+48 510 482 468"
+    phone: "Zadzwoń: +48 510 482 468"
     email: "piotr.subotowicz@sublog.com.pl"
-    openingTimes: "Poniedziałek - Piatek: 8:00 - 17:00"
+    openingTimes: "Pracujemy: Poniedziałek - Piątek: 8:00 - 17:00"
     address: "ul. Marynarki Polskiej 136A/47, 80-865 Gdańsk"
 ---

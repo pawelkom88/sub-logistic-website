@@ -22,11 +22,15 @@ const translations = defineCollection({
         body: z.string(),
         button: z.string(),
       }),
-      footer: z.string(),
+      footer: z.object({
+        body: z.string(),
+        copyright: z.string(),
+      }),
       contact: z.object({
         phone: z.string(),
         email: z.string(),
         openingTimes: z.string(),
+        address: z.string(),
       }),
     }),
   }),

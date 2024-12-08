@@ -9,12 +9,13 @@ import { type SelectedTranslation } from "../../pages/pl/index.astro";
 import type { Lang } from "../../utils/utils";
 
 interface Props {
+  contact: SelectedTranslation["contact"];
   links: SelectedTranslation["nav"]["links"];
 }
 
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;
 
-const { links = [] } = Astro.props;
+const { contact, links = [] } = Astro.props;
 ---
 
 <header id="cs-navigation">
@@ -31,7 +32,7 @@ const { links = [] } = Astro.props;
             aria-hidden="true"
             decoding="async"
           />
-          Zadzwoń: +48 510 482 468
+          {contact.phone}
         </a>
         <div class="working-hours">
           <Image
@@ -43,7 +44,7 @@ const { links = [] } = Astro.props;
             aria-hidden="true"
             decoding="async"
           />
-          Pracujemy: Poniedziałek - Piatek: 8:00 - 17:00
+          {contact.openingTimes}
         </div>
       </div>
       <!-- TODO: dynamically translate based on url -->
