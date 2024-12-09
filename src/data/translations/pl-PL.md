@@ -20,6 +20,20 @@ translations:
       Dzięki naszemu strategicznemu położeniu w Gdańsku, jesteśmy bramą do Polski i
       Europy, gwarantując płynność Twoich dostaw na każdym etapie drogi.
     button: "Wyceń transport"
+  services:
+    topper: "Wyróżniamy się na tle konkurencji."
+    heading: "Dlaczego nasze usługi spedycyjne?"
+    description: >
+      W Sub Logistic rozumiemy, jak ważna jest efektywna logistyka dla sukcesu Twojego biznesu. Oferujemy szeroki zakres usług transportowych i logistycznych, dostosowanych do Twoich oczekiwań. Nasz zespół to gwarancja profesjonalizmu i dostosowania do indywidualnych potrzeb każdego zlecenia.
+    cards:
+      - title: "Globalna Współpraca"
+        body: "W ciągu wielu lat stworzyliśmy rozległą sieć partnerów w branży logistycznej, zapewniając efektywny transport i przewóz towarów na każdą skalę. Nasze doświadczenie przekłada się również na logistykę międzynarodową."
+      - title: "Indywidualne Podejście"
+        body: "W Sub Logistic nie tylko oferujemy usługi logistyczne najwyższej klasy, ale także budujemy relacje, zapewniając indywidualne podejście i wsparcie na każdym kroku."
+      - title: "Atrakcyjne warunki współpracy"
+        body: "Oferujemy konkurencyjne ceny oraz elastyczne podejście do każdego klienta. Nasza oferta jest dostosowana do Twoich potrzeb biznesowych."
+      - title: "Bezpieczeństwo i Niezawodność"
+        body: "W Sub Logistic, priorytetem jest gwarancja bezpieczeństwa i punktualności Twoich przesyłek. Stosujemy sprawdzone protokoły bezpieczeństwa i skuteczne metody transportu, aby każdy ładunek dotarł na miejsce nienaruszony i terminowo."
   footer:
     body: >
       Zapraszamy do kontaktu i współpracy. Niezależnie od tego, czy szukasz partnera do stałej współpracy, czy potrzebujesz wsparcia przy jednorazowym zleceniu, Sub Logistic jest gotowy, aby wspierać Twój biznes na drogach Polski, Europy i świata.

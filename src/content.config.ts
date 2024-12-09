@@ -22,6 +22,17 @@ const translations = defineCollection({
         body: z.string(),
         button: z.string(),
       }),
+      services: z.object({
+        topper: z.string(),
+        heading: z.string(),
+        description: z.string(),
+        cards: z.array(
+          z.object({
+            title: z.string(),
+            body: z.string(),
+          })
+        ),
+      }),
       footer: z.object({
         body: z.string(),
         copyright: z.string(),

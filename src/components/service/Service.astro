@@ -1,95 +1,54 @@
 ---
 import { Picture } from "astro:assets";
-import serviceImage5 from "../../assets/images/customer-service.jpg";
-import serviceImage4 from "../../assets/images/forklift-loading-lorry.jpg";
+import serviceImage4 from "../../assets/images/customer-service.jpg";
+import serviceImage3 from "../../assets/images/forklift-loading-lorry.jpg";
 import serviceImage1 from "../../assets/images/lorry-driving-mountains-in-the-background.jpg";
-import serviceImage3 from "../../assets/images/man-with-a-van-full-of-parcels.jpg";
+import serviceImage2 from "../../assets/images/man-with-a-van-full-of-parcels.jpg";
+import type { SelectedTranslation } from "../../pages/pl/index.astro";
 import "./service.css";
+
+interface Props {
+  service: SelectedTranslation["services"] | undefined;
+}
+
+const { service } = Astro.props;
+
+const serviceCards = service?.cards.map((card, index) => ({
+  title: card.title,
+  body: card.body,
+  image:
+    [serviceImage1, serviceImage2, serviceImage3, serviceImage4][index] || serviceImage4,
+}));
 ---
 
 <section id="services-1628">
   <div class="cs-container">
     <div class="cs-content">
       <div class="cs-flex">
-        <span class="cs-topper">Wyróżniamy się na tle konkurencji.</span>
-        <!-- <span class="cs-topper">Innowacja w Transporcie</span> -->
-        <h2 class="cs-title">Dlaczego nasze usługi spedycyjne ?</h2>
+        <span class="cs-topper">{service?.topper}</span>
+        <h2 class="cs-title">{service?.heading}</h2>
       </div>
       <p class="cs-text">
-        W Sub Logistic rozumiemy, jak ważna jest efektywna logistyka dla sukcesu Twojego
-        biznesu. Oferujemy szeroki zakres usług transportowych i logistycznych,
-        dostosowanych do Twoich oczekiwań. Nasz zespół to gwarancja profesjonalizmu i
-        dostosowania do indywidualnych potrzeb każdego zlecenia.
+        {service?.description}
       </p>
     </div>
     <ul class="cs-card-group">
-      <li class="cs-item">
-        <Picture
-          src={serviceImage1}
-          alt="room"
-          width="813"
-          height="820"
-          class="cs-picture"
-          formats={["avif", "webp"]}
-          loading="lazy"
-        />
-
-        <h3 class="cs-h3">Globalna Współpraca</h3>
-        <p class="cs-item-text">
-          W ciągu wielu lat stworzyliśmy rozległą sieć partnerów w branży logistycznej,
-          zapewniając efektywny transport i przewóz towarów na każdą skalę. Nasze
-          doświadczenie przekłada się również logistykę międzynarodową.
-        </p>
-      </li>
-      <li class="cs-item">
-        <Picture
-          style={{ objectPosition: "center" }}
-          src={serviceImage3}
-          alt="room"
-          width="813"
-          height="820"
-          class="cs-picture"
-          formats={["avif", "webp"]}
-          loading="lazy"
-        />
-        <h3 class="cs-h3">Indywidualne Podejście</h3>
-        <p class="cs-item-text">
-          W Sub Logistic nie tylko oferujemy usługi logistyczne najwyższej klasy, ale
-          także budujemy relacje, zapewniając indywidualne podejście i wsparcie na każdym
-          kroku.
-        </p>
-      </li>
-      <li class="cs-item">
-        <Picture
-          src={serviceImage5}
-          alt="room"
-          width="813"
-          height="820"
-          class="cs-picture"
-          formats={["avif", "webp"]}
-          loading="lazy"
-        />
-        <h3 class="cs-h3">Atrakcyjne warunki wspołpracy</h3>
-        <p class="cs-item-text">?</p>
-      </li>
-      <li class="cs-item">
-        <Picture
-          style={{ objectPosition: "center" }}
-          src={serviceImage4}
-          alt="room"
-          width="813"
-          height="820"
-          class="cs-picture"
-          formats={["avif", "webp"]}
-          loading="lazy"
-        />
-        <h3 class="cs-h3">Bezpieczeństwo i Niezawodność</h3>
-        <p class="cs-item-text">
-          W Sub Logistic, priorytetem jest gwarancja bezpieczeństwa i punktualności Twoich
-          przesyłek. Stosujemy sprawdzone protokoły bezpieczeństwa i skuteczne metody
-          transportu, aby każdy ładunek dotarł na miejsce nienaruszony i terminowo.
-        </p>
-      </li>
+      {
+        serviceCards?.map((card) => (
+          <li class="cs-item">
+            <Picture
+              src={card.image}
+              alt="asd"
+              width="813"
+              height="820"
+              class="cs-picture"
+              formats={["avif", "webp"]}
+            />
+            <h3 class="cs-h3">{card.title}</h3>
+            <p class="cs-item-text">{card.body}</p>
+          </li>
+        ))
+      }
     </ul>
   </div>
 </section>
