@@ -9,14 +9,15 @@ import { type SelectedTranslation } from "../../pages/pl/index.astro";
 import {
   getFlagSrc,
   getLangCode,
+  isContactLink,
   translateAriaLabel,
   type Lang,
   type LangCode,
 } from "../../utils/utils";
 
 interface Props {
-  contact?: SelectedTranslation["contact"];
-  links?: SelectedTranslation["nav"]["links"];
+  contact?: SelectedTranslation["contact"] | undefined;
+  links?: SelectedTranslation["nav"]["links"] | undefined;
 }
 
 function getLangFullName(lang: Lang) {
@@ -146,10 +147,13 @@ const { contact, links = [] } = Astro.props;
       <div class="cs-ul-wrapper">
         <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
           {
-            links.map(({ url, name }) => {
+            links?.map(({ url, name }) => {
               return (
                 <li class="cs-li">
-                  <a href={`${currentLang}${url}`} class="cs-li-link">
+                  <a
+                    href={`${currentLang}${url}`}
+                    class="cs-li-link"
+                  >
                     {name}
                   </a>
                 </li>
@@ -162,72 +166,6 @@ const { contact, links = [] } = Astro.props;
     <a href="#cs-contact-490" class="cs-button-solid cs-nav-button">Kontakt</a>
   </div>
 </header>
-
-<style>
-  .language-selector {
-    position: relative;
-    display: inline-block;
-  }
-
-  #language-selector-btn {
-    min-width: 7rem;
-    background-color: var(--primary);
-    border: none;
-    border-radius: 5px;
-    color: var(--white);
-    padding-inline: 0.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  #language-selector-btn:hover {
-    background-color: var(--hover);
-  }
-
-  .arrow-down {
-    width: 10px;
-    height: 10px;
-    border-style: solid;
-    border-width: 5px 5px 0 5px;
-    border-color: var(--white) transparent transparent transparent;
-  }
-
-  .language-selector-content {
-    display: none;
-    position: absolute;
-    left: -0.2rem;
-    background-color: var(--white);
-    list-style: none;
-    margin: 0;
-    margin-top: 5px;
-    padding: 0;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    z-index: 10;
-    min-width: 120px;
-  }
-
-  .language-selector-content[aria-hidden="false"] {
-    display: block;
-  }
-
-  .language-selector-content li {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.5rem;
-    cursor: pointer;
-  }
-
-  .language-selector-content li:hover,
-  .language-selector-content li:focus {
-    background-color: var(--hover);
-    color: var(--white);
-  }
-</style>
 
 <script>
   function init() {

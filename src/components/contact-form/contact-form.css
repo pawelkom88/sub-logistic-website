@@ -90,6 +90,7 @@
     border-radius: 1rem;
   }
   #cs-contact-490 .cs-label {
+    position: relative;
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1.3vw, 1rem);
     line-height: 1.5em;
@@ -102,6 +103,23 @@
     align-items: flex-start;
     flex-direction: column;
   }
+
+  #cs-contact-490 .cs-label:has(input:not(input[type="checkbox"]):user-valid):after {
+    position: absolute;
+    top: 2.8rem;
+    right: 1rem;
+    content: "✓";
+    color: green;
+  }
+
+  #cs-contact-490 .cs-label:has(input:not(input[type="checkbox"]):user-invalid):after {
+    position: absolute;
+    top: 2.8rem;
+    right: 1rem;
+    content: "✗";
+    color: var(--secondary);
+  }
+
   #cs-contact-490 .cs-label-message {
     /* 32px - 40px */
     margin-bottom: clamp(2rem, 4.5vw, 2.5rem);
@@ -128,6 +146,15 @@
   #cs-contact-490 textarea::placeholder {
     color: #7d799c;
   }
+
+  .cs-input:user-valid {
+    border-bottom: 2px solid green;
+  }
+
+  .cs-input:user-invalid {
+    border-bottom: 2px solid var(--secondary);
+  }
+
   #cs-contact-490 textarea {
     font-family: inherit;
     margin: 0;

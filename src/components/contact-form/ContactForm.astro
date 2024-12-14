@@ -1,11 +1,15 @@
 ---
 import type { SelectedTranslation } from "../../pages/pl/index.astro";
+import type { Lang } from "../../utils/utils";
 import "../contact-form/contact-form.css";
 interface Props {
   contact?: SelectedTranslation["contact"] | undefined;
 }
 
+const currentLang = Astro.url.pathname.split("/")[1] as Lang;
+
 const { contact } = Astro.props;
+
 export const googleMapsLink =
   "https://www.google.pl/maps/place/Marynarki+Polskiej+136A%2F47,+80-865+Gda%C5%84sk/@54.3787535,18.6284272,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd74a1ec7664fb:0x4a47f05d5bd9227a!8m2!3d54.3787535!4d18.6310021?entry=ttu";
 ---
@@ -61,11 +65,13 @@ export const googleMapsLink =
       <label for="name-490" class="cs-label">
         Imię <input
           class="cs-input"
-          required=""
+          required="required"
           type="text"
           id="name-490"
           name="name"
-          placeholder="Jan Kowalski"
+          pattern="[A-Za-z]{2,}"
+          placeholder="np. Jan Kowalski"
+          autocomplete="given-name"
         />
       </label>
       <label for="email-490" class="cs-label">
@@ -75,17 +81,22 @@ export const googleMapsLink =
           type="email"
           id="email-490"
           name="email"
-          placeholder="jakkowalski@firma.pl"
+          placeholder="np. jakkowalski@firma.pl"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          autocomplete="email"
         />
       </label>
       <label for="phone-490" class="cs-label">
         Telefon <input
           class="cs-input"
           required
+          pattern="(?<!\w)(\(?(\+|00)?48\)?)?[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}(?!\w)"
           type="tel"
           id="phone-490"
           name="phone"
-          placeholder="0621345123"
+          placeholder="np. 0621345123"
+          autocomplete="tel"
+          minlength="9"
         />
       </label>
       <label for="message-490" class="cs-label -label-message">
@@ -96,8 +107,21 @@ export const googleMapsLink =
           id="message-490"
           placeholder="Witam, jestem zainteresowany wspłópraca..."></textarea>
       </label>
+      <div class="cs-label cs-span-2">
+        <label for="agreement">
+          Zgadzam się na przetwarzanie moich danych osobowych zgodnie z
+          <a href={`${currentLang}${contact?.policyLink}`}>polityką prywatności</a>
+          <input
+            class="cs-checkbox"
+            type="checkbox"
+            id="agreement"
+            name="Polityka prywatności"
+            required
+          />
+        </label>
+      </div>
       <br />
-      <button class="cs-button-solid" type="submit">Wyślij wiadomość</button>
+      <button class="cs-button-solid">Wyślij wiadomość</button>
     </form>
     <!-- !! FOR JS -->
     <!-- <div class="lds-spinner"></div>

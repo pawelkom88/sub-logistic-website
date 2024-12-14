@@ -6,7 +6,7 @@ export type Lang = "en" | "de" | "pl";
 
 export type LangCode = "en-GB" | "de-DE" | "pl-PL";
 
-export function getLangCode(lang: Lang) {
+export function getLangCode(lang: Lang): LangCode {
   switch (lang) {
     case "en":
       return "en-GB";
@@ -19,11 +19,11 @@ export function getLangCode(lang: Lang) {
   }
 }
 
-export function splitString(string: string, el = 0) {
+export function splitString(string: string, el = 0): string {
   return string.split("-")[el];
 }
 
-export function getFlagSrc(lang: LangCode) {
+export function getFlagSrc(lang: LangCode): ImageMetadata {
   switch (lang) {
     case "pl-PL":
       return plPL;
@@ -34,7 +34,7 @@ export function getFlagSrc(lang: LangCode) {
   }
 }
 
-export function translateAriaLabel(lang: Lang) {
+export function translateAriaLabel(lang: Lang): string {
   switch (lang) {
     case "en":
       return "Language selector";
@@ -45,4 +45,8 @@ export function translateAriaLabel(lang: Lang) {
     default:
       return "Language selector";
   }
+}
+
+export function isContactLink(url: string): boolean {
+  return url === "/kontak" || url === "/contact";
 }

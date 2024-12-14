@@ -42,6 +42,7 @@ const translations = defineCollection({
         email: z.string(),
         openingTimes: z.string(),
         address: z.string(),
+        policyLink: z.string(),
       }),
     }),
   }),
