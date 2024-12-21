@@ -33,18 +33,22 @@ translations:
         body: >
           Over the years, we have built an extensive network of partners in the logistics industry,
           ensuring efficient transport and shipping on every scale. Our experience also extends to international logistics.
+        alt: "A truck driving through mountains with a beautiful landscape"
       - title: "Personalised Approach"
         body: >
           At Sub Logistic, we not only provide top-class logistics services but also build relationships,
           offering a personalised approach and support at every step.
+        alt: "A focused courier with a tablet in hand against the backdrop of a van full of packages"
       - title: "Attractive Cooperation Terms"
         body: >
           We offer competitive pricing and a flexible approach to every client.
           Our offer is tailored to your business needs.
+        alt: "A forklift loading a truck"
       - title: "Safety and Reliability"
         body: >
           At Sub Logistic, ensuring the safety and punctuality of your shipments is a priority.
           We use proven safety protocols and effective transport methods to ensure every shipment arrives intact and on time.
+        alt: "A Sub Logistic employee at work"
   footer:
     body: >
       We invite you to get in touch and work with us. Whether you are looking for a partner for ongoing collaboration

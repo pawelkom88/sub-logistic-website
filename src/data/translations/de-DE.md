@@ -31,19 +31,23 @@ translations:
         body: >
           Im Laufe der Jahre haben wir ein umfangreiches Netzwerk von Partnern in der Logistikbranche aufgebaut,
           das einen effizienten Transport und Versand von Waren in jeder Größenordnung ermöglicht. Unsere Erfahrung umfasst auch die internationale Logistik.
+        alt: "Ein Lastwagen, der durch Berge mit einer wunderschönen Landschaft fährt"
       - title: "Individuelle Herangehensweise"
         body: >
           Bei Sub Logistic bieten wir nicht nur erstklassige Logistikdienstleistungen,
           sondern bauen auch Beziehungen auf, indem wir einen individuellen Ansatz und Unterstützung auf jedem Schritt des Weges bieten.
+        alt: "Ein konzentrierter Kurier mit einem Tablet in der Hand vor einem Lieferwagen voller Pakete"
       - title: "Attraktive Kooperationsbedingungen"
         body: >
           Wir bieten wettbewerbsfähige Preise und einen flexiblen Ansatz für jeden Kunden.
           Unser Angebot ist auf die Bedürfnisse Ihres Unternehmens zugeschnitten.
+        alt: "Ein Gabelstapler, der einen Lastwagen belädt"
       - title: "Sicherheit und Zuverlässigkeit"
         body: >
           Bei Sub Logistic hat die Sicherheit und Pünktlichkeit Ihrer Sendungen oberste Priorität.
           Wir setzen bewährte Sicherheitsprotokolle und effektive Transportmethoden ein,
           damit jede Lieferung unversehrt und termingerecht ankommt.
+        alt: "Ein Sub Logistic Mitarbeiter bei der Arbeit"
   footer:
     body: >
       Wir laden Sie ein, mit uns Kontakt aufzunehmen und zusammenzuarbeiten. Egal, ob Sie einen Partner für eine dauerhafte Zusammenarbeit suchen oder Unterstützung bei einem einmaligen Auftrag benötigen, Sub Logistic ist bereit, Ihr Unternehmen auf den Straßen Polens, Europas und der Welt zu unterstützen.

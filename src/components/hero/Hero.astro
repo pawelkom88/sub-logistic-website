@@ -3,8 +3,7 @@ import { Picture } from "astro:assets";
 import heroImage from "../../assets/images/port-full-of-containers.jpeg";
 import "./hero.css";
 import JobForm from "../job-form/JobForm.astro";
-import type { SelectedTranslation } from "../../pages/pl/index.astro";
-import { splitString } from "../../utils/utils";
+import { splitString, type SelectedTranslation } from "../../utils/utils";
 
 interface Props {
   hero: SelectedTranslation["hero"];

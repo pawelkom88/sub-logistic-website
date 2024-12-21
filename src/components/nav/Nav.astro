@@ -1,44 +1,22 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../../assets/images/sub-logistics-logo.webp";
-import plPL from "../../assets/images/pl-PL.png";
-import deDE from "../../assets/images/de-DE.png";
-import enGB from "../../assets/images/en-GB.png";
 import "./nav.css";
-import { type SelectedTranslation } from "../../pages/pl/index.astro";
 import {
   getFlagSrc,
   getLangCode,
-  isContactLink,
+  getLangFullName,
+  languagesConfig,
   translateAriaLabel,
   type Lang,
   type LangCode,
+  type SelectedTranslation,
 } from "../../utils/utils";
 
 interface Props {
   contact?: SelectedTranslation["contact"] | undefined;
   links?: SelectedTranslation["nav"]["links"] | undefined;
 }
-
-function getLangFullName(lang: Lang) {
-  switch (lang) {
-    case "pl":
-      return "Polski";
-    case "de":
-      return "Deutsch";
-    case "en":
-      return "English";
-  }
-}
-
-const languagesConfig = {
-  "pl-PL": { flag: plPL, translations: { pl: "Polski", en: "Polish", de: "Polnisch" } },
-  "en-GB": {
-    flag: enGB,
-    translations: { pl: "Angielski", en: "English", de: "Englisch" },
-  },
-  "de-DE": { flag: deDE, translations: { pl: "Niemiecki", en: "German", de: "Deutsch" } },
-};
 
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;
 
@@ -51,25 +29,25 @@ const { contact, links = [] } = Astro.props;
       <div class="cs-top-contact">
         <a href="tel:+48510482468" class="cs-top-link">
           <Image
+            loading="eager"
             class="cs-link-icon"
             src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/phone-grey.svg"
             alt="logo"
             width="16"
             height="16"
             aria-hidden="true"
-            decoding="async"
           />
           {contact?.phone}
         </a>
         <div class="working-hours">
           <Image
+            loading="eager"
             class="cs-link-icon"
             src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/clock-grey.svg"
             alt="logo"
             width="20"
             height="20"
             aria-hidden="true"
-            decoding="async"
           />
           {contact?.openingTimes}
         </div>
@@ -108,11 +86,12 @@ const { contact, links = [] } = Astro.props;
                     data-lang={lang}
                   >
                     <Image
+                      alt={`${translations[currentLang]} flag`}
+                      loading="eager"
                       aria-hidden="true"
                       width="20"
                       height="20"
                       src={getFlagSrc(lang as LangCode)}
-                      alt={`${translations[currentLang]} flag`}
                     />
                     {translations[currentLang]}
                   </li>
@@ -124,9 +103,10 @@ const { contact, links = [] } = Astro.props;
     </div>
   </div>
   <div class="cs-container">
-    <!--Nav Logo-->
     <a href="/" class="cs-logo" aria-label="back to home">
       <Image
+        loading="eager"
+        loading="eager"
         format={"webp"}
         src={logo}
         alt="sub logistic logo"
@@ -134,9 +114,7 @@ const { contact, links = [] } = Astro.props;
         height="152"
       />
     </a>
-    <!--Navigation List-->
     <nav class="cs-nav" role="navigation">
-      <!--Mobile Nav Toggle-->
       <button class="cs-toggle" aria-label="mobile menu toggle">
         <div class="cs-box" aria-hidden="true">
           <span class="cs-line cs-line1" aria-hidden="true"></span>
@@ -148,9 +126,10 @@ const { contact, links = [] } = Astro.props;
         <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
           {
             links?.map(({ url, name }) => {
+              const href = url.startsWith("/") ? `/${currentLang}${url}` : url;
               return (
                 <li class="cs-li">
-                  <a href={`${currentLang}${url}`} class="cs-li-link">
+                  <a href={href} class="cs-li-link">
                     {name}
                   </a>
                 </li>

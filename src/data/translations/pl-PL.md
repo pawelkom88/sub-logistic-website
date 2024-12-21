@@ -28,12 +28,16 @@ translations:
     cards:
       - title: "Globalna Współpraca"
         body: "W ciągu wielu lat stworzyliśmy rozległą sieć partnerów w branży logistycznej, zapewniając efektywny transport i przewóz towarów na każdą skalę. Nasze doświadczenie przekłada się również na logistykę międzynarodową."
+        alt: "Cieżarówka jadąca przez góry z pięknym krajobrazem"
       - title: "Indywidualne Podejście"
         body: "W Sub Logistic nie tylko oferujemy usługi logistyczne najwyższej klasy, ale także budujemy relacje, zapewniając indywidualne podejście i wsparcie na każdym kroku."
+        alt: "Skupiony kurier z tabletem w ręku na tle vana pełnego paczek"
       - title: "Atrakcyjne warunki współpracy"
         body: "Oferujemy konkurencyjne ceny oraz elastyczne podejście do każdego klienta. Nasza oferta jest dostosowana do Twoich potrzeb biznesowych."
+        alt: "Wózek widłowy ładujący cieżarówkę"
       - title: "Bezpieczeństwo i Niezawodność"
         body: "W Sub Logistic, priorytetem jest gwarancja bezpieczeństwa i punktualności Twoich przesyłek. Stosujemy sprawdzone protokoły bezpieczeństwa i skuteczne metody transportu, aby każdy ładunek dotarł na miejsce nienaruszony i terminowo."
+        alt: "Pracownik Sub Logistic w pracy"
   footer:
     body: >
       Zapraszamy do kontaktu i współpracy. Niezależnie od tego, czy szukasz partnera do stałej współpracy, czy potrzebujesz wsparcia przy jednorazowym zleceniu, Sub Logistic jest gotowy, aby wspierać Twój biznes na drogach Polski, Europy i świata.

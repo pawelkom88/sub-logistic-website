@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import logo from "../../assets/images/sub-logistics-logo.webp";
 import type { SelectedTranslation } from "../../pages/pl/index.astro";
 import { googleMapsLink } from "../contact-form/ContactForm.astro";
@@ -23,7 +23,8 @@ const todaysDate = new Date().getFullYear();
     <!-- Logo Group -->
     <div class="cs-logo-group">
       <a aria-label="go back to home" class="cs-logo" href="/">
-        <Image
+        <Picture
+          formats={["avif", "webp"]}
           class="cs-logo-img"
           format="webp"
           src={logo}
@@ -53,9 +54,6 @@ const todaysDate = new Date().getFullYear();
           );
         })
       }
-      <li class="cs-nav-li">
-        <a class="cs-nav-link" href="">Polityka prywatnosci</a>
-      </li>
     </ul>
     <!-- Contact Info -->
     <ul class="cs-nav">
@@ -63,11 +61,10 @@ const todaysDate = new Date().getFullYear();
         <span class="cs-header">Kontakt</span>
       </li>
       <li class="cs-nav-li">
-        <img
+        <Picture
+          formats={["avif", "webp"]}
           class="cs-icon"
           aria-hidden="true"
-          loading="lazy"
-          decoding="async"
           src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-stroke.svg"
           alt="phone"
           width="24"
@@ -76,24 +73,24 @@ const todaysDate = new Date().getFullYear();
         <a class="cs-nav-link cs-phone" href=`tel:${contact?.phone}`>{contact?.phone}</a>
       </li>
       <li class="cs-nav-li">
-        <img
+        <Picture
+          formats={["avif", "webp"]}
           class="cs-icon"
           aria-hidden="true"
-          loading="lazy"
-          decoding="async"
           src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/email-stroke.svg"
           alt="email"
           width="24"
           height="24"
         />
-        <a class="cs-nav-link cs-email" href=`mailto:${contact?.email}`>{contact?.email}</a>
+        <a class="cs-nav-link cs-email" href=`mailto:${contact?.email}`
+          >{contact?.email}</a
+        >
       </li>
       <li class="cs-nav-li">
-        <img
+        <Picture
+          formats={["avif", "webp"]}
           class="cs-icon"
           aria-hidden="true"
-          loading="lazy"
-          decoding="async"
           src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-stroke.svg"
           alt="pin"
           width="24"

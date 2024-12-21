@@ -2,36 +2,26 @@
 import { getCollection } from "astro:content";
 import Policy from "../../components/policy/Policy.astro";
 import Layout from "../../layouts/Layout.astro";
-import { getLangCode, type Lang } from "../../utils/utils";
-import type { TranslationEntry } from "./index.astro";
-
-// abstract ?
+import { getCurrentLanguageTranslation, type Lang } from "../../utils/utils";
 
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;
-const allTranslations = await getCollection("translations");
 const privacyPolicyAndTermsCollection = await getCollection("PrivacyPolicyAndTermsOfUse");
 
-const translationEntry = allTranslations.find(
-  (t: TranslationEntry) => t.data.languageCode === getLangCode(currentLang)
-) as TranslationEntry;
-
-const { translations } = translationEntry.data || {};
+const translations = getCurrentLanguageTranslation(currentLang);
 
 const selectedPolicyEntry = privacyPolicyAndTermsCollection.find((entry) =>
   entry.id.includes(currentLang.toLowerCase())
 );
 
 const policyData = selectedPolicyEntry?.data.policy;
-
-console.log(policyData);
 ---
 
 <Layout
   contact={translations.contact}
   links={translations.nav.links}
   footer={translations.footer}
-  title={translations.seoTitle}
-  description={translations.seoDescription}
+  title="Sub Logistics - Polityka prywatności"
+  description="Szczegóły odnosnie zasad korzystania ze strony internetowej Sub Logistics"
 >
   <Policy policy={policyData} />
 </Layout>

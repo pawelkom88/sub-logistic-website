@@ -1,3 +1,4 @@
+import { getCollection, type CollectionEntry } from "astro:content";
 import deDE from "../assets/images/de-DE.png";
 import enGB from "../assets/images/en-GB.png";
 import plPL from "../assets/images/pl-PL.png";
@@ -50,3 +51,37 @@ export function translateAriaLabel(lang: Lang): string {
 export function isContactLink(url: string): boolean {
   return url === "/kontak" || url === "/contact";
 }
+
+export type TranslationEntry = CollectionEntry<"translations">;
+export type SelectedTranslation = TranslationEntry["data"]["translations"];
+
+const allTranslations = await getCollection("translations");
+export function getCurrentLanguageTranslation(currentLang: Lang) {
+  const translationEntry = allTranslations.find(
+    (t: TranslationEntry) => t.data.languageCode === getLangCode(currentLang)
+  ) as TranslationEntry;
+
+  const { translations } = translationEntry.data || {};
+
+  return translations;
+}
+
+export function getLangFullName(lang: Lang) {
+  switch (lang) {
+    case "pl":
+      return "Polski";
+    case "de":
+      return "Deutsch";
+    case "en":
+      return "English";
+  }
+}
+
+export const languagesConfig = {
+  "pl-PL": { flag: plPL, translations: { pl: "Polski", en: "Polish", de: "Polnisch" } },
+  "en-GB": {
+    flag: enGB,
+    translations: { pl: "Angielski", en: "English", de: "Englisch" },
+  },
+  "de-DE": { flag: deDE, translations: { pl: "Niemiecki", en: "German", de: "Deutsch" } },
+};

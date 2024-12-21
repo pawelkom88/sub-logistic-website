@@ -1,4 +1,5 @@
 .cs-container {
+  padding: clamp(12rem, 24.95vw, 15.75rem) 1rem 0;
   width: 100%;
   max-width: 80rem;
   margin: auto;

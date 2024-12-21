@@ -30,6 +30,7 @@ const translations = defineCollection({
           z.object({
             title: z.string(),
             body: z.string(),
+            alt: z.string(),
           })
         ),
       }),
