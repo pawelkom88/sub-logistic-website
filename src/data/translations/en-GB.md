@@ -49,6 +49,66 @@ translations:
           At Sub Logistic, ensuring the safety and punctuality of your shipments is a priority.
           We use proven safety protocols and effective transport methods to ensure every shipment arrives intact and on time.
         alt: "A Sub Logistic employee at work"
+  whyUs:
+    topper: ""
+    heading: ""
+    description:
+      - paragraph: "1"
+      - paragraph: "2"
+      - paragraph: "3"
+    icons:
+      - title: ""
+      - title: ""
+      - title: ""
+    actionBtn: ""
+    stats:
+      - number: ""
+        title: ""
+      - number: ""
+        title: ""
+  reviews:
+    topper: ""
+    heading: ""
+    description: ""
+    review:
+      title: ""
+      body: ""
+      author: ""
+  team:
+    topper: ""
+    heading: ""
+    description: ""
+    actionBtn: ""
+    imageTitle: ""
+  cta:
+    topper: ""
+    heading: ""
+    description: ""
+    actionBtn: ""
+  contactForm:
+    topper: ""
+    heading: ""
+    description: ""
+    contactLabels:
+      address: ""
+      email: ""
+      phone: "+"
+    formFields:
+      name:
+        label: "Your Name"
+        placeholder: ""
+      email:
+        label: "Your Email"
+        placeholder: ""
+      phone:
+        label: "Your Phone"
+        placeholder: ""
+      message:
+        label: "Your Message"
+        placeholder: ""
+      checkbox:
+        label: "I agree to the privacy policy"
+        policyLink: "/???"
   footer:
     body: >
       We invite you to get in touch and work with us. Whether you are looking for a partner for ongoing collaboration

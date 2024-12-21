@@ -48,6 +48,66 @@ translations:
           Wir setzen bewährte Sicherheitsprotokolle und effektive Transportmethoden ein,
           damit jede Lieferung unversehrt und termingerecht ankommt.
         alt: "Ein Sub Logistic Mitarbeiter bei der Arbeit"
+  whyUs:
+    topper: ""
+    heading: ""
+    description:
+      - paragraph: "1"
+      - paragraph: "2"
+      - paragraph: "3"
+    icons:
+      - title: ""
+      - title: ""
+      - title: ""
+    actionBtn: ""
+    stats:
+      - number: ""
+        title: ""
+      - number: ""
+        title: ""
+  reviews:
+    topper: ""
+    heading: ""
+    description: ""
+    review:
+      title: ""
+      body: ""
+      author: ""
+  team:
+    topper: ""
+    heading: ""
+    description: ""
+    actionBtn: ""
+    imageTitle: ""
+  cta:
+    topper: ""
+    heading: ""
+    description: ""
+    actionBtn: ""
+  contactForm:
+    topper: ""
+    heading: ""
+    description: ""
+    contactLabels:
+      address: ""
+      email: ""
+      phone: ""
+    formFields:
+      name:
+        label: ""
+        placeholder: ""
+      email:
+        label: ""
+        placeholder: ""
+      phone:
+        label: ""
+        placeholder: ""
+      message:
+        label: ""
+        placeholder: ""
+      checkbox:
+        label: ""
+        policyLink: "/???"
   footer:
     body: >
       Wir laden Sie ein, mit uns Kontakt aufzunehmen und zusammenzuarbeiten. Egal, ob Sie einen Partner für eine dauerhafte Zusammenarbeit suchen oder Unterstützung bei einem einmaligen Auftrag benötigen, Sub Logistic ist bereit, Ihr Unternehmen auf den Straßen Polens, Europas und der Welt zu unterstützen.

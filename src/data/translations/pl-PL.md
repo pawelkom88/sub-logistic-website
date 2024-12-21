@@ -38,6 +38,83 @@ translations:
       - title: "Bezpieczeństwo i Niezawodność"
         body: "W Sub Logistic, priorytetem jest gwarancja bezpieczeństwa i punktualności Twoich przesyłek. Stosujemy sprawdzone protokoły bezpieczeństwa i skuteczne metody transportu, aby każdy ładunek dotarł na miejsce nienaruszony i terminowo."
         alt: "Pracownik Sub Logistic w pracy"
+  whyUs:
+    topper: "Dostosowane rozwiązania dla każdej przesyłki."
+    heading: "Transport Krajowy i Międzynarodowy"
+    description:
+      - paragraph:
+          "W Sub Logistic, rozumiemy, że potrzeby transportowe mogą znacznie się różnić – od
+          prostego transportu drobnicowego, który wymaga szybkiej i sprawnej dostawy, po
+          złożone projekty logistyczne obejmujące transport całopojazdowy z wieloma punktami
+          załadunku i rozładunku. Właśnie dlatego nasz zespół ekspertów logistycznych jest
+          zaangażowany w ciągłe analizowanie i optymalizowanie tras oraz metod transportu,
+          aby zapewnić, że Twoje towary zostaną dostarczone w najbardziej efektywny i
+          ekonomiczny sposób"
+      - paragraph:
+          "Kluczowe jest tutaj indywidualne podejście do każdego zlecenia. Nasz zespół nie
+          tylko dopasowuje usługi do konkretnych wymagań i specyfikacji towarów, ale także
+          proaktywnie szuka sposobów na redukcję kosztów i czasu transportu. Dzięki temu
+          klient otrzymuje nie tylko usługę transportową najwyższej jakości, ale także
+          partnera biznesowego, który realnie przyczynia się do optymalizacji jego łańcucha
+          dostaw."
+      - paragraph: "To właśnie zaangażowanie w dostarczanie spersonalizowanych rozwiązań
+          transportowych i logistycznych, połączone z ciągłym dążeniem do doskonałości
+          operacyjnej, wyróżnia Sub-Logistic na rynku jako lidera w branży. Każde zadanie,
+          niezależnie od jego rozmiaru, jest dla nas szansą na pokazanie, że zaufanie
+          klienta jest dla nas najważniejsze, a ich sukces jest również naszym sukcesem."
+    icons:
+      - title: "33"
+      - title: "22"
+      - title: "11"
+    actionBtn: "Nasza oferta"
+    stats:
+      - number: "200+"
+        title: "Zadowolonych klientów"
+      - number: "100%"
+        title: "Skutcznosc dostaw"
+  reviews:
+    topper: ""
+    heading: ""
+    description: ""
+    review:
+      title: ""
+      body: ""
+      author: ""
+  team:
+    topper: ""
+    heading: ""
+    description: ""
+    actionBtn: ""
+    imageTitle: ""
+  cta:
+    topper: ""
+    heading: ""
+    description: ""
+    actionBtn: ""
+  contactForm:
+    topper: ""
+    heading: ""
+    description: ""
+    contactLabels:
+      address: ""
+      email: ""
+      phone: ""
+    formFields:
+      name:
+        label: ""
+        placeholder: ""
+      email:
+        label: ""
+        placeholder: ""
+      phone:
+        label: ""
+        placeholder: ""
+      message:
+        label: ""
+        placeholder: ""
+      checkbox:
+        label: ""
+        policyLink: "/???"
   footer:
     body: >
       Zapraszamy do kontaktu i współpracy. Niezależnie od tego, czy szukasz partnera do stałej współpracy, czy potrzebujesz wsparcia przy jednorazowym zleceniu, Sub Logistic jest gotowy, aby wspierać Twój biznes na drogach Polski, Europy i świata.

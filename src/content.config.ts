@@ -34,9 +34,85 @@ const translations = defineCollection({
           })
         ),
       }),
+      whyUs: z.object({
+        topper: z.string(),
+        heading: z.string(),
+        description: z.array(
+          z.object({
+            paragraph: z.string(),
+          })
+        ),
+        icons: z.array(
+          z.object({
+            title: z.string(),
+          })
+        ),
+        actionBtn: z.string(),
+        stats: z.array(
+          z.object({
+            number: z.string(),
+            title: z.string(),
+          })
+        ),
+      }),
+      reviews: z.object({
+        topper: z.string(),
+        heading: z.string(),
+        description: z.string(),
+        review: z.object({
+          title: z.string(),
+          body: z.string(),
+          author: z.string(),
+        }),
+      }),
+      team: z.object({
+        topper: z.string(),
+        heading: z.string(),
+        description: z.string(),
+        actionBtn: z.string(),
+        imageTitle: z.string(),
+      }),
+      cta: z.object({
+        topper: z.string(),
+        heading: z.string(),
+        description: z.string(),
+        actionBtn: z.string(),
+      }),
       footer: z.object({
         body: z.string(),
         copyright: z.string(),
+      }),
+      contactForm: z.object({
+        topper: z.string(),
+        heading: z.string(),
+        description: z.string(),
+        contactLabels: z.object({
+          address: z.string(),
+          email: z.string(),
+          phone: z.string(),
+        }),
+        formFields: z.object({
+          name: z.object({
+            label: z.string(),
+            placeholder: z.string(),
+          }),
+          email: z.object({
+            label: z.string(),
+            placeholder: z.string(),
+          }),
+          phone: z.object({
+            label: z.string(),
+            placeholder: z.string(),
+          }),
+          message: z.object({
+            label: z.string(),
+            placeholder: z.string(),
+          }),
+          checkbox: z.object({
+            label: z.string(),
+            policyLink: z.string(),
+          }),
+        }),
       }),
       contact: z.object({
         phone: z.string(),
@@ -48,7 +124,7 @@ const translations = defineCollection({
   }),
 });
 
-const PrivacyPolicyAndTermsOfUseSchema = defineCollection({
+const privacyPolicyAndTermsOfUse = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/policy" }),
   schema: z.object({
     policy: z.object({
@@ -97,7 +173,37 @@ const PrivacyPolicyAndTermsOfUseSchema = defineCollection({
   }),
 });
 
+const quote = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/data/quote" }),
+  schema: z.object({
+    steps: z.array(
+      z.object({
+        title: z.string(),
+      })
+    ),
+    title: z.string(),
+    description: z.string(),
+    startBtn: z.string(),
+    form: z.object({
+      fullName: z.string(),
+      emailAddress: z.string(),
+      phoneNumber: z.string(),
+      cargoWeight: z.string(),
+      loadingDate: z.string(),
+      unloadingDate: z.string(),
+      loadingAddress: z.string(),
+      unloadingAddress: z.string(),
+      additionalMessage: z.string(),
+    }),
+    confirmation: z.object({
+      title: z.string(),
+      message: z.string(),
+    }),
+  }),
+});
+
 export const collections = {
   translations,
-  PrivacyPolicyAndTermsOfUse: PrivacyPolicyAndTermsOfUseSchema,
+  privacyPolicyAndTermsOfUse,
+  quote,
 };

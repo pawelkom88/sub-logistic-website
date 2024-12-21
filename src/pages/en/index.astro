@@ -15,22 +15,22 @@ const translations = getCurrentLanguageTranslation(currentLang);
 
 <Layout
   contact={translations.contact}
-  links={translations?.nav.links}
-  footer={translations?.footer}
-  title={translations?.seoTitle}
-  description={translations?.seoDescription}
+  links={translations.nav.links}
+  footer={translations.footer}
+  title={translations.seoTitle}
+  description={translations.seoDescription}
 >
-  <Hero hero={translations?.hero} />
+  <Hero hero={translations.hero} />
   <br />
-  <Service service={translations?.services} />
+  <Service service={translations.services} />
   <br />
-  <WhyUs />
+  <WhyUs whyUs={translations.whyUs} />
   <br />
   <!-- <Faq /> -->
-  <Reviews />
-  <Team />
+  <Reviews reviews={translations.reviews} />
+  <Team team={translations.team} />
   <br />
-  <Cta />
+  <Cta cta={translations.cta} />
   <br />
   <ContactForm contact={translations.contact} />
   <br />
