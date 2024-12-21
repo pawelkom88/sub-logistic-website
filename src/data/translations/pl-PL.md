@@ -102,13 +102,14 @@ translations:
     description: ""
     actionBtn: ""
   contactForm:
-    topper: ""
-    heading: ""
-    description: ""
+    topper: "Zainteresowany ?"
+    heading: "Zapraszamy do kontaktu"
+    description: " Z nami możesz liczyć na profesjonalne wsparcie i szybką odpowiedź. Nasz zespół
+        jest gotowy, aby pomóc Ci osiągnąć cele. Skontaktuj się z nami już dziś!"
     contactLabels:
-      address: ""
-      email: ""
-      phone: ""
+      address: "ADRES"
+      email: "EMAIL"
+      phone: "TELEFON"
     formFields:
       name:
         label: ""
@@ -124,7 +125,7 @@ translations:
         placeholder: ""
       checkbox:
         label: ""
-        policyLink: "/???"
+        policyLink: "/polityka-prywatnosci"
   footer:
     body: >
       Zapraszamy do kontaktu i współpracy. Niezależnie od tego, czy szukasz partnera do stałej współpracy, czy potrzebujesz wsparcia przy jednorazowym zleceniu, Sub Logistic jest gotowy, aby wspierać Twój biznes na drogach Polski, Europy i świata.

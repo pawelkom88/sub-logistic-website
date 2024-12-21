@@ -1,14 +1,15 @@
 ---
-import type { SelectedTranslation } from "../../pages/pl/index.astro";
-import type { Lang } from "../../utils/utils";
+import type { Lang, SelectedTranslation } from "../../utils/utils";
 import "../contact-form/contact-form.css";
 interface Props {
+  form?: SelectedTranslation["contactForm"] | undefined;
   contact?: SelectedTranslation["contact"] | undefined;
 }
 
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;
 
-const { contact } = Astro.props;
+const { form, contact } = Astro.props;
+console.log(form);
 
 export const googleMapsLink =
   "https://www.google.pl/maps/place/Marynarki+Polskiej+136A%2F47,+80-865+Gda%C5%84sk/@54.3787535,18.6284272,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd74a1ec7664fb:0x4a47f05d5bd9227a!8m2!3d54.3787535!4d18.6310021?entry=ttu";
@@ -18,16 +19,17 @@ export const googleMapsLink =
   <div class="cs-container">
     <!-- Contact Info -->
     <div class="cs-content">
-      <span class="cs-topper">Zainteresowany ?</span>
-      <h2 class="cs-title">Zapraszamy do kontaktu</h2>
+      <span class="cs-topper">
+        {form?.topper}
+      </span>
+      <h2 class="cs-title">{form?.heading}</h2>
       <p class="cs-text">
-        Z nami możesz liczyć na profesjonalne wsparcie i szybką odpowiedź. Nasz zespół
-        jest gotowy, aby pomóc Ci osiągnąć cele. Skontaktuj się z nami już dziś!
+        {form?.description}
       </p>
 
       <!--Address-->
       <div class="cs-address">
-        <span class="cs-header">Adres</span>
+        <span class="cs-header">{form?.contactLabels.address}</span>
         <a
           href={googleMapsLink}
           class="cs-link"
@@ -41,11 +43,11 @@ export const googleMapsLink =
       </div>
       <br />
       <!--Email-->
-      <span class="cs-header">Email</span>
+      <span class="cs-header">{form?.contactLabels.email}</span>
       <a href=`mailto:${contact?.email}` class="cs-link">{contact?.email}</a>
 
       <!--Phone-->
-      <span class="cs-header">Telefon</span>
+      <span class="cs-header">{form?.contactLabels.phone}</span>
       <a href=`tel:${contact?.phone}` class="cs-link">{contact?.phone}</a>
     </div>
     <!-- Form -->
@@ -110,7 +112,9 @@ export const googleMapsLink =
       <div class="cs-label cs-span-2">
         <label for="agreement">
           Zgadzam się na przetwarzanie moich danych osobowych zgodnie z
-          <a href={`${currentLang}${contact?.policyLink}`}>polityką prywatności</a>
+          <a href={`${currentLang}${form?.formFields.checkbox.policyLink}`}
+            >polityką prywatności</a
+          >
           <input
             class="cs-checkbox"
             type="checkbox"
