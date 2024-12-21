@@ -1,7 +1,7 @@
 ---
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 import logo from "../../assets/images/sub-logistics-logo.webp";
-import type { SelectedTranslation } from "../../pages/pl/index.astro";
+import type { SelectedTranslation } from "../../utils/utils";
 import { googleMapsLink } from "../contact-form/ContactForm.astro";
 import "./footer.css";
 
@@ -23,8 +23,7 @@ const todaysDate = new Date().getFullYear();
     <!-- Logo Group -->
     <div class="cs-logo-group">
       <a aria-label="go back to home" class="cs-logo" href="/">
-        <Picture
-          formats={["avif", "webp"]}
+        <Image
           class="cs-logo-img"
           format="webp"
           src={logo}
@@ -41,6 +40,7 @@ const todaysDate = new Date().getFullYear();
     <!-- Links -->
     <ul class="cs-nav">
       <li class="cs-nav-li">
+        <!-- TODO: translation -->
         <span class="cs-header">Linki</span>
       </li>
       {
@@ -58,11 +58,11 @@ const todaysDate = new Date().getFullYear();
     <!-- Contact Info -->
     <ul class="cs-nav">
       <li class="cs-nav-li">
+        <!-- TODO: translation -->
         <span class="cs-header">Kontakt</span>
       </li>
       <li class="cs-nav-li">
-        <Picture
-          formats={["avif", "webp"]}
+        <Image
           class="cs-icon"
           aria-hidden="true"
           src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-stroke.svg"
@@ -73,8 +73,7 @@ const todaysDate = new Date().getFullYear();
         <a class="cs-nav-link cs-phone" href=`tel:${contact?.phone}`>{contact?.phone}</a>
       </li>
       <li class="cs-nav-li">
-        <Picture
-          formats={["avif", "webp"]}
+        <Image
           class="cs-icon"
           aria-hidden="true"
           src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/email-stroke.svg"
@@ -87,8 +86,7 @@ const todaysDate = new Date().getFullYear();
         >
       </li>
       <li class="cs-nav-li">
-        <Picture
-          formats={["avif", "webp"]}
+        <Image
           class="cs-icon"
           aria-hidden="true"
           src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-stroke.svg"
@@ -125,6 +123,7 @@ const todaysDate = new Date().getFullYear();
       media="(min-width: 601px)"
       srcset="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     />
+    <!-- TODO: translation alt -->
     <img
       loading="lazy"
       decoding="async"
