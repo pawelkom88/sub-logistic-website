@@ -10,8 +10,8 @@ translations:
         url: "/"
       - name: "O nas"
         url: "/onas"
-      - name: "Kontakt"
-        url: "/#cs-contact-490"
+      - name: "Polityka prywatności"
+        url: "/polityka-prywatnosci"
   hero:
     title: "Sub Logistic Gdańsk - Twój Partner w Spedycji Drogowej w Polsce i Europie"
     body: >
@@ -43,5 +43,4 @@ translations:
     email: "piotr.subotowicz@sublog.com.pl"
     openingTimes: "Pracujemy: Poniedziałek - Piątek: 8:00 - 17:00"
     address: "ul. Marynarki Polskiej 136A/47, 80-865 Gdańsk"
-    policyLink: "/polityka-prywatnosci"
 ---

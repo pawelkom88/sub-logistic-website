@@ -1,0 +1,97 @@
+---
+import type { CollectionEntry } from "astro:content";
+import "./policy.css";
+
+export type TranslationEntry =
+  CollectionEntry<"PrivacyPolicyAndTermsOfUse">["data"]["policy"];
+
+interface Props {
+  policy: TranslationEntry;
+}
+
+const { policy } = Astro.props;
+---
+
+<section class="cs-container">
+  <h1>{policy.title}</h1>
+  <p>
+    {policy.description}
+  </p>
+  <h2>1. Administrator danych</h2>
+  <p>
+    Administratorem danych osobowych jest Sportuś Krzysztof Iwanowski z siedzibą w
+    Gdańsku.NIP 743200079
+  </p>
+  <h2>2. Cel i zakres zbierania danych</h2>
+  <p>
+    Przetwarzamy dane osobowe Użytkowników wyłącznie w celu obsługi zapytań przesłanych
+    przez formularz kontaktowy. Zakres przetwarzanych danych obejmuje:
+    <ul>
+      <li>imię i nazwisko</li>
+      <li>adres e-mail</li>
+      <li>numer telefonu</li>
+      <li>treść wiadomości</li>
+    </ul>
+  </p>
+  <p>
+    Nasza strona internetowa wykorzystuje wyłącznie niezbędne pliki cookies, które są
+    konieczne do prawidłowego funkcjonowania strony. Nie używamy żadnych plików cookies
+    służących do śledzenia lub profilowania użytkowników.
+  </p>
+  <h2>3. Podstawa prawna przetwarzania danych</h2>
+  <p>
+    {policy.legalBasis.description} ({policy.legalBasis.regulation}).
+  </p>
+  <h2>4. Okres przechowywania danych</h2>
+  <p>
+    Dane osobowe przechowywane są przez okres niezbędny do udzielenia odpowiedzi na
+    zapytanie, nie dłużej jednak niż przez 30 dni od daty otrzymania wiadomości. Po tym
+    czasie dane są usuwane.
+  </p>
+  <h2>5.Prawa Użytkowników</h2>
+  <p>Użytkownik ma prawo do:</p>
+  <ul>
+    {policy.userRights.map((rights) => <li>{rights}</li>)}
+  </ul>
+  <h2>6. Udostępnianie danych</h2>
+  <p>
+    {policy.dataSharing.policy}
+    <h2>7. Bezpieczeństwo Strony</h2>
+    <p>
+      {policy.security.policy}
+    </p>
+    <h2>8. Wyłączenie Odpowiedzialności</h2>
+    <p>
+      {policy.disclaimers.content}
+    </p>
+    <p>
+      {policy.disclaimers.externalLinks}
+    </p>
+    <p>
+      {policy.disclaimers.damages}
+    </p>
+    <h2>9. Zmiany w Polityce Prywatności i Warunkach Korzystania</h2>
+    <p>
+      {policy.policyChanges.policy}{policy.policyChanges.notice}
+    </p>
+    <h2>10. Kontakt</h2>
+    <p>
+      Jeśli mają Państwo pytania dotyczące naszej strony internetowej, prosimy o kontakt:
+    </p>
+    <ul>
+      <li>
+        E-mail: <a href=`mailto:${policy.contact.email}`>{policy.contact.email}</a>
+      </li>
+      <li>
+        Telefon: <a href=`tel:${policy.contact.phone}`>{policy.contact.phone}</a>
+      </li>
+      <li>
+        Dane firmy: <a
+          href=`${policy.contact.companyDetails}`
+          target="_blank"
+          rel="noopener noreferrer">Ogólnopolska Wyszukiwarka Gospodarcza</a
+        >
+      </li>
+    </ul>
+  </p>
+</section>

@@ -150,10 +150,7 @@ const { contact, links = [] } = Astro.props;
             links?.map(({ url, name }) => {
               return (
                 <li class="cs-li">
-                  <a
-                    href={`${currentLang}${url}`}
-                    class="cs-li-link"
-                  >
+                  <a href={`${currentLang}${url}`} class="cs-li-link">
                     {name}
                   </a>
                 </li>

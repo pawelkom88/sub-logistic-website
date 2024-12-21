@@ -11,7 +11,7 @@ import WhyUs from "../../components/why-us/WhyUs.astro";
 import Layout from "../../layouts/Layout.astro";
 import { getLangCode, type Lang } from "../../utils/utils";
 
-type TranslationEntry = CollectionEntry<"translations">;
+export type TranslationEntry = CollectionEntry<"translations">;
 
 const allTranslations = await getCollection("translations");
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;

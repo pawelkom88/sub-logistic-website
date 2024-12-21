@@ -12,8 +12,10 @@ translations:
         url: "/"
       - name: "About Us"
         url: "/about-us"
-      - name: "Contact"
-        url: "/#cs-contact-490"
+      - name: "Privacy policy"
+        url: "/privacy-policy"
+      - name: "Terms of use"
+        url: "/terms-of-use"
   hero:
     title: "Sub Logistic Gdańsk - Your Partner for Road Freight in Poland and Europe"
     body: >
@@ -54,5 +56,4 @@ translations:
     email: "piotr.subotowicz@sublog.com.pl"
     openingTimes: "Working hours: Monday - Friday: 8:00 AM - 5:00 PM"
     address: "ul. Marynarki Polskiej 136A/47, 80-865 Gdańsk"
-    policyLink: "/privacy-policy"
 ---

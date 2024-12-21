@@ -1,16 +1,37 @@
 ---
+import { getCollection } from "astro:content";
+import Policy from "../../components/policy/Policy.astro";
 import Layout from "../../layouts/Layout.astro";
+import { getLangCode, type Lang } from "../../utils/utils";
+import type { TranslationEntry } from "./index.astro";
 
-// !! get content collection here ? separate collection for all single pages ?
+// abstract ?
 
-interface Props {
-  title: string;
-  description: string;
-}
+const currentLang = Astro.url.pathname.split("/")[1] as Lang;
+const allTranslations = await getCollection("translations");
+const privacyPolicyAndTermsCollection = await getCollection("PrivacyPolicyAndTermsOfUse");
 
-const { title, description } = Astro.props;
+const translationEntry = allTranslations.find(
+  (t: TranslationEntry) => t.data.languageCode === getLangCode(currentLang)
+) as TranslationEntry;
+
+const { translations } = translationEntry.data || {};
+
+const selectedPolicyEntry = privacyPolicyAndTermsCollection.find((entry) =>
+  entry.id.includes(currentLang.toLowerCase())
+);
+
+const policyData = selectedPolicyEntry?.data.policy;
+
+console.log(policyData);
 ---
 
-<Layout title="??" description="??">
-  <h1>Polityka prywatności</h1>
+<Layout
+  contact={translations.contact}
+  links={translations.nav.links}
+  footer={translations.footer}
+  title={translations.seoTitle}
+  description={translations.seoDescription}
+>
+  <Policy policy={policyData} />
 </Layout>
