@@ -6,7 +6,7 @@ import "@fontsource/ibm-plex-sans/700.css";
 import Footer from "../components/footer/Footer.astro";
 import Nav from "../components/nav/Nav.astro";
 import Seo from "../seo/Seo.astro";
-import type { SelectedTranslation } from "../utils/utils";
+import type { Lang, SelectedTranslation } from "../utils/utils";
 
 interface Props {
   contact?: SelectedTranslation["contact"] | undefined;
@@ -20,11 +20,13 @@ interface Props {
   };
 }
 
+const currentLang = Astro.url.pathname.split("/")[1] as Lang;
+
 const { links, contact, footer, title, description, image } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="pl">
+<html lang={currentLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -47,6 +49,7 @@ const { links, contact, footer, title, description, image } = Astro.props;
         --bodyTextColor: #1a1a1a;
         --bodyTextColorWhite: #fafbfc;
         --white: #fff;
+        --navHeight: 4.5rem;
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
         /* 31px - 49px */

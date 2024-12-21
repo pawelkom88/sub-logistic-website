@@ -5,7 +5,7 @@
   }
   body.scroll #cs-navigation {
     /* 53px, same height as the cs-top-container */
-    transform: translateY(-3.3125rem);
+    transform: translateY(calc(-1 * var(--navHeight)));
   }
   #cs-navigation {
     width: 100%;
@@ -324,13 +324,6 @@
 
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  /* TODO worth it ? */
-  /* .language-selector {
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.5rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  } */
-
   .working-hours {
     display: flex;
     gap: 0.5rem;
@@ -338,7 +331,7 @@
   }
   body.scroll #cs-navigation {
     /* 53px, the same height as the cs-top-container */
-    transform: translateY(-4rem);
+    transform: translateY(calc(-1 * var(--navHeight)));
   }
   #cs-navigation {
     width: 100%;

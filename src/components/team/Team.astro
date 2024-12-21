@@ -1,13 +1,16 @@
 ---
 import { Picture } from "astro:assets";
-import type { SelectedTranslation } from "../../utils/utils";
+import type { Lang, SelectedTranslation } from "../../utils/utils";
 import "./team.css";
 
 interface Props {
+  link: SelectedTranslation["nav"]["links"][1];
   team: SelectedTranslation["team"];
 }
 
-const { team } = Astro.props;
+const currentLang = Astro.url.pathname.split("/")[1] as Lang;
+const { link, team } = Astro.props;
+const href = link.url.startsWith("/") ? `/${currentLang}${link.url}` : link.url;
 ---
 
 <section id="meet-team-860">
@@ -20,7 +23,7 @@ const { team } = Astro.props;
           {team?.description}
         </p>
       </div>
-      <a href="/onas" class="cs-button-solid">{team?.actionBtn}</a>
+      <a href={href} class="cs-button-solid">{team?.actionBtn}</a>
     </div>
     <ul class="cs-card-group">
       <li class="cs-item">
