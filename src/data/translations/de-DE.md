@@ -49,21 +49,37 @@ translations:
           damit jede Lieferung unversehrt und termingerecht ankommt.
         alt: "Ein Sub Logistic Mitarbeiter bei der Arbeit"
   whyUs:
-    topper: ""
-    heading: ""
+    topper: "Maßgeschneiderte Lösungen für jede Sendung."
+    heading: "Inlands- und Internationaler Transport"
     description:
-      - paragraph: "1"
-      - paragraph: "2"
-      - paragraph: "3"
+      - paragraph: >
+          Bei Sub Logistic verstehen wir, dass die Anforderungen an den Transport stark variieren
+          können – von einfachen Stückguttransporten, die schnelle und effiziente Lieferung erfordern,
+          bis hin zu komplexen Logistikprojekten, die Komplettladungen mit mehreren Lade- und
+          Entladepunkten umfassen. Deshalb ist unser Team aus Logistikexperten bestrebt, Routen und
+          Transportmethoden kontinuierlich zu analysieren und zu optimieren, um sicherzustellen,
+          dass Ihre Waren auf die effizienteste und kostengünstigste Weise geliefert werden.
+      - paragraph: >
+          Ein individueller Ansatz ist hierbei von entscheidender Bedeutung. Unser Team passt nicht
+          nur die Dienstleistungen an spezifische Anforderungen und Warenspezifikationen an, sondern
+          sucht auch proaktiv nach Möglichkeiten, Kosten und Transportzeiten zu reduzieren. Dadurch
+          erhält der Kunde nicht nur hochwertige Transportdienstleistungen, sondern auch einen
+          Geschäftspartner, der aktiv zur Optimierung seiner Lieferkette beiträgt.
+      - paragraph: >
+          Dieses Engagement für die Bereitstellung personalisierter Transport- und Logistiklösungen
+          in Verbindung mit einem ständigen Streben nach operativer Exzellenz macht Sub Logistic
+          zu einem führenden Unternehmen in der Branche. Jede Aufgabe, unabhängig von ihrer Größe,
+          ist für uns eine Gelegenheit zu zeigen, dass das Vertrauen unserer Kunden für uns oberste
+          Priorität hat und ihr Erfolg auch unser Erfolg ist.
     icons:
-      - title: ""
-      - title: ""
-      - title: ""
-    actionBtn: ""
+      - title: "Straßengüterverkehr"
+      - title: "Seefracht"
+      - title: "Luftfracht"
+    actionBtn: "Unser Angebot"
     stats:
-      - number: ""
+      - number: "200+"
         title: ""
-      - number: ""
+      - number: "100%"
         title: ""
   reviews:
     topper: ""
@@ -73,12 +89,15 @@ translations:
       title: ""
       body: ""
       author: ""
+      imageTitle: "Hafen voller Container bei Sonnenuntergang"
   team:
     topper: ""
-    heading: ""
+    heading1: ""
+    heading2: ""
     description: ""
     actionBtn: ""
     imageTitle: ""
+    jobTitle: ""
   cta:
     topper: ""
     heading: ""

@@ -50,22 +50,37 @@ translations:
           We use proven safety protocols and effective transport methods to ensure every shipment arrives intact and on time.
         alt: "A Sub Logistic employee at work"
   whyUs:
-    topper: ""
-    heading: ""
+    topper: "Tailored solutions for every shipment."
+    heading: "Domestic and International Transport"
     description:
-      - paragraph: "1"
-      - paragraph: "2"
-      - paragraph: "3"
+      - paragraph: >
+          At Sub Logistic, we understand that transport needs can vary greatly – from simple
+          small-scale deliveries requiring swift and efficient service to complex logistics
+          projects involving full-truckload transport with multiple loading and unloading points.
+          This is why our team of logistics experts is committed to continuously analysing and
+          optimising routes and transport methods, ensuring that your goods are delivered in the
+          most efficient and cost-effective way.
+      - paragraph: >
+          Individual approach is key in this context. Our team not only adapts services to meet
+          specific requirements and cargo specifications but also proactively seeks ways to
+          reduce costs and transport time. This ensures that our clients receive not only
+          high-quality transport services but also a business partner who genuinely contributes
+          to the optimisation of their supply chain.
+      - paragraph: >
+          This dedication to delivering personalised transport and logistics solutions, combined
+          with a constant pursuit of operational excellence, distinguishes Sub Logistic as an
+          industry leader. Every task, regardless of its scale, is an opportunity for us to
+          demonstrate that our clients' trust is our top priority, and their success is our success.
     icons:
-      - title: ""
-      - title: ""
-      - title: ""
-    actionBtn: ""
+      - title: "Road Freight"
+      - title: "Sea Freight"
+      - title: "Air Freight"
+    actionBtn: "Our Offer"
     stats:
-      - number: ""
-        title: ""
-      - number: ""
-        title: ""
+      - number: "200+"
+        title: "Zufriedene Kunden"
+      - number: "100%"
+        title: "Erfolgsquote bei Lieferungen"
   reviews:
     topper: ""
     heading: ""
@@ -74,12 +89,15 @@ translations:
       title: ""
       body: ""
       author: ""
+      imageTitle: "port full of containers during sunset"
   team:
     topper: ""
-    heading: ""
+    heading1: ""
+    heading2: ""
     description: ""
     actionBtn: ""
     imageTitle: ""
+    jobTitle: ""
   cta:
     topper: ""
     heading: ""

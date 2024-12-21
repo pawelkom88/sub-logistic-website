@@ -63,9 +63,9 @@ translations:
           niezależnie od jego rozmiaru, jest dla nas szansą na pokazanie, że zaufanie
           klienta jest dla nas najważniejsze, a ich sukces jest również naszym sukcesem."
     icons:
-      - title: "33"
-      - title: "22"
-      - title: "11"
+      - title: "Spedycja drogowa"
+      - title: "Spedycja morska"
+      - title: "Spedycja lotnicza"
     actionBtn: "Nasza oferta"
     stats:
       - number: "200+"
@@ -73,19 +73,29 @@ translations:
       - number: "100%"
         title: "Skutcznosc dostaw"
   reviews:
-    topper: ""
-    heading: ""
-    description: ""
+    topper: "Twoja Opinia, Nasza Motywacja"
+    heading: "Wspólnie budujemy lepsze usługi"
+    description:
+      "Pracujemy nad tym, by dostarczać Ci niezawodne rozwiązania dostosowane do Twoich
+      potrzeb. Dlatego zachęcamy Cię do dzielenia się swoją opinią. Twoje słowa mają
+      realny wpływ na nasze działania i pomagają nam stale się rozwijać."
     review:
-      title: ""
-      body: ""
-      author: ""
+      title: "Profesjonalna obsługa i niezawodność"
+      body: " Od momentu, gdy zaczęliśmy korzystać z usług Sub Logistic, nasze zlecenia
+        spedycyjne stają się prostsze i bardziej efektywne. Ich profesjonalna obsługa oraz
+        niezawodność w dostarczaniu naszych produktów do klientów są niezrównane. Zespół
+        Sub Logistic działa sprawnie, zapewniając terminowe dostawy i śledząc nasze
+        przesyłki na każdym etapie transportu."
+      author: "Marek Kowalski"
+      imageTitle: "Port pełen kontenerów o zachodzie słońca"
   team:
-    topper: ""
-    heading: ""
-    description: ""
-    actionBtn: ""
-    imageTitle: ""
+    topper: "Nasz Zespół"
+    heading1: "Zaangażowanie i pasja"
+    heading2: "Poznaj Piotra"
+    description: "Jako jednoosobowy zespół, Piotr łączy pasję do logistyki z głębokim zrozumieniem potrzeb rynku, dostarczając rozwiązania dostosowane do   indywidualnych wymagań każdego zlecenia. Jego zaangażowanie w zapewnienie niezawodności i efektywności w każdym elemencie łańcucha dostaw gwarantuje, że każdy klient Sub Logistic czuje się wartościowy i wyjątkowy."
+    actionBtn: "Poznaj naszą historię"
+    imageTitle: "Piotr Subotowicz"
+    jobTitle: "Piotr Subotowicz - Twój Specjalista od logistyki i transportu"
   cta:
     topper: ""
     heading: ""

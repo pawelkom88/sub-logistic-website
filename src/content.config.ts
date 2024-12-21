@@ -63,14 +63,17 @@ const translations = defineCollection({
           title: z.string(),
           body: z.string(),
           author: z.string(),
+          imageTitle: z.string(),
         }),
       }),
       team: z.object({
         topper: z.string(),
-        heading: z.string(),
+        heading1: z.string(),
+        heading2: z.string(),
         description: z.string(),
         actionBtn: z.string(),
         imageTitle: z.string(),
+        jobTitle: z.string(),
       }),
       cta: z.object({
         topper: z.string(),
