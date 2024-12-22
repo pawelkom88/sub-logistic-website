@@ -12,7 +12,7 @@ import {getCountryCode, getCurrentLanguageTranslation} from "../../utils/utils";
 const translations = getCurrentLanguageTranslation(getCountryCode(Astro.url.pathname));
 ---
 
-<Layout
+<Layout contactBtn={translations.contactBtn}
   contact={translations.contact}
   links={translations.nav.links}
   footer={translations.footer}
@@ -31,6 +31,6 @@ const translations = getCurrentLanguageTranslation(getCountryCode(Astro.url.path
   <br />
   <Cta cta={translations.cta} />
   <br />
-  <ContactForm contact={translations.contact} />
+  <ContactForm form={translations.contactForm} contact={translations.contact} />
   <br />
 </Layout>
