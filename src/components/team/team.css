@@ -46,6 +46,7 @@
     margin: 0 0 1rem 0;
     color: var(--headerColor);
     position: relative;
+    text-wrap: pretty;
   }
 
   #meet-team-860 .cs-button-solid {

@@ -15,7 +15,7 @@ translations:
         url: "/privacy-policy"
       - name: "Terms of use"
         url: "/terms-of-use"
-    contactBtn: "Contact us"
+  contactBtn: "Contact us"
   hero:
     title: "Sub Logistic Gdańsk - Your Partner for Road Freight in Poland and Europe"
     body: >
@@ -82,53 +82,53 @@ translations:
       - number: "100%"
         title: "Erfolgsquote bei Lieferungen"
   reviews:
-    topper: ""
-    heading: ""
-    description: ""
+    topper: "Your Feedback, Our Motivation"
+    heading: "Together we build better services"
+    description: "We work to deliver reliable solutions tailored to your needs. That’s why we encourage you to share your feedback. Your words have a real impact on our actions and help us constantly improve."
     review:
-      title: ""
-      body: ""
-      author: ""
+      title: "Professional service and reliability"
+      body: "Since we started using Sub Logistic's services, our freight forwarding has become simpler and more efficient. Their professional service and reliability in delivering our products to customers are unmatched. The Sub Logistic team operates efficiently, ensuring timely deliveries and tracking our shipments at every stage of transport."
+      author: "Marek Kowalski"
       imageTitle: "port full of containers during sunset"
   team:
-    topper: ""
-    heading1: ""
-    heading2: ""
-    description: ""
-    actionBtn: ""
-    imageTitle: ""
-    jobTitle: ""
+    topper: "Our Team"
+    heading1: "Commitment and passion"
+    heading2: "Meet Piotr"
+    description: "As a one-person team, Piotr combines a passion for logistics with a deep understanding of market needs, delivering solutions tailored to the unique requirements of each project. His commitment to reliability and efficiency at every stage of the supply chain ensures that every Sub Logistic client feels valued and special."
+    actionBtn: "Discover our story"
+    imageTitle: "Piotr Subotowicz"
+    jobTitle: "Piotr Subotowicz - Your logistics and transport specialist"
   cta:
-    topper: "1"
-    heading: "1"
-    description: ""
-    actionBtn: ""
+    topper: "Ready to work with us?"
+    heading: "Become our partner"
+    description: "Don’t wait to solve your logistics challenges. Join the ranks of satisfied Sub Trans clients and discover how our experience and innovative approach can transform your supply chain. Contact us today to start our journey to success together."
+    actionBtn: "Start working with us now"
   contactForm:
-    topper: ""
-    heading: ""
-    description: ""
+    topper: "Interested?"
+    heading: "Get in Touch"
+    description: "You can count on professional support and a quick response. Our team is ready to help you achieve your goals. Contact us today!"
     contactLabels:
-      address: ""
-      email: ""
-      phone: "+"
+      address: "ADDRESS"
+      email: "EMAIL"
+      phone: "PHONE"
       tooltip: "Click the link to see the map"
     formFields:
       name:
         label: "Your Name"
-        placeholder: ""
+        placeholder: "e.g. John Doe"
       email:
         label: "Your Email"
-        placeholder: ""
+        placeholder: "e.g. JohnDoe@example.com"
       phone:
         label: "Your Phone"
-        placeholder: ""
+        placeholder: "e.g. 123 456 789"
       message:
         label: "Your Message"
-        placeholder: ""
+        placeholder: "Write your message here"
       checkbox:
-        label: "I agree to the privacy policy"
-        label2: "I agree to the privacy policy"
-        policyLink: "/???"
+        label: "I agree to the processing of my personal data in accordance with the"
+        label2: "privacy policy"
+        policyLink: "/terms-of-use"
       submitBtn: "Send message"
   footer:
     body: >
