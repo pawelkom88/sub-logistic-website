@@ -11,8 +11,6 @@ translations:
         url: "/"
       - name: "About Us"
         url: "/about-us"
-      - name: "Privacy policy"
-        url: "/privacy-policy"
       - name: "Terms of use"
         url: "/terms-of-use"
   contactBtn: "Contact us"

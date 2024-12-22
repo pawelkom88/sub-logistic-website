@@ -25,73 +25,61 @@ const countryCodes = {
 } as const;
 
 export function getLangCode(lang: Lang): LangCode {
-  switch (lang) {
-    case countries.en:
-      return countryCodes.en;
-    case countries.de:
-      return countryCodes.de;
-    case countries.pl:
-      return countryCodes.pl;
-    default:
-      return countryCodes.en;
-  }
+  return countryCodes[lang] || countryCodes.en;
 }
 
 export function splitString(string: string, el = 0): string {
   return string.split("-")[el];
 }
 
+export const flagSrcMap: Record<LangCode, ImageMetadata> = {
+  [countryCodes.pl]: plPL,
+  [countryCodes.de]: deDE,
+  [countryCodes.en]: enGB,
+};
+
 export function getFlagSrc(lang: LangCode): ImageMetadata {
-  switch (lang) {
-    case countryCodes.pl:
-      return plPL;
-    case countryCodes.de:
-      return deDE;
-    case countryCodes.en:
-      return enGB;
-  }
+  return flagSrcMap[lang];
 }
+
+const ariaLabelMap: Record<Lang, string> = {
+  en: "Language selector",
+  de: "Sprachauswahl",
+  pl: "Wybierz język",
+};
 
 export function translateAriaLabel(lang: Lang): string {
-  switch (lang) {
-    case countries.en:
-      return "Language selector";
-    case countries.de:
-      return "Sprachauswahl";
-    case countries.pl:
-      return "Wybierz język";
-    default:
-      return "Language selector";
-  }
-}
-
-export function isContactLink(url: string): boolean {
-  return url === "/kontak" || url === "/contact";
+  return ariaLabelMap[lang] || ariaLabelMap.en;
 }
 
 export type TranslationEntry = CollectionEntry<"translations">;
 export type SelectedTranslation = TranslationEntry["data"]["translations"];
 
 const allTranslations = await getCollection("translations");
-export function getCurrentLanguageTranslation(currentLang: Lang) {
-  const translationEntry = allTranslations.find(
-    (t: TranslationEntry) => t.data.languageCode === getLangCode(currentLang),
-  ) as TranslationEntry;
+export async function getCurrentLanguageTranslation(
+  currentLang: Lang,
+  collection: CollectionEntry<"translations"> = allTranslations,
+): Promise<SelectedTranslation> {
+  const translationEntry: TranslationEntry | udnefined = await collection.find(
+    ({ data }: TranslationEntry["data"]) => {
+      return data.languageCode === getLangCode(currentLang);
+    },
+  );
 
-  const { translations } = translationEntry.data || {};
+  const { translations } = translationEntry?.data || {};
+
+  if (!translations) {
+    throw new Error(
+      `Translation for language ${currentLang} does not exist in collection`,
+    );
+  }
 
   return translations;
 }
 
 export function getLangFullName(lang: Lang) {
-  switch (lang) {
-    case countries.pl:
-      return "Polski";
-    case countries.de:
-      return "Deutsch";
-    case countries.en:
-      return "English";
-  }
+  const languageConfig = languagesConfig[getLangCode(lang)];
+  return languageConfig?.translations[lang] || "";
 }
 
 export const languagesConfig = {

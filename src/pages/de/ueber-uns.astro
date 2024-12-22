@@ -5,6 +5,8 @@ import {getCollection} from "astro:content";
 import {getCountryCode, getCurrentLanguageTranslation} from "../../utils/utils";
 import About from "../../components/about-us/About.astro";
 
+// TODO: add translation for layout props
+
 const aboutUsCollection = await getCollection("aboutUs");
 const aboutUs = await getCurrentLanguageTranslation(getCountryCode(Astro.url.pathname), aboutUsCollection);
 const translations = await getCurrentLanguageTranslation(getCountryCode(Astro.url.pathname));
@@ -14,6 +16,6 @@ const translations = await getCurrentLanguageTranslation(getCountryCode(Astro.ur
 <Layout contactBtn={translations.contactBtn}
         contact={translations.contact}
         links={translations.nav.links}
-        footer={translations.footer} title="O Sub Trans - Logistyka z Pasją i Doświadczeniem" description="Poznaj historię Sub Trans założoną przez Piotra Subotowicza. Odkryj nasze zaangażowanie w spersonalizowane usługi logistyczne, innowacyjność i pasję, które nas napędzają.">
+        footer={translations.footer} title="??" description="??">
     <About aboutUs={aboutUs} />
 </Layout>

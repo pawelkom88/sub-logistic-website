@@ -5,7 +5,10 @@ import { defineCollection, z } from "astro:content";
 const translations = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/translations" }),
   schema: z.object({
-    languageCode: z.string(),
+    languageCode: z
+      .literal("pl-PL")
+      .or(z.literal("en-GB"))
+      .or(z.literal("de-DE")),
     languageName: z.string(),
     translations: z.object({
       seoTitle: z.string(),
@@ -15,7 +18,7 @@ const translations = defineCollection({
           z.object({
             name: z.string(),
             url: z.string(),
-          })
+          }),
         ),
       }),
       contactBtn: z.string(),
@@ -33,7 +36,7 @@ const translations = defineCollection({
             title: z.string(),
             body: z.string(),
             alt: z.string(),
-          })
+          }),
         ),
       }),
       whyUs: z.object({
@@ -42,19 +45,19 @@ const translations = defineCollection({
         description: z.array(
           z.object({
             paragraph: z.string(),
-          })
+          }),
         ),
         icons: z.array(
           z.object({
             title: z.string(),
-          })
+          }),
         ),
         actionBtn: z.string(),
         stats: z.array(
           z.object({
             number: z.string(),
             title: z.string(),
-          })
+          }),
         ),
       }),
       reviews: z.object({
@@ -187,7 +190,7 @@ const quote = defineCollection({
     steps: z.array(
       z.object({
         title: z.string(),
-      })
+      }),
     ),
     title: z.string(),
     description: z.string(),
@@ -210,8 +213,42 @@ const quote = defineCollection({
   }),
 });
 
+const aboutUs = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/data/about-us" }),
+  schema: z.object({
+    languageCode: z
+      .literal("pl-PL")
+      .or(z.literal("en-GB"))
+      .or(z.literal("de-DE")),
+
+    translations: z.object({
+      h1part1: z.string(),
+      h1part2: z.string(),
+      h2: z.string(),
+      h2Paragraph: z.string(),
+      h3: z.string(),
+      h3Paragraph: z.string(),
+      h3next: z.string(),
+      li: z.array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+        }),
+      ),
+      h4: z.string(),
+      h4Paragraph: z.string(),
+      link: z.object({
+        url: z.string(),
+        part1: z.string(),
+        part2: z.string(),
+      }),
+    }),
+  }),
+});
+
 export const collections = {
   translations,
   privacyPolicyAndTermsOfUse,
   quote,
+  aboutUs,
 };

@@ -1,0 +1,109 @@
+---
+import "../../styles/onas.css";
+
+interface Props {
+    aboutUs: any ;
+}
+
+const { aboutUs } = Astro.props;
+console.log(aboutUs)
+---
+<section id="content-page-713">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">
+                {aboutUs.h1part1} <span class="cs-color"
+            >{aboutUs.h1part2}</span
+            >.
+            </h1>
+            <h2>{aboutUs.h2}</h2>
+            <p class="cs-text">{aboutUs.h2Paragraph}</p>
+            <h3>{aboutUs.h3}</h3>
+            <p class="cs-text">{aboutUs.h3Paragraph}
+            </p>
+            <h3>{aboutUs.h3next}</h3>
+            <ul>
+                <li>
+                    Personalizowane rozwiązania:
+                    <p class="cs-text">
+                        Każde zlecenie traktujemy indywidualnie, dostosowując usługi do konkretnych
+                        potrzeb i oczekiwań. Naszym celem jest nie tylko dostarczenie ładunku, ale
+                        przede wszystkim zbudowanie długoterminowej współpracy opartej na zaufaniu i
+                        zrozumieniu.
+                    </p>
+                </li>
+                <li>
+                    Nowoczesność i innowacja:
+                    <p class="cs-text">
+                        W Sub Trans łączymy sprawdzone metody pracy z nowoczesnymi narzędziami, co
+                        pozwala nam na optymalizację procesów logistycznych i zapewnienie najwyższej
+                        jakości usług.
+                    </p>
+                </li>
+                <li>
+                    Zrównoważony rozwój:
+                    <p class="cs-text">
+                        Jesteśmy świadomi wpływu, jaki branża transportowa ma na środowisko. Dlatego
+                        też staramy się minimalizować nasz ślad węglowy poprzez efektywne planowanie
+                        tras i dbałość o stan techniczny pojazdów.
+                    </p>
+                </li>
+                <li>
+                    Ekspert w branży:
+                    <p class="cs-text">
+                        Piotr Subotowicz, z swoją niezrównaną wiedzą i doświadczeniem, jest sercem
+                        Sub Trans. Jego osobiste zaangażowanie w każde zlecenie gwarantuje, że Twoje
+                        towary są zawsze w dobrych rękach.
+                    </p>
+                </li>
+            </ul>
+
+            <h4>Dołącz do nas</h4>
+            <p class="cs-text">
+                Zapraszamy do współpracy z Sub Trans, gdzie tradycyjne wartości spotykają się z
+                nowoczesnym podejściem do logistyki. Odkryj różnicę, jaką może wprowadzić
+                osobiste zaangażowanie i pasja do Twojego łańcucha dostaw.
+            </p>
+            <br />
+            <p class="cs-text">
+                <!--lang here ?-->
+                <a href="/#cs-contact-490">Skontaktuj się z nami</a>, aby dowiedzieć się więcej
+                o naszych usługach i jak możemy wspomóc Twój biznes.
+            </p>
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source
+                        media="(max-width: 600px)"
+                        srcset="https://scontent-waw2-1.xx.fbcdn.net/v/t1.6435-9/37626263_1309748129160660_6060351691067228160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ye4hXLUccj0Ab7lLPon&_nc_ht=scontent-waw2-1.xx&oh=00_AfCU5QKHHGEgDXnPU5AgeWI1P-jr4M-pzu3zNRIDyVoQCA&oe=6637BB3F"
+                />
+                <!--Tablet and above Image-->
+                <source
+                        media="(min-width: 601px)"
+                        srcset="https://scontent-waw2-1.xx.fbcdn.net/v/t1.6435-9/37626263_1309748129160660_6060351691067228160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ye4hXLUccj0Ab7lLPon&_nc_ht=scontent-waw2-1.xx&oh=00_AfCU5QKHHGEgDXnPU5AgeWI1P-jr4M-pzu3zNRIDyVoQCA&oe=6637BB3F"
+                />
+                <img
+                        loading="lazy"
+                        decoding="async"
+                        src="https://scontent-waw2-1.xx.fbcdn.net/v/t1.6435-9/37626263_1309748129160660_6060351691067228160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ye4hXLUccj0Ab7lLPon&_nc_ht=scontent-waw2-1.xx&oh=00_AfCU5QKHHGEgDXnPU5AgeWI1P-jr4M-pzu3zNRIDyVoQCA&oe=6637BB3F"
+                        alt="person"
+                        width="570"
+                        height="680"
+                        aria-hidden="true"
+                />
+            </picture>
+        </div>
+    </div>
+    <!--Waves Graphic-->
+    <picture class="cs-background">
+        <img
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Flarge-waves.svg"
+                alt="waves"
+                decoding="async"
+                aria-hidden="true"
+                width="625"
+                height="952"
+        />
+    </picture>
+</section>

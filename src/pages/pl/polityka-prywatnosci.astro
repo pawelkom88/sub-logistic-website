@@ -6,7 +6,7 @@ import {getCountryCode, getCurrentLanguageTranslation} from "../../utils/utils";
 
 const currentLang = getCountryCode(Astro.url.pathname);
 const privacyPolicyAndTermsCollection = await getCollection("PrivacyPolicyAndTermsOfUse");
-const translations = getCurrentLanguageTranslation(currentLang);
+const translations = await getCurrentLanguageTranslation(currentLang);
 const selectedPolicyEntry = privacyPolicyAndTermsCollection.find((entry) =>
   entry.id.includes(currentLang.toLowerCase())
 );
