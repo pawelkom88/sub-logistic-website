@@ -12,6 +12,7 @@ translations:
         url: "/onas"
       - name: "Polityka prywatności"
         url: "/polityka-prywatnosci"
+  contactBtn: "Skontaktuj się z nami"
   hero:
     title: "Sub Logistic Gdańsk - Twój Partner w Spedycji Drogowej w Polsce i Europie"
     body: >
@@ -97,10 +98,13 @@ translations:
     imageTitle: "Piotr Subotowicz"
     jobTitle: "Piotr Subotowicz - Twój Specjalista od logistyki i transportu"
   cta:
-    topper: ""
-    heading: ""
-    description: ""
-    actionBtn: ""
+    topper: "Gotowi do działania"
+    heading: "Zostań Naszym Partnerem"
+    description: "Nie czekaj na rozwiązanie swoich wyzwań logistycznych. Dołącz do grona
+      zadowolonych klientów Sub Trans i odkryj, jak nasze doświadczenie oraz innowacyjne
+      podejście mogą przetransformować Twój łańcuch dostaw. Skontaktuj się z nami już
+      dziś, by rozpocząć naszą wspólną drogę do sukcesu."
+    actionBtn: "Zacznij współpracę juz dziś"
   contactForm:
     topper: "Zainteresowany ?"
     heading: "Zapraszamy do kontaktu"
@@ -110,22 +114,25 @@ translations:
       address: "ADRES"
       email: "EMAIL"
       phone: "TELEFON"
+      tooltip: "Kliknij w link aby zobaczyć mape"
     formFields:
       name:
-        label: ""
-        placeholder: ""
+        label: "Imię"
+        placeholder: "np. Jan Kowalski"
       email:
-        label: ""
-        placeholder: ""
+        label: "Email"
+        placeholder: "np. jakkowalski@firma.pl"
       phone:
-        label: ""
-        placeholder: ""
+        label: "Telefon"
+        placeholder: "np. 123 456 789"
       message:
-        label: ""
-        placeholder: ""
+        label: "Wiadomość"
+        placeholder: "Opowiedz nam o swoim zleceniu"
       checkbox:
-        label: ""
+        label: "Zgadzam się na przetwarzanie moich danych osobowych zgodnie z"
+        label2: "polityką prywatności"
         policyLink: "/polityka-prywatnosci"
+      submitBtn: "Wyślij wiadomość"
   footer:
     body: >
       Zapraszamy do kontaktu i współpracy. Niezależnie od tego, czy szukasz partnera do stałej współpracy, czy potrzebujesz wsparcia przy jednorazowym zleceniu, Sub Logistic jest gotowy, aby wspierać Twój biznes na drogach Polski, Europy i świata.

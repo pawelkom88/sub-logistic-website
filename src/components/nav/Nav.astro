@@ -14,13 +14,14 @@ import {
 } from "../../utils/utils";
 
 interface Props {
+  contactBtn?: SelectedTranslation["contactBtn"] | undefined;
   contact?: SelectedTranslation["contact"] | undefined;
   links?: SelectedTranslation["nav"]["links"] | undefined;
 }
 
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;
 
-const { contact, links = [] } = Astro.props;
+const { contactBtn, contact, links = [] } = Astro.props;
 ---
 
 <header id="cs-navigation">
@@ -106,7 +107,6 @@ const { contact, links = [] } = Astro.props;
     <a href="/" class="cs-logo" aria-label="back to home">
       <Image
         loading="eager"
-        loading="eager"
         format={"webp"}
         src={logo}
         alt="sub logistic logo"
@@ -140,7 +140,7 @@ const { contact, links = [] } = Astro.props;
       </div>
     </nav>
     <!-- TODO: add contact translation -->
-    <a href="#cs-contact-490" class="cs-button-solid cs-nav-button">Kontakt</a>
+    <a href="#cs-contact-490" class="cs-button-solid cs-nav-button">{contactBtn}</a>
   </div>
 </header>
 

@@ -9,6 +9,7 @@ import Seo from "../seo/Seo.astro";
 import type { Lang, SelectedTranslation } from "../utils/utils";
 
 interface Props {
+    contactBtn?: SelectedTranslation["contactBtn"] | undefined;
   contact?: SelectedTranslation["contact"] | undefined;
   footer?: SelectedTranslation["footer"] | undefined;
   links?: SelectedTranslation["nav"]["links"] | undefined;
@@ -22,7 +23,7 @@ interface Props {
 
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;
 
-const { links, contact, footer, title, description, image } = Astro.props;
+const { contactBtn, links, contact, footer, title, description, image } = Astro.props;
 ---
 
 <!doctype html>
@@ -37,7 +38,7 @@ const { links, contact, footer, title, description, image } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <Nav contact={contact} links={links} />
+    <Nav contactBtn={contactBtn} contact={contact} links={links} />
     <slot />
     <Footer contact={contact} footer={footer} links={links} />
     <style is:global>

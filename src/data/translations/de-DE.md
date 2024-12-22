@@ -14,6 +14,7 @@ translations:
         url: "/ueber-uns"
       - name: "Datenschutz"
         url: "/datenschutz"
+  contactBtn: "Kontakt"
   hero:
     title: "Sub Logistic Gdańsk - Ihr Partner für Straßenspedition in Polen und Europa"
     body: >
@@ -111,6 +112,7 @@ translations:
       address: ""
       email: ""
       phone: ""
+      tooltip: "Klicken Sie auf den Link, um die Karte zu sehen."
     formFields:
       name:
         label: ""
@@ -126,7 +128,9 @@ translations:
         placeholder: ""
       checkbox:
         label: ""
+        label2: ""
         policyLink: "/???"
+      submitBtn: ""
   footer:
     body: >
       Wir laden Sie ein, mit uns Kontakt aufzunehmen und zusammenzuarbeiten. Egal, ob Sie einen Partner für eine dauerhafte Zusammenarbeit suchen oder Unterstützung bei einem einmaligen Auftrag benötigen, Sub Logistic ist bereit, Ihr Unternehmen auf den Straßen Polens, Europas und der Welt zu unterstützen.

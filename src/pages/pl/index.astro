@@ -11,9 +11,10 @@ import { getCurrentLanguageTranslation, type Lang } from "../../utils/utils";
 
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;
 const translations = getCurrentLanguageTranslation(currentLang);
+console.log(translations.contactBtn, "contact btn")
 ---
 
-<Layout
+<Layout contactBtn={translations.contactBtn}
   contact={translations.contact}
   links={translations.nav.links}
   footer={translations.footer}

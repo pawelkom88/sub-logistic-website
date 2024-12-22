@@ -16,6 +16,7 @@ translations:
         url: "/privacy-policy"
       - name: "Terms of use"
         url: "/terms-of-use"
+  contactBtn: "Contact us"
   hero:
     title: "Sub Logistic Gdańsk - Your Partner for Road Freight in Poland and Europe"
     body: >
@@ -99,8 +100,8 @@ translations:
     imageTitle: ""
     jobTitle: ""
   cta:
-    topper: ""
-    heading: ""
+    topper: "1"
+    heading: "1"
     description: ""
     actionBtn: ""
   contactForm:
@@ -111,6 +112,7 @@ translations:
       address: ""
       email: ""
       phone: "+"
+      tooltip: "Click the link to see the map"
     formFields:
       name:
         label: "Your Name"
@@ -126,7 +128,9 @@ translations:
         placeholder: ""
       checkbox:
         label: "I agree to the privacy policy"
+        label2: "I agree to the privacy policy"
         policyLink: "/???"
+      submitBtn: "Send message"
   footer:
     body: >
       We invite you to get in touch and work with us. Whether you are looking for a partner for ongoing collaboration

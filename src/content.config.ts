@@ -17,6 +17,7 @@ const translations = defineCollection({
           })
         ),
       }),
+      contactBtn: z.string(),
       hero: z.object({
         title: z.string(),
         body: z.string(),
@@ -93,6 +94,7 @@ const translations = defineCollection({
           address: z.string(),
           email: z.string(),
           phone: z.string(),
+          tooltip: z.string(),
         }),
         formFields: z.object({
           name: z.object({
@@ -113,8 +115,10 @@ const translations = defineCollection({
           }),
           checkbox: z.object({
             label: z.string(),
+            label2: z.string(),
             policyLink: z.string(),
           }),
+          submitBtn: z.string(),
         }),
       }),
       contact: z.object({

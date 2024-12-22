@@ -1,19 +1,23 @@
 ---
 import "./cta.css";
+import {SelectedTranslation} from "../../utils/utils";
+
+interface Props {
+    cta: SelectedTranslation["cta"]
+}
+
+const {cta} = Astro.props
 ---
 
 <section id="cta-51">
   <div class="cs-container">
     <div class="cs-content">
-      <span class="cs-topper">Gotowi do działania</span>
-      <h2 class="cs-title">Zostań Naszym Partnerem</h2>
+      <span class="cs-topper">{cta.topper}</span>
+      <h2 class="cs-title">{cta.heading}</h2>
       <p class="cs-text">
-        Nie czekaj na rozwiązanie swoich wyzwań logistycznych. Dołącz do grona
-        zadowolonych klientów Sub Trans i odkryj, jak nasze doświadczenie oraz innowacyjne
-        podejście mogą przetransformować Twój łańcuch dostaw. Skontaktuj się z nami już
-        dziś, by rozpocząć naszą wspólną drogę do sukcesu.
+        {cta.description}
       </p>
-      <a href="#cs-contact-490" class="cs-button-solid">Zacznij współpracę juz dziś</a>
+      <a href="#cs-contact-490" class="cs-button-solid">{cta.actionBtn}</a>
     </div>
   </div>
   <!-- Background Image-->

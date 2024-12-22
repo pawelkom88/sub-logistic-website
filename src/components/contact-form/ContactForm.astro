@@ -38,7 +38,7 @@ export const googleMapsLink =
         >
           {contact?.address}
         </a>
-        <span aria-hidden="true" class="cs-tooltip">Kliknij w link aby zobaczyć mape</span
+        <span aria-hidden="true" class="cs-tooltip">{form?.contactLabels.tooltip}</span
         >
       </div>
       <br />
@@ -65,31 +65,31 @@ export const googleMapsLink =
       <input type="hidden" name="subject" value="Nowa wiadomość ze strony" />
       <!-- HIDDEN -->
       <label for="name-490" class="cs-label">
-        Imię <input
+        {form?.formFields.name.label} <input
           class="cs-input"
           required="required"
           type="text"
           id="name-490"
           name="name"
           pattern="[A-Za-z]{2,}"
-          placeholder="np. Jan Kowalski"
+          placeholder={form?.formFields.name.placeholder}
           autocomplete="given-name"
         />
       </label>
       <label for="email-490" class="cs-label">
-        Email <input
+        {form?.formFields.email.label} <input
           class="cs-input"
           required
           type="email"
           id="email-490"
           name="email"
-          placeholder="np. jakkowalski@firma.pl"
+          placeholder={form?.formFields.email.placeholder}
           pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
           autocomplete="email"
         />
       </label>
       <label for="phone-490" class="cs-label">
-        Telefon <input
+        {form?.formFields.phone} <input
           class="cs-input"
           required
           pattern="(?<!\w)(\(?(\+|00)?48\)?)?[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}(?!\w)"
@@ -102,18 +102,18 @@ export const googleMapsLink =
         />
       </label>
       <label for="message-490" class="cs-label -label-message">
-        Wiadomość <textarea
+        {form?.formFields.message.label} <textarea
           class="cs-input"
           required
           name="Message"
           id="message-490"
-          placeholder="Witam, jestem zainteresowany wspłópraca..."></textarea>
+          placeholder={form?.formFields.message.placeholder}></textarea>
       </label>
       <div class="cs-label cs-span-2">
         <label for="agreement">
-          Zgadzam się na przetwarzanie moich danych osobowych zgodnie z
+          {form?.formFields.checkbox.label}
           <a href={`${currentLang}${form?.formFields.checkbox.policyLink}`}
-            >polityką prywatności</a
+            >{form?.formFields.checkbox.label2}</a
           >
           <input
             class="cs-checkbox"
@@ -125,7 +125,7 @@ export const googleMapsLink =
         </label>
       </div>
       <br />
-      <button class="cs-button-solid">Wyślij wiadomość</button>
+      <button class="cs-button-solid">{form?.formFields.submitBtn}</button>
     </form>
     <!-- !! FOR JS -->
     <!-- <div class="lds-spinner"></div>
