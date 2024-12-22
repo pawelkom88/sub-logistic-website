@@ -4,8 +4,7 @@ languageName: English
 translations:
   seoTitle: "Sub-Logistic Gdańsk: Road Freight in Poland and Europe | Your Logistics Partner"
   seoDescription: >
-    Sub-Logistic Gdańsk provides professional road freight services in Poland and Europe.
-    As your logistics partner, we offer fast and secure transportation.
+    "Sub-Logistic Gdańsk provides professional road freight services in Poland and Europe. As your logistics partner, we offer fast and secure transportation."
   nav:
     links:
       - name: "Home"
@@ -16,7 +15,7 @@ translations:
         url: "/privacy-policy"
       - name: "Terms of use"
         url: "/terms-of-use"
-  contactBtn: "Contact us"
+    contactBtn: "Contact us"
   hero:
     title: "Sub Logistic Gdańsk - Your Partner for Road Freight in Poland and Europe"
     body: >

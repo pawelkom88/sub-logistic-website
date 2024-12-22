@@ -2,13 +2,11 @@
 import { getCollection } from "astro:content";
 import Policy from "../../components/policy/Policy.astro";
 import Layout from "../../layouts/Layout.astro";
-import { getCurrentLanguageTranslation, type Lang } from "../../utils/utils";
+import {getCountryCode, getCurrentLanguageTranslation} from "../../utils/utils";
 
-const currentLang = Astro.url.pathname.split("/")[1] as Lang;
+const currentLang = getCountryCode(Astro.url.pathname);
 const privacyPolicyAndTermsCollection = await getCollection("PrivacyPolicyAndTermsOfUse");
-
 const translations = getCurrentLanguageTranslation(currentLang);
-
 const selectedPolicyEntry = privacyPolicyAndTermsCollection.find((entry) =>
   entry.id.includes(currentLang.toLowerCase())
 );

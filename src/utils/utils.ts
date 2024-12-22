@@ -7,16 +7,33 @@ export type Lang = "en" | "de" | "pl";
 
 export type LangCode = "en-GB" | "de-DE" | "pl-PL";
 
+export function getCountryCode(pathname: string): Lang {
+  const [, currentLang] = pathname.split("/") as Lang[];
+  return currentLang;
+}
+
+const countries = {
+  en: "en",
+  de: "de",
+  pl: "pl",
+} as const;
+
+const countryCodes = {
+  en: "en-GB",
+  de: "de-DE",
+  pl: "pl-PL",
+} as const;
+
 export function getLangCode(lang: Lang): LangCode {
   switch (lang) {
-    case "en":
-      return "en-GB";
-    case "de":
-      return "de-DE";
-    case "pl":
-      return "pl-PL";
+    case countries.en:
+      return countryCodes.en;
+    case countries.de:
+      return countryCodes.de;
+    case countries.pl:
+      return countryCodes.pl;
     default:
-      return "en-GB";
+      return countryCodes.en;
   }
 }
 
@@ -26,22 +43,22 @@ export function splitString(string: string, el = 0): string {
 
 export function getFlagSrc(lang: LangCode): ImageMetadata {
   switch (lang) {
-    case "pl-PL":
+    case countryCodes.pl:
       return plPL;
-    case "de-DE":
+    case countryCodes.de:
       return deDE;
-    case "en-GB":
+    case countryCodes.en:
       return enGB;
   }
 }
 
 export function translateAriaLabel(lang: Lang): string {
   switch (lang) {
-    case "en":
+    case countries.en:
       return "Language selector";
-    case "de":
+    case countries.de:
       return "Sprachauswahl";
-    case "pl":
+    case countries.pl:
       return "Wybierz język";
     default:
       return "Language selector";
@@ -58,7 +75,7 @@ export type SelectedTranslation = TranslationEntry["data"]["translations"];
 const allTranslations = await getCollection("translations");
 export function getCurrentLanguageTranslation(currentLang: Lang) {
   const translationEntry = allTranslations.find(
-    (t: TranslationEntry) => t.data.languageCode === getLangCode(currentLang)
+    (t: TranslationEntry) => t.data.languageCode === getLangCode(currentLang),
   ) as TranslationEntry;
 
   const { translations } = translationEntry.data || {};
@@ -68,20 +85,26 @@ export function getCurrentLanguageTranslation(currentLang: Lang) {
 
 export function getLangFullName(lang: Lang) {
   switch (lang) {
-    case "pl":
+    case countries.pl:
       return "Polski";
-    case "de":
+    case countries.de:
       return "Deutsch";
-    case "en":
+    case countries.en:
       return "English";
   }
 }
 
 export const languagesConfig = {
-  "pl-PL": { flag: plPL, translations: { pl: "Polski", en: "Polish", de: "Polnisch" } },
-  "en-GB": {
+  [countryCodes.pl]: {
+    flag: plPL,
+    translations: { pl: "Polski", en: "Polish", de: "Polnisch" },
+  },
+  [countryCodes.en]: {
     flag: enGB,
     translations: { pl: "Angielski", en: "English", de: "Englisch" },
   },
-  "de-DE": { flag: deDE, translations: { pl: "Niemiecki", en: "German", de: "Deutsch" } },
+  [countryCodes.de]: {
+    flag: deDE,
+    translations: { pl: "Niemiecki", en: "German", de: "Deutsch" },
+  },
 };

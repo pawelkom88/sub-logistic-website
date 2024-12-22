@@ -3,7 +3,8 @@ languageCode: pl-PL
 languageName: Polski
 translations:
   seoTitle: "Sub-Logistic Gdańsk: Spedycja Drogowa w Polsce i Europie | Twój Partner w Logistyce"
-  seoDescription: "Sub-Logistic Gdańsk zapewnia profesjonalną spedycję drogową w Polsce i Europie. Jako Twój partner w logistyce, oferujemy szybki i bezpieczny transport."
+  seoDescription: >
+    Sub-Logistic Gdańsk zapewnia profesjonalną spedycję drogową w Polsce i Europie. Jako Twój partner w logistyce, oferujemy szybki i bezpieczny transport.
   nav:
     links:
       - name: "Strona Główna"

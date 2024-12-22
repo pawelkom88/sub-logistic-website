@@ -7,11 +7,9 @@ import Service from "../../components/service/Service.astro";
 import Team from "../../components/team/Team.astro";
 import WhyUs from "../../components/why-us/WhyUs.astro";
 import Layout from "../../layouts/Layout.astro";
-import { getCurrentLanguageTranslation, type Lang } from "../../utils/utils";
+import {getCountryCode, getCurrentLanguageTranslation} from "../../utils/utils";
 
-const currentLang = Astro.url.pathname.split("/")[1] as Lang;
-const translations = getCurrentLanguageTranslation(currentLang);
-console.log(translations.contactBtn, "contact btn")
+const translations = getCurrentLanguageTranslation(getCountryCode(Astro.url.pathname));
 ---
 
 <Layout contactBtn={translations.contactBtn}

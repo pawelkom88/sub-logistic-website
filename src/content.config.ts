@@ -1,4 +1,5 @@
 import { glob } from "astro/loaders";
+// @ts-ignore
 import { defineCollection, z } from "astro:content";
 
 const translations = defineCollection({

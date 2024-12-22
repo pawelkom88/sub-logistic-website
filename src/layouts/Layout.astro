@@ -6,7 +6,7 @@ import "@fontsource/ibm-plex-sans/700.css";
 import Footer from "../components/footer/Footer.astro";
 import Nav from "../components/nav/Nav.astro";
 import Seo from "../seo/Seo.astro";
-import type { Lang, SelectedTranslation } from "../utils/utils";
+import {getCountryCode, SelectedTranslation} from "../utils/utils";
 
 interface Props {
     contactBtn?: SelectedTranslation["contactBtn"] | undefined;
@@ -21,8 +21,7 @@ interface Props {
   };
 }
 
-const currentLang = Astro.url.pathname.split("/")[1] as Lang;
-
+const currentLang = getCountryCode(Astro.url.pathname)
 const { contactBtn, links, contact, footer, title, description, image } = Astro.props;
 ---
 
