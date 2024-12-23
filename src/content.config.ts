@@ -138,46 +138,52 @@ const translations = defineCollection({
 const privacyPolicyAndTermsOfUse = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/policy" }),
   schema: z.object({
-    policy: z.object({
-      title: z.string(),
-      description: z.string(),
-      administrator: z.object({
-        label: z.string(),
-        content: z.string(),
-      }),
-      dataProcessing: z.object({
-        purpose: z.string(),
-        scope: z.array(z.string()),
-        cookies: z.array(z.string()),
-      }),
-      legalBasis: z.object({
+    languageCode: z
+      .literal("pl-PL")
+      .or(z.literal("en-GB"))
+      .or(z.literal("de-DE")),
+    translations: z.object({
+      policy: z.object({
+        title: z.string(),
         description: z.string(),
-        regulation: z.string(),
-      }),
-      dataRetention: z.object({
-        period: z.string(),
-        policy: z.string(),
-      }),
-      userRights: z.array(z.string()),
-      dataSharing: z.object({
-        policy: z.string(),
-      }),
-      security: z.object({
-        policy: z.string(),
-      }),
-      disclaimers: z.object({
-        content: z.string(),
-        externalLinks: z.string(),
-        damages: z.string(),
-      }),
-      policyChanges: z.object({
-        policy: z.string(),
-        notice: z.string(),
-      }),
-      contact: z.object({
-        email: z.string().optional(),
-        phone: z.string().optional(),
-        companyDetails: z.string().optional(),
+        administrator: z.object({
+          label: z.string(),
+          content: z.string(),
+        }),
+        dataProcessing: z.object({
+          purpose: z.string(),
+          scope: z.array(z.string()),
+          cookies: z.array(z.string()),
+        }),
+        legalBasis: z.object({
+          description: z.string(),
+          regulation: z.string(),
+        }),
+        dataRetention: z.object({
+          period: z.string(),
+          policy: z.string(),
+        }),
+        userRights: z.array(z.string()),
+        dataSharing: z.object({
+          policy: z.string(),
+        }),
+        security: z.object({
+          policy: z.string(),
+        }),
+        disclaimers: z.object({
+          content: z.string(),
+          externalLinks: z.string(),
+          damages: z.string(),
+        }),
+        policyChanges: z.object({
+          policy: z.string(),
+          notice: z.string(),
+        }),
+        contact: z.object({
+          email: z.string().optional(),
+          phone: z.string().optional(),
+          companyDetails: z.string().optional(),
+        }),
       }),
     }),
   }),
