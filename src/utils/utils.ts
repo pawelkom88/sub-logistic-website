@@ -4,19 +4,18 @@ import enGB from "../assets/images/en-GB.png";
 import plPL from "../assets/images/pl-PL.png";
 
 export type Lang = "en" | "de" | "pl";
-
 export type LangCode = "en-GB" | "de-DE" | "pl-PL";
+export type TranslationEntry = CollectionEntry<"translations">;
+export type SelectedTranslation = TranslationEntry["data"]["translations"];
 
 export function getCountryCode(pathname: string): Lang {
   const [, currentLang] = pathname.split("/") as Lang[];
   return currentLang;
 }
 
-const countries = {
-  en: "en",
-  de: "de",
-  pl: "pl",
-} as const;
+export function getHref(currentLang: Lang, url: string) {
+  return url.startsWith("/") ? `/${currentLang}${url}` : url;
+}
 
 const countryCodes = {
   en: "en-GB",
@@ -51,9 +50,6 @@ const ariaLabelMap: Record<Lang, string> = {
 export function translateAriaLabel(lang: Lang): string {
   return ariaLabelMap[lang] || ariaLabelMap.en;
 }
-
-export type TranslationEntry = CollectionEntry<"translations">;
-export type SelectedTranslation = TranslationEntry["data"]["translations"];
 
 const allTranslations = await getCollection("translations");
 export async function getCurrentLanguageTranslation(

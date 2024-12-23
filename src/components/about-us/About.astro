@@ -1,12 +1,13 @@
 ---
 import "../../styles/onas.css";
+import { getCountryCode, getHref } from "../../utils/utils";
 
 interface Props {
   aboutUs: any;
 }
 
 const { aboutUs } = Astro.props;
-console.log(aboutUs);
+const currentLang = getCountryCode(Astro.url.pathname);
 ---
 
 <section id="content-page-713">
@@ -22,53 +23,22 @@ console.log(aboutUs);
       <p class="cs-text">{aboutUs.h3Paragraph}</p>
       <h3>{aboutUs.h3next}</h3>
       <ul>
-        <li>
-          Personalizowane rozwiązania:
-          <p class="cs-text">
-            Każde zlecenie traktujemy indywidualnie, dostosowując usługi do
-            konkretnych potrzeb i oczekiwań. Naszym celem jest nie tylko
-            dostarczenie ładunku, ale przede wszystkim zbudowanie
-            długoterminowej współpracy opartej na zaufaniu i zrozumieniu.
-          </p>
-        </li>
-        <li>
-          Nowoczesność i innowacja:
-          <p class="cs-text">
-            W Sub Trans łączymy sprawdzone metody pracy z nowoczesnymi
-            narzędziami, co pozwala nam na optymalizację procesów logistycznych
-            i zapewnienie najwyższej jakości usług.
-          </p>
-        </li>
-        <li>
-          Zrównoważony rozwój:
-          <p class="cs-text">
-            Jesteśmy świadomi wpływu, jaki branża transportowa ma na środowisko.
-            Dlatego też staramy się minimalizować nasz ślad węglowy poprzez
-            efektywne planowanie tras i dbałość o stan techniczny pojazdów.
-          </p>
-        </li>
-        <li>
-          Ekspert w branży:
-          <p class="cs-text">
-            Piotr Subotowicz, z swoją niezrównaną wiedzą i doświadczeniem, jest
-            sercem Sub Trans. Jego osobiste zaangażowanie w każde zlecenie
-            gwarantuje, że Twoje towary są zawsze w dobrych rękach.
-          </p>
-        </li>
+        {
+          aboutUs.li.map((item: any) => (
+            <li>
+              {item.title}
+              <p class="cs-text">{item.description}</p>
+            </li>
+          ))
+        }
       </ul>
-
-      <h4>Dołącz do nas</h4>
-      <p class="cs-text">
-        Zapraszamy do współpracy z Sub Trans, gdzie tradycyjne wartości
-        spotykają się z nowoczesnym podejściem do logistyki. Odkryj różnicę,
-        jaką może wprowadzić osobiste zaangażowanie i pasja do Twojego łańcucha
-        dostaw.
-      </p>
+      <h4>{aboutUs.h4}</h4>
+      <p class="cs-text">{aboutUs.h4Paragraph}</p>
       <br />
       <p class="cs-text">
         <!--lang here ?-->
-        <a href="/#cs-contact-490">Skontaktuj się z nami</a>, aby dowiedzieć się
-        więcej o naszych usługach i jak możemy wspomóc Twój biznes.
+        <a href={getHref(currentLang, aboutUs.link.url)}>{aboutUs.link.part1}</a
+        >, {aboutUs.link.part2}
       </p>
     </div>
     <div class="cs-image-group">

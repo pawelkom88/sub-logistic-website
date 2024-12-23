@@ -1,6 +1,6 @@
 ---
 import { Picture } from "astro:assets";
-import type { Lang, SelectedTranslation } from "../../utils/utils";
+import { getHref, Lang, SelectedTranslation } from "../../utils/utils";
 import "./team.css";
 
 interface Props {
@@ -10,7 +10,6 @@ interface Props {
 
 const currentLang = Astro.url.pathname.split("/")[1] as Lang;
 const { link, team } = Astro.props;
-const href = link.url.startsWith("/") ? `/${currentLang}${link.url}` : link.url;
 ---
 
 <section id="meet-team-860">
@@ -23,7 +22,9 @@ const href = link.url.startsWith("/") ? `/${currentLang}${link.url}` : link.url;
           {team?.description}
         </p>
       </div>
-      <a href={href} class="cs-button-solid">{team?.actionBtn}</a>
+      <a href={getHref(currentLang, link.url)} class="cs-button-solid"
+        >{team?.actionBtn}</a
+      >
     </div>
     <ul class="cs-card-group">
       <li class="cs-item">

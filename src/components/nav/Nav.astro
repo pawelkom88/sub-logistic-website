@@ -11,6 +11,7 @@ import {
   type LangCode,
   type SelectedTranslation,
   getCountryCode,
+  getHref,
 } from "../../utils/utils";
 
 interface Props {
@@ -107,7 +108,11 @@ const { contactBtn, contact, links = [] } = Astro.props;
     </div>
   </div>
   <div class="cs-container">
-    <a href="/" class="cs-logo" aria-label="back to home">
+    <a
+      href={getHref(currentLang, "/")}
+      class="cs-logo"
+      aria-label="back to home"
+    >
       <Image
         loading="eager"
         format={"webp"}
@@ -129,10 +134,10 @@ const { contactBtn, contact, links = [] } = Astro.props;
         <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
           {
             links?.map(({ url, name }) => {
-              const href = url.startsWith("/") ? `/${currentLang}${url}` : url;
+              // const href = url.startsWith("/") ? `/${currentLang}${url}` : url;
               return (
                 <li class="cs-li">
-                  <a href={href} class="cs-li-link">
+                  <a href={getHref(currentLang, url)} class="cs-li-link">
                     {name}
                   </a>
                 </li>
