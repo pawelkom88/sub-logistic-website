@@ -3,13 +3,15 @@ import type { CollectionEntry } from "astro:content";
 import "./policy.css";
 
 export type PolicyEntry =
-  CollectionEntry<"PrivacyPolicyAndTermsOfUse">["data"]["policy"];
+  CollectionEntry<"privacyPolicyAndTermsOfUse">["data"]["policy"];
 
 interface Props {
   policy: PolicyEntry | undefined;
 }
 
 const { policy } = Astro.props;
+
+console.log(policy);
 ---
 
 <section class="cs-container">
@@ -17,10 +19,9 @@ const { policy } = Astro.props;
   <p>
     {policy?.description}
   </p>
-  <h2>1. Administrator danych</h2>
+  <h2>1. {policy?.administrator.label}</h2>
   <p>
-    Administratorem danych osobowych jest Sportuś Krzysztof Iwanowski z siedzibą
-    w Gdańsku.NIP 743200079
+    {policy?.administrator.content}
   </p>
   <h2>2. Cel i zakres zbierania danych</h2>
   <p>

@@ -142,9 +142,8 @@ const privacyPolicyAndTermsOfUse = defineCollection({
       title: z.string(),
       description: z.string(),
       administrator: z.object({
-        name: z.string(),
-        location: z.string(),
-        NIP: z.string(),
+        label: z.string(),
+        content: z.string(),
       }),
       dataProcessing: z.object({
         purpose: z.string(),

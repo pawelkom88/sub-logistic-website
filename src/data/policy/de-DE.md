@@ -4,9 +4,8 @@ policy:
   description: "Diese Datenschutzrichtlinie und Nutzungsbedingungen legen die Regeln für die Nutzung der Sportuś-Website fest, die Sportaktivitäten für Kinder anbietet."
 
   administrator:
-    name: "Sportuś Krzysztof Iwanowski"
-    location: "Gdańsk"
-    NIP: "743200079"
+    label: "Sportuś Krzysztof Iwanowski"
+    content: "Gdańsk"
 
   dataProcessing:
     purpose: "Bearbeitung von Anfragen, die über das Kontaktformular gesendet werden"

@@ -9,8 +9,10 @@ import {
 
 const currentLang = getCountryCode(Astro.url.pathname);
 const privacyPolicyAndTermsCollection = await getCollection(
-  "PrivacyPolicyAndTermsOfUse",
+  "privacyPolicyAndTermsOfUse",
 );
+
+// TODO: ad translation key and reuse function
 const translations = await getCurrentLanguageTranslation(currentLang);
 const selectedPolicyEntry = privacyPolicyAndTermsCollection.find((entry) =>
   entry.id.includes(currentLang.toLowerCase()),
