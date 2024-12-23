@@ -246,6 +246,7 @@ const { contactBtn, contact, links = [] } = Astro.props;
       options?.forEach((option, index) => {
         option.addEventListener("click", () => {
           const selectedLang = option.getAttribute("data-lang") as LangCode;
+            <!--TODO: make sure when languages changes the path is preserved-->
           window.location.pathname = `/${selectedLang.split("-")[0]}`;
 
           dropdownBtn?.setAttribute("aria-expanded", "false");

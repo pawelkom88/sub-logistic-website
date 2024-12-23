@@ -127,8 +127,8 @@ translations:
         label: "Nachricht"
         placeholder: "Schreiben sie uns eine nachricht"
       checkbox:
-        label: "Ich stimme der verarbeitung meiner persönlichen daten gemäß der"
-        label2: ""
+        label: "Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß zu"
+        label2: "der Datenschutzrichtlinie"
         policyLink: "/datenschutz"
       submitBtn: "Nachricht senden"
   footer:
