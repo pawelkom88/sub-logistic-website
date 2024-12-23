@@ -6,10 +6,10 @@ import "@fontsource/ibm-plex-sans/700.css";
 import Footer from "../components/footer/Footer.astro";
 import Nav from "../components/nav/Nav.astro";
 import Seo from "../seo/Seo.astro";
-import {getCountryCode, SelectedTranslation} from "../utils/utils";
+import { getCountryCode, SelectedTranslation } from "../utils/utils";
 
 interface Props {
-    contactBtn?: SelectedTranslation["contactBtn"] | undefined;
+  contactBtn?: SelectedTranslation["contactBtn"] | undefined;
   contact?: SelectedTranslation["contact"] | undefined;
   footer?: SelectedTranslation["footer"] | undefined;
   links?: SelectedTranslation["nav"]["links"] | undefined;
@@ -21,8 +21,9 @@ interface Props {
   };
 }
 
-const currentLang = getCountryCode(Astro.url.pathname)
-const { contactBtn, links, contact, footer, title, description, image } = Astro.props;
+const currentLang = getCountryCode(Astro.url.pathname);
+const { contactBtn, links, contact, footer, title, description, image } =
+  Astro.props;
 ---
 
 <!doctype html>

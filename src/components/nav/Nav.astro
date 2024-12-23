@@ -9,7 +9,8 @@ import {
   languagesConfig,
   translateAriaLabel,
   type LangCode,
-  type SelectedTranslation, getCountryCode,
+  type SelectedTranslation,
+  getCountryCode,
 } from "../../utils/utils";
 
 interface Props {
@@ -18,7 +19,7 @@ interface Props {
   links?: SelectedTranslation["nav"]["links"] | undefined;
 }
 
-const currentLang =getCountryCode(Astro.url.pathname);
+const currentLang = getCountryCode(Astro.url.pathname);
 const { contactBtn, contact, links = [] } = Astro.props;
 ---
 
@@ -56,7 +57,11 @@ const { contactBtn, contact, links = [] } = Astro.props;
         tabindex="-1"
         aria-label={translateAriaLabel(currentLang)}
       >
-        <button id="language-selector-btn" aria-haspopup="listbox" aria-expanded="false">
+        <button
+          id="language-selector-btn"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+        >
           <Image
             aria-hidden="true"
             width="20"
@@ -138,7 +143,9 @@ const { contactBtn, contact, links = [] } = Astro.props;
       </div>
     </nav>
     <!-- TODO: add contact translation -->
-    <a href="#cs-contact-490" class="cs-button-solid cs-nav-button">{contactBtn}</a>
+    <a href="#cs-contact-490" class="cs-button-solid cs-nav-button"
+      >{contactBtn}</a
+    >
   </div>
 </header>
 
@@ -146,9 +153,11 @@ const { contactBtn, contact, links = [] } = Astro.props;
   function init() {
     // add classes for mobile navigation toggling
     const CSbody = document.querySelector("body") as HTMLBodyElement;
-    const CSnavbarMenu = document.querySelector("#cs-navigation") as HTMLElement;
+    const CSnavbarMenu = document.querySelector(
+      "#cs-navigation",
+    ) as HTMLElement;
     const CShamburgerMenu = document.querySelector(
-      "#cs-navigation .cs-toggle"
+      "#cs-navigation .cs-toggle",
     ) as HTMLElement;
     const logo = document.querySelector(".cs-logo") as HTMLImageElement;
 
@@ -189,7 +198,7 @@ const { contactBtn, contact, links = [] } = Astro.props;
 
     // mobile nav toggle code
     const dropDowns = Array.from(
-      document.querySelectorAll("#cs-navigation .cs-dropdown")
+      document.querySelectorAll("#cs-navigation .cs-dropdown"),
     );
     for (const item of dropDowns) {
       item.addEventListener("click", () => item.classList.toggle("cs-active"));
@@ -204,12 +213,14 @@ const { contactBtn, contact, links = [] } = Astro.props;
     type LangCode = "en-GB" | "de-DE" | "pl-PL";
 
     const dropdownBtn = document.getElementById(
-      "language-selector-btn"
+      "language-selector-btn",
     ) as HTMLButtonElement;
     const dropdownContent = document.getElementById(
-      "language-selector-content"
+      "language-selector-content",
     ) as HTMLElement;
-    const options = dropdownContent?.querySelectorAll("li") as NodeListOf<HTMLElement>;
+    const options = dropdownContent?.querySelectorAll(
+      "li",
+    ) as NodeListOf<HTMLElement>;
 
     function initializeDropdown() {
       // Event listener to toggle dropdown visibility

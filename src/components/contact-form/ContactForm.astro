@@ -37,7 +37,8 @@ export const googleMapsLink =
         >
           {contact?.address}
         </a>
-        <span aria-hidden="true" class="cs-tooltip">{form?.contactLabels.tooltip}</span
+        <span aria-hidden="true" class="cs-tooltip"
+          >{form?.contactLabels.tooltip}</span
         >
       </div>
       <br />
@@ -60,11 +61,17 @@ export const googleMapsLink =
       <!-- HIDDEN -->
       <!-- <input type="hidden" name="redirect" value="wiadomosc-wyslana" /> -->
       <input type="hidden" name="apikey" value={import.meta.env.VITE_API_KEY} />
-      <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+      <input
+        type="checkbox"
+        name="botcheck"
+        class="hidden"
+        style="display: none;"
+      />
       <input type="hidden" name="subject" value="Nowa wiadomość ze strony" />
       <!-- HIDDEN -->
       <label for="name-490" class="cs-label">
-        {form?.formFields.name.label} <input
+        {form?.formFields.name.label}
+        <input
           class="cs-input"
           required="required"
           type="text"
@@ -76,7 +83,8 @@ export const googleMapsLink =
         />
       </label>
       <label for="email-490" class="cs-label">
-        {form?.formFields.email.label} <input
+        {form?.formFields.email.label}
+        <input
           class="cs-input"
           required
           type="email"
@@ -88,7 +96,8 @@ export const googleMapsLink =
         />
       </label>
       <label for="phone-490" class="cs-label">
-        {form?.formFields.phone.label} <input
+        {form?.formFields.phone.label}
+        <input
           class="cs-input"
           required
           pattern="(?<!\w)(\(?(\+|00)?48\)?)?[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}(?!\w)"
@@ -101,7 +110,8 @@ export const googleMapsLink =
         />
       </label>
       <label for="message-490" class="cs-label -label-message">
-        {form?.formFields.message.label} <textarea
+        {form?.formFields.message.label}
+        <textarea
           class="cs-input"
           required
           name="Message"

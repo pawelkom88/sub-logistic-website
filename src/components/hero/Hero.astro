@@ -37,8 +37,11 @@ const formattedHeroAfter = splitString(hero.title, 1);
   />
   <!-- new route !!! -->
   <dialog id="cs-dialog">
-    <button type="button" autofocus class="close-btn" aria-label="Zamknij dialog"
-      >zamknij</button
+    <button
+      type="button"
+      autofocus
+      class="close-btn"
+      aria-label="Zamknij dialog">zamknij</button
     >
     <ol class="cs-stepper">
       <li class="active">Informacje ogólne</li>
@@ -47,21 +50,24 @@ const formattedHeroAfter = splitString(hero.title, 1);
     </ol>
     <!-- component -->
     <div class="cs-dialog-content">
-      <h1 class="cs-dialog-title">Znajdź idealne rozwiązanie dla swojej przesyłki.</h1>
+      <h1 class="cs-dialog-title">
+        Znajdź idealne rozwiązanie dla swojej przesyłki.
+      </h1>
 
       <p class="cs-dialog-text">
-        Niezależnie od tego, czy potrzebujesz zapełnić całą ciężarówkę, czy tylko małą
-        przestrzeń, mamy rozwiązanie dla Ciebie rozwiązanie. Posiadamy szeroką gamę
-        pojazdów, dzięki czemu możemy dopasować się do Twoich unikalnych potrzeb. Nasza
-        oferta obejmuje transport FTL i LTL, szybkie dostawy dedykowane, a także
-        bezpieczny przewóz materiałów niebezpiecznych (ADR) i ładunków specjalnych. Z nami
-        Twoja przesyłka jest zawsze bezpieczna, monitorowana w czasie rzeczywistym i
-        odpowiednio ubezpieczona.
+        Niezależnie od tego, czy potrzebujesz zapełnić całą ciężarówkę, czy
+        tylko małą przestrzeń, mamy rozwiązanie dla Ciebie rozwiązanie.
+        Posiadamy szeroką gamę pojazdów, dzięki czemu możemy dopasować się do
+        Twoich unikalnych potrzeb. Nasza oferta obejmuje transport FTL i LTL,
+        szybkie dostawy dedykowane, a także bezpieczny przewóz materiałów
+        niebezpiecznych (ADR) i ładunków specjalnych. Z nami Twoja przesyłka
+        jest zawsze bezpieczna, monitorowana w czasie rzeczywistym i odpowiednio
+        ubezpieczona.
       </p>
       <p class="cs-dialog-text">
-        Przejdź do naszego formularza i w kilku prostych krokach uzyskaj wycenę dla swojej
-        przesyłki. Nie czekaj, zaplanuj swój transport już dziś i doświadcz najwyższej
-        jakości usług logistycznych.
+        Przejdź do naszego formularza i w kilku prostych krokach uzyskaj wycenę
+        dla swojej przesyłki. Nie czekaj, zaplanuj swój transport już dziś i
+        doświadcz najwyższej jakości usług logistycznych.
       </p>
     </div>
 
@@ -72,7 +78,9 @@ const formattedHeroAfter = splitString(hero.title, 1);
     </div>
     <!-- component -->
 
-    <button type="button" class="next-btn">Kliknij, aby przejść do formularza</button>
+    <button type="button" class="next-btn"
+      >Kliknij, aby przejść do formularza</button
+    >
 
     <!-- component -->
     <!-- <div class="cs-buttons">
@@ -88,15 +96,19 @@ const formattedHeroAfter = splitString(hero.title, 1);
   // Initialize UI Elements
   const ui = {
     transportOfferBtn: document.querySelector(
-      ".transport-offer-btn"
+      ".transport-offer-btn",
     ) as HTMLButtonElement,
     dialog: document.querySelector("#cs-dialog") as HTMLDialogElement,
     closeButton: document.querySelector(".close-btn") as HTMLButtonElement,
     nextButton: document.querySelector(".next-btn") as HTMLButtonElement,
     prevButton: document.querySelector(".submit-btn") as HTMLButtonElement,
-    dialogContent: document.querySelector(".cs-dialog-content") as HTMLDivElement,
+    dialogContent: document.querySelector(
+      ".cs-dialog-content",
+    ) as HTMLDivElement,
     form: document.querySelector(".cs-form") as HTMLFormElement,
-    steps: document.querySelectorAll(".cs-stepper li") as NodeListOf<HTMLLIElement>,
+    steps: document.querySelectorAll(
+      ".cs-stepper li",
+    ) as NodeListOf<HTMLLIElement>,
     formContainer: document.querySelector(".form-container") as HTMLDivElement,
   };
 
@@ -106,9 +118,11 @@ const formattedHeroAfter = splitString(hero.title, 1);
 
   // Event Listeners
   ui.transportOfferBtn.addEventListener("click", () =>
-    openDialogWithTransition(ui.dialog)
+    openDialogWithTransition(ui.dialog),
   );
-  ui.closeButton.addEventListener("click", () => closeDialogWithTransition(ui.dialog));
+  ui.closeButton.addEventListener("click", () =>
+    closeDialogWithTransition(ui.dialog),
+  );
   ui.nextButton.addEventListener("click", handleNextStep);
   ui.prevButton.addEventListener("click", handlePrevStep);
 

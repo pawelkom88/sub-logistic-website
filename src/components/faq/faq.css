@@ -98,7 +98,9 @@
     right: 0.25rem;
     transform: rotate(90deg);
     transform-origin: center;
-    transition: opacity 0.5s, transform 0.3s;
+    transition:
+      opacity 0.5s,
+      transform 0.3s;
   }
   #faq-254 .cs-item-p {
     /* 14px - 16px */
@@ -111,7 +113,9 @@
     color: var(--bodyTextColor);
     /* clips the text so it doesn't show up */
     overflow: hidden;
-    transition: opacity 0.3s, margin-bottom 0.3s;
+    transition:
+      opacity 0.3s,
+      margin-bottom 0.3s;
   }
   #faq-254 .cs-cta {
     text-align: center;

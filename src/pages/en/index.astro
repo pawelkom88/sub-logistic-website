@@ -7,12 +7,18 @@ import Service from "../../components/service/Service.astro";
 import Team from "../../components/team/Team.astro";
 import WhyUs from "../../components/why-us/WhyUs.astro";
 import Layout from "../../layouts/Layout.astro";
-import {getCountryCode, getCurrentLanguageTranslation} from "../../utils/utils";
+import {
+  getCountryCode,
+  getCurrentLanguageTranslation,
+} from "../../utils/utils";
 
-const translations = await getCurrentLanguageTranslation(getCountryCode(Astro.url.pathname));
+const translations = await getCurrentLanguageTranslation(
+  getCountryCode(Astro.url.pathname),
+);
 ---
 
-<Layout contactBtn={translations.contactBtn}
+<Layout
+  contactBtn={translations.contactBtn}
   contact={translations.contact}
   links={translations.nav.links}
   footer={translations.footer}

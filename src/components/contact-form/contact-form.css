@@ -104,7 +104,8 @@
     flex-direction: column;
   }
 
-  #cs-contact-490 .cs-label:has(input:not(input[type="checkbox"]):user-valid):after {
+  #cs-contact-490
+    .cs-label:has(input:not(input[type="checkbox"]):user-valid):after {
     position: absolute;
     top: 2.8rem;
     right: 1rem;
@@ -112,7 +113,8 @@
     color: green;
   }
 
-  #cs-contact-490 .cs-label:has(input:not(input[type="checkbox"]):user-invalid):after {
+  #cs-contact-490
+    .cs-label:has(input:not(input[type="checkbox"]):user-invalid):after {
     position: absolute;
     top: 2.8rem;
     right: 1rem;

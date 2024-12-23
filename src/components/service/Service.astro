@@ -17,7 +17,8 @@ const serviceCards = service?.cards.map((card, index) => ({
   title: card.title,
   body: card.body,
   image:
-    [serviceImage1, serviceImage2, serviceImage3, serviceImage4][index] || serviceImage4,
+    [serviceImage1, serviceImage2, serviceImage3, serviceImage4][index] ||
+    serviceImage4,
   alt: card.alt || "",
 }));
 ---

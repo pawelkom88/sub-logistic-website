@@ -50,7 +50,9 @@
     border-bottom: 1px solid #e8e8e8;
     box-sizing: border-box;
     grid-column: span 12;
-    transition: background-color 0.3s, border-color 0.3s;
+    transition:
+      background-color 0.3s,
+      border-color 0.3s;
   }
   #services-1301 .cs-item:last-of-type {
     grid-column: span 6;
@@ -88,7 +90,9 @@
     line-height: 1.5em;
     margin: 0;
     color: var(--bodyTextColor);
-    transition: color 0.3s, opacity 0.3s;
+    transition:
+      color 0.3s,
+      opacity 0.3s;
   }
 }
 /* Tablet - 768px */

@@ -2,7 +2,8 @@
 import type { CollectionEntry } from "astro:content";
 import "./policy.css";
 
-export type PolicyEntry = CollectionEntry<"PrivacyPolicyAndTermsOfUse">["data"]["policy"];
+export type PolicyEntry =
+  CollectionEntry<"PrivacyPolicyAndTermsOfUse">["data"]["policy"];
 
 interface Props {
   policy: PolicyEntry | undefined;
@@ -18,13 +19,14 @@ const { policy } = Astro.props;
   </p>
   <h2>1. Administrator danych</h2>
   <p>
-    Administratorem danych osobowych jest Sportuś Krzysztof Iwanowski z siedzibą w
-    Gdańsku.NIP 743200079
+    Administratorem danych osobowych jest Sportuś Krzysztof Iwanowski z siedzibą
+    w Gdańsku.NIP 743200079
   </p>
   <h2>2. Cel i zakres zbierania danych</h2>
   <p>
-    Przetwarzamy dane osobowe Użytkowników wyłącznie w celu obsługi zapytań przesłanych
-    przez formularz kontaktowy. Zakres przetwarzanych danych obejmuje:
+    Przetwarzamy dane osobowe Użytkowników wyłącznie w celu obsługi zapytań
+    przesłanych przez formularz kontaktowy. Zakres przetwarzanych danych
+    obejmuje:
     <ul>
       <li>imię i nazwisko</li>
       <li>adres e-mail</li>
@@ -33,9 +35,9 @@ const { policy } = Astro.props;
     </ul>
   </p>
   <p>
-    Nasza strona internetowa wykorzystuje wyłącznie niezbędne pliki cookies, które są
-    konieczne do prawidłowego funkcjonowania strony. Nie używamy żadnych plików cookies
-    służących do śledzenia lub profilowania użytkowników.
+    Nasza strona internetowa wykorzystuje wyłącznie niezbędne pliki cookies,
+    które są konieczne do prawidłowego funkcjonowania strony. Nie używamy
+    żadnych plików cookies służących do śledzenia lub profilowania użytkowników.
   </p>
   <h2>3. Podstawa prawna przetwarzania danych</h2>
   <p>
@@ -43,9 +45,9 @@ const { policy } = Astro.props;
   </p>
   <h2>4. Okres przechowywania danych</h2>
   <p>
-    Dane osobowe przechowywane są przez okres niezbędny do udzielenia odpowiedzi na
-    zapytanie, nie dłużej jednak niż przez 30 dni od daty otrzymania wiadomości. Po tym
-    czasie dane są usuwane.
+    Dane osobowe przechowywane są przez okres niezbędny do udzielenia odpowiedzi
+    na zapytanie, nie dłużej jednak niż przez 30 dni od daty otrzymania
+    wiadomości. Po tym czasie dane są usuwane.
   </p>
   <h2>5.Prawa Użytkowników</h2>
   <p>Użytkownik ma prawo do:</p>
@@ -75,14 +77,19 @@ const { policy } = Astro.props;
     </p>
     <h2>10. Kontakt</h2>
     <p>
-      Jeśli mają Państwo pytania dotyczące naszej strony internetowej, prosimy o kontakt:
+      Jeśli mają Państwo pytania dotyczące naszej strony internetowej, prosimy o
+      kontakt:
     </p>
     <ul>
       <li>
-        E-mail: <a href=`mailto:${policy?.contact.email}`>{policy?.contact.email}</a>
+        E-mail: <a href=`mailto:${policy?.contact.email}`
+          >{policy?.contact.email}</a
+        >
       </li>
       <li>
-        Telefon: <a href=`tel:${policy?.contact.phone}`>{policy?.contact.phone}</a>
+        Telefon: <a href=`tel:${policy?.contact.phone}`
+          >{policy?.contact.phone}</a
+        >
       </li>
       <li>
         Dane firmy: <a

@@ -205,11 +205,23 @@
     display: block;
     height: 100%;
     width: 100%;
-    background: -moz-linear-gradient(left, rgba(26, 26, 26, 0.94) 0%, #1a1a1a 100%);
+    background: -moz-linear-gradient(
+      left,
+      rgba(26, 26, 26, 0.94) 0%,
+      #1a1a1a 100%
+    );
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba(26, 26, 26, 0.94) 0%, #1a1a1a 100%);
+    background: -webkit-linear-gradient(
+      left,
+      rgba(26, 26, 26, 0.94) 0%,
+      #1a1a1a 100%
+    );
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba(26, 26, 26, 0.94) 0%, #1a1a1a 100%);
+    background: linear-gradient(
+      to right,
+      rgba(26, 26, 26, 0.94) 0%,
+      #1a1a1a 100%
+    );
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     opacity: 0.97;
     top: 0;

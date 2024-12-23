@@ -8,9 +8,9 @@ import "./faq.css";
       <span class="cs-topper">FAQ’s</span>
       <h2 class="cs-title">Najczęściej zadawane pytania</h2>
       <p class="cs-text">
-        Naszym celem jest zapewnienie Państwu pełnej przejrzystości i szybkiego dostępu do
-        istotnych informacji. W tej sekcji znajdą Państwo odpowiedzi na często pojawiające
-        się pytania dotyczące naszych usług i produktów.
+        Naszym celem jest zapewnienie Państwu pełnej przejrzystości i szybkiego
+        dostępu do istotnych informacji. W tej sekcji znajdą Państwo odpowiedzi
+        na często pojawiające się pytania dotyczące naszych usług i produktów.
       </p>
     </div>
     <div class="cs-flex-group">
@@ -19,48 +19,54 @@ import "./faq.css";
         <li class="cs-faq-item active">
           <button class="cs-button">Pytanie ?</button>
           <p class="cs-item-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc
-            neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada
-            nunc, habitant. Dignissim ipsum porta enim, magna urna, quam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
           </p>
         </li>
         <li class="cs-faq-item">
           <button class="cs-button">Pytanie ?</button>
           <p class="cs-item-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc
-            neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada
-            nunc, habitant. Dignissim ipsum porta enim, magna urna, quam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
           </p>
         </li>
         <li class="cs-faq-item">
           <button class="cs-button">Pytanie ?</button>
           <p class="cs-item-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc
-            neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada
-            nunc, habitant. Dignissim ipsum porta enim, magna urna, quam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
           </p>
         </li>
         <li class="cs-faq-item">
           <button class="cs-button">Pytanie ?</button>
           <p class="cs-item-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc
-            neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada
-            nunc, habitant. Dignissim ipsum porta enim, magna urna, quam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
           </p>
         </li>
         <li class="cs-faq-item">
           <button class="cs-button">Pytanie ?</button>
           <p class="cs-item-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc
-            neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada
-            nunc, habitant. Dignissim ipsum porta enim, magna urna, quam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
+            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
+            enim, magna urna, quam.
           </p>
         </li>
       </ul>
       <div class="cs-cta">
         <h3 class="cs-h3">Nie widzisz odpowiedzi, której potrzebujesz?</h3>
         <p class="cs-cta-p">
-          To nic. Po prostu zostaw wiadomość, a my odpowiemy najszybciej, jak to możliwe.
+          To nic. Po prostu zostaw wiadomość, a my odpowiemy najszybciej, jak to
+          możliwe.
         </p>
         <a href="" class="cs-button-solid">Skontaktuj się z nami</a>
       </div>
@@ -69,18 +75,18 @@ import "./faq.css";
 </section>
 
 <script>
-const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
+  const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
 
-faqItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    // Remove 'active' class from all FAQ items
-    faqItems.forEach((otherItem) => {
-      if (otherItem !== item) {
-        otherItem.classList.remove("active");
-      }
+  faqItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      // Remove 'active' class from all FAQ items
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+        }
+      });
+      // Toggle 'active' class on the clicked FAQ item
+      item.classList.toggle("active");
     });
-    // Toggle 'active' class on the clicked FAQ item
-    item.classList.toggle("active");
   });
-});
 </script>

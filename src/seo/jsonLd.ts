@@ -32,7 +32,8 @@ export default function jsonLDGenerator({
         "headline": "${post.title}",
         "description": "${post.description}",
         "image": "${
-          post.image?.src || "https://www.sikorskanotary.co.uk/social-media-card.png"
+          post.image?.src ||
+          "https://www.sikorskanotary.co.uk/social-media-card.png"
         }",
         "author": {
           "@type": "Person",

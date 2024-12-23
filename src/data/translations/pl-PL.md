@@ -59,7 +59,8 @@ translations:
           klient otrzymuje nie tylko usługę transportową najwyższej jakości, ale także
           partnera biznesowego, który realnie przyczynia się do optymalizacji jego łańcucha
           dostaw."
-      - paragraph: "To właśnie zaangażowanie w dostarczanie spersonalizowanych rozwiązań
+      - paragraph:
+          "To właśnie zaangażowanie w dostarczanie spersonalizowanych rozwiązań
           transportowych i logistycznych, połączone z ciągłym dążeniem do doskonałości
           operacyjnej, wyróżnia Sub-Logistic na rynku jako lidera w branży. Każde zadanie,
           niezależnie od jego rozmiaru, jest dla nas szansą na pokazanie, że zaufanie
@@ -83,7 +84,8 @@ translations:
       realny wpływ na nasze działania i pomagają nam stale się rozwijać."
     review:
       title: "Profesjonalna obsługa i niezawodność"
-      body: " Od momentu, gdy zaczęliśmy korzystać z usług Sub Logistic, nasze zlecenia
+      body:
+        " Od momentu, gdy zaczęliśmy korzystać z usług Sub Logistic, nasze zlecenia
         spedycyjne stają się prostsze i bardziej efektywne. Ich profesjonalna obsługa oraz
         niezawodność w dostarczaniu naszych produktów do klientów są niezrównane. Zespół
         Sub Logistic działa sprawnie, zapewniając terminowe dostawy i śledząc nasze
@@ -101,7 +103,8 @@ translations:
   cta:
     topper: "Gotowi do działania"
     heading: "Zostań Naszym Partnerem"
-    description: "Nie czekaj na rozwiązanie swoich wyzwań logistycznych. Dołącz do grona
+    description:
+      "Nie czekaj na rozwiązanie swoich wyzwań logistycznych. Dołącz do grona
       zadowolonych klientów Sub Trans i odkryj, jak nasze doświadczenie oraz innowacyjne
       podejście mogą przetransformować Twój łańcuch dostaw. Skontaktuj się z nami już
       dziś, by rozpocząć naszą wspólną drogę do sukcesu."
@@ -109,8 +112,9 @@ translations:
   contactForm:
     topper: "Zainteresowany ?"
     heading: "Zapraszamy do kontaktu"
-    description: " Z nami możesz liczyć na profesjonalne wsparcie i szybką odpowiedź. Nasz zespół
-        jest gotowy, aby pomóc Ci osiągnąć cele. Skontaktuj się z nami już dziś!"
+    description:
+      " Z nami możesz liczyć na profesjonalne wsparcie i szybką odpowiedź. Nasz zespół
+      jest gotowy, aby pomóc Ci osiągnąć cele. Skontaktuj się z nami już dziś!"
     contactLabels:
       address: "ADRES"
       email: "EMAIL"
