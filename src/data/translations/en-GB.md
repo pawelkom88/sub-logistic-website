@@ -153,6 +153,18 @@ translations:
         placeholder: "e.g. 456 Oak Ave, City"
       goodsDescription: "Goods Description"
     submitBtn: "Request Quote"
+    errors:
+      nameRequired: "Name is required"
+      phoneRequired: "Phone number is required"
+      phoneInvalid: "Invalid phone number format"
+      emailRequired: "Email is required"
+      emailInvalid: "Invalid email format"
+      weightRequired: "Weight must be greater than 1"
+      loadingDateRequired: "Loading date is required"
+      unloadingDateRequired: "Unloading date is required"
+      loadingAddressRequired: "Loading address is required"
+      unloadingAddressRequired: "Unloading address is required"
+      goodsDescriptionRequired: "Goods description is required"
   dialog:
     ariaClose: "Close dialog"
     close: "close"

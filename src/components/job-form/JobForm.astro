@@ -59,6 +59,7 @@ const { jobForm } = Astro.props;
   name="Job Form"
   action="https://api.web3forms.com/submit"
   method="POST"
+  novalidate
 >
   <input
     aria-hidden="true"
@@ -79,20 +80,21 @@ const { jobForm } = Astro.props;
     style="display: none;"
   />
   <!-- <div class="h-captcha" data-captcha="true"></div> -->
-  <div>
+  <div class="cs-field-wrapper">
     <label for="name-569" class="cs-label">{jobForm.fields.name.label}</label>
     <input
       autocomplete="name"
       class="cs-input"
-      required
       type="text"
       id="name-569"
       name="name"
       placeholder={jobForm.fields.name.placeholder}
-      required
+      aria-describedby="name-error-569"
+      aria-required="true"
     />
+    <span id="name-error-569" class="cs-error" role="alert"></span>
   </div>
-  <div>
+  <div class="cs-field-wrapper">
     <label for="phone-569" class="cs-label">{jobForm.fields.phone.label}</label>
     <input
       autocomplete="tel"
@@ -101,11 +103,13 @@ const { jobForm } = Astro.props;
       id="phone-569"
       name="phone"
       placeholder={jobForm.fields.phone.placeholder}
-      required
+      aria-describedby="phone-error-569"
+      aria-required="true"
     />
+    <span id="phone-error-569" class="cs-error" role="alert"></span>
   </div>
 
-  <div>
+  <div class="cs-field-wrapper">
     <label for="email-569" class="cs-label">{jobForm.fields.email.label}</label>
     <input
       autocomplete="email"
@@ -114,78 +118,247 @@ const { jobForm } = Astro.props;
       id="email-569"
       name="email"
       placeholder={jobForm.fields.email.placeholder}
-      required
+      aria-describedby="email-error-569"
+      aria-required="true"
     />
+    <span id="email-error-569" class="cs-error" role="alert"></span>
   </div>
 
-  <div>
+  <div class="cs-field-wrapper">
     <label for="waga-towaru" class="cs-label">{jobForm.fields.weight.label}</label>
     <input
       class="cs-input"
-      required
       type="number"
       id="waga-towaru"
       name="Waga towarów do przewiezienia"
       placeholder={jobForm.fields.weight.placeholder}
-      required
+      min="1"
+      step="0.1"
+      aria-describedby="weight-error-569"
+      aria-required="true"
     />
+    <span id="weight-error-569" class="cs-error" role="alert"></span>
   </div>
 
-  <div>
+  <div class="cs-field-wrapper">
     <label for="date-load" class="cs-label">{jobForm.fields.loadingDate}</label>
     <input
       class="cs-input"
       type="date"
       id="date-load"
       name="Data załadunku"
-      required
+      aria-describedby="date-load-error-569"
+      aria-required="true"
     />
+    <span id="date-load-error-569" class="cs-error" role="alert"></span>
   </div>
 
-  <div>
+  <div class="cs-field-wrapper">
     <label for="date-unload" class="cs-label">{jobForm.fields.unloadingDate}</label>
     <input
       class="cs-input"
       type="date"
       id="date-unload"
       name="Data rozładunku"
-      required
+      aria-describedby="date-unload-error-569"
+      aria-required="true"
     />
+    <span id="date-unload-error-569" class="cs-error" role="alert"></span>
   </div>
 
-  <div>
-    <label for="date-569" class="cs-label">{jobForm.fields.loadingAddress.label}</label>
+  <div class="cs-field-wrapper">
+    <label for="loading-address-569" class="cs-label">{jobForm.fields.loadingAddress.label}</label>
     <input
       class="cs-input"
       type="text"
-      id="date-569"
+      id="loading-address-569"
       name="Adres załadunku"
       placeholder={jobForm.fields.loadingAddress.placeholder}
-      required
+      aria-describedby="loading-address-error-569"
+      aria-required="true"
     />
+    <span id="loading-address-error-569" class="cs-error" role="alert"></span>
   </div>
 
-  <div>
-    <label for="hear-569" class="cs-label">{jobForm.fields.unloadingAddress.label}</label>
+  <div class="cs-field-wrapper">
+    <label for="unloading-address-569" class="cs-label">{jobForm.fields.unloadingAddress.label}</label>
     <input
       class="cs-input"
       type="text"
-      id="hear-569"
+      id="unloading-address-569"
       name="Adres rozładunku"
       placeholder={jobForm.fields.unloadingAddress.placeholder}
-      required
+      aria-describedby="unloading-address-error-569"
+      aria-required="true"
     />
+    <span id="unloading-address-error-569" class="cs-error" role="alert"></span>
   </div>
 
-  <div class="cs-textarea-column">
+  <div class="cs-textarea-column cs-field-wrapper">
     <label for="message-569" class="cs-label cs-message">{jobForm.fields.goodsDescription}</label>
     <textarea
       class="cs-input cs-textarea"
-      required
       name="Opis towarów"
       id="message-569"
-      placeholder="Describe your goods"></textarea>
+      placeholder="Describe your goods"
+      aria-describedby="message-error-569"
+      aria-required="true"></textarea>
+    <span id="message-error-569" class="cs-error" role="alert"></span>
   </div>
-  <button class="submit-btn">{jobForm.submitBtn}</button>
+  <button class="submit-btn" type="submit">{jobForm.submitBtn}</button>
 </form>
 <!-- <button class="cs-submit" type="submit">Wyceń</button> -->
+
+<script define:vars={{ errors: jobForm.errors }}>
+  // Get form and all input elements
+  const form = document.getElementById('contact-569') as HTMLFormElement;
+  const nameInput = document.getElementById('name-569') as HTMLInputElement;
+  const phoneInput = document.getElementById('phone-569') as HTMLInputElement;
+  const emailInput = document.getElementById('email-569') as HTMLInputElement;
+  const weightInput = document.getElementById('waga-towaru') as HTMLInputElement;
+  const loadDateInput = document.getElementById('date-load') as HTMLInputElement;
+  const unloadDateInput = document.getElementById('date-unload') as HTMLInputElement;
+  const loadAddressInput = document.getElementById('loading-address-569') as HTMLInputElement;
+  const unloadAddressInput = document.getElementById('unloading-address-569') as HTMLInputElement;
+  const goodsDescriptionInput = document.getElementById('message-569') as HTMLTextAreaElement;
+
+  // Validation functions
+  function validateEmpty(input: HTMLInputElement | HTMLTextAreaElement, errorId: string, errorMessage: string): boolean {
+    const errorElement = document.getElementById(errorId);
+    if (!errorElement) return false;
+    
+    if (input.value.trim() === '') {
+      input.classList.add('invalid');
+      errorElement.textContent = errorMessage;
+      return false;
+    }
+    return true;
+  }
+
+  function validatePhone(input: HTMLInputElement, errorId: string, errorMessage: string): boolean {
+    const errorElement = document.getElementById(errorId);
+    if (!errorElement) return false;
+    
+    const phoneValue = input.value.trim();
+    // Basic phone validation: must have at least 7 digits, can include +, -, (), spaces
+    const phoneRegex = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,4}$/;
+    
+    if (phoneValue === '') {
+      input.classList.add('invalid');
+      errorElement.textContent = errorMessage;
+      return false;
+    }
+    
+    if (!phoneRegex.test(phoneValue)) {
+      input.classList.add('invalid');
+      errorElement.textContent = errors.phoneInvalid;
+      return false;
+    }
+    return true;
+  }
+
+  function validateEmail(input: HTMLInputElement, errorId: string, errorMessage: string): boolean {
+    const errorElement = document.getElementById(errorId);
+    if (!errorElement) return false;
+    
+    const emailValue = input.value.trim();
+    // Simple email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (emailValue === '') {
+      input.classList.add('invalid');
+      errorElement.textContent = errorMessage;
+      return false;
+    }
+    
+    if (!emailRegex.test(emailValue)) {
+      input.classList.add('invalid');
+      errorElement.textContent = errors.emailInvalid;
+      return false;
+    }
+    return true;
+  }
+
+  function validateWeight(input: HTMLInputElement, errorId: string, errorMessage: string): boolean {
+    const errorElement = document.getElementById(errorId);
+    if (!errorElement) return false;
+    
+    const weightValue = parseFloat(input.value);
+    
+    if (isNaN(weightValue) || weightValue < 1) {
+      input.classList.add('invalid');
+      errorElement.textContent = errorMessage;
+      return false;
+    }
+    return true;
+  }
+
+  function validateDate(input: HTMLInputElement, errorId: string, errorMessage: string): boolean {
+    const errorElement = document.getElementById(errorId);
+    if (!errorElement) return false;
+    
+    if (!input.value) {
+      input.classList.add('invalid');
+      errorElement.textContent = errorMessage;
+      return false;
+    }
+    return true;
+  }
+
+  // Clear error on input
+  function clearError(input: HTMLInputElement | HTMLTextAreaElement, errorId: string) {
+    const errorElement = document.getElementById(errorId);
+    if (errorElement) {
+      input.classList.remove('invalid');
+      errorElement.textContent = '';
+    }
+  }
+
+  // Add input event listeners to clear errors when user types
+  nameInput?.addEventListener('input', () => clearError(nameInput, 'name-error-569'));
+  phoneInput?.addEventListener('input', () => clearError(phoneInput, 'phone-error-569'));
+  emailInput?.addEventListener('input', () => clearError(emailInput, 'email-error-569'));
+  weightInput?.addEventListener('input', () => clearError(weightInput, 'weight-error-569'));
+  loadDateInput?.addEventListener('input', () => clearError(loadDateInput, 'date-load-error-569'));
+  unloadDateInput?.addEventListener('input', () => clearError(unloadDateInput, 'date-unload-error-569'));
+  loadAddressInput?.addEventListener('input', () => clearError(loadAddressInput, 'loading-address-error-569'));
+  unloadAddressInput?.addEventListener('input', () => clearError(unloadAddressInput, 'unloading-address-error-569'));
+  goodsDescriptionInput?.addEventListener('input', () => clearError(goodsDescriptionInput, 'message-error-569'));
+
+  // Form submit handler
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Clear all errors first
+    const allInputs = form.querySelectorAll('.cs-input');
+    const allErrors = form.querySelectorAll('.cs-error');
+    
+    allInputs.forEach(input => input.classList.remove('invalid'));
+    allErrors.forEach(error => error.textContent = '');
+    
+    // Perform validation
+    const validations = [
+      validateEmpty(nameInput, 'name-error-569', errors.nameRequired),
+      validatePhone(phoneInput, 'phone-error-569', errors.phoneRequired),
+      validateEmail(emailInput, 'email-error-569', errors.emailRequired),
+      validateWeight(weightInput, 'weight-error-569', errors.weightRequired),
+      validateDate(loadDateInput, 'date-load-error-569', errors.loadingDateRequired),
+      validateDate(unloadDateInput, 'date-unload-error-569', errors.unloadingDateRequired),
+      validateEmpty(loadAddressInput, 'loading-address-error-569', errors.loadingAddressRequired),
+      validateEmpty(unloadAddressInput, 'unloading-address-error-569', errors.unloadingAddressRequired),
+      validateEmpty(goodsDescriptionInput, 'message-error-569', errors.goodsDescriptionRequired)
+    ];
+    
+    const isValid = validations.every(v => v);
+    
+    if (!isValid) {
+      // Focus first invalid field
+      const firstInvalid = form.querySelector('.cs-input.invalid') as HTMLElement;
+      firstInvalid?.focus();
+      return;
+    }
+    
+    // If all validations pass, submit the form
+    form.submit();
+  });
+</script>

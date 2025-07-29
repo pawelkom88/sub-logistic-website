@@ -163,6 +163,18 @@ translations:
         placeholder: "np. ul. Dębowa 456, Miasto"
       goodsDescription: "Opis towaru"
     submitBtn: "Poproś o wycenę"
+    errors:
+      nameRequired: "Imię i nazwisko jest wymagane"
+      phoneRequired: "Numer telefonu jest wymagany"
+      phoneInvalid: "Nieprawidłowy format numeru telefonu"
+      emailRequired: "Email jest wymagany"
+      emailInvalid: "Nieprawidłowy format adresu email"
+      weightRequired: "Waga musi być większa niż 1"
+      loadingDateRequired: "Data załadunku jest wymagana"
+      unloadingDateRequired: "Data rozładunku jest wymagana"
+      loadingAddressRequired: "Adres załadunku jest wymagany"
+      unloadingAddressRequired: "Adres rozładunku jest wymagany"
+      goodsDescriptionRequired: "Opis towaru jest wymagany"
   dialog:
     ariaClose: "Zamknij dialog"
     close: "zamknij"

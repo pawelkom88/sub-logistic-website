@@ -156,6 +156,18 @@ translations:
         placeholder: "z.B. Eichenweg 456, Stadt"
       goodsDescription: "Warenbeschreibung"
     submitBtn: "Angebot anfordern"
+    errors:
+      nameRequired: "Name ist erforderlich"
+      phoneRequired: "Telefonnummer ist erforderlich"
+      phoneInvalid: "Ungültiges Telefonnummernformat"
+      emailRequired: "E-Mail ist erforderlich"
+      emailInvalid: "Ungültiges E-Mail-Format"
+      weightRequired: "Gewicht muss größer als 1 sein"
+      loadingDateRequired: "Ladedatum ist erforderlich"
+      unloadingDateRequired: "Entladedatum ist erforderlich"
+      loadingAddressRequired: "Ladeadresse ist erforderlich"
+      unloadingAddressRequired: "Entladeadresse ist erforderlich"
+      goodsDescriptionRequired: "Warenbeschreibung ist erforderlich"
   dialog:
     ariaClose: "Dialog schließen"
     close: "schließen"

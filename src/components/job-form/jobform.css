@@ -36,6 +36,18 @@
   #contact-569 .cs-input:hover {
     border-color: var(--secondary);
   }
+
+  #contact-569 .cs-input.invalid {
+    border-color: red;
+  }
+
+  .cs-error {
+    color: red;
+    font-size: 0.875rem;
+    height: 1rem;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+  }
   #contact-569 .cs-input:focus {
     outline: 1px solid var(--secondary);
   }
