@@ -210,20 +210,28 @@ const { jobForm } = Astro.props;
 <!-- <button class="cs-submit" type="submit">Wyceń</button> -->
 
 <script define:vars={{ errors: jobForm.errors }}>
-  // Get form and all input elements
-  const form = document.getElementById('contact-569') as HTMLFormElement;
-  const nameInput = document.getElementById('name-569') as HTMLInputElement;
-  const phoneInput = document.getElementById('phone-569') as HTMLInputElement;
-  const emailInput = document.getElementById('email-569') as HTMLInputElement;
-  const weightInput = document.getElementById('waga-towaru') as HTMLInputElement;
-  const loadDateInput = document.getElementById('date-load') as HTMLInputElement;
-  const unloadDateInput = document.getElementById('date-unload') as HTMLInputElement;
-  const loadAddressInput = document.getElementById('loading-address-569') as HTMLInputElement;
-  const unloadAddressInput = document.getElementById('unloading-address-569') as HTMLInputElement;
-  const goodsDescriptionInput = document.getElementById('message-569') as HTMLTextAreaElement;
+  // Wait for DOM to be ready
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get form and all input elements
+    const form = document.getElementById('contact-569');
+    const nameInput = document.getElementById('name-569');
+    const phoneInput = document.getElementById('phone-569');
+    const emailInput = document.getElementById('email-569');
+    const weightInput = document.getElementById('waga-towaru');
+    const loadDateInput = document.getElementById('date-load');
+    const unloadDateInput = document.getElementById('date-unload');
+    const loadAddressInput = document.getElementById('loading-address-569');
+    const unloadAddressInput = document.getElementById('unloading-address-569');
+    const goodsDescriptionInput = document.getElementById('message-569');
+    
+    // Debug check
+    if (!form) {
+      console.error('Form not found!');
+      return;
+    }
 
   // Validation functions
-  function validateEmpty(input: HTMLInputElement | HTMLTextAreaElement, errorId: string, errorMessage: string): boolean {
+  function validateEmpty(input, errorId, errorMessage) {
     const errorElement = document.getElementById(errorId);
     if (!errorElement) return false;
     
@@ -235,7 +243,7 @@ const { jobForm } = Astro.props;
     return true;
   }
 
-  function validatePhone(input: HTMLInputElement, errorId: string, errorMessage: string): boolean {
+  function validatePhone(input, errorId, errorMessage) {
     const errorElement = document.getElementById(errorId);
     if (!errorElement) return false;
     
@@ -257,7 +265,7 @@ const { jobForm } = Astro.props;
     return true;
   }
 
-  function validateEmail(input: HTMLInputElement, errorId: string, errorMessage: string): boolean {
+  function validateEmail(input, errorId, errorMessage) {
     const errorElement = document.getElementById(errorId);
     if (!errorElement) return false;
     
@@ -279,7 +287,7 @@ const { jobForm } = Astro.props;
     return true;
   }
 
-  function validateWeight(input: HTMLInputElement, errorId: string, errorMessage: string): boolean {
+  function validateWeight(input, errorId, errorMessage) {
     const errorElement = document.getElementById(errorId);
     if (!errorElement) return false;
     
@@ -293,7 +301,7 @@ const { jobForm } = Astro.props;
     return true;
   }
 
-  function validateDate(input: HTMLInputElement, errorId: string, errorMessage: string): boolean {
+  function validateDate(input, errorId, errorMessage) {
     const errorElement = document.getElementById(errorId);
     if (!errorElement) return false;
     
@@ -306,7 +314,7 @@ const { jobForm } = Astro.props;
   }
 
   // Clear error on input
-  function clearError(input: HTMLInputElement | HTMLTextAreaElement, errorId: string) {
+  function clearError(input, errorId) {
     const errorElement = document.getElementById(errorId);
     if (errorElement) {
       input.classList.remove('invalid');
@@ -314,19 +322,19 @@ const { jobForm } = Astro.props;
     }
   }
 
-  // Add input event listeners to clear errors when user types
-  nameInput?.addEventListener('input', () => clearError(nameInput, 'name-error-569'));
-  phoneInput?.addEventListener('input', () => clearError(phoneInput, 'phone-error-569'));
-  emailInput?.addEventListener('input', () => clearError(emailInput, 'email-error-569'));
-  weightInput?.addEventListener('input', () => clearError(weightInput, 'weight-error-569'));
-  loadDateInput?.addEventListener('input', () => clearError(loadDateInput, 'date-load-error-569'));
-  unloadDateInput?.addEventListener('input', () => clearError(unloadDateInput, 'date-unload-error-569'));
-  loadAddressInput?.addEventListener('input', () => clearError(loadAddressInput, 'loading-address-error-569'));
-  unloadAddressInput?.addEventListener('input', () => clearError(unloadAddressInput, 'unloading-address-error-569'));
-  goodsDescriptionInput?.addEventListener('input', () => clearError(goodsDescriptionInput, 'message-error-569'));
+    // Add input event listeners to clear errors when user types
+    if (nameInput) nameInput.addEventListener('input', () => clearError(nameInput, 'name-error-569'));
+    if (phoneInput) phoneInput.addEventListener('input', () => clearError(phoneInput, 'phone-error-569'));
+    if (emailInput) emailInput.addEventListener('input', () => clearError(emailInput, 'email-error-569'));
+    if (weightInput) weightInput.addEventListener('input', () => clearError(weightInput, 'weight-error-569'));
+    if (loadDateInput) loadDateInput.addEventListener('input', () => clearError(loadDateInput, 'date-load-error-569'));
+    if (unloadDateInput) unloadDateInput.addEventListener('input', () => clearError(unloadDateInput, 'date-unload-error-569'));
+    if (loadAddressInput) loadAddressInput.addEventListener('input', () => clearError(loadAddressInput, 'loading-address-error-569'));
+    if (unloadAddressInput) unloadAddressInput.addEventListener('input', () => clearError(unloadAddressInput, 'unloading-address-error-569'));
+    if (goodsDescriptionInput) goodsDescriptionInput.addEventListener('input', () => clearError(goodsDescriptionInput, 'message-error-569'));
 
-  // Form submit handler
-  form?.addEventListener('submit', (e) => {
+    // Form submit handler
+    form.addEventListener('submit', (e) => {
     e.preventDefault();
     
     // Clear all errors first
@@ -353,12 +361,16 @@ const { jobForm } = Astro.props;
     
     if (!isValid) {
       // Focus first invalid field
-      const firstInvalid = form.querySelector('.cs-input.invalid') as HTMLElement;
-      firstInvalid?.focus();
+      const firstInvalid = form.querySelector('.cs-input.invalid');
+      if (firstInvalid) {
+        firstInvalid.focus();
+      }
       return;
     }
     
     // If all validations pass, submit the form
+    console.log('All validations passed, submitting form');
     form.submit();
+    });
   });
 </script>
