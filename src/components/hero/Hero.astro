@@ -7,9 +7,11 @@ import { splitString, type SelectedTranslation } from "../../utils/utils";
 
 interface Props {
   hero: SelectedTranslation["hero"];
+  jobForm: SelectedTranslation["jobForm"];
+  dialog: SelectedTranslation["dialog"];
 }
 
-const { hero } = Astro.props;
+const { hero, jobForm, dialog } = Astro.props;
 const formattedHero = splitString(hero.title);
 const formattedHeroAfter = splitString(hero.title, 1);
 ---
@@ -41,53 +43,36 @@ const formattedHeroAfter = splitString(hero.title, 1);
       type="button"
       autofocus
       class="close-btn"
-      aria-label="Zamknij dialog">zamknij</button
+      aria-label={dialog.ariaClose}>{dialog.close}</button
     >
     <ol class="cs-stepper">
-      <li class="active">Informacje ogólne</li>
-      <li>Formularz przesyłki</li>
-      <li>Potwierdzenie</li>
+      {dialog.steps.map((step, index) => (
+        <li class={index === 0 ? "active" : ""}>{step}</li>
+      ))}
     </ol>
     <!-- component -->
     <div class="cs-dialog-content">
       <h1 class="cs-dialog-title">
-        Znajdź idealne rozwiązanie dla swojej przesyłki.
+        {dialog.title}
       </h1>
 
-      <p class="cs-dialog-text">
-        Niezależnie od tego, czy potrzebujesz zapełnić całą ciężarówkę, czy
-        tylko małą przestrzeń, mamy rozwiązanie dla Ciebie rozwiązanie.
-        Posiadamy szeroką gamę pojazdów, dzięki czemu możemy dopasować się do
-        Twoich unikalnych potrzeb. Nasza oferta obejmuje transport FTL i LTL,
-        szybkie dostawy dedykowane, a także bezpieczny przewóz materiałów
-        niebezpiecznych (ADR) i ładunków specjalnych. Z nami Twoja przesyłka
-        jest zawsze bezpieczna, monitorowana w czasie rzeczywistym i odpowiednio
-        ubezpieczona.
-      </p>
-      <p class="cs-dialog-text">
-        Przejdź do naszego formularza i w kilku prostych krokach uzyskaj wycenę
-        dla swojej przesyłki. Nie czekaj, zaplanuj swój transport już dziś i
-        doświadcz najwyższej jakości usług logistycznych.
-      </p>
+      {dialog.text.map((paragraph) => (
+        <p class="cs-dialog-text">
+          {paragraph}
+        </p>
+      ))}
     </div>
 
     <!-- <form class="cs-form"></form> -->
     <!-- <form id="cs-form" style="display: none;"> -->
     <div style="display: none;" class="form-container">
-      <JobForm />
+      <JobForm jobForm={jobForm} />
     </div>
     <!-- component -->
 
     <button type="button" class="next-btn"
-      >Kliknij, aby przejść do formularza</button
+      >{dialog.next}</button
     >
-
-    <!-- component -->
-    <!-- <div class="cs-buttons">
-      <button class="next-btn">Kliknij, aby przejść do formularza</button>
-      <button class="submit-btn">Wyślij</button>
-    </div> -->
-    <!-- component -->
   </dialog>
   <div class="overlay"></div>
 </section>

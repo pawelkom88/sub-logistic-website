@@ -138,6 +138,41 @@ translations:
         label2: "polityką prywatności"
         policyLink: "/polityka-prywatnosci"
       submitBtn: "Wyślij wiadomość"
+  jobForm:
+    subject: "Nowe zapytanie o wycenę"
+    fields:
+      name:
+        label: "Imię i nazwisko"
+        placeholder: "np. Jan Kowalski"
+      email:
+        label: "Email"
+        placeholder: "np. jan@example.com"
+      phone:
+        label: "Telefon"
+        placeholder: "np. 123 456 789"
+      weight:
+        label: "Waga ładunku (kg)"
+        placeholder: "np. 1000"
+      loadingDate: "Data załadunku"
+      unloadingDate: "Data rozładunku"
+      loadingAddress:
+        label: "Adres załadunku"
+        placeholder: "np. ul. Główna 123, Miasto"
+      unloadingAddress:
+        label: "Adres rozładunku"
+        placeholder: "np. ul. Dębowa 456, Miasto"
+      goodsDescription: "Opis towaru"
+    submitBtn: "Poproś o wycenę"
+  dialog:
+    ariaClose: "Zamknij dialog"
+    close: "zamknij"
+    steps: ["Informacje ogólne", "Formularz przesyłki", "Potwierdzenie"]
+    title: "Znajdź idealne rozwiązanie dla swojej przesyłki."
+    text: [
+      "Niezależnie od tego, czy potrzebujesz zapełnić całą ciężarówkę, czy tylko małą przestrzeń, mamy rozwiązanie dla Ciebie rozwiązanie. Posiadamy szeroką gamę pojazdów, dzięki czemu możemy dopasować się do Twoich unikalnych potrzeb. Nasza oferta obejmuje transport FTL i LTL, szybkie dostawy dedykowane, a także bezpieczny przewóz materiałów niebezpiecznych (ADR) i ładunków specjalnych. Z nami Twoja przesyłka jest zawsze bezpieczna, monitorowana w czasie rzeczywistym i odpowiednio ubezpieczona.",
+      "Przejdź do naszego formularza i w kilku prostych krokach uzyskaj wycenę dla swojej przesyłki. Nie czekaj, zaplanuj swój transport już dziś i doświadcz najwyższej jakości usług logistycznych."
+    ]
+    next: "Kliknij, aby przejść do formularza"
   footer:
     body: >
       Zapraszamy do kontaktu i współpracy. Niezależnie od tego, czy szukasz partnera do stałej współpracy, czy potrzebujesz wsparcia przy jednorazowym zleceniu, Sub Logistic jest gotowy, aby wspierać Twój biznes na drogach Polski, Europy i świata.

@@ -131,6 +131,41 @@ translations:
         label2: "der Datenschutzrichtlinie"
         policyLink: "/datenschutz"
       submitBtn: "Nachricht senden"
+  jobForm:
+    subject: "Neue Angebotsanfrage"
+    fields:
+      name:
+        label: "Name"
+        placeholder: "z.B. Max Mustermann"
+      email:
+        label: "E-Mail"
+        placeholder: "z.B. max@example.com"
+      phone:
+        label: "Telefon"
+        placeholder: "z.B. 123 456 789"
+      weight:
+        label: "Frachtgewicht (kg)"
+        placeholder: "z.B. 1000"
+      loadingDate: "Ladedatum"
+      unloadingDate: "Entladedatum"
+      loadingAddress:
+        label: "Ladeadresse"
+        placeholder: "z.B. Hauptstraße 123, Stadt"
+      unloadingAddress:
+        label: "Entladeadresse"
+        placeholder: "z.B. Eichenweg 456, Stadt"
+      goodsDescription: "Warenbeschreibung"
+    submitBtn: "Angebot anfordern"
+  dialog:
+    ariaClose: "Dialog schließen"
+    close: "schließen"
+    steps: ["Allgemeine Informationen", "Versandformular", "Bestätigung"]
+    title: "Finden Sie die perfekte Lösung für Ihren Versand."
+    text: [
+      "Ob Sie einen kompletten LKW füllen oder nur einen kleinen Raum benötigen, wir haben die perfekte Lösung für Sie. Wir bieten eine breite Palette von Fahrzeugen, um Ihre individuellen Bedürfnisse zu erfüllen. Unser Angebot umfasst FTL- und LTL-Transporte, schnelle dedizierte Lieferungen sowie den sicheren Transport von Gefahrgütern (ADR) und Spezialfrachten. Mit uns ist Ihre Sendung immer sicher, in Echtzeit überwacht und ordnungsgemäß versichert.",
+      "Gehen Sie zu unserem Formular und erhalten Sie in wenigen einfachen Schritten ein Angebot für Ihren Versand. Warten Sie nicht, planen Sie noch heute Ihren Transport und erleben Sie qualitativ hochwertige Logistikdienstleistungen."
+    ]
+    next: "Klicken Sie, um zum Formular zu gelangen"
   footer:
     body: >
       Wir laden Sie ein, mit uns Kontakt aufzunehmen und zusammenzuarbeiten. Egal, ob Sie einen Partner für eine dauerhafte Zusammenarbeit suchen oder Unterstützung bei einem einmaligen Auftrag benötigen, Sub Logistic ist bereit, Ihr Unternehmen auf den Straßen Polens, Europas und der Welt zu unterstützen.

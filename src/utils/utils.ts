@@ -54,15 +54,18 @@ export function translateAriaLabel(lang: Lang): string {
 const allTranslations = await getCollection("translations");
 export async function getCurrentLanguageTranslation(
   currentLang: Lang,
-  collection: CollectionEntry<"translations"> = allTranslations,
+  collection: CollectionEntry<"translations">[] | CollectionEntry<"translations"> = allTranslations,
 ): Promise<SelectedTranslation> {
-  const translationEntry: TranslationEntry | udnefined = await collection.find(
-    ({ data }: TranslationEntry["data"]) => {
+  // Handle both array and single entry cases
+  const entries = Array.isArray(collection) ? collection : [collection];
+  
+  const translationEntry: TranslationEntry | undefined = entries.find(
+    ({ data }) => {
       return data.languageCode === getLangCode(currentLang);
     },
   );
 
-  const { translations } = translationEntry?.data || {};
+const { translations } = translationEntry?.data || {};
 
   if (!translations) {
     throw new Error(
@@ -70,7 +73,7 @@ export async function getCurrentLanguageTranslation(
     );
   }
 
-  return translations;
+return translations;
 }
 
 export function getLangFullName(lang: Lang) {

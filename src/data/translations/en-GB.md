@@ -128,6 +128,41 @@ translations:
         label2: "privacy policy"
         policyLink: "/terms-of-use"
       submitBtn: "Send message"
+  jobForm:
+    subject: "New Quote Request"
+    fields:
+      name:
+        label: "Name"
+        placeholder: "e.g. John Doe"
+      email:
+        label: "Email"
+        placeholder: "e.g. johndoe@example.com"
+      phone:
+        label: "Phone"
+        placeholder: "e.g. 123 456 789"
+      weight:
+        label: "Cargo Weight (kg)"
+        placeholder: "e.g. 1000"
+      loadingDate: "Loading Date"
+      unloadingDate: "Unloading Date"
+      loadingAddress:
+        label: "Loading Address"
+        placeholder: "e.g. 123 Main St, City"
+      unloadingAddress:
+        label: "Unloading Address"
+        placeholder: "e.g. 456 Oak Ave, City"
+      goodsDescription: "Goods Description"
+    submitBtn: "Request Quote"
+  dialog:
+    ariaClose: "Close dialog"
+    close: "close"
+    steps: ["General Information", "Shipment Form", "Confirmation"]
+    title: "Find the perfect solution for your shipment."
+    text: [
+      "Whether you need to fill an entire truck or just a small space, we have the perfect solution for you. We offer a wide range of vehicles to accommodate your unique needs. Our services include FTL and LTL transport, fast dedicated deliveries, as well as safe transportation of hazardous materials (ADR) and special cargo. With us, your shipment is always safe, monitored in real-time, and properly insured.",
+      "Go to our form and get a quote for your shipment in just a few simple steps. Don't wait, plan your transport today and experience top-quality logistics services."
+    ]
+    next: "Click to go to the form"
   footer:
     body: >
       We invite you to get in touch and work with us. Whether you are looking for a partner for ongoing collaboration

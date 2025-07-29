@@ -1,5 +1,12 @@
 ---
 import "./jobform.css";
+import type { SelectedTranslation } from "../../utils/translations";
+
+interface Props {
+  jobForm: SelectedTranslation["jobForm"];
+}
+
+const { jobForm } = Astro.props;
 ---
 
 <!-- <label for="name" class="cs-label">
@@ -63,7 +70,7 @@ import "./jobform.css";
     aria-hidden="true"
     type="hidden"
     name="subject"
-    value="Wycena transportu"
+    value={jobForm.subject}
   />
   <input
     aria-hidden="true"
@@ -73,7 +80,7 @@ import "./jobform.css";
   />
   <!-- <div class="h-captcha" data-captcha="true"></div> -->
   <div>
-    <label for="name-569" class="cs-label"> Imie </label>
+    <label for="name-569" class="cs-label">{jobForm.fields.name.label}</label>
     <input
       autocomplete="name"
       class="cs-input"
@@ -81,58 +88,53 @@ import "./jobform.css";
       type="text"
       id="name-569"
       name="name"
-      placeholder="Jan Kowalski"
+      placeholder={jobForm.fields.name.placeholder}
       required
     />
   </div>
   <div>
-    <label for="phone-569" class="cs-label"> Telefon</label>
+    <label for="phone-569" class="cs-label">{jobForm.fields.phone.label}</label>
     <input
       autocomplete="tel"
       class="cs-input"
-      required
       type="tel"
       id="phone-569"
       name="phone"
-      placeholder="604342567"
+      placeholder={jobForm.fields.phone.placeholder}
       required
     />
   </div>
 
   <div>
-    <label for="email-569" class="cs-label"> Email</label>
+    <label for="email-569" class="cs-label">{jobForm.fields.email.label}</label>
     <input
       autocomplete="email"
       class="cs-input"
-      required
       type="email"
       id="email-569"
       name="email"
-      placeholder="firma@firma.com.pl"
+      placeholder={jobForm.fields.email.placeholder}
       required
     />
   </div>
 
   <div>
-    <label for="waga-towaru" class="cs-label">
-      Waga towarów do przewiezienia ( kg )</label
-    >
+    <label for="waga-towaru" class="cs-label">{jobForm.fields.weight.label}</label>
     <input
       class="cs-input"
       required
       type="number"
       id="waga-towaru"
       name="Waga towarów do przewiezienia"
-      placeholder="ul. Kowalska 1, 00-000 Gdanów"
+      placeholder={jobForm.fields.weight.placeholder}
       required
     />
   </div>
 
   <div>
-    <label for="date-load" class="cs-label"> Data załadunku</label>
+    <label for="date-load" class="cs-label">{jobForm.fields.loadingDate}</label>
     <input
       class="cs-input"
-      required
       type="date"
       id="date-load"
       name="Data załadunku"
@@ -141,10 +143,9 @@ import "./jobform.css";
   </div>
 
   <div>
-    <label for="date-unload" class="cs-label"> Data rozładunku</label>
+    <label for="date-unload" class="cs-label">{jobForm.fields.unloadingDate}</label>
     <input
       class="cs-input"
-      required
       type="date"
       id="date-unload"
       name="Data rozładunku"
@@ -153,40 +154,38 @@ import "./jobform.css";
   </div>
 
   <div>
-    <label for="date-569" class="cs-label"> Adres załadunku</label>
+    <label for="date-569" class="cs-label">{jobForm.fields.loadingAddress.label}</label>
     <input
       class="cs-input"
-      required
       type="text"
       id="date-569"
       name="Adres załadunku"
-      placeholder="ul. Kowalska 1, 00-000 Gdanów"
+      placeholder={jobForm.fields.loadingAddress.placeholder}
       required
     />
   </div>
 
   <div>
-    <label for="hear-569" class="cs-label"> Adres rozładunku</label>
+    <label for="hear-569" class="cs-label">{jobForm.fields.unloadingAddress.label}</label>
     <input
       class="cs-input"
-      required
       type="text"
       id="hear-569"
       name="Adres rozładunku"
-      placeholder="ul. Kowalska 1, 00-000 Gdanów"
+      placeholder={jobForm.fields.unloadingAddress.placeholder}
       required
     />
   </div>
 
   <div class="cs-textarea-column">
-    <label for="message-569" class="cs-label cs-message"> Opis towarów</label>
+    <label for="message-569" class="cs-label cs-message">{jobForm.fields.goodsDescription}</label>
     <textarea
       class="cs-input cs-textarea"
       required
       name="Opis towarów"
       id="message-569"
-      placeholder="Paleta..."></textarea>
+      placeholder="Describe your goods"></textarea>
   </div>
-  <button class="submit-btn">Wyślij</button>
+  <button class="submit-btn">{jobForm.submitBtn}</button>
 </form>
 <!-- <button class="cs-submit" type="submit">Wyceń</button> -->
