@@ -175,6 +175,8 @@ translations:
       "Go to our form and get a quote for your shipment in just a few simple steps. Don't wait, plan your transport today and experience top-quality logistics services."
     ]
     next: "Click to go to the form"
+    back: "Back"
+    confirmationMessage: "Your request has been successfully submitted!"
   footer:
     body: >
       We invite you to get in touch and work with us. Whether you are looking for a partner for ongoing collaboration

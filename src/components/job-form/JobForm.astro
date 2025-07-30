@@ -9,50 +9,6 @@ interface Props {
 const { jobForm } = Astro.props;
 ---
 
-<!-- <label for="name" class="cs-label">
-  Imie
-  <input
-    class="cs-input"
-    required
-    type="text"
-    id="name"
-    name="name"
-    placeholder="Jan Kowalski"
-  />
-</label>
-<label for="email" class="cs-label">
-  Email
-  <input
-    class="cs-input"
-    required
-    type="email"
-    id="email"
-    name="email"
-    placeholder="jakkowalski@firma.pl"
-  /></label
->
-<label for="phone" class="cs-label">
-  Telefony
-  <input
-    class="cs-input"
-    required
-    type="tel"
-    id="phone"
-    name="phone"
-    placeholder="+48 600123234"
-  /></label
->
-<label for="date" class="cs-label">
-  <input id="date" type="date" name="date" id="date" class="cs-input" required />
-</label>
-
-<label for="wiadomosc" class="cs-label">
-  Nazwa firmy
-  <textarea id="wiadomosc" class="cs-textarea" name="wiadomosc" placeholder="Nazwa firmy"
-  ></textarea></label
->
-
-<button class="submit-btn">Prosze o wycene</button> --><!-- <form class="cs-form" id="cs-form-569" name="Contact Form" method="post"> -->
 <form
   class="cs-form"
   id="contact-569"
@@ -67,6 +23,8 @@ const { jobForm } = Astro.props;
     name="access_key"
     value="YOUR_ACCESS_KEY_HERE"
   />
+  <input type="hidden" name="from_name" value="Zapytanie o wycene">
+  <!-- IMPORTANT: Replace YOUR_ACCESS_KEY_HERE with your actual Web3Forms access key -->
   <input
     aria-hidden="true"
     type="hidden"
@@ -207,7 +165,6 @@ const { jobForm } = Astro.props;
   </div>
   <button class="submit-btn" type="submit">{jobForm.submitBtn}</button>
 </form>
-<!-- <button class="cs-submit" type="submit">Wyceń</button> -->
 
 <script define:vars={{ errors: jobForm.errors }}>
   // Wait for DOM to be ready
@@ -223,7 +180,7 @@ const { jobForm } = Astro.props;
     const loadAddressInput = document.getElementById('loading-address-569');
     const unloadAddressInput = document.getElementById('unloading-address-569');
     const goodsDescriptionInput = document.getElementById('message-569');
-    
+
     // Debug check
     if (!form) {
       console.error('Form not found!');
@@ -234,7 +191,7 @@ const { jobForm } = Astro.props;
   function validateEmpty(input, errorId, errorMessage) {
     const errorElement = document.getElementById(errorId);
     if (!errorElement) return false;
-    
+
     if (input.value.trim() === '') {
       input.classList.add('invalid');
       errorElement.textContent = errorMessage;
@@ -246,17 +203,17 @@ const { jobForm } = Astro.props;
   function validatePhone(input, errorId, errorMessage) {
     const errorElement = document.getElementById(errorId);
     if (!errorElement) return false;
-    
+
     const phoneValue = input.value.trim();
     // Basic phone validation: must have at least 7 digits, can include +, -, (), spaces
     const phoneRegex = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,4}$/;
-    
+
     if (phoneValue === '') {
       input.classList.add('invalid');
       errorElement.textContent = errorMessage;
       return false;
     }
-    
+
     if (!phoneRegex.test(phoneValue)) {
       input.classList.add('invalid');
       errorElement.textContent = errors.phoneInvalid;
@@ -268,17 +225,17 @@ const { jobForm } = Astro.props;
   function validateEmail(input, errorId, errorMessage) {
     const errorElement = document.getElementById(errorId);
     if (!errorElement) return false;
-    
+
     const emailValue = input.value.trim();
     // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
+
     if (emailValue === '') {
       input.classList.add('invalid');
       errorElement.textContent = errorMessage;
       return false;
     }
-    
+
     if (!emailRegex.test(emailValue)) {
       input.classList.add('invalid');
       errorElement.textContent = errors.emailInvalid;
@@ -290,9 +247,9 @@ const { jobForm } = Astro.props;
   function validateWeight(input, errorId, errorMessage) {
     const errorElement = document.getElementById(errorId);
     if (!errorElement) return false;
-    
+
     const weightValue = parseFloat(input.value);
-    
+
     if (isNaN(weightValue) || weightValue < 1) {
       input.classList.add('invalid');
       errorElement.textContent = errorMessage;
@@ -303,13 +260,24 @@ const { jobForm } = Astro.props;
 
   function validateDate(input, errorId, errorMessage) {
     const errorElement = document.getElementById(errorId);
+    const todaysDate = new Date();
+    const today = todaysDate.toISOString().split('T')[0];
+
     if (!errorElement) return false;
-    
+
     if (!input.value) {
       input.classList.add('invalid');
       errorElement.textContent = errorMessage;
       return false;
     }
+
+    if(input.value < today) {
+      input.classList.add('invalid');
+      errorElement.textContent = 'Data nie może być z przeszłości';
+      return false;
+    }
+
+
     return true;
   }
 
@@ -336,14 +304,14 @@ const { jobForm } = Astro.props;
     // Form submit handler
     form.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     // Clear all errors first
     const allInputs = form.querySelectorAll('.cs-input');
     const allErrors = form.querySelectorAll('.cs-error');
-    
+
     allInputs.forEach(input => input.classList.remove('invalid'));
     allErrors.forEach(error => error.textContent = '');
-    
+
     // Perform validation
     const validations = [
       validateEmpty(nameInput, 'name-error-569', errors.nameRequired),
@@ -356,9 +324,9 @@ const { jobForm } = Astro.props;
       validateEmpty(unloadAddressInput, 'unloading-address-error-569', errors.unloadingAddressRequired),
       validateEmpty(goodsDescriptionInput, 'message-error-569', errors.goodsDescriptionRequired)
     ];
-    
+
     const isValid = validations.every(v => v);
-    
+
     if (!isValid) {
       // Focus first invalid field
       const firstInvalid = form.querySelector('.cs-input.invalid');
@@ -367,10 +335,37 @@ const { jobForm } = Astro.props;
       }
       return;
     }
-    
-    // If all validations pass, submit the form
+
+    // If all validations pass, submit the form using Web3Forms
     console.log('All validations passed, submitting form');
-    form.submit();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: json
+    })
+    .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+            console.log(json.message);
+            form.reset();
+            // Move to confirmation step
+            window.dispatchEvent(new CustomEvent('submitSuccess'));
+        } else {
+            console.log(json);
+            console.log('Submission failed');
+        }
+    })
+    .catch(error => {
+        console.log(error);
+        console.log('Something went wrong!');
+    });
     });
   });
 </script>

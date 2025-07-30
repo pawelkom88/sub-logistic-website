@@ -166,6 +166,8 @@ const translations = defineCollection({
         title: z.string(),
         text: z.array(z.string()),
         next: z.string(),
+        back: z.string(),
+        confirmationMessage: z.string(),
       }),
     }),
   }),

@@ -50,12 +50,11 @@ const formattedHeroAfter = splitString(hero.title, 1);
         <li class={index === 0 ? "active" : ""}>{step}</li>
       ))}
     </ol>
-    <!-- component -->
-    <div class="cs-dialog-content">
+    <!-- Step 1: Introduction -->
+    <div class="cs-dialog-content" style="display: block;">
       <h1 class="cs-dialog-title">
         {dialog.title}
       </h1>
-
       {dialog.text.map((paragraph) => (
         <p class="cs-dialog-text">
           {paragraph}
@@ -63,16 +62,22 @@ const formattedHeroAfter = splitString(hero.title, 1);
       ))}
     </div>
 
-    <!-- <form class="cs-form"></form> -->
-    <!-- <form id="cs-form" style="display: none;"> -->
-    <div style="display: none;" class="form-container">
+    <!-- Step 2: Job Form -->
+    <div class="form-container" style="display: none;">
       <JobForm jobForm={jobForm} />
+      <button type="button" class="prev-btn">{dialog.back}</button>
     </div>
-    <!-- component -->
 
+    <!-- Step 3: Confirmation -->
+    <div class="confirmation-container" style="display: none;">
+      <h1 class="cs-dialog-title">{dialog.steps[2]}</h1>
+      <p>{dialog.confirmationMessage}</p>
+      <button type="button" class="close-btn">{dialog.close}</button>
+    </div>
+
+    <!-- Controls -->
     <button type="button" class="next-btn"
-      >{dialog.next}</button
-    >
+    >{dialog.next}</button>
   </dialog>
   <div class="overlay"></div>
 </section>
@@ -80,25 +85,22 @@ const formattedHeroAfter = splitString(hero.title, 1);
 <script>
   // Initialize UI Elements
   const ui = {
-    transportOfferBtn: document.querySelector(
-      ".transport-offer-btn",
-    ) as HTMLButtonElement,
-    dialog: document.querySelector("#cs-dialog") as HTMLDialogElement,
-    closeButton: document.querySelector(".close-btn") as HTMLButtonElement,
-    nextButton: document.querySelector(".next-btn") as HTMLButtonElement,
-    prevButton: document.querySelector(".submit-btn") as HTMLButtonElement,
-    dialogContent: document.querySelector(
-      ".cs-dialog-content",
-    ) as HTMLDivElement,
-    form: document.querySelector(".cs-form") as HTMLFormElement,
-    steps: document.querySelectorAll(
-      ".cs-stepper li",
-    ) as NodeListOf<HTMLLIElement>,
-    formContainer: document.querySelector(".form-container") as HTMLDivElement,
+    transportOfferBtn: document.querySelector(".transport-offer-btn"),
+    dialog: document.querySelector("#cs-dialog"),
+    closeButton: document.querySelector(".close-btn"),
+    nextButton: document.querySelector(".next-btn"),
+    prevButton: document.querySelector(".prev-btn"), // Now selects the new Back button
+    dialogContent: document.querySelector(".cs-dialog-content"),
+    form: document.querySelector(".cs-form"),
+    steps: document.querySelectorAll(".cs-stepper li"),
+    formContainer: document.querySelector(".form-container"),
+    confirmationContainer: document.querySelector(".confirmation-container"),
+    confirmationCloseBtn: document.querySelector(".confirmation-container .close-btn"),
   };
 
-  // Initial Setup
   let currentStep = 1;
+
+  // Initial Setup
   ui.prevButton.style.display = "none";
 
   // Event Listeners
@@ -110,6 +112,11 @@ const formattedHeroAfter = splitString(hero.title, 1);
   );
   ui.nextButton.addEventListener("click", handleNextStep);
   ui.prevButton.addEventListener("click", handlePrevStep);
+  if (ui.confirmationCloseBtn) {
+    ui.confirmationCloseBtn.addEventListener("click", () => {
+      closeDialogWithTransition(ui.dialog);
+    });
+  }
 
   function handleNextStep() {
     if (currentStep < 3) {
@@ -138,13 +145,27 @@ const formattedHeroAfter = splitString(hero.title, 1);
     });
   }
 
-  function toggleFormVisibility(currentStep: number) {
-    ui.dialogContent.style.display = currentStep === 1 ? "block" : "none";
-    ui.formContainer.style.display = currentStep === 2 ? "block" : "none";
-    ui.prevButton.style.display = currentStep > 1 ? "block" : "none";
-    ui.nextButton.style.display = currentStep === 2 ? "none" : "block";
-
-    if (currentStep === 3) {
+  function toggleFormVisibility(currentStep) {
+    // Hide all containers first
+    ui.dialogContent.style.display = "none";
+    ui.formContainer.style.display = "none";
+    if (ui.confirmationContainer) {
+      ui.confirmationContainer.style.display = "none";
+    }
+    
+    // Show the current step
+    if (currentStep === 1) {
+      ui.dialogContent.style.display = "block";
+      ui.nextButton.style.display = "block";
+      ui.prevButton.style.display = "none";
+    } else if (currentStep === 2) {
+      ui.formContainer.style.display = "block";
+      ui.nextButton.style.display = "none";
+      ui.prevButton.style.display = "block";
+    } else if (currentStep === 3) {
+      if (ui.confirmationContainer) {
+        ui.confirmationContainer.style.display = "block";
+      }
       ui.prevButton.style.display = "none";
       ui.nextButton.style.display = "none";
     }
@@ -152,21 +173,30 @@ const formattedHeroAfter = splitString(hero.title, 1);
     updateActiveStepIndicator();
   }
 
-  function closeDialogWithDelayedTransition(dialog: HTMLDialogElement) {
+  function closeDialogWithDelayedTransition(dialog) {
     setTimeout(() => {
       dialog.close();
     }, 300);
   }
 
-  function closeDialogWithTransition(dialog: HTMLDialogElement) {
+  function closeDialogWithTransition(dialog) {
     dialog.classList.add("closed-dialog");
     dialog.classList.remove("opened-dialog");
     closeDialogWithDelayedTransition(dialog);
   }
 
-  function openDialogWithTransition(dialog: HTMLDialogElement) {
+  function openDialogWithTransition(dialog) {
     dialog.showModal();
     dialog.classList.add("opened-dialog");
     dialog.classList.remove("closed-dialog");
+    // Always start at step 1 when opening
+    currentStep = 1;
+    updateStepperUI();
   }
+  
+  // Handle form submission success event
+  window.addEventListener('submitSuccess', () => {
+    currentStep = 3;
+    updateStepperUI();
+  });
 </script>

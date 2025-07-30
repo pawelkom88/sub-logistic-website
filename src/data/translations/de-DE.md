@@ -178,6 +178,8 @@ translations:
       "Gehen Sie zu unserem Formular und erhalten Sie in wenigen einfachen Schritten ein Angebot für Ihren Versand. Warten Sie nicht, planen Sie noch heute Ihren Transport und erleben Sie qualitativ hochwertige Logistikdienstleistungen."
     ]
     next: "Klicken Sie, um zum Formular zu gelangen"
+    back: "Zurück"
+    confirmationMessage: "Ihre Anfrage wurde erfolgreich gesendet!"
   footer:
     body: >
       Wir laden Sie ein, mit uns Kontakt aufzunehmen und zusammenzuarbeiten. Egal, ob Sie einen Partner für eine dauerhafte Zusammenarbeit suchen oder Unterstützung bei einem einmaligen Auftrag benötigen, Sub Logistic ist bereit, Ihr Unternehmen auf den Straßen Polens, Europas und der Welt zu unterstützen.

@@ -185,6 +185,8 @@ translations:
       "Przejdź do naszego formularza i w kilku prostych krokach uzyskaj wycenę dla swojej przesyłki. Nie czekaj, zaplanuj swój transport już dziś i doświadcz najwyższej jakości usług logistycznych."
     ]
     next: "Kliknij, aby przejść do formularza"
+    back: "Wstecz"
+    confirmationMessage: "Twoje zapytanie zostało pomyślnie wysłane!"
   footer:
     body: >
       Zapraszamy do kontaktu i współpracy. Niezależnie od tego, czy szukasz partnera do stałej współpracy, czy potrzebujesz wsparcia przy jednorazowym zleceniu, Sub Logistic jest gotowy, aby wspierać Twój biznes na drogach Polski, Europy i świata.
