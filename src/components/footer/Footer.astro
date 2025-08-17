@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import logo from "../../assets/images/sub-logistics-logo.webp";
 import type { SelectedTranslation } from "../../utils/utils";
+import { getCountryCode, getHref } from "../../utils/utils";
 import { googleMapsLink } from "../contact-form/ContactForm.astro";
 import "./footer.css";
 
@@ -13,6 +14,8 @@ interface Props {
 
 const { contact, footer, links } = Astro.props;
 
+const currentLang = getCountryCode(Astro.url.pathname);
+
 const todaysDate = new Date().getFullYear();
 ---
 
@@ -22,7 +25,7 @@ const todaysDate = new Date().getFullYear();
   <div class="cs-container">
     <!-- Logo Group -->
     <div class="cs-logo-group">
-      <a aria-label="go back to home" class="cs-logo" href="/">
+      <a aria-label="go back to home" class="cs-logo" href={getHref(currentLang, "/")}>
         <Image
           class="cs-logo-img"
           format="webp"
@@ -47,7 +50,7 @@ const todaysDate = new Date().getFullYear();
         links?.map(({ url, name }) => {
           return (
             <li class="cs-nav-li">
-              <a class="cs-nav-link" href={url}>
+              <a class="cs-nav-link" href={getHref(currentLang, url)}>
                 {name}
               </a>
             </li>

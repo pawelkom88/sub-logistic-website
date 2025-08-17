@@ -12,6 +12,8 @@ translations:
         url: "/"
       - name: "Über uns"
         url: "/ueber-uns"
+      - name: "Leistungen"
+        url: "/leistungen"
       - name: "Datenschutz"
         url: "/datenschutz"
   contactBtn: "Kontakt"
@@ -49,6 +51,26 @@ translations:
           Wir setzen bewährte Sicherheitsprotokolle und effektive Transportmethoden ein,
           damit jede Lieferung unversehrt und termingerecht ankommt.
         alt: "Ein Sub Logistic Mitarbeiter bei der Arbeit"
+  offer:
+    title: "Unser Angebot:"
+    items:
+      - lead: "Der Komplettladungsverkehr (FTL – Full Truck Load) ist eine Transportart, bei der der gesamte Laderaum eines Fahrzeugs einem einzelnen Kunden oder einer Sendung vorbehalten ist."
+        text: "Die optimale Lösung für große Sendungen. Der Kunde erhält eine pünktliche und sichere Zustellung. Unterwegs finden keine Umladungen statt."
+      - lead: "Der Teilladungsverkehr (LTL – Less Than Truck Load), auch Sammel- oder Teilpartien genannt, ist eine Transportart, bei der eine Sendung nicht den gesamten Laderaum belegt."
+        text: "Kosteneffizient für kleinere Volumina. Der Kunde profitiert von geringeren Stückkosten und zahlt nur für den tatsächlich genutzten Platz oder das Gewicht. Es kommt zu Umladungen, die Laufzeit ist länger als beim Komplettladungsverkehr."
+      - lead: "Just-in-Time (JIT) ist eine Logistikstrategie, die darauf abzielt, Waren genau dann zu liefern, wenn sie in der Produktion oder im Verkauf benötigt werden – ohne große Lagerbestände aufzubauen."
+      - lead: "Transport gefährlicher Güter (ADR) gemäß dem internationalen Übereinkommen ADR (Accord Dangereux Routier), das die Regeln für sicheres Verpacken, Kennzeichnen, Verladen und Befördern festlegt."
+      - lead: "Transportversicherung (Cargo) – eine Garantie, dass der Kunde bei unvorhergesehenen Ereignissen keinen finanziellen Schaden erleidet."
+        text: "Der Kunde gewinnt Ruhe und Schutz. Gilt für Sendungen auf dem Land-, See-, Luft- und Schienenweg."
+      - lead: "Kühltransport – Beförderung in kontrolliert abgesenkter Temperatur mit Kühlfahrzeugen."
+        text: "Ziel ist es, die Frische, Qualität und Sicherheit temperaturempfindlicher Produkte zu gewährleisten."
+      - lead: "Dedizierter Transport mit Ladebordwand – Lieferung von Tür zu Tür."
+        text: "Garantie für eine schnelle Zustellung."
+      - lead: "Transport von Schüttgütern – wir bieten sicheren und schnellen Transport von Schüttgütern wie Getreide, Schotter, Sand, Zement und anderen Massenrohstoffen."
+        text: "Wir nutzen Spezialfahrzeuge – Kipper, Silozüge und Tankauflieger."
+      - lead: "Transport von Übermaß- und Schwerlastgütern – wir befördern Ladungen mit nicht standardmäßigen Abmessungen oder Gewichten, von Industrieanlagen und Maschinen über Stahlkonstruktionen bis hin zu Turbinen- und Infrastrukturelementen."
+        text: "Wir stellen geeignete Ausrüstung, notwendige Genehmigungen und bei Bedarf Begleitfahrzeuge bereit."
+      - lead: "Umfassende Unterstützung bei der Zollabfertigung, die eine reibungslose Ein- oder Ausfuhr von Waren über die Grenzen der Europäischen Union hinweg ermöglicht."
   whyUs:
     topper: "Maßgeschneiderte Lösungen für jede Sendung."
     heading: "Inlands- und Internationaler Transport"
@@ -184,6 +206,19 @@ translations:
     body: >
       Wir laden Sie ein, mit uns Kontakt aufzunehmen und zusammenzuarbeiten. Egal, ob Sie einen Partner für eine dauerhafte Zusammenarbeit suchen oder Unterstützung bei einem einmaligen Auftrag benötigen, Sub Logistic ist bereit, Ihr Unternehmen auf den Straßen Polens, Europas und der Welt zu unterstützen.
     copyright: "Alle Rechte vorbehalten."
+  faq:
+    - question: "Welche Arten von Transportdiensten bieten Sie an?"
+      answer: "Wir bieten eine Reihe von Transportdienstleistungen, darunter Straßen-, Luft- und Seefracht, die speziell auf Ihre logistischen Bedürfnisse zugeschnitten sind."
+    - question: "Wie gewährleisten Sie die Sicherheit meiner Waren während des Transports?"
+      answer: "Unser Team befolgt strenge Sicherheitsprotokolle und nutzt modernste Technologie, um die Integrität Ihrer Waren während der gesamten Reise zu überwachen und zu gewährleisten."
+    - question: "Wie kann ich meine Sendung verfolgen?"
+      answer: "Sie können Ihre Sendung mit unserem Online-Tracking-System verfolgen, das Echtzeit-Updates über den Standort und Status Ihrer Waren bereitstellt."
+    - question: "An wen kann ich mich bei Fragen zum Kundenservice wenden?"
+      answer: "Unser engagiertes Support-Team steht Ihnen telefonisch oder per E-Mail für Anfragen oder Bedenken zur Verfügung."
+    - question: "Welche Nachhaltigkeitsmaßnahmen setzen Sie um?"
+      answer: "Wir konzentrieren uns auf die Reduzierung unseres CO2-Fußabdrucks durch effiziente Routenplanung, Fahrzeugwartung und Investitionen in umweltfreundliche Technologien."
+    - question: "Wie kann ich Partner von Sub Logistic werden?"
+      answer: "Um Partnerschaftsmöglichkeiten zu erkunden, kontaktieren Sie bitte unser Business Development-Team über unsere Website oder per E-Mail."
   contact:
     phone: "Zahle: +48 510 482 468"
     email: "piotr.subotowicz@sublog.com.pl"

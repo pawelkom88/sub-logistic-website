@@ -1,120 +1,203 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import "../../styles/oferta.css";
+import {
+  getCountryCode,
+  getCurrentLanguageTranslation,
+} from "../../utils/utils";
+
+const lang = getCountryCode(Astro.url.pathname);
+const translations = await getCurrentLanguageTranslation(lang);
+const offer = translations?.offer ?? { title: "", items: [] as { lead: string; text?: string }[] };
+const items = offer?.items ?? [] as { lead: string; text?: string }[];
+const mid = Math.ceil(items.length / 2);
+const group1 = items.slice(0, mid);
+const group2 = items.slice(mid);
 ---
 
-<Layout title="Oferta" description="Oferta">
-  <section id="services-1301">
+<Layout
+  contactBtn={translations.contactBtn}
+  contact={translations.contact}
+  links={translations.nav.links}
+  footer={translations.footer}
+  title={offer?.title ?? "Oferta"}
+  description={offer?.title ?? "Oferta"}
+>
+  <section id="why-choose-1662">
     <div class="cs-container">
       <div class="cs-content">
-        <div class="cs-flex-group">
-          <span class="cs-topper">Our Services</span>
-          <h2 class="cs-title">Professional Tax & Accounting Services</h2>
-        </div>
-        <p class="cs-text">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Amet minim
-          mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-          officia consequat duis enim velit mollit.
-        </p>
+        <h2 class="cs-title">{offer?.title ?? ""}</h2>
       </div>
-      <ul class="cs-card-group">
-        <li class="cs-item">
-          <a href="" class="cs-link">
-            <img
-              class="cs-icon"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/brain.svg"
-              loading="lazy"
-              decoding="async"
-              alt="icon"
-              width="40"
-              height="40"
-              aria-hidden="true"
-            />
-            <h3 class="cs-h3">Bus blaszak</h3>
-            <ul class="cs-item-text">
-              <li>Wymiary: 20 x 20 x 20 cm</li>
-              <li>Ładowność: 10 kg</li>
-            </ul>
-          </a>
-        </li>
-        <li class="cs-item">
-          <a href="" class="cs-link">
-            <img
-              class="cs-icon"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/users.svg"
-              loading="lazy"
-              decoding="async"
-              alt="icon"
-              width="40"
-              height="40"
-              aria-hidden="true"
-            />
-            <h3 class="cs-h3">Bus firanka</h3>
-            <ul class="cs-item-text">
-              <li>Wymiary: 20 x 20 x 20 cm</li>
-              <li>Ładowność: 10 kg</li>
-            </ul>
-          </a>
-        </li>
-        <li class="cs-item">
-          <a href="" class="cs-link">
-            <img
-              class="cs-icon"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/Layer.svg"
-              loading="lazy"
-              decoding="async"
-              alt="icon"
-              width="40"
-              height="40"
-              aria-hidden="true"
-            />
-            <h3 class="cs-h3">Solówka kontener</h3>
-            <ul class="cs-item-text">
-              <li>Wymiary: 20 x 20 x 20 cm</li>
-              <li>Ładowność: 10 kg</li>
-            </ul>
-          </a>
-        </li>
-        <li class="cs-item">
-          <a href="" class="cs-link">
-            <img
-              class="cs-icon"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/Layer.svg"
-              loading="lazy"
-              decoding="async"
-              alt="icon"
-              width="40"
-              height="40"
-              aria-hidden="true"
-            />
-            <h3 class="cs-h3">Solówka firanka</h3>
-            <ul class="cs-item-text">
-              <li>Wymiary: 20 x 20 x 20 cm</li>
-              <li>Ładowność: 10 kg</li>
-            </ul>
-          </a>
-        </li>
-        <li class="cs-item">
-          <a href="" class="cs-link">
-            <img
-              class="cs-icon"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/Layer.svg"
-              loading="lazy"
-              decoding="async"
-              alt="icon"
-              width="40"
-              height="40"
-              aria-hidden="true"
-            />
-            <h3 class="cs-h3">Tandem (zestaw)</h3>
-            <ul class="cs-item-text">
-              <li>Wymiary: 20 x 20 x 20 cm</li>
-              <li>Ładowność: 10 kg</li>
-            </ul>
-          </a>
-        </li>
-      </ul>
+      <div class="cs-wrapper">
+        <ul class="cs-card-group">
+          {
+            group1.map((item, idx) => (
+              <li class="cs-item">
+                <span class="cs-item-number">
+                  {String(idx + 1).padStart(2, "0")}
+                </span>
+                <div class="cs-item-wrapper">
+                  <p class="cs-item-text">
+                    <strong class="cs-item-lead">{item.lead}</strong>{item.text ? ` ${item.text}` : ""}
+                  </p>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+        <ul class="cs-card-group">
+          {
+            group2.map((item, idx) => (
+              <li class="cs-item">
+                <span class="cs-item-number">
+                  {String(idx + 1 + group1.length).padStart(2, "0")}
+                </span>
+                <div class="cs-item-wrapper">
+                  <p class="cs-item-text">
+                    <strong class="cs-item-lead">{item.lead}</strong>{item.text ? ` ${item.text}` : ""}
+                  </p>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
+    <br />
+    <br />
+    <br />
+    <div class="cs-container">
+      <div class="cs-content">
+        <h2 class="cs-title">Dostępne formy transportu</h2>
+      </div>
+    </div>
+    <br />
+    <section id="timetable-1731">
+      <div class="cs-container">
+        <div class="cs-table-list">
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Truck</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <img
+                    width="360"
+                    height="230"
+                    alt="Truck"
+                    src="https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-f890-620a-8116-8dced25cc647/raw?se=2025-08-17T17%3A59%3A50Z&sp=r&sv=2024-08-04&sr=b&scid=fb2c6ca9-7fd7-5eb6-a923-eae0f0406e59&skoid=82a3371f-2f6c-4f81-8a78-2701b362559b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-17T16%3A11%3A39Z&ske=2025-08-18T16%3A11%3A39Z&sks=b&skv=2024-08-04&sig=XMSBOvCZMlZJuYmtz/zUFZQ/huOx%2B3ahAzUYr6epQJ8%3D"
+                    alt="Truck"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Tuesday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <img
+                    width="360"
+                    height="230"
+                    alt="Truck"
+                    src="https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-f890-620a-8116-8dced25cc647/raw?se=2025-08-17T17%3A59%3A50Z&sp=r&sv=2024-08-04&sr=b&scid=fb2c6ca9-7fd7-5eb6-a923-eae0f0406e59&skoid=82a3371f-2f6c-4f81-8a78-2701b362559b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-17T16%3A11%3A39Z&ske=2025-08-18T16%3A11%3A39Z&sks=b&skv=2024-08-04&sig=XMSBOvCZMlZJuYmtz/zUFZQ/huOx%2B3ahAzUYr6epQJ8%3D"
+                    alt="Truck"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Wednesday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <img
+                    width="360"
+                    height="230"
+                    alt="Truck"
+                    src="https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-f890-620a-8116-8dced25cc647/raw?se=2025-08-17T17%3A59%3A50Z&sp=r&sv=2024-08-04&sr=b&scid=fb2c6ca9-7fd7-5eb6-a923-eae0f0406e59&skoid=82a3371f-2f6c-4f81-8a78-2701b362559b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-17T16%3A11%3A39Z&ske=2025-08-18T16%3A11%3A39Z&sks=b&skv=2024-08-04&sig=XMSBOvCZMlZJuYmtz/zUFZQ/huOx%2B3ahAzUYr6epQJ8%3D"
+                    alt="Truck"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Thursday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <img
+                    width="360"
+                    height="230"
+                    alt="Truck"
+                    src="https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-f890-620a-8116-8dced25cc647/raw?se=2025-08-17T17%3A59%3A50Z&sp=r&sv=2024-08-04&sr=b&scid=fb2c6ca9-7fd7-5eb6-a923-eae0f0406e59&skoid=82a3371f-2f6c-4f81-8a78-2701b362559b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-17T16%3A11%3A39Z&ske=2025-08-18T16%3A11%3A39Z&sks=b&skv=2024-08-04&sig=XMSBOvCZMlZJuYmtz/zUFZQ/huOx%2B3ahAzUYr6epQJ8%3D"
+                    alt="Truck"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Friday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <!--todo:aspect ration or object fit cover-->
+                  <img
+                    width="360"
+                    height="230"
+                    alt="Truck"
+                    src="https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-f890-620a-8116-8dced25cc647/raw?se=2025-08-17T17%3A59%3A50Z&sp=r&sv=2024-08-04&sr=b&scid=fb2c6ca9-7fd7-5eb6-a923-eae0f0406e59&skoid=82a3371f-2f6c-4f81-8a78-2701b362559b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-17T16%3A11%3A39Z&ske=2025-08-18T16%3A11%3A39Z&sks=b&skv=2024-08-04&sig=XMSBOvCZMlZJuYmtz/zUFZQ/huOx%2B3ahAzUYr6epQJ8%3D"
+                    alt="Truck"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Saturday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <img
+                    width="360"
+                    height="230"
+                    alt="Truck"
+                    src="https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-f890-620a-8116-8dced25cc647/raw?se=2025-08-17T17%3A59%3A50Z&sp=r&sv=2024-08-04&sr=b&scid=fb2c6ca9-7fd7-5eb6-a923-eae0f0406e59&skoid=82a3371f-2f6c-4f81-8a78-2701b362559b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-17T16%3A11%3A39Z&ske=2025-08-18T16%3A11%3A39Z&sks=b&skv=2024-08-04&sig=XMSBOvCZMlZJuYmtz/zUFZQ/huOx%2B3ahAzUYr6epQJ8%3D"
+                    alt="Truck"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
   </section>
 </Layout>

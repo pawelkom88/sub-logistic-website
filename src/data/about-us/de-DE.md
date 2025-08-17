@@ -21,10 +21,7 @@ translations:
   li:
     - title: "Personalisierte Lösungen"
       description: >
-        Jede Aufgabe wird individuell behandelt, wobei die Dienstleistungen auf spezifische
-        Bedürfnisse und Erwartungen abgestimmt werden. Unser Ziel ist es nicht nur, Waren
-        zu liefern, sondern langfristige Kooperationen auf Basis von Vertrauen und Verständnis
-        aufzubauen.
+        Unsere Logistikdienstleistungen sind auf die spezifischen Anforderungen unserer Kunden in Deutschland abgestimmt und bieten zuverlässige und effiziente Transportlösungen. Wir integrieren moderne Technologien, um logistische Prozesse zu optimieren.
     - title: "Modernität und Innovation"
       description: >
         Bei Sub Trans kombinieren wir bewährte Arbeitsmethoden mit modernen Werkzeugen,

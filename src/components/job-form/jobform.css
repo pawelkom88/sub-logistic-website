@@ -13,11 +13,18 @@
     width: 100%;
     color: var(--headerColor);
   }
-
+  .cs-captcha-button-wrapper {
+    grid-column: 1 / -1;
+    margin-inline: auto;
+  }
   #contact-569 .cs-label:after {
     content: "*";
     color: var(--secondary);
     padding-left: 0.2rem;
+  }
+  .cs-field-wrapper {
+    flex: 1 1 100%;
+    width: 100%;
   }
   #contact-569 .cs-input {
     font-size: 1rem;
@@ -39,6 +46,27 @@
 
   #contact-569 .cs-input.invalid {
     border-color: red;
+  }
+
+  .error-component,
+  .success-component {
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    color: black;
+  }
+
+  .error-component {
+    border: 1px solid var(--secondary);
+    background: var(--secondary);
+    color: white;
+  }
+
+  .success-component {
+    border: 1px solid #84e380;
+    background: #84e380;
   }
 
   .cs-error {
@@ -67,7 +95,6 @@
   .next-btn,
   .submit-btn {
     display: block;
-    border: none;
     padding: 0.5rem 1rem;
     margin: auto;
     color: var(--white);
@@ -112,10 +139,6 @@
   }
 
   .cs-textarea-column {
-    grid-column: span 2;
-  }
-
-  .submit-btn {
     grid-column: span 2;
   }
 

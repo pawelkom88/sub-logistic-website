@@ -245,9 +245,55 @@ const { contactBtn, contact, links = [] } = Astro.props;
 
       options?.forEach((option, index) => {
         option.addEventListener("click", () => {
-          const selectedLang = option.getAttribute("data-lang") as LangCode;
-            <!--TODO: make sure when languages changes the path is preserved-->
-          window.location.pathname = `/${selectedLang.split("-")[0]}`;
+          const selectedLangCode = option.getAttribute("data-lang") as LangCode;
+          const selectedLang = selectedLangCode.split("-")[0] as "en" | "de" | "pl";
+
+          // Preserve current path, query string, and hash.
+          const url = new URL(window.location.href);
+          const segments = url.pathname.split("/"); // e.g. ["", "en", "get-quote"]
+
+          // Known localized slug mappings (top-level pages)
+          const slugMap: Record<string, { en: string; de: string; pl: string }> = {
+            // About us
+            "about-us": { en: "about-us", de: "ueber-uns", pl: "onas" },
+            "ueber-uns": { en: "about-us", de: "ueber-uns", pl: "onas" },
+            "onas": { en: "about-us", de: "ueber-uns", pl: "onas" },
+            // Offer / Services
+            "services": { en: "services", de: "leistungen", pl: "oferta" },
+            "leistungen": { en: "services", de: "leistungen", pl: "oferta" },
+            "oferta": { en: "services", de: "leistungen", pl: "oferta" },
+            // Get a quote
+            "get-quote": { en: "get-quote", de: "angebot-anfordern", pl: "uzyskaj-wycene" },
+            "angebot-anfordern": { en: "get-quote", de: "angebot-anfordern", pl: "uzyskaj-wycene" },
+            "uzyskaj-wycene": { en: "get-quote", de: "angebot-anfordern", pl: "uzyskaj-wycene" },
+            // Privacy / Terms (mapped to closest existing page)
+            "terms-of-use": { en: "terms-of-use", de: "datenschutz", pl: "polityka-prywatnosci" },
+            "datenschutz": { en: "terms-of-use", de: "datenschutz", pl: "polityka-prywatnosci" },
+            "polityka-prywatnosci": { en: "terms-of-use", de: "datenschutz", pl: "polityka-prywatnosci" },
+          };
+
+          // Replace or insert locale segment
+          if (["en", "de", "pl"].includes(segments[1])) {
+            segments[1] = selectedLang; // replace existing locale
+          } else {
+            segments.splice(1, 0, selectedLang); // insert locale if missing
+          }
+
+          // Try to map slug between locales (only for top-level pages)
+          if (segments.length >= 3 && segments[2]) {
+            const currentSlug = segments[2];
+            const mapped = slugMap[currentSlug]?.[selectedLang];
+            if (mapped) {
+              segments[2] = mapped; // replace slug with localized equivalent
+            } else {
+              // If the slug doesn't exist in target locale, optionally fallback to locale root
+              // segments = ["", selectedLang];
+              // Keep original slug by default; if it 404s, routing will handle NotFound
+            }
+          }
+
+          url.pathname = segments.join("/");
+          window.location.href = url.toString();
 
           dropdownBtn?.setAttribute("aria-expanded", "false");
           dropdownContent?.setAttribute("aria-hidden", "true");

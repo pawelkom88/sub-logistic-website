@@ -39,6 +39,15 @@ const translations = defineCollection({
           }),
         ),
       }),
+      offer: z.object({
+        title: z.string(),
+        items: z.array(
+          z.object({
+            lead: z.string(),
+            text: z.string().optional(),
+          }),
+        ),
+      }),
       whyUs: z.object({
         topper: z.string(),
         heading: z.string(),
@@ -125,6 +134,12 @@ const translations = defineCollection({
           submitBtn: z.string(),
         }),
       }),
+      faq: z.array(
+        z.object({
+          question: z.string(),
+          answer: z.string(),
+        })
+      ),
       contact: z.object({
         phone: z.string(),
         email: z.string(),

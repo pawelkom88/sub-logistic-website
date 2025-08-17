@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import JobForm from "../../components/job-form/JobForm.astro";
+import { getCountryCode, getCurrentLanguageTranslation } from "../../utils/utils";
+import "../../styles/wycena.css";
+
+const lang = getCountryCode(Astro.url.pathname);
+const translations = await getCurrentLanguageTranslation(lang);
+---
+
+<Layout
+  contactBtn={translations.contactBtn}
+  contact={translations.contact}
+  links={translations.nav.links}
+  footer={translations.footer}
+  title="Angebot anfordern"
+  description="Fordern Sie ein auf Ihre Sendung zugeschnittenes Logistikangebot an."
+>
+  <section class="quote">
+    <h1 class="cs-title">Angebot anfordern</h1>
+    <p class="cs-text">Beschreiben Sie Ihre Sendung und wir melden uns zeitnah mit einem Angebot.</p>
+    <br>
+    <JobForm jobForm={translations.jobForm} />
+  </section>
+</Layout>

@@ -6,7 +6,7 @@ import icon3 from "../../assets/icons/truck.svg";
 import whyUsImage from "../../assets/images/dron-view-warehouse.jpg";
 import whyUsImage3 from "../../assets/images/loads-of-containers-at-port.jpg";
 import whyUsImage2 from "../../assets/images/lorries-parked-in-warehouse-yard.jpg";
-import type { SelectedTranslation } from "../../utils/utils";
+import { type SelectedTranslation, getCountryCode } from "../../utils/utils";
 import "./whyus.css";
 
 interface Props {
@@ -19,6 +19,21 @@ const icons = whyUs.icons.map((icon, index) => ({
   title: icon.title,
   image: [icon2, icon1, icon3][index],
 }));
+
+// Offer/Services localized slug and text
+const lang = getCountryCode(Astro.url.pathname);
+const offerSlugMap = {
+  en: "/services",
+  pl: "/oferta",
+  de: "/leistungen",
+} as const;
+const offerTextMap = {
+  en: "Services",
+  pl: "Oferta",
+  de: "Leistungen",
+} as const;
+const offerHref = `/${lang}${offerSlugMap[lang]}`;
+const offerText = offerTextMap[lang];
 ---
 
 <section id="sbsr-516">
@@ -38,7 +53,7 @@ const icons = whyUs.icons.map((icon, index) => ({
               <Image
                 class="cm-icon"
                 src={icon.image}
-                alt="icon"
+  alt="Logistics icon"
                 width="40"
                 height="40"
                 loading="lazy"
@@ -48,7 +63,7 @@ const icons = whyUs.icons.map((icon, index) => ({
           ))
         }
       </ul>
-      <a href="/oferta" class="cs-button-solid">{whyUs?.actionBtn}</a>
+      <a href={offerHref} class="cs-button-solid">{offerText}</a>
     </div>
     <div class="cs-image-group">
       <ul class="cs-stat-group">
@@ -68,7 +83,7 @@ const icons = whyUs.icons.map((icon, index) => ({
             height="461"
             src={whyUsImage}
             class="cs-picture"
-            alt="Dron view warehouse"
+  alt="Aerial view of a large logistics warehouse"
             formats={["avif", "webp"]}
             loading="lazy"
           />

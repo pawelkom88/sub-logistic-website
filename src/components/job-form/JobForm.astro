@@ -1,12 +1,13 @@
 ---
 import "./jobform.css";
-import type { SelectedTranslation } from "../../utils/translations";
+import { SelectedTranslation, getCountryCode } from "../../utils/utils";
 
 interface Props {
   jobForm: SelectedTranslation["jobForm"];
 }
 
 const { jobForm } = Astro.props;
+const lang = getCountryCode(Astro.url.pathname);
 ---
 
 <form
@@ -21,10 +22,9 @@ const { jobForm } = Astro.props;
     aria-hidden="true"
     type="hidden"
     name="access_key"
-    value="YOUR_ACCESS_KEY_HERE"
+    value="e63617a1-6b8c-4a8f-adf8-03aba92d5110"
   />
-  <input type="hidden" name="from_name" value="Zapytanie o wycene">
-  <!-- IMPORTANT: Replace YOUR_ACCESS_KEY_HERE with your actual Web3Forms access key -->
+  <input type="hidden" name="from_name" value="Zapytanie o wycene" />
   <input
     aria-hidden="true"
     type="hidden"
@@ -37,7 +37,6 @@ const { jobForm } = Astro.props;
     name="botcheck"
     style="display: none;"
   />
-  <!-- <div class="h-captcha" data-captcha="true"></div> -->
   <div class="cs-field-wrapper">
     <label for="name-569" class="cs-label">{jobForm.fields.name.label}</label>
     <input
@@ -83,7 +82,9 @@ const { jobForm } = Astro.props;
   </div>
 
   <div class="cs-field-wrapper">
-    <label for="waga-towaru" class="cs-label">{jobForm.fields.weight.label}</label>
+    <label for="waga-towaru" class="cs-label"
+      >{jobForm.fields.weight.label}</label
+    >
     <input
       class="cs-input"
       type="number"
@@ -112,7 +113,9 @@ const { jobForm } = Astro.props;
   </div>
 
   <div class="cs-field-wrapper">
-    <label for="date-unload" class="cs-label">{jobForm.fields.unloadingDate}</label>
+    <label for="date-unload" class="cs-label"
+      >{jobForm.fields.unloadingDate}</label
+    >
     <input
       class="cs-input"
       type="date"
@@ -125,7 +128,9 @@ const { jobForm } = Astro.props;
   </div>
 
   <div class="cs-field-wrapper">
-    <label for="loading-address-569" class="cs-label">{jobForm.fields.loadingAddress.label}</label>
+    <label for="loading-address-569" class="cs-label"
+      >{jobForm.fields.loadingAddress.label}</label
+    >
     <input
       class="cs-input"
       type="text"
@@ -139,7 +144,9 @@ const { jobForm } = Astro.props;
   </div>
 
   <div class="cs-field-wrapper">
-    <label for="unloading-address-569" class="cs-label">{jobForm.fields.unloadingAddress.label}</label>
+    <label for="unloading-address-569" class="cs-label"
+      >{jobForm.fields.unloadingAddress.label}</label
+    >
     <input
       class="cs-input"
       type="text"
@@ -153,7 +160,9 @@ const { jobForm } = Astro.props;
   </div>
 
   <div class="cs-textarea-column cs-field-wrapper">
-    <label for="message-569" class="cs-label cs-message">{jobForm.fields.goodsDescription}</label>
+    <label for="message-569" class="cs-label cs-message"
+      >{jobForm.fields.goodsDescription}</label
+    >
     <textarea
       class="cs-input cs-textarea"
       name="Opis towarów"
@@ -163,209 +172,364 @@ const { jobForm } = Astro.props;
       aria-required="true"></textarea>
     <span id="message-error-569" class="cs-error" role="alert"></span>
   </div>
+  <div class="cs-captcha-button-wrapper">
+  <div
+    class="h-captcha"
+    data-captcha="true"
+    data-lang={lang}
+    data-size="compact"
+  >
+  </div>
+  <br />
   <button class="submit-btn" type="submit">{jobForm.submitBtn}</button>
+  </div>
+  <div class="lds-spinner"></div>
+
+  <div class="success-component" style="display: none;">
+    Wiadomość została wysłana pomyślnie!
+  </div>
+  <div class="error-component" style="display: none;">
+    Weryfikacja hCaptcha jest wymagana, aby zapewnić bezpieczeństwo. Prosimy o
+    jej zaznaczenie.
+  </div>
 </form>
 
-<script define:vars={{ errors: jobForm.errors }}>
-  // Wait for DOM to be ready
-  document.addEventListener('DOMContentLoaded', () => {
-    // Get form and all input elements
-    const form = document.getElementById('contact-569');
-    const nameInput = document.getElementById('name-569');
-    const phoneInput = document.getElementById('phone-569');
-    const emailInput = document.getElementById('email-569');
-    const weightInput = document.getElementById('waga-towaru');
-    const loadDateInput = document.getElementById('date-load');
-    const unloadDateInput = document.getElementById('date-unload');
-    const loadAddressInput = document.getElementById('loading-address-569');
-    const unloadAddressInput = document.getElementById('unloading-address-569');
-    const goodsDescriptionInput = document.getElementById('message-569');
+<script define:vars={{ errors: jobForm.errors, lang }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-569");
+    const nameInput = document.getElementById("name-569");
+    const phoneInput = document.getElementById("phone-569");
+    const emailInput = document.getElementById("email-569");
+    const weightInput = document.getElementById("waga-towaru");
+    const loadDateInput = document.getElementById("date-load");
+    const unloadDateInput = document.getElementById("date-unload");
+    const loadAddressInput = document.getElementById("loading-address-569");
+    const unloadAddressInput = document.getElementById("unloading-address-569");
+    const goodsDescriptionInput = document.getElementById("message-569");
+    // const hcaptcha = document.getElementById("anchor-wr");
+    // const dialog =  document.querySelector("#cs-dialog")
 
-    // Debug check
     if (!form) {
-      console.error('Form not found!');
+      console.error("Form not found!");
       return;
     }
 
-  // Validation functions
-  function validateEmpty(input, errorId, errorMessage) {
-    const errorElement = document.getElementById(errorId);
-    if (!errorElement) return false;
+    // hcaptcha.addEventListener("click", (event) => {
+    //   dialog.close()
+    // })
 
-    if (input.value.trim() === '') {
-      input.classList.add('invalid');
-      errorElement.textContent = errorMessage;
-      return false;
-    }
-    return true;
-  }
+    const spinner = document.querySelector(".lds-spinner");
+    const successComponent = document.querySelector(".success-component");
+    const errorComponent = document.querySelector(".error-component");
+    const submitButton = document.querySelector(".submit-btn");
 
-  function validatePhone(input, errorId, errorMessage) {
-    const errorElement = document.getElementById(errorId);
-    if (!errorElement) return false;
+    spinner.style.display = "none";
+    successComponent.style.display = "none";
+    errorComponent.style.display = "none";
 
-    const phoneValue = input.value.trim();
-    // Basic phone validation: must have at least 7 digits, can include +, -, (), spaces
-    const phoneRegex = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,4}$/;
+    // Initialize date inputs with today as minimum
+    const todayStr = new Date().toISOString().split("T")[0];
+    if (loadDateInput) loadDateInput.min = todayStr;
+    if (unloadDateInput) unloadDateInput.min = todayStr;
 
-    if (phoneValue === '') {
-      input.classList.add('invalid');
-      errorElement.textContent = errorMessage;
-      return false;
-    }
+    function validateEmpty(input, errorId, errorMessage) {
+      const errorElement = document.getElementById(errorId);
+      if (!errorElement) return false;
 
-    if (!phoneRegex.test(phoneValue)) {
-      input.classList.add('invalid');
-      errorElement.textContent = errors.phoneInvalid;
-      return false;
-    }
-    return true;
-  }
-
-  function validateEmail(input, errorId, errorMessage) {
-    const errorElement = document.getElementById(errorId);
-    if (!errorElement) return false;
-
-    const emailValue = input.value.trim();
-    // Simple email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (emailValue === '') {
-      input.classList.add('invalid');
-      errorElement.textContent = errorMessage;
-      return false;
-    }
-
-    if (!emailRegex.test(emailValue)) {
-      input.classList.add('invalid');
-      errorElement.textContent = errors.emailInvalid;
-      return false;
-    }
-    return true;
-  }
-
-  function validateWeight(input, errorId, errorMessage) {
-    const errorElement = document.getElementById(errorId);
-    if (!errorElement) return false;
-
-    const weightValue = parseFloat(input.value);
-
-    if (isNaN(weightValue) || weightValue < 1) {
-      input.classList.add('invalid');
-      errorElement.textContent = errorMessage;
-      return false;
-    }
-    return true;
-  }
-
-  function validateDate(input, errorId, errorMessage) {
-    const errorElement = document.getElementById(errorId);
-    const todaysDate = new Date();
-    const today = todaysDate.toISOString().split('T')[0];
-
-    if (!errorElement) return false;
-
-    if (!input.value) {
-      input.classList.add('invalid');
-      errorElement.textContent = errorMessage;
-      return false;
-    }
-
-    if(input.value < today) {
-      input.classList.add('invalid');
-      errorElement.textContent = 'Data nie może być z przeszłości';
-      return false;
-    }
-
-
-    return true;
-  }
-
-  // Clear error on input
-  function clearError(input, errorId) {
-    const errorElement = document.getElementById(errorId);
-    if (errorElement) {
-      input.classList.remove('invalid');
-      errorElement.textContent = '';
-    }
-  }
-
-    // Add input event listeners to clear errors when user types
-    if (nameInput) nameInput.addEventListener('input', () => clearError(nameInput, 'name-error-569'));
-    if (phoneInput) phoneInput.addEventListener('input', () => clearError(phoneInput, 'phone-error-569'));
-    if (emailInput) emailInput.addEventListener('input', () => clearError(emailInput, 'email-error-569'));
-    if (weightInput) weightInput.addEventListener('input', () => clearError(weightInput, 'weight-error-569'));
-    if (loadDateInput) loadDateInput.addEventListener('input', () => clearError(loadDateInput, 'date-load-error-569'));
-    if (unloadDateInput) unloadDateInput.addEventListener('input', () => clearError(unloadDateInput, 'date-unload-error-569'));
-    if (loadAddressInput) loadAddressInput.addEventListener('input', () => clearError(loadAddressInput, 'loading-address-error-569'));
-    if (unloadAddressInput) unloadAddressInput.addEventListener('input', () => clearError(unloadAddressInput, 'unloading-address-error-569'));
-    if (goodsDescriptionInput) goodsDescriptionInput.addEventListener('input', () => clearError(goodsDescriptionInput, 'message-error-569'));
-
-    // Form submit handler
-    form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Clear all errors first
-    const allInputs = form.querySelectorAll('.cs-input');
-    const allErrors = form.querySelectorAll('.cs-error');
-
-    allInputs.forEach(input => input.classList.remove('invalid'));
-    allErrors.forEach(error => error.textContent = '');
-
-    // Perform validation
-    const validations = [
-      validateEmpty(nameInput, 'name-error-569', errors.nameRequired),
-      validatePhone(phoneInput, 'phone-error-569', errors.phoneRequired),
-      validateEmail(emailInput, 'email-error-569', errors.emailRequired),
-      validateWeight(weightInput, 'weight-error-569', errors.weightRequired),
-      validateDate(loadDateInput, 'date-load-error-569', errors.loadingDateRequired),
-      validateDate(unloadDateInput, 'date-unload-error-569', errors.unloadingDateRequired),
-      validateEmpty(loadAddressInput, 'loading-address-error-569', errors.loadingAddressRequired),
-      validateEmpty(unloadAddressInput, 'unloading-address-error-569', errors.unloadingAddressRequired),
-      validateEmpty(goodsDescriptionInput, 'message-error-569', errors.goodsDescriptionRequired)
-    ];
-
-    const isValid = validations.every(v => v);
-
-    if (!isValid) {
-      // Focus first invalid field
-      const firstInvalid = form.querySelector('.cs-input.invalid');
-      if (firstInvalid) {
-        firstInvalid.focus();
+      if (input.value.trim() === "") {
+        input.classList.add("invalid");
+        errorElement.textContent = errorMessage;
+        return false;
       }
-      return;
+      return true;
     }
 
-    // If all validations pass, submit the form using Web3Forms
-    console.log('All validations passed, submitting form');
-    const formData = new FormData(form);
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+    function validatePhone(input, errorId, errorMessage) {
+      const errorElement = document.getElementById(errorId);
+      if (!errorElement) return false;
 
-    fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: json
-    })
-    .then(async (response) => {
-        let json = await response.json();
-        if (response.status == 200) {
-            console.log(json.message);
-            form.reset();
-            // Move to confirmation step
-            window.dispatchEvent(new CustomEvent('submitSuccess'));
-        } else {
-            console.log(json);
-            console.log('Submission failed');
+      const phoneValue = input.value.trim();
+      // Basic phone validation: must have at least 7 digits, can include +, -, (), spaces
+      const phoneRegex =
+        /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,4}$/;
+
+      if (phoneValue === "") {
+        input.classList.add("invalid");
+        errorElement.textContent = errorMessage;
+        return false;
+      }
+
+      if (!phoneRegex.test(phoneValue)) {
+        input.classList.add("invalid");
+        errorElement.textContent = errors.phoneInvalid;
+        return false;
+      }
+      return true;
+    }
+
+    function validateEmail(input, errorId, errorMessage) {
+      const errorElement = document.getElementById(errorId);
+      if (!errorElement) return false;
+
+      const emailValue = input.value.trim();
+      // Simple email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (emailValue === "") {
+        input.classList.add("invalid");
+        errorElement.textContent = errorMessage;
+        return false;
+      }
+
+      if (!emailRegex.test(emailValue)) {
+        input.classList.add("invalid");
+        errorElement.textContent = errors.emailInvalid;
+        return false;
+      }
+      return true;
+    }
+
+    function validateWeight(input, errorId, errorMessage) {
+      const errorElement = document.getElementById(errorId);
+      if (!errorElement) return false;
+
+      const weightValue = parseFloat(input.value);
+
+      if (isNaN(weightValue) || weightValue < 1) {
+        input.classList.add("invalid");
+        errorElement.textContent = errorMessage;
+        return false;
+      }
+      return true;
+    }
+
+    function validateDate(input, errorId, errorMessage) {
+      const errorElement = document.getElementById(errorId);
+      const todaysDate = new Date();
+      const today = todaysDate.toISOString().split("T")[0];
+
+      if (!errorElement) return false;
+
+      if (!input.value) {
+        input.classList.add("invalid");
+        errorElement.textContent = errorMessage;
+        return false;
+      }
+
+      if (input.value < today) {
+        input.classList.add("invalid");
+        errorElement.textContent = "Data nie może być z przeszłości";
+        return false;
+      }
+
+      return true;
+    }
+
+    // Ensure loading date is not later than unloading date
+    function validateDateOrder(loadInput, unloadInput) {
+      const loadVal = loadInput?.value;
+      const unloadVal = unloadInput?.value;
+      const loadErr = document.getElementById("date-load-error-569");
+      const unloadErr = document.getElementById("date-unload-error-569");
+
+      if (!loadInput || !unloadInput || !loadErr || !unloadErr) return true;
+
+      // Only check when both dates are present
+      if (!loadVal || !unloadVal) return true;
+
+      const isOrderValid = loadVal <= unloadVal;
+
+      if (!isOrderValid) {
+        const orderMsg =
+          lang === "pl"
+            ? "Data załadunku nie może być późniejsza niż data rozładunku"
+            : lang === "de"
+            ? "Das Ladedatum darf nicht nach dem Entladedatum liegen"
+            : "Loading date cannot be later than unloading date";
+
+        loadInput.classList.add("invalid");
+        unloadInput.classList.add("invalid");
+        loadErr.textContent = orderMsg;
+        unloadErr.textContent = orderMsg;
+        return false;
+      }
+
+      // Clear errors when order is valid
+      loadInput.classList.remove("invalid");
+      unloadInput.classList.remove("invalid");
+      loadErr.textContent = "";
+      unloadErr.textContent = "";
+      return true;
+    }
+
+    // Keep date fields constrained relative to each other
+    function setDateConstraints() {
+      if (loadDateInput && unloadDateInput) {
+        if (loadDateInput.value) {
+          unloadDateInput.min = loadDateInput.value;
         }
-    })
-    .catch(error => {
-        console.log(error);
-        console.log('Something went wrong!');
-    });
+        if (unloadDateInput.value) {
+          loadDateInput.max = unloadDateInput.value;
+        } else {
+          loadDateInput.removeAttribute("max");
+        }
+      }
+    }
+
+    function clearError(input, errorId) {
+      const errorElement = document.getElementById(errorId);
+      if (errorElement) {
+        input.classList.remove("invalid");
+        errorElement.textContent = "";
+      }
+    }
+
+    // Hide any global banners when user starts editing or before a new submit
+    function hideGlobalMessages() {
+      if (successComponent) successComponent.style.display = "none";
+      if (errorComponent) errorComponent.style.display = "none";
+    }
+
+    if (nameInput)
+      nameInput.addEventListener("input", () => {
+        hideGlobalMessages();
+        clearError(nameInput, "name-error-569");
+      });
+    if (phoneInput)
+      phoneInput.addEventListener("input", () => {
+        hideGlobalMessages();
+        clearError(phoneInput, "phone-error-569");
+      });
+    if (emailInput)
+      emailInput.addEventListener("input", () => {
+        hideGlobalMessages();
+        clearError(emailInput, "email-error-569");
+      });
+    if (weightInput)
+      weightInput.addEventListener("input", () => {
+        hideGlobalMessages();
+        clearError(weightInput, "weight-error-569");
+      });
+    if (loadDateInput)
+      loadDateInput.addEventListener("input", () => {
+        hideGlobalMessages();
+        setDateConstraints();
+        clearError(loadDateInput, "date-load-error-569");
+        clearError(unloadDateInput, "date-unload-error-569");
+        validateDateOrder(loadDateInput, unloadDateInput);
+      });
+    if (unloadDateInput)
+      unloadDateInput.addEventListener("input", () => {
+        hideGlobalMessages();
+        setDateConstraints();
+        clearError(unloadDateInput, "date-unload-error-569");
+        clearError(loadDateInput, "date-load-error-569");
+        validateDateOrder(loadDateInput, unloadDateInput);
+      });
+    if (loadAddressInput)
+      loadAddressInput.addEventListener("input", () => {
+        hideGlobalMessages();
+        clearError(loadAddressInput, "loading-address-error-569");
+      });
+    if (unloadAddressInput)
+      unloadAddressInput.addEventListener("input", () => {
+        hideGlobalMessages();
+        clearError(unloadAddressInput, "unloading-address-error-569");
+      });
+    if (goodsDescriptionInput)
+      goodsDescriptionInput.addEventListener("input", () => {
+        hideGlobalMessages();
+        clearError(goodsDescriptionInput, "message-error-569");
+      });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // const allInputs = form.querySelectorAll(".cs-input");
+      // const allErrors = form.querySelectorAll(".cs-error");
+      //
+      // allInputs.forEach((input) => input.classList.remove("invalid"));
+      // allErrors.forEach((error) => (error.textContent = ""));
+
+      hideGlobalMessages();
+
+      // Perform validation
+      const validations = [
+        validateEmpty(nameInput, "name-error-569", errors.nameRequired),
+        validatePhone(phoneInput, "phone-error-569", errors.phoneRequired),
+        validateEmail(emailInput, "email-error-569", errors.emailRequired),
+        validateWeight(weightInput, "weight-error-569", errors.weightRequired),
+        validateDate(
+          loadDateInput,
+          "date-load-error-569",
+          errors.loadingDateRequired,
+        ),
+        validateDate(
+          unloadDateInput,
+          "date-unload-error-569",
+          errors.unloadingDateRequired,
+        ),
+        validateDateOrder(loadDateInput, unloadDateInput),
+        validateEmpty(
+          loadAddressInput,
+          "loading-address-error-569",
+          errors.loadingAddressRequired,
+        ),
+        validateEmpty(
+          unloadAddressInput,
+          "unloading-address-error-569",
+          errors.unloadingAddressRequired,
+        ),
+        validateEmpty(
+          goodsDescriptionInput,
+          "message-error-569",
+          errors.goodsDescriptionRequired,
+        ),
+      ];
+
+      const isValid = validations.every((v) => v);
+
+      if (!isValid) {
+        // Focus first invalid field
+        const firstInvalid = form.querySelector(".cs-input.invalid");
+        if (firstInvalid) {
+          firstInvalid.focus();
+        }
+        return;
+      }
+
+      // const formData = new FormData(form);
+      // const object = Object.fromEntries(formData);
+      // const json = JSON.stringify(object);
+
+      const formData = new FormData(form);
+      const formJSON = JSON.stringify(Object.fromEntries(formData));
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: formJSON,
+      })
+        .then(async (response) => {
+          if (response.status == 200) {
+            spinner.style.display = "none";
+            errorComponent.style.display = "none";
+            successComponent.style.display = "block";
+            form.reset();
+            setDateConstraints();
+            // propagate success to any listening components (e.g., dialog stepper)
+            window.dispatchEvent(new Event("submitSuccess"));
+          } else {
+            submitButton.style.display = "block";
+            errorComponent.style.display = "block";
+          }
+        })
+        .catch(() => {
+          errorComponent.style.display = "block";
+        });
     });
   });
 </script>

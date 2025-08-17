@@ -19,9 +19,7 @@ translations:
   li:
     - title: "Personalised solutions"
       description: >
-        Each assignment is treated individually, tailoring services to specific needs
-        and expectations. Our goal is not just to deliver goods but to build long-term
-        cooperation based on trust and understanding.
+        Our logistics services are tailored to meet the specific needs of clients across Europe. By leveraging modern technology and innovative solutions, we optimize logistics processes, ensuring reliable and efficient transportation.
     - title: "Modernity and innovation"
       description: >
         At Sub Trans, we combine proven work methods with modern tools, enabling us

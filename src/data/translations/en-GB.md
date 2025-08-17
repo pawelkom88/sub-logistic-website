@@ -11,6 +11,8 @@ translations:
         url: "/"
       - name: "About Us"
         url: "/about-us"
+      - name: "Services"
+        url: "/services"
       - name: "Terms of use"
         url: "/terms-of-use"
   contactBtn: "Contact us"
@@ -47,6 +49,26 @@ translations:
           At Sub Logistic, ensuring the safety and punctuality of your shipments is a priority.
           We use proven safety protocols and effective transport methods to ensure every shipment arrives intact and on time.
         alt: "A Sub Logistic employee at work"
+  offer:
+    title: "Our Offer:"
+    items:
+      - lead: "Full Truck Load (FTL) transport is a mode of freight in which the vehicle’s entire cargo space is allocated to a single client or shipment."
+        text: "The optimal solution for large consignments. The client receives a punctual and secure delivery. No transshipments occur en route."
+      - lead: "Less Than Truck Load (LTL) transport—also known as groupage or partial loads—is a mode where a single shipment does not occupy the vehicle’s full cargo space."
+        text: "Cost‑effective for smaller volumes. The client benefits from a lower unit cost, paying only for the actual space or weight used. Transshipments occur, and transit time is longer than with full‑truckload transport."
+      - lead: "Just‑In‑Time (JIT) transport is a logistics strategy focused on delivering goods precisely when they are needed in production or sales, without the need to hold large inventories."
+      - lead: "ADR dangerous goods transport in accordance with the international ADR agreement (Accord Dangereux Routier), which sets out rules for safe packaging, labelling, loading, and carriage."
+      - lead: "Cargo insurance—a guarantee that, in the event of unforeseen incidents, the client will not incur financial loss."
+        text: "The client gains peace of mind and protection. Applies to shipments by road, sea, air, and rail."
+      - lead: "Refrigerated transport—a mode of carriage in controlled, reduced temperature using refrigerated vehicles."
+        text: "The aim is to preserve the freshness, quality, and safety of temperature‑sensitive products."
+      - lead: "Dedicated transport with a tail lift—door‑to‑door delivery to the client."
+        text: "A guarantee of rapid delivery."
+      - lead: "Bulk cargo transport—we offer safe and fast haulage of loose materials such as grain, aggregates, sand, cement, and other bulk commodities."
+        text: "We use specialised vehicles—tippers, silo trailers, and tankers."
+      - lead: "Oversized cargo transport—we carry loads with non‑standard dimensions or weight—from industrial machinery and equipment to steel structures and components of turbines and infrastructure."
+        text: "We provide appropriate equipment, the required permits, and, where necessary, road escort."
+      - lead: "We provide full support with customs clearance, enabling smooth and hassle‑free import or export of goods across the borders of the European Union."
   whyUs:
     topper: "Tailored solutions for every shipment."
     heading: "Domestic and International Transport"
@@ -183,6 +205,19 @@ translations:
       or need support for a one-off project, Sub Logistic is ready to support your business on the roads of Poland,
       Europe, and the world.
     copyright: "All rights reserved."
+  faq:
+    - question: "What types of transportation services do you offer?"
+      answer: "We provide a range of transportation services including road, air, and sea freight, customized to meet your specific logistics needs."
+    - question: "How can you ensure the safety of my goods during transit?"
+      answer: "Our team follows strict safety protocols and uses state-of-the-art technology to monitor and maintain the integrity of your goods throughout the journey."
+    - question: "How do I track my shipment?"
+      answer: "You can track your shipment using our online tracking system, which provides real-time updates on the location and status of your goods."
+    - question: "Who do I contact for customer support?"
+      answer: "Our dedicated support team is available via phone or email to assist with any inquiries or concerns you may have."
+    - question: "What sustainability measures are you implementing?"
+      answer: "We focus on reducing our carbon footprint through efficient route planning, vehicle maintenance, and investing in eco-friendly technologies."
+    - question: "How can I become a partner with Sub Logistic?"
+      answer: "To explore partnership opportunities, please contact our business development team through our website or via email."
   contact:
     phone: "Call: +48 510 482 468"
     email: "piotr.subotowicz@sublog.com.pl"

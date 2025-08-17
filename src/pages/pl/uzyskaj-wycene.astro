@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import JobForm from "../../components/job-form/JobForm.astro";
+import { getCountryCode, getCurrentLanguageTranslation } from "../../utils/utils";
+import "../../styles/wycena.css";
+
+const lang = getCountryCode(Astro.url.pathname);
+const translations = await getCurrentLanguageTranslation(lang);
+---
+
+<Layout
+  contactBtn={translations.contactBtn}
+  contact={translations.contact}
+  links={translations.nav.links}
+  footer={translations.footer}
+  title="Uzyskaj wycenę"
+  description="Poproś o wycenę transportu dopasowaną do Twojego ładunku."
+>
+  <section class="quote">
+    <h1 class="cs-title">Uzyskaj wycenę</h1>
+    <p class="cs-text">Opisz swój ładunek, a szybko wrócimy z wyceną.</p>
+    <br>
+    <JobForm jobForm={translations.jobForm} />
+  </section>
+</Layout>

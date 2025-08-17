@@ -1,0 +1,58 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/oferta.css";
+import { getCountryCode, getCurrentLanguageTranslation } from "../../utils/utils";
+
+const lang = getCountryCode(Astro.url.pathname);
+const translations = await getCurrentLanguageTranslation(lang);
+const offer = translations?.offer ?? { title: "", items: [] as { lead: string; text?: string }[] };
+const items = offer?.items ?? [] as { lead: string; text?: string }[];
+const mid = Math.ceil(items.length / 2);
+const group1 = items.slice(0, mid);
+const group2 = items.slice(mid);
+---
+
+<Layout
+  contactBtn={translations.contactBtn}
+  contact={translations.contact}
+  links={translations.nav.links}
+  footer={translations.footer}
+  title="Leistungen"
+  description="Leistungen"
+>
+  <section id="why-choose-1662">
+    <div class="cs-container">
+      <div class="cs-content">
+        <h2 class="cs-title">{offer.title}</h2>
+      </div>
+      <div class="cs-wrapper">
+        <ul class="cs-card-group">
+          {group1.map((item, idx) => (
+            <li class="cs-item">
+              <span class="cs-item-number">{String(idx + 1).padStart(2, '0')}</span>
+              <div class="cs-item-wrapper">
+                <p class="cs-item-text">
+                  <strong class="cs-item-lead">{item.lead}</strong>{item.text ? ` ${item.text}` : ""}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <ul class="cs-card-group">
+          {group2.map((item, idx) => (
+            <li class="cs-item">
+              <span class="cs-item-number">{String(idx + 1 + group1.length).padStart(2, '0')}</span>
+              <div class="cs-item-wrapper">
+                <p class="cs-item-text">
+                  <strong class="cs-item-lead">{item.lead}</strong>{item.text ? ` ${item.text}` : ""}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <!---SVG Graphic-->
+      <img class="cs-floater" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/diagnol-ovals.svg" alt="graphic" loading="lazy" decoding="async" height="710" aria-hidden="true" width="690">
+    </div>
+  </section>
+</Layout>

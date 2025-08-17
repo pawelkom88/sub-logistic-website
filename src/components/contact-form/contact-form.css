@@ -209,6 +209,27 @@
     justify-content: center;
     align-items: center;
   }
+
+  .error-component,
+  .success-component {
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    color: black;
+  }
+
+  .error-component {
+    border: 1px solid var(--secondary);
+    background: var(--secondary);
+    color: white;
+  }
+
+  .success-component {
+    border: 1px solid #84e380;
+    background: #84e380;
+  }
 }
 /* Tablet - 700px */
 @media only screen and (min-width: 43.75rem) {

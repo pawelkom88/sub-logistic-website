@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import JobForm from "../../components/job-form/JobForm.astro";
+import { getCountryCode, getCurrentLanguageTranslation } from "../../utils/utils";
+import "../../styles/wycena.css";
+
+const lang = getCountryCode(Astro.url.pathname);
+const translations = await getCurrentLanguageTranslation(lang);
+---
+
+<Layout
+  contactBtn={translations.contactBtn}
+  contact={translations.contact}
+  links={translations.nav.links}
+  footer={translations.footer}
+  title="Get a quote"
+  description="Request a logistics quote tailored to your shipment."
+>
+  <section class="quote">
+    <h1 class="cs-title">Get a quote</h1>
+    <p class="cs-text">Tell us about your shipment and we’ll get back to you quickly.</p>
+    <br>
+    <JobForm jobForm={translations.jobForm} />
+  </section>
+</Layout>

@@ -12,6 +12,9 @@ const { form, contact } = Astro.props;
 
 export const googleMapsLink =
   "https://www.google.pl/maps/place/Marynarki+Polskiej+136A%2F47,+80-865+Gda%C5%84sk/@54.3787535,18.6284272,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd74a1ec7664fb:0x4a47f05d5bd9227a!8m2!3d54.3787535!4d18.6310021?entry=ttu";
+
+const url = new URL(Astro.url);
+const lang = url.searchParams.get('lang') || 'pl';
 ---
 
 <section id="cs-contact-490">
@@ -56,11 +59,14 @@ export const googleMapsLink =
       id="cs-form-490"
       name="Contact Form"
       method="post"
-      action="https://api.web3forms.com/submit"
+
     >
       <!-- HIDDEN -->
-      <!-- <input type="hidden" name="redirect" value="wiadomosc-wyslana" /> -->
-      <input type="hidden" name="apikey" value={import.meta.env.VITE_API_KEY} />
+      <input
+        type="hidden"
+        name="apikey"
+        value="e63617a1-6b8c-4a8f-adf8-03aba92d5110"
+      />
       <input
         type="checkbox"
         name="botcheck"
@@ -77,7 +83,6 @@ export const googleMapsLink =
           type="text"
           id="name-490"
           name="name"
-          pattern="[A-Za-z]{2,}"
           placeholder={form?.formFields.name.placeholder}
           autocomplete="given-name"
         />
@@ -92,7 +97,10 @@ export const googleMapsLink =
           name="email"
           placeholder={form?.formFields.email.placeholder}
           pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          title="Please enter a valid email address (e.g., user@example.com)"
           autocomplete="email"
+          oninput="this.setCustomValidity('')"
+          oninvalid="this.setCustomValidity('Please enter a valid email address')"
         />
       </label>
       <label for="phone-490" class="cs-label">
@@ -134,13 +142,19 @@ export const googleMapsLink =
         </label>
       </div>
       <br />
-      <button class="cs-button-solid">{form?.formFields.submitBtn}</button>
+      <!-- Add hCaptcha -->
+      <!--todo: get value based on selected lang-->
+      <div class="h-captcha" data-captcha="true" data-lang={lang} data-size="compact"></div>
+      <br/>
+      <button type="submit" class="cs-button-solid submit-btn">{form?.formFields.submitBtn}</button>
+      <div class="lds-spinner"></div>
+
+      <!--translate !-->
+      <div class="success-component" style="display: none;">Wiadomość została wysłana pomyślnie!</div>
+      <div class="error-component" style="display: none;">
+        Weryfikacja hCaptcha jest wymagana, aby zapewnić bezpieczeństwo. Prosimy o jej zaznaczenie.
+      </div>
     </form>
-    <!-- !! FOR JS -->
-    <!-- <div class="lds-spinner"></div>
-    <div class="success-component">Wiadomość została wysłana pomyślnie!</div>
-    <div class="error-component">Wystąpił błąd, spróbuj ponownie później.</div>
-    <a href="/" class="back-to-home">Powrót do strony głównej</a> -->
   </div>
 </section>
 
@@ -160,46 +174,45 @@ export const googleMapsLink =
   });
 </script>
 
-<!-- <script>
+<script>
   function h() {
     document.addEventListener("DOMContentLoaded", function () {
       const spinner = document.querySelector(".lds-spinner") as HTMLElement;
       const successComponent = document.querySelector(
-        ".success-component"
+        ".success-component",
       ) as HTMLElement;
-      const errorComponent = document.querySelector(".error-component") as HTMLElement;
+      const errorComponent = document.querySelector(
+        ".error-component",
+      ) as HTMLElement;
       const submitButton = document.querySelector(".submit-btn") as HTMLElement;
-      const contactForm = document.getElementById("contact-569") as HTMLFormElement;
-      const errorMessage = document.querySelector(".error-message") as HTMLElement;
-      const backToHome = document.querySelector(".back-to-home") as HTMLElement;
-
-      // needed ?
+      const contactForm = document.getElementById(
+        "cs-form-490",
+      ) as HTMLFormElement;
+      const nameInput = document.getElementById("name-490") as HTMLInputElement;
+      const emailInput = document.getElementById("email-490") as HTMLInputElement;
+      const phoneInput = document.getElementById("phone-490") as HTMLInputElement;
+      const messageInput = document.getElementById("message-490") as HTMLTextAreaElement;
+      const agreementInput = document.getElementById("agreement") as HTMLInputElement;
       spinner.style.display = "none";
       successComponent.style.display = "none";
       errorComponent.style.display = "none";
-      backToHome.style.display = "none";
 
-      let errorText;
-      switch (document.documentElement.lang) {
-        case "pl":
-          errorText = "* Zaznacz pole";
-          break;
-        case "en":
-          errorText = "* Check the box";
-          break;
-        case "de":
-          errorText = "* Bitte auswählen";
-          break;
-        default:
-          errorText = "* Zaznacz pole";
+      function hideGlobalMessages() {
+        if (successComponent) successComponent.style.display = "none";
+        if (errorComponent) errorComponent.style.display = "none";
       }
 
+      // Hide success/error banners on any field change
+      nameInput?.addEventListener("input", hideGlobalMessages);
+      emailInput?.addEventListener("input", hideGlobalMessages);
+      phoneInput?.addEventListener("input", hideGlobalMessages);
+      messageInput?.addEventListener("input", hideGlobalMessages);
+      agreementInput?.addEventListener("change", hideGlobalMessages);
+
       contactForm.addEventListener("submit", function (event) {
+
         event.preventDefault();
-        if (!contactForm.querySelector("textarea[name=h-captcha-response]")?.value) {
-          errorMessage.textContent = errorText;
-          return;
-        }
+        hideGlobalMessages();
 
         const formData = new FormData(contactForm);
         const formJSON = JSON.stringify(Object.fromEntries(formData));
@@ -216,20 +229,19 @@ export const googleMapsLink =
           body: formJSON,
         })
           .then(async (response) => {
+            console.log(response, "asd");
             if (response.status == 200) {
-              console.log(response.status);
-              contactForm.style.display = "none";
               spinner.style.display = "none";
+              errorComponent.style.display = "none";
               successComponent.style.display = "block";
-              backToHome.style.display = "block";
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              // notify any listeners (e.g., dialog) that submission succeeded
+              window.dispatchEvent(new Event("submitSuccess"));
             } else {
-              console.log(response);
               submitButton.style.display = "block";
+              errorComponent.style.display = "block"
             }
           })
-          .catch((error) => {
-            console.log(error);
+          .catch(() => {
             errorComponent.style.display = "block";
           });
       });
@@ -237,7 +249,4 @@ export const googleMapsLink =
   }
 
   h();
-</script> -->
-
-<!-- TODO: CUSTOM FORM LOGIC  -->
-<script></script>
+</script>

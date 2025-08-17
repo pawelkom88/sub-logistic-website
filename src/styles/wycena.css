@@ -1,0 +1,19 @@
+.quote {
+  padding: clamp(12rem, 23vw, 13rem) 10rem 2rem;
+}
+
+.quote {
+  padding: clamp(12rem, 23vw, 13rem) 2rem 2rem;
+}
+
+@media only screen and (min-width: 48rem) {
+  .quote {
+    padding: clamp(12rem, 23vw, 13rem) 5rem 2rem;
+  }
+}
+
+@media only screen and (min-width: 81.25rem) {
+  .quote {
+    padding: clamp(12rem, 23vw, 13rem) 25vw 2rem;
+  }
+}

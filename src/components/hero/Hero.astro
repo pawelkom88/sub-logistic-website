@@ -2,18 +2,37 @@
 import { Picture } from "astro:assets";
 import heroImage from "../../assets/images/port-full-of-containers.jpeg";
 import "./hero.css";
-import JobForm from "../job-form/JobForm.astro";
-import { splitString, type SelectedTranslation } from "../../utils/utils";
+import { splitString, type SelectedTranslation, getCountryCode } from "../../utils/utils";
 
 interface Props {
   hero: SelectedTranslation["hero"];
-  jobForm: SelectedTranslation["jobForm"];
-  dialog: SelectedTranslation["dialog"];
 }
 
-const { hero, jobForm, dialog } = Astro.props;
+const { hero } = Astro.props;
 const formattedHero = splitString(hero.title);
 const formattedHeroAfter = splitString(hero.title, 1);
+
+const lang = getCountryCode(Astro.url.pathname);
+const quoteSlugMap = {
+  en: "/get-quote",
+  pl: "/uzyskaj-wycene",
+  de: "/angebot-anfordern",
+} as const;
+const quoteHref = `/${lang}${quoteSlugMap[lang]}`;
+
+// Offer/Services localized slug and text
+const offerSlugMap = {
+  en: "/services",
+  pl: "/oferta",
+  de: "/leistungen",
+} as const;
+const offerTextMap = {
+  en: "Services",
+  pl: "Oferta",
+  de: "Leistungen",
+} as const;
+const offerHref = `/${lang}${offerSlugMap[lang]}`;
+const offerText = offerTextMap[lang];
 ---
 
 <section id="hero-219">
@@ -26,9 +45,11 @@ const formattedHeroAfter = splitString(hero.title, 1);
     <p class="cs-text">
       {hero.body}
     </p>
-    <button type="button" class="cs-button-solid transport-offer-btn"
-      >{hero.button}</button
-    >
+    <!--<button type="button" class="cs-button-solid transport-offer-btn"-->
+    <!--  >{hero.button}</button-->
+    <!--&gt;-->
+    <a href={quoteHref} class="cs-button-solid transport-offer-btn">{hero.button}</a>
+    <a href={offerHref} class="cs-button-solid" style="margin-left: 0.75rem">{offerText}</a>
   </div>
   <Picture
     src={heroImage}
@@ -37,49 +58,6 @@ const formattedHeroAfter = splitString(hero.title, 1);
     alt="lorry driving on a road between forest"
     loading="eager"
   />
-  <!-- new route !!! -->
-  <dialog id="cs-dialog">
-    <button
-      type="button"
-      autofocus
-      class="close-btn"
-      aria-label={dialog.ariaClose}>{dialog.close}</button
-    >
-    <ol class="cs-stepper">
-      {dialog.steps.map((step, index) => (
-        <li class={index === 0 ? "active" : ""}>{step}</li>
-      ))}
-    </ol>
-    <!-- Step 1: Introduction -->
-    <div class="cs-dialog-content" style="display: block;">
-      <h1 class="cs-dialog-title">
-        {dialog.title}
-      </h1>
-      {dialog.text.map((paragraph) => (
-        <p class="cs-dialog-text">
-          {paragraph}
-        </p>
-      ))}
-    </div>
-
-    <!-- Step 2: Job Form -->
-    <div class="form-container" style="display: none;">
-      <JobForm jobForm={jobForm} />
-      <button type="button" class="prev-btn">{dialog.back}</button>
-    </div>
-
-    <!-- Step 3: Confirmation -->
-    <div class="confirmation-container" style="display: none;">
-      <h1 class="cs-dialog-title">{dialog.steps[2]}</h1>
-      <p>{dialog.confirmationMessage}</p>
-      <button type="button" class="close-btn">{dialog.close}</button>
-    </div>
-
-    <!-- Controls -->
-    <button type="button" class="next-btn"
-    >{dialog.next}</button>
-  </dialog>
-  <div class="overlay"></div>
 </section>
 
 <script>
@@ -152,7 +130,7 @@ const formattedHeroAfter = splitString(hero.title, 1);
     if (ui.confirmationContainer) {
       ui.confirmationContainer.style.display = "none";
     }
-    
+
     // Show the current step
     if (currentStep === 1) {
       ui.dialogContent.style.display = "block";
@@ -193,7 +171,7 @@ const formattedHeroAfter = splitString(hero.title, 1);
     currentStep = 1;
     updateStepperUI();
   }
-  
+
   // Handle form submission success event
   window.addEventListener('submitSuccess', () => {
     currentStep = 3;
