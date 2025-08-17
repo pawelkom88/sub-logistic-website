@@ -219,7 +219,7 @@ translations:
     - question: "How can I become a partner with Sub Logistic?"
       answer: "To explore partnership opportunities, please contact our business development team through our website or via email."
   contact:
-    phone: "+48 510 482 468"
+    phone: "+48510482468"
     email: "piotr.subotowicz@sublog.com.pl"
     openingTimes: "Working hours: Monday - Friday: 8:00 AM - 5:00 PM"
     address: "ul. Marynarki Polskiej 136A/47, 80-865 Gdańsk"

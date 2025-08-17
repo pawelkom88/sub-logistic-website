@@ -220,7 +220,7 @@ translations:
     - question: "Wie kann ich Partner von Sub Logistic werden?"
       answer: "Um Partnerschaftsmöglichkeiten zu erkunden, kontaktieren Sie bitte unser Business Development-Team über unsere Website oder per E-Mail."
   contact:
-    phone: "+48 510 482 468"
+    phone: "+48510482468"
     email: "piotr.subotowicz@sublog.com.pl"
     openingTimes: "Arbeitszeiten: Montag - Freitag: 8:00 - 17:00"
     address: "ul. Marynarki Polskiej 136A/47, 80-865 Gdańsk"
