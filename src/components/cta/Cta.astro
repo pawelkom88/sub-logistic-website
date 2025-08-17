@@ -1,12 +1,13 @@
 ---
 import "./cta.css";
-import { SelectedTranslation } from "../../utils/utils";
+import { SelectedTranslation, getCountryCode, getHref } from "../../utils/utils";
 
 interface Props {
   cta: SelectedTranslation["cta"];
 }
 
 const { cta } = Astro.props;
+const currentLang = getCountryCode(Astro.url.pathname);
 ---
 
 <section id="cta-51">
@@ -17,7 +18,7 @@ const { cta } = Astro.props;
       <p class="cs-text">
         {cta.description}
       </p>
-      <a href="#cs-contact-490" class="cs-button-solid">{cta.actionBtn}</a>
+      <a href={getHref(currentLang, "/#cs-contact-490")} class="cs-button-solid">{cta.actionBtn}</a>
     </div>
   </div>
   <!-- Background Image-->

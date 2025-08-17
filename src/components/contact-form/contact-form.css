@@ -209,6 +209,10 @@
     justify-content: center;
     align-items: center;
   }
+  .xxx {
+    margin-inline: auto;
+    border: 1px solid red;
+  }
 
   .error-component,
   .success-component {

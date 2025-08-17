@@ -43,7 +43,7 @@ translations:
     nowoczesnym podejściem do logistyki. Odkryj różnicę, jaką może wprowadzić
     osobiste zaangażowanie i pasja do Twojego łańcucha dostaw.
   link:
-    url: "/#cs-contact-490"
+    url: "/pl/#cs-contact-490"
     part1: "Skontaktuj się z nami"
     part2: >
       , aby dowiedzieć się więcej o naszych usługach i jak możemy wspomóc Twój biznes.

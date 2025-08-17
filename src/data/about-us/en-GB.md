@@ -40,7 +40,7 @@ translations:
     modern approach to logistics. Discover the difference personal dedication and 
     passion can make in your supply chain.
   link:
-    url: "/#cs-contact-490"
+    url: "/en/#cs-contact-490"
     part1: "Contact us"
     part2: >
       to learn more about our services and how we can support your business.

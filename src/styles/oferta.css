@@ -1,7 +1,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #why-choose-1662 {
-    padding: clamp(9rem, 25.95vw, 15.75rem) 1rem 4rem;
+    padding: clamp(12rem, 24.95vw, 15.75rem) 1rem 4rem;
     background-color: #f7f7f7;
     position: relative;
     overflow: hidden;

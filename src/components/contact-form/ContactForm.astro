@@ -14,7 +14,7 @@ export const googleMapsLink =
   "https://www.google.pl/maps/place/Marynarki+Polskiej+136A%2F47,+80-865+Gda%C5%84sk/@54.3787535,18.6284272,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd74a1ec7664fb:0x4a47f05d5bd9227a!8m2!3d54.3787535!4d18.6310021?entry=ttu";
 
 const url = new URL(Astro.url);
-const lang = url.searchParams.get('lang') || 'pl';
+const lang = url.searchParams.get("lang") || "pl";
 ---
 
 <section id="cs-contact-490">
@@ -55,12 +55,7 @@ const lang = url.searchParams.get('lang') || 'pl';
     </div>
     <!-- Form -->
     <!-- TODO: check docs -->
-    <form
-      id="cs-form-490"
-      name="Contact Form"
-      method="post"
-
-    >
+    <form id="cs-form-490" name="Contact Form" method="post">
       <!-- HIDDEN -->
       <input
         type="hidden"
@@ -144,15 +139,26 @@ const lang = url.searchParams.get('lang') || 'pl';
       <br />
       <!-- Add hCaptcha -->
       <!--todo: get value based on selected lang-->
-      <div class="h-captcha" data-captcha="true" data-lang={lang} data-size="compact"></div>
-      <br/>
-      <button type="submit" class="cs-button-solid submit-btn">{form?.formFields.submitBtn}</button>
+        <div
+          class="h-captcha xxx"
+          data-captcha="true"
+          data-lang={lang}
+          data-size="compact"
+        >
+        </div>
+        <br />
+        <button type="submit" class="cs-button-solid submit-btn"
+          >{form?.formFields.submitBtn}</button
+        >
       <div class="lds-spinner"></div>
 
       <!--translate !-->
-      <div class="success-component" style="display: none;">Wiadomość została wysłana pomyślnie!</div>
+      <div class="success-component" style="display: none;">
+        Wiadomość została wysłana pomyślnie!
+      </div>
       <div class="error-component" style="display: none;">
-        Weryfikacja hCaptcha jest wymagana, aby zapewnić bezpieczeństwo. Prosimy o jej zaznaczenie.
+        Weryfikacja hCaptcha jest wymagana, aby zapewnić bezpieczeństwo. Prosimy
+        o jej zaznaczenie.
       </div>
     </form>
   </div>
@@ -189,10 +195,18 @@ const lang = url.searchParams.get('lang') || 'pl';
         "cs-form-490",
       ) as HTMLFormElement;
       const nameInput = document.getElementById("name-490") as HTMLInputElement;
-      const emailInput = document.getElementById("email-490") as HTMLInputElement;
-      const phoneInput = document.getElementById("phone-490") as HTMLInputElement;
-      const messageInput = document.getElementById("message-490") as HTMLTextAreaElement;
-      const agreementInput = document.getElementById("agreement") as HTMLInputElement;
+      const emailInput = document.getElementById(
+        "email-490",
+      ) as HTMLInputElement;
+      const phoneInput = document.getElementById(
+        "phone-490",
+      ) as HTMLInputElement;
+      const messageInput = document.getElementById(
+        "message-490",
+      ) as HTMLTextAreaElement;
+      const agreementInput = document.getElementById(
+        "agreement",
+      ) as HTMLInputElement;
       spinner.style.display = "none";
       successComponent.style.display = "none";
       errorComponent.style.display = "none";
@@ -210,7 +224,6 @@ const lang = url.searchParams.get('lang') || 'pl';
       agreementInput?.addEventListener("change", hideGlobalMessages);
 
       contactForm.addEventListener("submit", function (event) {
-
         event.preventDefault();
         hideGlobalMessages();
 
@@ -238,7 +251,7 @@ const lang = url.searchParams.get('lang') || 'pl';
               window.dispatchEvent(new Event("submitSuccess"));
             } else {
               submitButton.style.display = "block";
-              errorComponent.style.display = "block"
+              errorComponent.style.display = "block";
             }
           })
           .catch(() => {

@@ -43,7 +43,7 @@ translations:
     modernen Ansatz in der Logistik treffen. Entdecken Sie den Unterschied, den persönliches
     Engagement und Leidenschaft in Ihrer Lieferkette bewirken können.
   link:
-    url: "/#cs-contact-490"
+    url: "/de/#cs-contact-490"
     part1: "Kontaktieren Sie uns"
     part2: >
       um mehr über unsere Dienstleistungen und die Unterstützung für Ihr Unternehmen
