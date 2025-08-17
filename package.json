@@ -16,13 +16,12 @@
     "@astrojs/netlify": "^6.0.0",
     "@astrojs/sitemap": "^3.2.1",
     "@fontsource/ibm-plex-sans": "^5.0.19",
-    "astro": "^4.0.0",
+    "astro": "^5.0.3",
     "sharp": "^0.33.3",
     "typescript": "^5.4.2"
   },
   "devDependencies": {
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1"
-  },
-  "packageManager": "yarn@4.9.1+sha512.f95ce356460e05be48d66401c1ae64ef84d163dd689964962c6888a9810865e39097a5e9de748876c2e0bf89b232d583c33982773e9903ae7a76257270986538"
+  }
 }
