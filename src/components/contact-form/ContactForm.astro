@@ -263,3 +263,34 @@ const lang = getCountryCode(Astro.url.pathname);
 
   h();
 </script>
+
+<script>
+  (function lazyLoadWeb3Forms() {
+    const target = document.getElementById('cs-contact-490');
+    if (!target) return;
+
+    let loaded = false;
+    const load = () => {
+      if (loaded) return;
+      loaded = true;
+      const s = document.createElement('script');
+      s.src = 'https://web3forms.com/client/script.js';
+      s.async = true;
+      s.defer = true;
+      document.head.appendChild(s);
+    };
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          load();
+          io.disconnect();
+        }
+      },
+      { rootMargin: '200px' }
+    );
+    io.observe(target);
+
+    target.addEventListener('pointerdown', load, { once: true });
+  })();
+</script>

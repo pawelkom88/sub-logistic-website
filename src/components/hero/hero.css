@@ -9,6 +9,7 @@
     padding-bottom: clamp(8.125rem, 12.5vw, 25rem);
     position: relative;
     z-index: 1;
+    min-height: calc(100svh - var(--navHeight));
   }
   #hero-219 .cs-background {
     width: 100%;
@@ -136,8 +137,6 @@
     width: 100%;
   }
 
-  // different css file
-
   .form-container {
     padding-inline: 1rem;
   }
@@ -261,7 +260,7 @@
     z-index: 1;
   }
   ol.cs-stepper li.active ~ li::before {
-    // remaining steps
+    /* remaining steps */
     background: green;
   }
   ol.cs-stepper li.active::after {
