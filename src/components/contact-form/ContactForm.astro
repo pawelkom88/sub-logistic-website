@@ -1,5 +1,5 @@
 ---
-import type { Lang, SelectedTranslation } from "../../utils/utils";
+import { getHref, type Lang, type SelectedTranslation } from "../../utils/utils";
 import "../contact-form/contact-form.css";
 interface Props {
   form?: SelectedTranslation["contactForm"] | undefined;
@@ -124,7 +124,7 @@ const lang = url.searchParams.get("lang") || "pl";
       <div class="cs-label cs-span-2">
         <label for="agreement">
           {form?.formFields.checkbox.label}
-          <a href={`${currentLang}${form?.formFields.checkbox.policyLink}`}
+          <a href={getHref(currentLang, form?.formFields.checkbox.policyLink || "")}
             >{form?.formFields.checkbox.label2}</a
           >
           <input

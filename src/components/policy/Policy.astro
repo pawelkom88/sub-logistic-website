@@ -10,6 +10,73 @@ interface Props {
 }
 
 const { policy } = Astro.props;
+
+const pathname = Astro.url.pathname || "/";
+const lang = pathname.startsWith("/en")
+  ? "en"
+  : pathname.startsWith("/de")
+  ? "de"
+  : "pl";
+
+const headings = {
+  pl: {
+    scopeIntro: "Zakres przetwarzanych danych obejmuje:",
+    legalBasis: "Podstawa prawna przetwarzania danych",
+    dataRetention: "Okres przechowywania danych",
+    userRights: "Prawa Użytkowników",
+    userRightsIntro: "Użytkownik ma prawo do:",
+    dataSharing: "Udostępnianie danych",
+    security: "Bezpieczeństwo strony",
+    disclaimers: "Wyłączenie odpowiedzialności",
+    policyChanges: "Zmiany w Polityce Prywatności",
+    contact: "Kontakt",
+    contactIntro:
+      "Jeśli mają Państwo pytania dotyczące naszej strony internetowej, prosimy o kontakt:",
+    companyDetailsLink: "Ogólnopolska Wyszukiwarka Gospodarcza",
+    retentionIntro: "Dane osobowe przechowujemy przez okres:",
+    emailLabel: "E-mail",
+    phoneLabel: "Telefon",
+    companyDetailsLabel: "Dane firmy",
+  },
+  en: {
+    scopeIntro: "The scope of processed data includes:",
+    legalBasis: "Legal basis for data processing",
+    dataRetention: "Data retention period",
+    userRights: "User rights",
+    userRightsIntro: "You have the right to:",
+    dataSharing: "Data sharing",
+    security: "Website security",
+    disclaimers: "Disclaimer",
+    policyChanges: "Changes to this Privacy Policy",
+    contact: "Contact",
+    contactIntro:
+      "If you have any questions regarding our website, please contact us:",
+    companyDetailsLink: "National Business Registry (Poland)",
+    retentionIntro: "We retain personal data for:",
+    emailLabel: "Email",
+    phoneLabel: "Phone",
+    companyDetailsLabel: "Company details",
+  },
+  de: {
+    scopeIntro: "Der Umfang der verarbeiteten Daten umfasst:",
+    legalBasis: "Rechtsgrundlage der Datenverarbeitung",
+    dataRetention: "Speicherdauer der Daten",
+    userRights: "Rechte der Nutzer",
+    userRightsIntro: "Sie haben das Recht auf:",
+    dataSharing: "Weitergabe von Daten",
+    security: "Sicherheit der Website",
+    disclaimers: "Haftungsausschluss",
+    policyChanges: "Änderungen dieser Datenschutzrichtlinie",
+    contact: "Kontakt",
+    contactIntro:
+      "Wenn Sie Fragen zu unserer Website haben, kontaktieren Sie uns bitte:",
+    companyDetailsLink: "Zentrales Unternehmensregister (Polen)",
+    retentionIntro: "Wir speichern personenbezogene Daten für:",
+    emailLabel: "E-Mail",
+    phoneLabel: "Telefon",
+    companyDetailsLabel: "Firmendaten",
+  },
+}[lang as "pl" | "en" | "de"];
 ---
 
 <section class="cs-container">
@@ -23,45 +90,37 @@ const { policy } = Astro.props;
   </p>
   <h2>2. {policy?.dataProcessing?.purpose}</h2>
   <p>
-    Przetwarzamy dane osobowe Użytkowników wyłącznie w celu obsługi zapytań
-    przesłanych przez formularz kontaktowy. Zakres przetwarzanych danych
-    obejmuje:
+    {headings.scopeIntro}
   </p>
   <ul>
-    <li>imię i nazwisko</li>
-    <li>adres e-mail</li>
-    <li>numer telefonu</li>
-    <li>treść wiadomości</li>
+    {policy?.dataProcessing?.scope?.map((item) => <li>{item}</li>)}
   </ul>
-  <p>
-    Nasza strona internetowa wykorzystuje wyłącznie niezbędne pliki cookies,
-    które są konieczne do prawidłowego funkcjonowania strony. Nie używamy
-    żadnych plików cookies służących do śledzenia lub profilowania użytkowników.
-  </p>
-  <h2>3. Podstawa prawna przetwarzania danych</h2>
+  <ul>
+    {policy?.dataProcessing?.cookies?.map((cookie) => <li>{cookie}</li>)}
+  </ul>
+  <h2>3. {headings.legalBasis}</h2>
   <p>
     {policy?.legalBasis?.description} ({policy?.legalBasis?.regulation}).
   </p>
-  <h2>4. Okres przechowywania danych</h2>
+  <h2>4. {headings.dataRetention}</h2>
   <p>
-    Dane osobowe przechowywane są przez okres niezbędny do udzielenia odpowiedzi
-    na zapytanie, nie dłużej jednak niż przez 30 dni od daty otrzymania
-    wiadomości. Po tym czasie dane są usuwane.
+    {headings.retentionIntro} {policy?.dataRetention?.period}.
+    {policy?.dataRetention?.policy}
   </p>
-  <h2>5.Prawa Użytkowników</h2>
-  <p>Użytkownik ma prawo do:</p>
+  <h2>5. {headings.userRights}</h2>
+  <p>{headings.userRightsIntro}</p>
   <ul>
     {policy?.userRights?.map((rights) => <li>{rights}</li>)}
   </ul>
-  <h2>6. Udostępnianie danych</h2>
+  <h2>6. {headings.dataSharing}</h2>
   <p>
     {policy?.dataSharing?.policy}
   </p>
-  <h2>7. Bezpieczeństwo Strony</h2>
+  <h2>7. {headings.security}</h2>
   <p>
     {policy?.security?.policy}
   </p>
-  <h2>8. Wyłączenie Odpowiedzialności</h2>
+  <h2>8. {headings.disclaimers}</h2>
   <p>
     {policy?.disclaimers?.content}
   </p>
@@ -71,31 +130,30 @@ const { policy } = Astro.props;
   <p>
     {policy?.disclaimers?.damages}
   </p>
-  <h2>9. Zmiany w Polityce Prywatności i Warunkach Korzystania</h2>
+  <h2>9. {headings.policyChanges}</h2>
   <p>
     {policy?.policyChanges?.policy}{policy?.policyChanges?.notice}
   </p>
-  <h2>10. Kontakt</h2>
+  <h2>10. {headings.contact}</h2>
   <p>
-    Jeśli mają Państwo pytania dotyczące naszej strony internetowej, prosimy o
-    kontakt:
+    {headings.contactIntro}
   </p>
   <ul>
     <li>
-      E-mail: <a href=`mailto:${policy?.contact?.email}`
+      {headings.emailLabel}: <a href=`mailto:${policy?.contact?.email}`
         >{policy?.contact?.email}</a
       >
     </li>
     <li>
-      Telefon: <a href=`tel:${policy?.contact?.phone}`
+      {headings.phoneLabel}: <a href=`tel:${policy?.contact?.phone}`
         >{policy?.contact?.phone}</a
       >
     </li>
     <li>
-      Dane firmy: <a
+      {headings.companyDetailsLabel}: <a
         href=`${policy?.contact?.companyDetails}`
         target="_blank"
-        rel="noopener noreferrer">Ogólnopolska Wyszukiwarka Gospodarcza</a
+        rel="noopener noreferrer">{headings.companyDetailsLink}</a
       >
     </li>
   </ul>

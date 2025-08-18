@@ -1,74 +1,68 @@
 ---
 import "./faq.css";
+import { getCountryCode, getHref, type SelectedTranslation } from "../../utils/utils";
+
+interface Props {
+  faq: SelectedTranslation["faq"];
+  contactBtn: string;
+}
+
+const { faq, contactBtn } = Astro.props as Props;
+const currentLang = getCountryCode(Astro.url.pathname);
+
+const labelsMap = {
+  pl: {
+    topper: "FAQ’s",
+    title: "Najczęściej zadawane pytania",
+    description:
+      "Naszym celem jest zapewnienie Państwu pełnej przejrzystości i szybkiego dostępu do istotnych informacji. W tej sekcji znajdą Państwo odpowiedzi na często pojawiające się pytania dotyczące naszych usług i produktów.",
+    ctaTitle: "Nie widzisz odpowiedzi, której potrzebujesz?",
+    ctaDescription:
+      "Po prostu zostaw wiadomość, a my odpowiemy najszybciej, jak to możliwe.",
+  },
+  en: {
+    topper: "FAQ’s",
+    title: "Frequently Asked Questions",
+    description:
+      "Our goal is to provide full transparency and quick access to essential information. Here you’ll find answers to common questions about our services.",
+    ctaTitle: "Can’t find the answer you need?",
+    ctaDescription:
+      "No problem. Just leave a message and we’ll get back to you as soon as possible.",
+  },
+  de: {
+    topper: "FAQ’s",
+    title: "Häufig gestellte Fragen",
+    description:
+      "Unser Ziel ist es, Ihnen volle Transparenz und schnellen Zugang zu wichtigen Informationen zu bieten. In diesem Abschnitt finden Sie Antworten auf häufige Fragen zu unseren Dienstleistungen.",
+    ctaTitle: "Sie finden nicht die gewünschte Antwort?",
+    ctaDescription:
+      "Kein Problem. Hinterlassen Sie uns eine Nachricht, und wir melden uns so schnell wie möglich.",
+  },
+} as const;
+
+const labels = labelsMap[currentLang] || labelsMap.en;
 ---
 
 <section id="faq-254">
   <div class="cs-container">
     <div class="cs-content">
-      <span class="cs-topper">FAQ’s</span>
-      <h2 class="cs-title">Najczęściej zadawane pytania</h2>
-      <p class="cs-text">
-        Naszym celem jest zapewnienie Państwu pełnej przejrzystości i szybkiego
-        dostępu do istotnych informacji. W tej sekcji znajdą Państwo odpowiedzi
-        na często pojawiające się pytania dotyczące naszych usług i produktów.
-      </p>
+      <span class="cs-topper">{labels.topper}</span>
+      <h2 class="cs-title">{labels.title}</h2>
+      <p class="cs-text">{labels.description}</p>
     </div>
     <div class="cs-flex-group">
       <ul class="cs-faq-group">
-        <!-- Active class added as default -->
-        <li class="cs-faq-item active">
-          <button class="cs-button">Pytanie ?</button>
-          <p class="cs-item-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
-            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
-            enim, magna urna, quam.
-          </p>
-        </li>
-        <li class="cs-faq-item">
-          <button class="cs-button">Pytanie ?</button>
-          <p class="cs-item-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
-            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
-            enim, magna urna, quam.
-          </p>
-        </li>
-        <li class="cs-faq-item">
-          <button class="cs-button">Pytanie ?</button>
-          <p class="cs-item-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
-            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
-            enim, magna urna, quam.
-          </p>
-        </li>
-        <li class="cs-faq-item">
-          <button class="cs-button">Pytanie ?</button>
-          <p class="cs-item-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
-            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
-            enim, magna urna, quam.
-          </p>
-        </li>
-        <li class="cs-faq-item">
-          <button class="cs-button">Pytanie ?</button>
-          <p class="cs-item-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-            convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
-            diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
-            enim, magna urna, quam.
-          </p>
-        </li>
+        {faq?.map(({ question, answer }, idx) => (
+          <li class={`cs-faq-item ${idx === 0 ? "active" : ""}`}>
+            <button class="cs-button">{question}</button>
+            <p class="cs-item-p">{answer}</p>
+          </li>
+        ))}
       </ul>
       <div class="cs-cta">
-        <h3 class="cs-h3">Nie widzisz odpowiedzi, której potrzebujesz?</h3>
-        <p class="cs-cta-p">
-          To nic. Po prostu zostaw wiadomość, a my odpowiemy najszybciej, jak to
-          możliwe.
-        </p>
-        <a href="" class="cs-button-solid">Skontaktuj się z nami</a>
+        <h3 class="cs-h3">{labels.ctaTitle}</h3>
+        <p class="cs-cta-p">{labels.ctaDescription}</p>
+        <a href={getHref(currentLang, "/#cs-contact-490")} class="cs-button-solid">{contactBtn}</a>
       </div>
     </div>
   </div>

@@ -6,6 +6,7 @@ import Reviews from "../../components/reviews/Reviews.astro";
 import Service from "../../components/service/Service.astro";
 import Team from "../../components/team/Team.astro";
 import WhyUs from "../../components/why-us/WhyUs.astro";
+import Faq from "../../components/faq/Faq.astro";
 import Layout from "../../layouts/Layout.astro";
 import {
   getCountryCode,
@@ -31,7 +32,7 @@ const translations = await getCurrentLanguageTranslation(
   <br />
   <WhyUs whyUs={translations.whyUs} />
   <br />
-  <!-- <Faq /> -->
+   <Faq faq={translations.faq} contactBtn={translations.contactBtn} />
   <Reviews reviews={translations.reviews} />
   <Team link={translations.nav.links[1]} team={translations.team} />
   <br />

@@ -25,7 +25,11 @@ const todaysDate = new Date().getFullYear();
   <div class="cs-container">
     <!-- Logo Group -->
     <div class="cs-logo-group">
-      <a aria-label="go back to home" class="cs-logo" href={getHref(currentLang, "/")}>
+      <a
+        aria-label="go back to home"
+        class="cs-logo"
+        href={getHref(currentLang, "/")}
+      >
         <Image
           class="cs-logo-img"
           format="webp"
@@ -65,40 +69,46 @@ const todaysDate = new Date().getFullYear();
         <span class="cs-header">Kontakt</span>
       </li>
       <li class="cs-nav-li">
-        <Image
-          class="cs-icon"
-          aria-hidden="true"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-stroke.svg"
-          alt="phone"
-          width="24"
-          height="24"
-        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="none"
+          ><path
+            fill="#F7F7F7"
+            d="M19.94 13.678c-.22 0-.45-.07-.67-.12a9.425 9.425 0 0 1-1.31-.39 2 2 0 0 0-2.48 1l-.22.45a12.177 12.177 0 0 1-2.66-2 12.178 12.178 0 0 1-2-2.66l.42-.28a2 2 0 0 0 1-2.48 10.32 10.32 0 0 1-.39-1.31c-.05-.22-.09-.45-.12-.68a3 3 0 0 0-3-2.49h-3a3 3 0 0 0-3 3.41 19 19 0 0 0 16.52 16.46h.38a3 3 0 0 0 2.741-1.778c.173-.388.26-.808.259-1.232v-3a3 3 0 0 0-2.47-2.9Zm.5 6a1.001 1.001 0 0 1-.723.962c-.142.043-.29.056-.437.038A17 17 0 0 1 4.57 5.898a1.09 1.09 0 0 1 .25-.82 1 1 0 0 1 .75-.34h3a1 1 0 0 1 1 .79c.04.273.09.543.15.81.115.527.27 1.045.46 1.55l-1.4.65a1 1 0 0 0-.49 1.33 14.49 14.49 0 0 0 7 7 1 1 0 0 0 .76 0 .999.999 0 0 0 .57-.52l.62-1.4a13.68 13.68 0 0 0 1.58.46c.267.06.537.11.81.15a1 1 0 0 1 .79 1l.02 3.12Z"
+          ></path></svg
+        >
         <a class="cs-nav-link cs-phone" href=`tel:${contact?.phone}`
           >{contact?.phone}</a
         >
       </li>
       <li class="cs-nav-li">
-        <Image
-          class="cs-icon"
-          aria-hidden="true"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/email-stroke.svg"
-          alt="email"
-          width="24"
-          height="24"
-        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="none"
+          ><path
+            fill="#F7F7F7"
+            d="M19.5 4.678h-14a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-10a3 3 0 0 0-3-3Zm-.41 2-5.88 5.88a.999.999 0 0 1-1.42 0l-5.88-5.88h13.18Zm1.41 11a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1v-9.59l5.88 5.88a3 3 0 0 0 4.24 0l5.88-5.88v9.59Z"
+          ></path></svg
+        >
         <a class="cs-nav-link cs-email" href=`mailto:${contact?.email}`
           >{contact?.email}</a
         >
       </li>
       <li class="cs-nav-li">
-        <Image
-          class="cs-icon"
-          aria-hidden="true"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-stroke.svg"
-          alt="pin"
-          width="24"
-          height="24"
-        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="none"
+          ><path
+            fill="#F7F7F7"
+            d="M18.5 5.158a8.485 8.485 0 0 0-12 12l5.27 5.28a.997.997 0 0 0 1.095.219.998.998 0 0 0 .325-.22l5.31-5.33a8.45 8.45 0 0 0 0-11.95Zm-1.43 10.52-4.57 4.59-4.57-4.59a6.46 6.46 0 1 1 9.14 0ZM9.5 8.088a4.32 4.32 0 0 0 0 6.1 4.31 4.31 0 0 0 7.36-3 4.24 4.24 0 0 0-1.26-3.05 4.301 4.301 0 0 0-6.1-.05Zm4.69 4.68a2.33 2.33 0 1 1 .67-1.63 2.33 2.33 0 0 1-.72 1.63h.05Z"
+          ></path></svg
+        >
         <a
           class="cs-nav-link cs-address"
           href={googleMapsLink}
