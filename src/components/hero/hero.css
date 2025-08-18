@@ -17,23 +17,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -1;
     object-fit: cover;
   }
-  #hero-219 .overlay {
-    /* Overlay */
+  #hero-219::after {
     content: "";
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    inset: 0;
     background: #000;
     opacity: 0.5;
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    /* prevents the cursor from interacting with it */
     pointer-events: none;
+    z-index: 0;
   }
   #hero-219 .cs-background img {
     position: absolute;
@@ -47,6 +41,8 @@
     width: 100%;
     max-width: 80rem;
     margin: auto;
+    position: relative;
+    z-index: 1; /* ensure content stays above overlay */
   }
   #hero-219 .cs-title {
     /* 39px - 61px */
@@ -59,6 +55,7 @@
     margin: 5rem auto clamp(1rem, 4vw, 1.5rem) 0;
     color: #fff;
     position: relative;
+    text-wrap: balance;
   }
   #hero-219 .cs-text {
     /* 16px - 20px */

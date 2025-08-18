@@ -1,7 +1,5 @@
 ---
 import "@fontsource/ibm-plex-sans/300.css";
-import "@fontsource/ibm-plex-sans/400.css";
-import "@fontsource/ibm-plex-sans/500.css";
 import "@fontsource/ibm-plex-sans/700.css";
 import Footer from "../components/footer/Footer.astro";
 import Nav from "../components/nav/Nav.astro";
@@ -33,6 +31,7 @@ const { contactBtn, links, contact, footer, title, description, image } =
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://web3forms.com" crossorigin />
     <meta name="generator" content={Astro.generator} />
     <Seo {title} {description} url={Astro.url} {image} jsonLDType="website" />
     <title>{title}</title>

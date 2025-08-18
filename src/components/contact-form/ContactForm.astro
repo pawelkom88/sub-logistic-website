@@ -1,5 +1,5 @@
 ---
-import { getHref, type Lang, type SelectedTranslation } from "../../utils/utils";
+import { getCountryCode, getHref, type Lang, type SelectedTranslation } from "../../utils/utils";
 import "../contact-form/contact-form.css";
 interface Props {
   form?: SelectedTranslation["contactForm"] | undefined;
@@ -14,7 +14,7 @@ export const googleMapsLink =
   "https://www.google.pl/maps/place/Marynarki+Polskiej+136A%2F47,+80-865+Gda%C5%84sk/@54.3787535,18.6284272,17z/data=!3m1!4b1!4m5!3m4!1s0x46fd74a1ec7664fb:0x4a47f05d5bd9227a!8m2!3d54.3787535!4d18.6310021?entry=ttu";
 
 const url = new URL(Astro.url);
-const lang = url.searchParams.get("lang") || "pl";
+const lang = getCountryCode(Astro.url.pathname);
 ---
 
 <section id="cs-contact-490">

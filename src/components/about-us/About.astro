@@ -1,6 +1,8 @@
 ---
 import "../../styles/onas.css";
 import { getCountryCode, getHref } from "../../utils/utils";
+import { Picture } from "astro:assets";
+import aboutImage from "../../assets/images/lorries-parked-in-warehouse-yard.jpg";
 
 interface Props {
   aboutUs: any;
@@ -42,34 +44,22 @@ const currentLang = getCountryCode(Astro.url.pathname);
       </p>
     </div>
     <div class="cs-image-group">
-      <picture class="cs-picture">
-        <!--Mobile Image-->
-        <source
-          media="(max-width: 600px)"
-          srcset="https://scontent-waw2-1.xx.fbcdn.net/v/t1.6435-9/37626263_1309748129160660_6060351691067228160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ye4hXLUccj0Ab7lLPon&_nc_ht=scontent-waw2-1.xx&oh=00_AfCU5QKHHGEgDXnPU5AgeWI1P-jr4M-pzu3zNRIDyVoQCA&oe=6637BB3F"
-        />
-        <!--Tablet and above Image-->
-        <source
-          media="(min-width: 601px)"
-          srcset="https://scontent-waw2-1.xx.fbcdn.net/v/t1.6435-9/37626263_1309748129160660_6060351691067228160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ye4hXLUccj0Ab7lLPon&_nc_ht=scontent-waw2-1.xx&oh=00_AfCU5QKHHGEgDXnPU5AgeWI1P-jr4M-pzu3zNRIDyVoQCA&oe=6637BB3F"
-        />
-        <img
-          loading="lazy"
-          decoding="async"
-          src="https://scontent-waw2-1.xx.fbcdn.net/v/t1.6435-9/37626263_1309748129160660_6060351691067228160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ye4hXLUccj0Ab7lLPon&_nc_ht=scontent-waw2-1.xx&oh=00_AfCU5QKHHGEgDXnPU5AgeWI1P-jr4M-pzu3zNRIDyVoQCA&oe=6637BB3F"
-          alt="person"
-          width="570"
-          height="680"
-          aria-hidden="true"
-        />
-      </picture>
+      <Picture
+        src={aboutImage}
+        class="cs-picture"
+        alt="Piotr Subotowicz"
+        formats={["avif", "webp"]}
+        loading="lazy"
+        decoding="async"
+        sizes="(max-width: 600px) 100vw, 570px"
+      />
     </div>
   </div>
-  <!--Waves Graphic-->
   <picture class="cs-background">
     <img
       src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Flarge-waves.svg"
       alt="waves"
+      loading="lazy"
       decoding="async"
       aria-hidden="true"
       width="625"

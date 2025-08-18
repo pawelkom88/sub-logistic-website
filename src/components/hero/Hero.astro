@@ -39,7 +39,6 @@ const offerText = offerTextMap[lang];
   <div class="cs-container">
     <h1 class="cs-title">
       {formattedHero}{"-"}
-      <br />
       {formattedHeroAfter}
     </h1>
     <p class="cs-text">
@@ -57,44 +56,62 @@ const offerText = offerTextMap[lang];
     class="cs-background"
     alt="lorry driving on a road between forest"
     loading="eager"
+    decoding="async"
+    fetchpriority="high"
+    sizes="100vw"
   />
 </section>
 
 <script>
-  // Initialize UI Elements
-  const ui = {
-    transportOfferBtn: document.querySelector(".transport-offer-btn"),
-    dialog: document.querySelector("#cs-dialog"),
-    closeButton: document.querySelector(".close-btn"),
-    nextButton: document.querySelector(".next-btn"),
-    prevButton: document.querySelector(".prev-btn"), // Now selects the new Back button
-    dialogContent: document.querySelector(".cs-dialog-content"),
-    form: document.querySelector(".cs-form"),
-    steps: document.querySelectorAll(".cs-stepper li"),
-    formContainer: document.querySelector(".form-container"),
-    confirmationContainer: document.querySelector(".confirmation-container"),
-    confirmationCloseBtn: document.querySelector(".confirmation-container .close-btn"),
-  };
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialize UI Elements
+    const ui = {
+      transportOfferBtn: document.querySelector('.transport-offer-btn'),
+      dialog: document.querySelector('#cs-dialog'),
+      closeButton: document.querySelector('.close-btn'),
+      nextButton: document.querySelector('.next-btn'),
+      prevButton: document.querySelector('.prev-btn'), // Back button
+      dialogContent: document.querySelector('.cs-dialog-content'),
+      form: document.querySelector('.cs-form'),
+      steps: document.querySelectorAll('.cs-stepper li'),
+      formContainer: document.querySelector('.form-container'),
+      confirmationContainer: document.querySelector('.confirmation-container'),
+      confirmationCloseBtn: document.querySelector('.confirmation-container .close-btn'),
+    };
 
-  let currentStep = 1;
+    let currentStep = 1;
 
-  // Initial Setup
-  ui.prevButton.style.display = "none";
+    // Guard: if required elements are not present, safely exit to avoid errors
+    const requiredPresent = [
+      ui.transportOfferBtn,
+      ui.dialog,
+      ui.closeButton,
+      ui.nextButton,
+      ui.prevButton,
+      ui.dialogContent,
+      ui.form,
+      ui.formContainer,
+    ].every(Boolean);
 
-  // Event Listeners
-  ui.transportOfferBtn.addEventListener("click", () =>
-    openDialogWithTransition(ui.dialog),
-  );
-  ui.closeButton.addEventListener("click", () =>
-    closeDialogWithTransition(ui.dialog),
-  );
-  ui.nextButton.addEventListener("click", handleNextStep);
-  ui.prevButton.addEventListener("click", handlePrevStep);
-  if (ui.confirmationCloseBtn) {
-    ui.confirmationCloseBtn.addEventListener("click", () => {
-      closeDialogWithTransition(ui.dialog);
-    });
-  }
+    if (!requiredPresent) return;
+
+    // Initial Setup
+    ui.prevButton.style.display = 'none';
+
+    // Event Listeners
+    ui.transportOfferBtn.addEventListener('click', () =>
+      openDialogWithTransition(ui.dialog)
+    );
+    ui.closeButton.addEventListener('click', () =>
+      closeDialogWithTransition(ui.dialog)
+    );
+    ui.nextButton.addEventListener('click', handleNextStep);
+    ui.prevButton.addEventListener('click', handlePrevStep);
+    if (ui.confirmationCloseBtn) {
+      ui.confirmationCloseBtn.addEventListener('click', () => {
+        closeDialogWithTransition(ui.dialog);
+      });
+    }
 
   function handleNextStep() {
     if (currentStep < 3) {
@@ -172,9 +189,10 @@ const offerText = offerTextMap[lang];
     updateStepperUI();
   }
 
-  // Handle form submission success event
-  window.addEventListener('submitSuccess', () => {
-    currentStep = 3;
-    updateStepperUI();
+    // Handle form submission success event
+    window.addEventListener('submitSuccess', () => {
+      currentStep = 3;
+      updateStepperUI();
+    });
   });
 </script>

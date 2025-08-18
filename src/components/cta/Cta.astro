@@ -1,6 +1,8 @@
 ---
 import "./cta.css";
 import { SelectedTranslation, getCountryCode, getHref } from "../../utils/utils";
+import { Picture } from "astro:assets";
+import ctaBg from "../../assets/images/lorry-driving-on-a-road-between-forest.webp";
 
 interface Props {
   cta: SelectedTranslation["cta"];
@@ -22,23 +24,14 @@ const currentLang = getCountryCode(Astro.url.pathname);
     </div>
   </div>
   <!-- Background Image-->
-  <picture class="cs-picture">
-    <source
-      media="(max-width: 600px)"
-      srcset="https://images.pexels.com/photos/167733/pexels-photo-167733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    />
-    <source
-      media="(min-width: 601px)"
-      srcset="https://images.pexels.com/photos/167733/pexels-photo-167733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    />
-    <img
-      loading="lazy"
-      decoding="async"
-      src="https://images.pexels.com/photos/167733/pexels-photo-167733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-      alt="cabinets"
-      width="1920"
-      height="1280"
-      aria-hidden="true"
-    />
-  </picture>
+  <Picture
+    src={ctaBg}
+    class="cs-picture"
+    alt=""
+    aria-hidden="true"
+    loading="lazy"
+    decoding="async"
+    sizes="100vw"
+    formats={["avif", "webp"]}
+  />
 </section>

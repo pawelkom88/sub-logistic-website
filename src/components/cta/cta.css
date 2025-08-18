@@ -3,6 +3,8 @@
   #cta-51 {
     padding: var(--sectionPadding);
     position: relative;
+    content-visibility: auto;
+    contain-intrinsic-size: 650px;
   }
   #cta-51 .cs-container {
     width: 100%;
@@ -13,6 +15,8 @@
     align-items: center;
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
   }
   #cta-51 .cs-content {
     /* set text align to left if content needs to be left aligned */
@@ -78,18 +82,15 @@
     left: 0;
     z-index: -1;
   }
-  #cta-51 .cs-picture:before {
-    /* black color overlay */
+  /* Section-level overlay above the background image */
+  #cta-51::after {
     content: "";
     position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: #000;
-    opacity: 0.8;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    background: #000; /* black overlay */
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0; /* sits above background (-1) and below content (1) */
   }
   #cta-51 .cs-picture img {
     position: absolute;
@@ -98,5 +99,11 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 60rem) {
+  #cta-51 {
+    contain-intrinsic-size: 520px;
   }
 }

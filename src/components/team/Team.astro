@@ -1,6 +1,7 @@
 ---
 import { Picture } from "astro:assets";
 import { getHref, Lang, SelectedTranslation } from "../../utils/utils";
+import teamImage from "../../assets/images/customer-service.jpg";
 import "./team.css";
 
 interface Props {
@@ -31,11 +32,13 @@ const { link, team } = Astro.props;
         <Picture
           width="305"
           height="407"
-          src="https://scontent-waw2-1.xx.fbcdn.net/v/t1.6435-9/37626263_1309748129160660_6060351691067228160_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ye4hXLUccj0Ab7lLPon&_nc_ht=scontent-waw2-1.xx&oh=00_AfCU5QKHHGEgDXnPU5AgeWI1P-jr4M-pzu3zNRIDyVoQCA&oe=6637BB3F"
+          src={teamImage}
           class="cs-picture"
           alt={team?.imageTitle || ""}
           formats={["avif", "webp"]}
           loading="lazy"
+          decoding="async"
+          sizes="(max-width: 600px) 60vw, 305px"
         />
         <div class="cs-info">
           <span class="cs-name">Piotr Subotowicz</span>

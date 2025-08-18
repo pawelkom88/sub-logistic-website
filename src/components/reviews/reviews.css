@@ -2,6 +2,8 @@
 @media only screen and (min-width: 0rem) {
   #reviews-211 {
     padding: var(--sectionPadding);
+    content-visibility: auto;
+    contain-intrinsic-size: 900px;
   }
   #reviews-211 .cs-container {
     width: 100%;
@@ -117,6 +119,10 @@
     align-items: center; */
     box-shadow: -1px 21px 39px 0px rgba(0, 0, 0, 0.06);
     flex-direction: row;
+  }
+  /* Narrower fallback on wider viewports */
+  #reviews-211 {
+    contain-intrinsic-size: 700px;
   }
   #reviews-211 .cs-card {
     /* prevents it from being squished by flexbox */

@@ -53,15 +53,18 @@ const { contactBtn, contact, links = [] } = Astro.props;
       <div
         class="language-selector"
         tabindex="-1"
-        aria-label={translateAriaLabel(currentLang)}
       >
         <button
           id="language-selector-btn"
           aria-haspopup="listbox"
           aria-expanded="false"
+          aria-label={translateAriaLabel(currentLang)}
+          aria-controls="language-selector-content"
         >
           <Image
             aria-hidden="true"
+            loading="eager"
+            decoding="async"
             width="20"
             height="20"
             src={getFlagSrc(getLangCode(currentLang))}
@@ -89,7 +92,9 @@ const { contactBtn, contact, links = [] } = Astro.props;
                   >
                     <Image
                       alt={`${translations[currentLang]} flag`}
-                      loading="eager"
+                      loading="lazy"
+                      decoding="async"
+                      fetchpriority="low"
                       aria-hidden="true"
                       width="20"
                       height="20"
@@ -112,6 +117,8 @@ const { contactBtn, contact, links = [] } = Astro.props;
     >
       <Image
         loading="eager"
+        decoding="async"
+        sizes="(max-width: 640px) 160px, 261px"
         format={"webp"}
         src={logo}
         alt="sub logistic logo"
@@ -151,62 +158,64 @@ const { contactBtn, contact, links = [] } = Astro.props;
 </header>
 
 <script>
-  function init() {
-    // add classes for mobile navigation toggling
-    const CSbody = document.querySelector("body") as HTMLBodyElement;
-    const CSnavbarMenu = document.querySelector(
-      "#cs-navigation",
-    ) as HTMLElement;
-    const CShamburgerMenu = document.querySelector(
-      "#cs-navigation .cs-toggle",
-    ) as HTMLElement;
-    const logo = document.querySelector(".cs-logo") as HTMLImageElement;
+  document.addEventListener("DOMContentLoaded", () => {
+    function init() {
+      // add classes for mobile navigation toggling
+      const CSbody = document.querySelector("body");
+      const CSnavbarMenu = document.querySelector("#cs-navigation");
+      const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
+      const logo = document.querySelector(".cs-logo");
 
-    CShamburgerMenu.addEventListener("click", function () {
-      CShamburgerMenu.classList.toggle("cs-active");
-      CSnavbarMenu.classList.toggle("cs-active");
-      CSbody.classList.toggle("cs-open");
-      // run the function to check the aria-expanded value
-      ariaExpanded();
-    });
+      if (CShamburgerMenu && CSnavbarMenu && CSbody) {
+        CShamburgerMenu.addEventListener("click", function () {
+          CShamburgerMenu.classList.toggle("cs-active");
+          CSnavbarMenu.classList.toggle("cs-active");
+          CSbody.classList.toggle("cs-open");
+          // run the function to check the aria-expanded value
+          ariaExpanded();
+        });
+      }
 
-    // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not
-    function ariaExpanded() {
-      const csUL = document.querySelector("#cs-expanded");
-      const csExpanded = csUL?.getAttribute("aria-expanded");
+      // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not
+      function ariaExpanded() {
+        const csUL = document.querySelector("#cs-expanded");
+        const csExpanded = csUL?.getAttribute("aria-expanded");
 
-      if (csExpanded === "false") {
-        csUL?.setAttribute("aria-expanded", "true");
-      } else {
-        csUL?.setAttribute("aria-expanded", "false");
+        if (csExpanded === "false") {
+          csUL?.setAttribute("aria-expanded", "true");
+        } else {
+          csUL?.setAttribute("aria-expanded", "false");
+        }
+      }
+
+      if (logo) {
+        document.addEventListener("scroll", () => {
+          const transition = (logo.style.transition = "all 0.3s ease-in-out");
+
+          const scroll = document.documentElement.scrollTop;
+          if (scroll >= 100) {
+            document.querySelector("body")?.classList.add("scroll");
+            (logo as HTMLElement).style.height = "clamp(3.6rem, 5.76vw, 3.96rem";
+            transition;
+          } else {
+            document.querySelector("body")?.classList.remove("scroll");
+            (logo as HTMLElement).style.height = "clamp(4.32rem, 6.912vw, 4.752rem)";
+            transition;
+          }
+        });
+      }
+
+      // mobile nav toggle code
+      const dropDowns = Array.from(
+        document.querySelectorAll("#cs-navigation .cs-dropdown"),
+      );
+      for (const item of dropDowns) {
+        item.addEventListener("click", () => item.classList.toggle("cs-active"));
       }
     }
 
-    document.addEventListener("scroll", () => {
-      const transition = (logo.style.transition = "all 0.3s ease-in-out");
-
-      const scroll = document.documentElement.scrollTop;
-      if (scroll >= 100) {
-        document.querySelector("body")?.classList.add("scroll");
-        logo.style.height = "clamp(3.6rem, 5.76vw, 3.96rem";
-        transition;
-      } else {
-        document.querySelector("body")?.classList.remove("scroll");
-        logo.style.height = "clamp(4.32rem, 6.912vw, 4.752rem)";
-        transition;
-      }
-    });
-
-    // mobile nav toggle code
-    const dropDowns = Array.from(
-      document.querySelectorAll("#cs-navigation .cs-dropdown"),
-    );
-    for (const item of dropDowns) {
-      item.addEventListener("click", () => item.classList.toggle("cs-active"));
-    }
-  }
-
-  init();
+    init();
+  });
 </script>
 
 <script>

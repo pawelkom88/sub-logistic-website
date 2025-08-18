@@ -45,6 +45,9 @@ const serviceCards = service?.cards.map((card, index) => ({
               height="820"
               class="cs-picture"
               formats={["avif", "webp"]}
+              loading="lazy"
+              decoding="async"
+              sizes="(max-width: 768px) 100vw, 813px"
             />
             <h3 class="cs-h3">{card.title}</h3>
             <p class="cs-item-text">{card.body}</p>
