@@ -1,4 +1,4 @@
-import siteData from "../seo/siteData.json";
+import { siteDataByLang, type Locale } from "./siteData";
 
 export function slugify(text: string) {
   return text
@@ -15,11 +15,16 @@ export default function jsonLDGenerator({
   type = "website",
   post,
   url,
+  image,
+  lang = "en",
 }: {
   type: string;
   post?: any;
   url?: string;
+  image?: string;
+  lang?: Locale;
 }) {
+  const s = siteDataByLang[lang] || siteDataByLang.en;
   if (type === "post") {
     return `<script type="application/ld+json">
       {
@@ -31,10 +36,7 @@ export default function jsonLDGenerator({
         },
         "headline": "${post.title}",
         "description": "${post.description}",
-        "image": "${
-          post.image?.src ||
-          "https://sub-logistic.netlify.app/social-media-card.webp"
-        }",
+        "image": "${post.image?.src || image}",
         "author": {
           "@type": "Person",
           "name": "${post.author}",
@@ -49,28 +51,28 @@ export default function jsonLDGenerator({
       {
       "@context": "https://schema.org/",
       "@type": "WebSite",
-      "name": "${siteData.title}",
-        "url": "${siteData.url}",
-        "logo": "${siteData.url}/.netlify/images?url=_astro%2Fsub-logistics-logo.DeiqvkTr.webp&fm=webp&w=261&h=152",
-        "image": "${siteData.url}/social-media-card.png",
-        "description": "${siteData.description}",  
+      "name": "${s.title}",
+        "url": "${s.url}",
+        "logo": "${s.url}/.netlify/images?url=_astro%2Fsub-logistics-logo.DeiqvkTr.webp&fm=webp&w=261&h=152",
+        "image": "${image}",
+        "description": "${s.description}",  
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "${siteData.streetAddress}",
-          "addressRegion": "Pomorskie",
-          "addressCountry": "Polska",
-          "postalCode": "${siteData.postalCode}",
+          "addressLocality": "${s.streetAddress}",
+          "addressRegion": "${s.region}",
+          "addressCountry": "${s.country}",
+          "postalCode": "${s.postalCode}",
           "addressCountryCode": "PL",
-          "city": "${siteData.city}",
-          "region": "${siteData.region}",
-          "streetAddress": "${siteData.streetAddress}"
+          "city": "${s.city}",
+          "region": "${s.region}",
+          "streetAddress": "${s.streetAddress}"
         },
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "${siteData.telephone}",
+          "telephone": "${s.telephone}",
           "contactType": "customer support",
           "areaServed": "PL",
-          "availableLanguage": "en-GB, pl-PL",
+          "availableLanguage": "en-GB, pl-PL, de-DE",
         }
       }
     </script>`;
