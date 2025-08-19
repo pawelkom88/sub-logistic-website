@@ -5,6 +5,8 @@ import Footer from "../components/footer/Footer.astro";
 import Nav from "../components/nav/Nav.astro";
 import Seo from "../seo/Seo.astro";
 import { getCountryCode, SelectedTranslation } from "../utils/utils";
+import { getImage } from "astro:assets";
+import logoPng from "../assets/images/sub-logistic-logo.png";
 
 interface Props {
   contactBtn?: SelectedTranslation["contactBtn"] | undefined;
@@ -22,15 +24,24 @@ interface Props {
 const currentLang = getCountryCode(Astro.url.pathname);
 const { contactBtn, links, contact, footer, title, description, image } =
   Astro.props;
+
+// Generate Apple Touch Icon at build time (180x180 PNG)
+const appleIcon = await getImage({
+  src: logoPng,
+  width: 180,
+  height: 180,
+  format: "png",
+});
 ---
 
 <!doctype html>
 <html lang={currentLang}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href={appleIcon.src} />
     <link rel="preconnect" href="https://web3forms.com" crossorigin />
     <meta name="generator" content={Astro.generator} />
     <Seo {title} {description} url={Astro.url} {image} jsonLDType="website" />

@@ -100,6 +100,9 @@
     width: 100%;
     object-fit: cover;
   }
+  #cta-51 .cs-topper {
+    color: var(--white) !important;
+  }
 }
 
 @media only screen and (min-width: 60rem) {

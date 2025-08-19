@@ -34,6 +34,21 @@ const offerTextMap = {
 } as const;
 const offerHref = `/${lang}${offerSlugMap[lang]}`;
 const offerText = offerTextMap[lang];
+const why1AltMap = {
+  en: "Aerial view of a large logistics warehouse",
+  de: "Luftaufnahme eines großen Logistiklagers",
+  pl: "Widok z lotu ptaka na duży magazyn logistyczny",
+} as const;
+const why2AltMap = {
+  en: "Drone view of lorries parked in a warehouse yard",
+  de: "Drohnenansicht von LKWs, die in einem Lagerhof parken",
+  pl: "Ujęcie z drona ciężarówek zaparkowanych na placu magazynowym",
+} as const;
+const why3AltMap = {
+  en: "Stacks of containers at a busy port",
+  de: "Containerstapel in einem geschäftigen Hafen",
+  pl: "Stosy kontenerów w ruchliwym porcie",
+} as const;
 ---
 
 <section id="sbsr-516">
@@ -53,7 +68,7 @@ const offerText = offerTextMap[lang];
               <Image
                 class="cm-icon"
                 src={icon.image}
-                alt="Logistics icon"
+                alt={`${icon.title} icon`}
                 width="40"
                 height="40"
                 loading="lazy"
@@ -84,7 +99,7 @@ const offerText = offerTextMap[lang];
             height="461"
             src={whyUsImage}
             class="cs-picture"
-            alt="Aerial view of a large logistics warehouse"
+            alt={why1AltMap[lang]}
             formats={["avif", "webp"]}
             loading="lazy"
             decoding="async"
@@ -98,7 +113,7 @@ const offerText = offerTextMap[lang];
             height="461"
             src={whyUsImage2}
             class="cs-picture"
-            alt="Dron view warehouse"
+            alt={why2AltMap[lang]}
             formats={["avif", "webp"]}
             loading="lazy"
             decoding="async"
@@ -112,7 +127,7 @@ const offerText = offerTextMap[lang];
             height="461"
             src={whyUsImage3}
             class="cs-picture"
-            alt="Dron view warehouse"
+            alt={why3AltMap[lang]}
             formats={["avif", "webp"]}
             loading="lazy"
             decoding="async"

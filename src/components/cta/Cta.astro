@@ -10,6 +10,11 @@ interface Props {
 
 const { cta } = Astro.props;
 const currentLang = getCountryCode(Astro.url.pathname);
+const ctaAltMap = {
+  en: "Truck driving along a forest road at sunset – background image for the call to action section",
+  de: "Lastwagen fährt bei Sonnenuntergang auf einer Straße durch den Wald – Hintergrundbild des Call-to-Action-Bereichs",
+  pl: "Ciężarówka jadąca leśną drogą o zachodzie słońca – obraz tła sekcji wezwania do działania",
+} as const;
 ---
 
 <section id="cta-51">
@@ -27,8 +32,7 @@ const currentLang = getCountryCode(Astro.url.pathname);
   <Picture
     src={ctaBg}
     class="cs-picture"
-    alt=""
-    aria-hidden="true"
+    alt={ctaAltMap[currentLang]}
     loading="lazy"
     decoding="async"
     fetchpriority="low"

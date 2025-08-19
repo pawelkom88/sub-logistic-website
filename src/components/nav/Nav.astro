@@ -22,6 +22,11 @@ interface Props {
 
 const currentLang = getCountryCode(Astro.url.pathname);
 const { contactBtn, contact, links = [] } = Astro.props;
+const logoAltMap = {
+  en: "Sub Logistic logo",
+  de: "Sub Logistic Logo",
+  pl: "Logo Sub Logistic",
+} as const;
 ---
 
 <header id="cs-navigation">
@@ -68,6 +73,7 @@ const { contactBtn, contact, links = [] } = Astro.props;
             width="20"
             height="20"
             src={getFlagSrc(getLangCode(currentLang))}
+            densities={[1, 2]}
             alt={`${languagesConfig[getLangCode(currentLang)].translations[currentLang]} flag`}
           />
           <span style="display: block; padding: 10px 0;" aria-hidden="true">{getLangFullName(currentLang)}</span>
@@ -98,6 +104,7 @@ const { contactBtn, contact, links = [] } = Astro.props;
                       aria-hidden="true"
                       width="20"
                       height="20"
+                      densities={[1, 2]}
                       src={getFlagSrc(lang as LangCode)}
                     />
                     {translations[currentLang]}
@@ -121,7 +128,7 @@ const { contactBtn, contact, links = [] } = Astro.props;
         sizes="(max-width: 640px) 160px, 261px"
         format={"webp"}
         src={logo}
-        alt="sub logistic logo"
+        alt={logoAltMap[currentLang]}
         width="261"
         height="152"
       />

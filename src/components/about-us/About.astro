@@ -10,6 +10,11 @@ interface Props {
 
 const { aboutUs } = Astro.props;
 const currentLang = getCountryCode(Astro.url.pathname);
+const aboutAltMap = {
+  en: "Lorries parked in a warehouse yard",
+  de: "Lastwagen, die in einem Lagerhof parken",
+  pl: "Ciężarówki zaparkowane na placu magazynowym",
+} as const;
 ---
 
 <section id="content-page-713">
@@ -47,7 +52,7 @@ const currentLang = getCountryCode(Astro.url.pathname);
       <Picture
         src={aboutImage}
         class="cs-picture"
-        alt="Piotr Subotowicz"
+        alt={aboutAltMap[currentLang]}
         formats={["avif", "webp"]}
         loading="lazy"
         decoding="async"

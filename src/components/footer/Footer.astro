@@ -17,6 +17,18 @@ const { contact, footer, links } = Astro.props;
 
 const currentLang = getCountryCode(Astro.url.pathname);
 
+const logoAltMap = {
+  en: "Sub Logistic logo",
+  pl: "Logo Sub Logistic",
+  de: "Sub Logistic Logo",
+} as const;
+
+const footerBgAltMap = {
+  en: "Logistics warehouse background with containers – footer background image",
+  pl: "Tło magazynu logistycznego z kontenerami – obraz tła stopki",
+  de: "Logistiklager mit Containern – Hintergrundbild des Fußbereichs",
+} as const;
+
 const todaysDate = new Date().getFullYear();
 ---
 
@@ -35,7 +47,7 @@ const todaysDate = new Date().getFullYear();
           class="cs-logo-img"
           format="webp"
           src={logo}
-          alt="logo"
+          alt={logoAltMap[currentLang]}
           width="197"
           height="43"
           loading="lazy"
@@ -132,8 +144,7 @@ const todaysDate = new Date().getFullYear();
   <Picture
     src={footerBg}
     class="cs-background"
-    alt=""
-    aria-hidden="true"
+    alt={footerBgAltMap[currentLang]}
     loading="lazy"
     decoding="async"
     fetchpriority="low"

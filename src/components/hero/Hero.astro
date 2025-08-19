@@ -33,6 +33,11 @@ const offerTextMap = {
 } as const;
 const offerHref = `/${lang}${offerSlugMap[lang]}`;
 const offerText = offerTextMap[lang];
+const heroAltMap = {
+  en: "Lorry driving on a road between forest",
+  de: "Lastwagen fährt auf einer Straße durch den Wald",
+  pl: "Ciężarówka jadąca drogą przez las",
+} as const;
 ---
 
 <section id="hero-219">
@@ -54,7 +59,7 @@ const offerText = offerTextMap[lang];
     src={heroImage}
     formats={["avif", "webp"]}
     class="cs-background"
-    alt="lorry driving on a road between forest"
+    alt={heroAltMap[lang]}
     loading="eager"
     decoding="async"
     fetchpriority="high"

@@ -33,7 +33,7 @@ export default function jsonLDGenerator({
         "description": "${post.description}",
         "image": "${
           post.image?.src ||
-          "https://www.sikorskanotary.co.uk/social-media-card.png"
+          "https://sub-logistic.netlify.app/social-media-card.webp"
         }",
         "author": {
           "@type": "Person",
@@ -51,7 +51,7 @@ export default function jsonLDGenerator({
       "@type": "WebSite",
       "name": "${siteData.title}",
         "url": "${siteData.url}",
-        "logo": "${siteData.url}/_astro/sub-logistic-logo.ryrZlyYN_Z1AmXDn.webp",
+        "logo": "${siteData.url}/.netlify/images?url=_astro%2Fsub-logistics-logo.DeiqvkTr.webp&fm=webp&w=261&h=152",
         "image": "${siteData.url}/social-media-card.png",
         "description": "${siteData.description}",  
         "address": {

@@ -1,16 +1,51 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import "../../styles/oferta.css";
-import { getCountryCode, getCurrentLanguageTranslation } from "../../utils/utils";
+import {
+  getCountryCode,
+  getCurrentLanguageTranslation,
+} from "../../utils/utils";
+import mapPl from "../../assets/images/map_pl.webp";
+import mapEng from "../../assets/images/map_eng.webp";
+import mapDe from "../../assets/images/map_de.webp";
+import Image from "astro/components/Image.astro";
+import truck1 from "../../assets/images/truck1.webp";
+import truck2 from "../../assets/images/truck2.webp";
+import truck3 from "../../assets/images/truck3.webp";
+import truck4 from "../../assets/images/truck4.webp";
+import truck5 from "../../assets/images/truck5.webp";
+import truck6 from "../../assets/images/truck6.webp";
+import truck7 from "../../assets/images/truck7.webp";
+import truck8 from "../../assets/images/truck8.webp";
 
 const lang = getCountryCode(Astro.url.pathname);
 const translations = await getCurrentLanguageTranslation(lang);
-const offer = translations?.offer ?? { title: "", items: [] as { lead: string; text?: string }[] };
-const items = offer?.items ?? [] as { lead: string; text?: string }[];
+const offer = translations?.offer ?? {
+  title: "",
+  items: [] as { lead: string; text?: string }[],
+};
+const items = offer?.items ?? ([] as { lead: string; text?: string }[]);
 const mid = Math.ceil(items.length / 2);
 const group1 = items.slice(0, mid);
 const group2 = items.slice(mid);
 
+const truckAltMap = {
+  en: "Truck",
+  de: "Lastwagen",
+  pl: "Ciężarówka",
+} as const;
+
+const mapImage = {
+  en: mapEng,
+  de: mapDe,
+  pl: mapPl,
+} as const;
+
+const mapAlt = {
+  en: "Map of deliveries",
+  de: "Karte der Lieferungen",
+  pl: "Mapa dostaw",
+} as const;
 ---
 
 <Layout
@@ -28,30 +63,268 @@ const group2 = items.slice(mid);
       </div>
       <div class="cs-wrapper">
         <ul class="cs-card-group">
-          {group1.map((item, idx) => (
-            <li class="cs-item">
-              <span class="cs-item-number">{String(idx + 1).padStart(2, '0')}</span>
-              <div class="cs-item-wrapper">
-                <p class="cs-item-text">
-                  <strong class="cs-item-lead">{item.lead}</strong>{item.text ? ` ${item.text}` : ""}
-                </p>
-              </div>
-            </li>
-          ))}
+          {
+            group1.map((item, idx) => (
+              <li class="cs-item">
+                <span class="cs-item-number">
+                  -
+                </span>
+                <div class="cs-item-wrapper">
+                  <p class="cs-item-text">
+                    <strong class="cs-item-lead">{item.lead}</strong>
+                    {item.text ? ` ${item.text}` : ""}
+                  </p>
+                </div>
+              </li>
+            ))
+          }
         </ul>
         <ul class="cs-card-group">
-          {group2.map((item, idx) => (
-            <li class="cs-item">
-              <span class="cs-item-number">{String(idx + 1 + group1.length).padStart(2, '0')}</span>
-              <div class="cs-item-wrapper">
-                <p class="cs-item-text">
-                  <strong class="cs-item-lead">{item.lead}</strong>{item.text ? ` ${item.text}` : ""}
-                </p>
-              </div>
-            </li>
-          ))}
+          {
+            group2.map((item, idx) => (
+              <li class="cs-item">
+                <span class="cs-item-number">
+                  -
+                </span>
+                <div class="cs-item-wrapper">
+                  <p class="cs-item-text">
+                    <strong class="cs-item-lead">{item.lead}</strong>
+                    {item.text ? ` ${item.text}` : ""}
+                  </p>
+                </div>
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>
+    <br />
+    <br />
+    <br />
+    <div class="cs-container">
+      <div class="cs-content">
+        <h2 class="cs-title">Available transport types</h2>
+      </div>
+    </div>
+    <br />
+    <section id="timetable-1731">
+      <div class="cs-container">
+        <div class="cs-table-list">
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">??</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <Image
+                    class="truck"
+                    width="410"
+                    height="150"
+                    src={truck1}
+                    alt={truckAltMap[lang]}
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">??</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <Image
+                    class="truck"
+                    width="410"
+                    height="150"
+                    src={truck2}
+                    alt={truckAltMap[lang]}
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">??</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <Image
+                    class="truck"
+                    width="410"
+                    height="150"
+                    src={truck3}
+                    alt="Truck"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">??</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <Image
+                    class="truck"
+                    width="410"
+                    height="150"
+                    src={truck4}
+                    alt="Truck"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">??</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  {/*todo:aspect ration or object fit cover*/}
+                  <Image
+                    class="truck"
+                    width="410"
+                    height="150"
+                    src={truck5}
+                    alt={truckAltMap[lang]}
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">??</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <Image
+                    class="truck"
+                    width="410"
+                    height="150"
+                    src={truck6}
+                    alt="Truck"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">??</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <Image
+                    class="truck"
+                    width="410"
+                    height="150"
+                    src={truck7}
+                    alt="Truck"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">??</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <Image
+                    class="truck"
+                    width="410"
+                    height="150"
+                    src={truck8}
+                    alt="Truck"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <div class="cs-container">
+      <div class="cs-content">
+        <h2 class="cs-title">Service coverage</h2>
+      </div>
+    </div>
+    <br />
+    <figure class="map-figure">
+      <button
+        type="button"
+        class="map-open"
+        aria-haspopup="dialog"
+        aria-controls="map-dialog"
+        aria-label="Open map full screen"
+      >
+        <Image
+          class="map"
+          width="1900"
+          height="1322"
+          src={mapImage[lang]}
+          alt={mapAlt[lang]}
+        />
+        <span class="sr-only">Open map full screen</span>
+      </button>
+      <figcaption class="sr-only">Service coverage map</figcaption>
+    </figure>
+    <dialog id="map-dialog" class="map-dialog" aria-label="Map">
+      <div class="map-dialog__content">
+        <button type="button" class="map-dialog__close" aria-label="Close">Close</button>
+        <Image
+          class="map-dialog__img"
+          width="1900"
+          height="1322"
+          src={mapImage[lang]}
+          alt={mapAlt[lang]}
+        />
+      </div>
+    </dialog>
+    <script is:inline>
+      (function () {
+        const btn = document.querySelector('.map-open');
+        const dlg = document.getElementById('map-dialog');
+        const closeBtn = dlg?.querySelector('.map-dialog__close');
+        if (!btn || !dlg || !closeBtn) return;
+        btn.addEventListener('click', () => dlg.showModal());
+        closeBtn.addEventListener('click', () => dlg.close());
+        dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+        dlg.addEventListener('keydown', (e) => { if (e.key === 'Escape') dlg.close(); });
+      })();
+    </script>
   </section>
 </Layout>

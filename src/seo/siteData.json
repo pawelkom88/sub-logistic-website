@@ -1,7 +1,7 @@
 {
   "title": "Sub Logistic - Twój Partner w Efektywnym Transporcie i Logistyce",
   "description": "Sub Logistic provides efficient logistics and transport solutions tailored to your needs. Discover our services and contact us for more details.",
-  "url": "https://sublogistic.com/",
+  "url": "https://sub-logistic.netlify.app/",
   "keywords": ["efficient logistics services", "international freight transport", "customized logistics solutions", "eco-friendly shipping", "logistic partner in Europe", "transport", "logistyka"],
   "telephone": "",
   "streetAddress": "ul. Marynarki",
@@ -10,7 +10,7 @@
   "postalCode": "",
   "country": "Polska",
   "image": {
-    "src": "https://sublogistic.com/social-media-card.png",
+    "src": "https://sub-logistic.netlify.app/social-media-card.webp",
     "alt": "Sub Logistic - Twój Partner w Efektywnym Transporcie i Logistyce"
   }
 }
