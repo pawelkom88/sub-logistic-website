@@ -71,6 +71,87 @@ translations:
       - lead: "Transport von Übermaß- und Schwerlastgütern – wir befördern Ladungen mit nicht standardmäßigen Abmessungen oder Gewichten, von Industrieanlagen und Maschinen über Stahlkonstruktionen bis hin zu Turbinen- und Infrastrukturelementen."
         text: "Wir stellen geeignete Ausrüstung, notwendige Genehmigungen und bei Bedarf Begleitfahrzeuge bereit."
       - lead: "Umfassende Unterstützung bei der Zollabfertigung, die eine reibungslose Ein- oder Ausfuhr von Waren über die Grenzen der Europäischen Union hinweg ermöglicht."
+  transport:
+    heading: "Verfügbare Transportarten"
+    labels:
+      dimensions: "Abmessungen"
+      payload: "Nutzlast"
+      loading: "Ladeoptionen"
+      pallets: "Paletten"
+      volume: "Volumen"
+    vehicles:
+      - title: "Transporter"
+        specs:
+          - "Abmessungen: 4,2–4,8 m × 2,1–2,4 m × 2,2–2,6 m"
+          - "Nutzlast: bis zu 1,2 t"
+          - "Ladeoptionen: hinten, seitlich, oben"
+          - "Paletten: 8–10 Europaletten 120×80"
+      - title: "Solo-Lkw (starr)"
+        specs:
+          - "Abmessungen: 6,2–9,3 m × 2,45 m × 2,5–3 m"
+          - "Nutzlast: 3–12 t"
+          - "Ladeoptionen: hinten, seitlich, oben"
+          - "Paletten: 15 (120×80), 16 (120×80), 18 (120×80), 23 (120×80)"
+      - title: "Standard‑Sattelauflieger"
+        specs:
+          - "Abmessungen: 13,6 × 2,45 × 2,6–2,85 m"
+          - "Nutzlast: 24,5 t"
+          - "Volumen: 88–94 m³"
+          - "Ladeoptionen: seitlich, hinten, oben"
+          - "Paletten: 33–34 Europaletten 120×80"
+      - title: "Tiefbettauflieger"
+        specs:
+          - "Abmessungen: 12–18,2 m × 2,55–3,2 m × Höhe bis 4 m"
+          - "Nutzlast: 24–60 t"
+          - "Ladeoptionen: seitlich, hinten, oben"
+      - title: "Gliederzug (Tandem)"
+        specs:
+          - "Abmessungen: 7,7 × 2,45 m (Lkw) + 7,7 × 2,45 m (Anhänger) oder 6,8 × 2,45 m (Lkw) + 8,3 × 2,45 m (Anhänger)"
+          - "Höhe: 2,65–3,0 m"
+          - "Nutzlast: 5–24 t"
+          - "Volumen: 120 m³"
+          - "Ladeoptionen: seitlich, hinten, oben"
+          - "Paletten: 38 Europaletten 120×80"
+      - title: "Kühl‑Sattelauflieger"
+        specs:
+          - "Abmessungen: 13,6 × 2,45 × 2,6–2,75 m"
+          - "Nutzlast: 20–22 t"
+          - "Laderaumlänge: 7,75 m"
+          - "Volumen: 86–88 m³"
+          - "Ladeoptionen: hinten"
+          - "Paletten: 33 Europaletten 120×80"
+      - title: "Isolierter Sattelauflieger"
+        specs:
+          - "Abmessungen: 13,6 × 2,45 × 2,6–2,75 m"
+          - "Nutzlast: 20–22 t"
+          - "Volumen: 86–88 m³"
+          - "Volumen: 51 m³"
+          - "Ladeoptionen: hinten"
+          - "Paletten: 33 Europaletten 120×80"
+      - title: "Mega‑Sattelauflieger"
+        specs:
+          - "Abmessungen: 13,6 × 2,45–2,48 × 2,9–3 m"
+          - "Nutzlast: 24,5 t"
+          - "Volumen: 98–101 m³"
+          - "Ladeoptionen: seitlich, hinten, oben"
+          - "Paletten: 33–34 Europaletten 120×80"
+      - title: "Plattform‑Sattelauflieger"
+        specs:
+          - "Abmessungen: 13,6 m × Breite bis 2,5 m × Höhe bis 3,1 m"
+          - "Nutzlast: 24,5 t"
+          - "Ladeoptionen: seitlich, hinten, oben"
+      - title: "Kipper"
+        specs:
+          - "Nutzlast: 24 t"
+          - "Volumen: 24–55 m³"
+          - "Ladeoptionen: oben"
+  coverage:
+    heading: "Leistungsabdeckung"
+    openAria: "Karte im Vollbild öffnen"
+    srOpen: "Karte im Vollbild öffnen"
+    figcaption: "Karte der Leistungsabdeckung"
+    dialogAriaLabel: "Karte"
+    dialogClose: "Schließen"
   whyUs:
     topper: "Maßgeschneiderte Lösungen für jede Sendung."
     heading: "Inlands- und Internationaler Transport"
@@ -195,10 +276,11 @@ translations:
     close: "schließen"
     steps: ["Allgemeine Informationen", "Versandformular", "Bestätigung"]
     title: "Finden Sie die perfekte Lösung für Ihren Versand."
-    text: [
-      "Ob Sie einen kompletten LKW füllen oder nur einen kleinen Raum benötigen, wir haben die perfekte Lösung für Sie. Wir bieten eine breite Palette von Fahrzeugen, um Ihre individuellen Bedürfnisse zu erfüllen. Unser Angebot umfasst FTL- und LTL-Transporte, schnelle dedizierte Lieferungen sowie den sicheren Transport von Gefahrgütern (ADR) und Spezialfrachten. Mit uns ist Ihre Sendung immer sicher, in Echtzeit überwacht und ordnungsgemäß versichert.",
-      "Gehen Sie zu unserem Formular und erhalten Sie in wenigen einfachen Schritten ein Angebot für Ihren Versand. Warten Sie nicht, planen Sie noch heute Ihren Transport und erleben Sie qualitativ hochwertige Logistikdienstleistungen."
-    ]
+    text:
+      [
+        "Ob Sie einen kompletten LKW füllen oder nur einen kleinen Raum benötigen, wir haben die perfekte Lösung für Sie. Wir bieten eine breite Palette von Fahrzeugen, um Ihre individuellen Bedürfnisse zu erfüllen. Unser Angebot umfasst FTL- und LTL-Transporte, schnelle dedizierte Lieferungen sowie den sicheren Transport von Gefahrgütern (ADR) und Spezialfrachten. Mit uns ist Ihre Sendung immer sicher, in Echtzeit überwacht und ordnungsgemäß versichert.",
+        "Gehen Sie zu unserem Formular und erhalten Sie in wenigen einfachen Schritten ein Angebot für Ihren Versand. Warten Sie nicht, planen Sie noch heute Ihren Transport und erleben Sie qualitativ hochwertige Logistikdienstleistungen.",
+      ]
     next: "Klicken Sie, um zum Formular zu gelangen"
     back: "Zurück"
     confirmationMessage: "Ihre Anfrage wurde erfolgreich gesendet!"

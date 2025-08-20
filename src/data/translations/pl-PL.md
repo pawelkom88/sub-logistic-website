@@ -62,6 +62,87 @@ translations:
       - lead: "Transport towarów ponadgabarytowych - przewozimy ładunki o niestandardowych wymiarach lub wadze – od maszyn i urządzeń przemysłowych, przez konstrukcje stalowe, po elementy turbin i infrastruktury."
         text: "Zapewniamy odpowiedni sprzęt, niezbędne zezwolenia oraz, jeśli trzeba, pilotaż drogowy."
       - lead: "Zapewniamy pełne wsparcie w zakresie odprawy celnej, umożliwiające sprawne i bezproblemowe wprowadzenie lub wywóz towarów przez granice Unii Europejskiej."
+  transport:
+    heading: "Dostępne formy transportu"
+    labels:
+      dimensions: "Wymiary"
+      payload: "Ładowność"
+      loading: "Możliwość załadunku"
+      pallets: "Ilość palet"
+      volume: "Kubatura"
+    vehicles:
+      - title: "Bus"
+        specs:
+          - "Wymiary: 4,2 – 4,8m x 2,1 – 2,4m x 2,2 – 2,6m"
+          - "Ładowność: do 1,2t"
+          - "Możliwość załadunku: tyłem, bokiem, górą"
+          - "Ilość palet: 8-10 euro palet 120x80"
+      - title: "Pojazd typu SOLO"
+        specs:
+          - "Wymiary: 6,2 – 9,3m x 2,45m x 2,5 – 3m"
+          - "Ładowność: 3-12t"
+          - "Możliwość załadunku: tyłem, bokiem, górą"
+          - "Ilość palet: 15 (120 x 80), 16 (120 x 80), 18 (120 x 80), 23 (120 x 80)"
+      - title: "Naczepa typu STANDRAD"
+        specs:
+          - "Wymiary: 13,6 x 2,45 x 2,6 – 2,85m"
+          - "Ładowność: 24,5t"
+          - "Kubatura: 88-94m³"
+          - "Możliwość załadunku: bokiem, tyłem, górą"
+          - "Ilość palet: 33-34 euro palety 120x80"
+      - title: "Niskopodwozie"
+        specs:
+          - "Wymiary: 12 – 18,2m x 2,55 – 3,2m x WYS. do 4m"
+          - "Ładowność: 24 – 60t"
+          - "Możliwość załadunku: bokiem, tyłem, górą"
+      - title: "Zestaw przestrzenny TANDEM"
+        specs:
+          - "Wymiary: 7,7 x 2,45m (solówka) + 7,7 x 2,45m (przyczepa) lub 6,8 x 2,45m (solówka) + 8,3 x 2,45m (przyczepa)"
+          - "WYS. 2,65 - 3,0m"
+          - "Ładowność: 5-24t"
+          - "Kubatura: 120m³"
+          - "Możliwość załadunku: bokiem, tyłem, górą"
+          - "Ilość palet: 38 euro palety 120x80"
+      - title: "Naczepa typu CHŁODNIA"
+        specs:
+          - "Wymiary: 13,6 x 2,45 x 2,6 – 2,75m"
+          - "Ładowność: 20-22t"
+          - "Długość przestrzeni ładunkowej: 7,75 m"
+          - "Kubatura: 86-88m³"
+          - "Możliwość załadunku: tyłem"
+          - "Ilość palet: 33 euro palety 120x80"
+      - title: "Naczepa typu IZOTERMA"
+        specs:
+          - "Wymiary: 13,6 x 2,45 x 2,6 – 2,75m"
+          - "Ładowność: 20-22t"
+          - "Kubatura: 86-88m³"
+          - "Kubatura: 51 m³"
+          - "Możliwość załadunku: tyłem"
+          - "Ilość palet: 33 euro palety 120x80"
+      - title: "Naczepa typu MEGA"
+        specs:
+          - "Wymiary: 13,6 x 2,45 – 2,48 x 2,9 – 3m"
+          - "Ładowność: 24,5t"
+          - "Kubatura: 98-101m³"
+          - "Możliwość załadunku: bokiem, tyłem, górą"
+          - "Ilość palet: 33-34 euro palety 120x80"
+      - title: "Naczepa typu PLATFORMA"
+        specs:
+          - "Wymiary: 13,6m x SZER. do 2,5m x WYS. do 3,1m"
+          - "Ładowność: 24,5t"
+          - "Możliwość załadunku: bokiem, tyłem, górą"
+      - title: "Wywrotka"
+        specs:
+          - "Ładowność: 24t"
+          - "Kubatura: 24-55 m³"
+          - "Możliwość załadunku: górą"
+  coverage:
+    heading: "Zasięg usług"
+    openAria: "Otwórz mapę na pełnym ekranie"
+    srOpen: "Otwórz mapę na pełnym ekranie"
+    figcaption: "Mapa zasięgu usług"
+    dialogAriaLabel: "Mapa"
+    dialogClose: "Zamknij"
   whyUs:
     topper: "Dostosowane rozwiązania dla każdej przesyłki."
     heading: "Transport Krajowy i Międzynarodowy"
@@ -202,10 +283,11 @@ translations:
     close: "zamknij"
     steps: ["Informacje ogólne", "Formularz przesyłki", "Potwierdzenie"]
     title: "Znajdź idealne rozwiązanie dla swojej przesyłki."
-    text: [
-      "Niezależnie od tego, czy potrzebujesz zapełnić całą ciężarówkę, czy tylko małą przestrzeń, mamy rozwiązanie dla Ciebie rozwiązanie. Posiadamy szeroką gamę pojazdów, dzięki czemu możemy dopasować się do Twoich unikalnych potrzeb. Nasza oferta obejmuje transport FTL i LTL, szybkie dostawy dedykowane, a także bezpieczny przewóz materiałów niebezpiecznych (ADR) i ładunków specjalnych. Z nami Twoja przesyłka jest zawsze bezpieczna, monitorowana w czasie rzeczywistym i odpowiednio ubezpieczona.",
-      "Przejdź do naszego formularza i w kilku prostych krokach uzyskaj wycenę dla swojej przesyłki. Nie czekaj, zaplanuj swój transport już dziś i doświadcz najwyższej jakości usług logistycznych."
-    ]
+    text:
+      [
+        "Niezależnie od tego, czy potrzebujesz zapełnić całą ciężarówkę, czy tylko małą przestrzeń, mamy rozwiązanie dla Ciebie rozwiązanie. Posiadamy szeroką gamę pojazdów, dzięki czemu możemy dopasować się do Twoich unikalnych potrzeb. Nasza oferta obejmuje transport FTL i LTL, szybkie dostawy dedykowane, a także bezpieczny przewóz materiałów niebezpiecznych (ADR) i ładunków specjalnych. Z nami Twoja przesyłka jest zawsze bezpieczna, monitorowana w czasie rzeczywistym i odpowiednio ubezpieczona.",
+        "Przejdź do naszego formularza i w kilku prostych krokach uzyskaj wycenę dla swojej przesyłki. Nie czekaj, zaplanuj swój transport już dziś i doświadcz najwyższej jakości usług logistycznych.",
+      ]
     next: "Kliknij, aby przejść do formularza"
     back: "Wstecz"
     confirmationMessage: "Twoje zapytanie zostało pomyślnie wysłane!"

@@ -69,6 +69,87 @@ translations:
       - lead: "Oversized cargo transport—we carry loads with non‑standard dimensions or weight—from industrial machinery and equipment to steel structures and components of turbines and infrastructure."
         text: "We provide appropriate equipment, the required permits, and, where necessary, road escort."
       - lead: "We provide full support with customs clearance, enabling smooth and hassle‑free import or export of goods across the borders of the European Union."
+  transport:
+    heading: "Available transport types"
+    labels:
+      dimensions: "Dimensions"
+      payload: "Payload"
+      loading: "Loading options"
+      pallets: "Pallets"
+      volume: "Volume"
+    vehicles:
+      - title: "Van"
+        specs:
+          - "Dimensions: 4.2–4.8 m × 2.1–2.4 m × 2.2–2.6 m"
+          - "Payload: up to 1.2 t"
+          - "Loading: rear, side, top"
+          - "Pallets: 8–10 euro pallets 120×80"
+      - title: "Solo truck (rigid)"
+        specs:
+          - "Dimensions: 6.2–9.3 m × 2.45 m × 2.5–3 m"
+          - "Payload: 3–12 t"
+          - "Loading: rear, side, top"
+          - "Pallets: 15 (120×80), 16 (120×80), 18 (120×80), 23 (120×80)"
+      - title: "Standard semi‑trailer"
+        specs:
+          - "Dimensions: 13.6 × 2.45 × 2.6–2.85 m"
+          - "Payload: 24.5 t"
+          - "Volume: 88–94 m³"
+          - "Loading: side, rear, top"
+          - "Pallets: 33–34 euro pallets 120×80"
+      - title: "Lowbed trailer"
+        specs:
+          - "Dimensions: 12–18.2 m × 2.55–3.2 m × height up to 4 m"
+          - "Payload: 24–60 t"
+          - "Loading: side, rear, top"
+      - title: "Tandem set (road train)"
+        specs:
+          - "Dimensions: 7.7 × 2.45 m (rigid) + 7.7 × 2.45 m (trailer) or 6.8 × 2.45 m (rigid) + 8.3 × 2.45 m (trailer)"
+          - "Height: 2.65–3.0 m"
+          - "Payload: 5–24 t"
+          - "Volume: 120 m³"
+          - "Loading: side, rear, top"
+          - "Pallets: 38 euro pallets 120×80"
+      - title: "Refrigerated semi‑trailer"
+        specs:
+          - "Dimensions: 13.6 × 2.45 × 2.6–2.75 m"
+          - "Payload: 20–22 t"
+          - "Load space length: 7.75 m"
+          - "Volume: 86–88 m³"
+          - "Loading: rear"
+          - "Pallets: 33 euro pallets 120×80"
+      - title: "Insulated semi‑trailer"
+        specs:
+          - "Dimensions: 13.6 × 2.45 × 2.6–2.75 m"
+          - "Payload: 20–22 t"
+          - "Volume: 86–88 m³"
+          - "Volume: 51 m³"
+          - "Loading: rear"
+          - "Pallets: 33 euro pallets 120×80"
+      - title: "Mega semi‑trailer"
+        specs:
+          - "Dimensions: 13.6 × 2.45–2.48 × 2.9–3 m"
+          - "Payload: 24.5 t"
+          - "Volume: 98–101 m³"
+          - "Loading: side, rear, top"
+          - "Pallets: 33–34 euro pallets 120×80"
+      - title: "Flatbed semi‑trailer"
+        specs:
+          - "Dimensions: 13.6 m × width up to 2.5 m × height up to 3.1 m"
+          - "Payload: 24.5 t"
+          - "Loading: side, rear, top"
+      - title: "Tipper"
+        specs:
+          - "Payload: 24 t"
+          - "Volume: 24–55 m³"
+          - "Loading: top"
+  coverage:
+    heading: "Service coverage"
+    openAria: "Open map full screen"
+    srOpen: "Open map full screen"
+    figcaption: "Service coverage map"
+    dialogAriaLabel: "Map"
+    dialogClose: "Close"
   whyUs:
     topper: "Tailored solutions for every shipment."
     heading: "Domestic and International Transport"
@@ -192,10 +273,11 @@ translations:
     close: "close"
     steps: ["General Information", "Shipment Form", "Confirmation"]
     title: "Find the perfect solution for your shipment."
-    text: [
-      "Whether you need to fill an entire truck or just a small space, we have the perfect solution for you. We offer a wide range of vehicles to accommodate your unique needs. Our services include FTL and LTL transport, fast dedicated deliveries, as well as safe transportation of hazardous materials (ADR) and special cargo. With us, your shipment is always safe, monitored in real-time, and properly insured.",
-      "Go to our form and get a quote for your shipment in just a few simple steps. Don't wait, plan your transport today and experience top-quality logistics services."
-    ]
+    text:
+      [
+        "Whether you need to fill an entire truck or just a small space, we have the perfect solution for you. We offer a wide range of vehicles to accommodate your unique needs. Our services include FTL and LTL transport, fast dedicated deliveries, as well as safe transportation of hazardous materials (ADR) and special cargo. With us, your shipment is always safe, monitored in real-time, and properly insured.",
+        "Go to our form and get a quote for your shipment in just a few simple steps. Don't wait, plan your transport today and experience top-quality logistics services.",
+      ]
     next: "Click to go to the form"
     back: "Back"
     confirmationMessage: "Your request has been successfully submitted!"

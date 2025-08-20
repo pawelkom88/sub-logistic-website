@@ -48,6 +48,30 @@ const translations = defineCollection({
           }),
         ),
       }),
+      transport: z.object({
+        heading: z.string(),
+        labels: z.object({
+          dimensions: z.string(),
+          payload: z.string(),
+          loading: z.string(),
+          pallets: z.string(),
+          volume: z.string(),
+        }),
+        vehicles: z.array(
+          z.object({
+            title: z.string(),
+            specs: z.array(z.string()).optional(),
+          })
+        ),
+      }),
+      coverage: z.object({
+        heading: z.string(),
+        openAria: z.string(),
+        srOpen: z.string(),
+        figcaption: z.string(),
+        dialogAriaLabel: z.string(),
+        dialogClose: z.string(),
+      }),
       whyUs: z.object({
         topper: z.string(),
         heading: z.string(),

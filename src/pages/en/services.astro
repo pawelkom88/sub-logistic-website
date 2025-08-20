@@ -9,14 +9,12 @@ import mapPl from "../../assets/images/map_pl.webp";
 import mapEng from "../../assets/images/map_eng.webp";
 import mapDe from "../../assets/images/map_de.webp";
 import Image from "astro/components/Image.astro";
-import truck1 from "../../assets/images/truck1.webp";
-import truck2 from "../../assets/images/truck2.webp";
-import truck3 from "../../assets/images/truck3.webp";
-import truck4 from "../../assets/images/truck4.webp";
-import truck5 from "../../assets/images/truck5.webp";
-import truck6 from "../../assets/images/truck6.webp";
-import truck7 from "../../assets/images/truck7.webp";
-import truck8 from "../../assets/images/truck8.webp";
+import truck1 from "../../assets/images/bus.png";
+import truck2 from "../../assets/images/solo.png";
+import truck3 from "../../assets/images/platforma.png";
+import truck5 from "../../assets/images/standard-1.png";
+import truck8 from "../../assets/images/zestaw.png";
+import truck9 from "../../assets/images/wywrotka.png";
 
 const lang = getCountryCode(Astro.url.pathname);
 const translations = await getCurrentLanguageTranslation(lang);
@@ -28,6 +26,35 @@ const items = offer?.items ?? ([] as { lead: string; text?: string }[]);
 const mid = Math.ceil(items.length / 2);
 const group1 = items.slice(0, mid);
 const group2 = items.slice(mid);
+
+const transport = translations?.transport ?? {
+  heading: "",
+  labels: { dimensions: "", payload: "", loading: "", pallets: "", volume: "" },
+  vehicles: [] as { title: string; specs?: string[] }[],
+};
+const vehicles =
+  transport.vehicles ?? ([] as { title: string; specs?: string[] }[]);
+const truckImages = [
+  truck1, // Bus
+  truck2, // SOLO
+  truck5, // STANDARD
+  truck8, // TANDEM
+  truck5, // CHŁODNIA
+  truck5, // IZOTERMA
+  truck5, // MEGA
+  truck3, // PLATFORMA
+  truck3, // Niskopodwozie
+  truck9, // Wywrotka
+] as const;
+
+const coverage = translations?.coverage ?? {
+  heading: "",
+  openAria: "",
+  srOpen: "",
+  figcaption: "",
+  dialogAriaLabel: "",
+  dialogClose: "",
+};
 
 const truckAltMap = {
   en: "Truck",
@@ -66,9 +93,7 @@ const mapAlt = {
           {
             group1.map((item, idx) => (
               <li class="cs-item">
-                <span class="cs-item-number">
-                  -
-                </span>
+                <span class="cs-item-number">-</span>
                 <div class="cs-item-wrapper">
                   <p class="cs-item-text">
                     <strong class="cs-item-lead">{item.lead}</strong>
@@ -83,9 +108,7 @@ const mapAlt = {
           {
             group2.map((item, idx) => (
               <li class="cs-item">
-                <span class="cs-item-number">
-                  -
-                </span>
+                <span class="cs-item-number">-</span>
                 <div class="cs-item-wrapper">
                   <p class="cs-item-text">
                     <strong class="cs-item-lead">{item.lead}</strong>
@@ -103,174 +126,46 @@ const mapAlt = {
     <br />
     <div class="cs-container">
       <div class="cs-content">
-        <h2 class="cs-title">Available transport types</h2>
+        <h2 class="cs-title">{transport.heading}</h2>
       </div>
     </div>
     <br />
     <section id="timetable-1731">
       <div class="cs-container">
         <div class="cs-table-list">
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">??</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck1}
-                    alt={truckAltMap[lang]}
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">??</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck2}
-                    alt={truckAltMap[lang]}
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">??</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck3}
-                    alt="Truck"
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">??</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck4}
-                    alt="Truck"
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">??</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="2">
-                  {/*todo:aspect ration or object fit cover*/}
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck5}
-                    alt={truckAltMap[lang]}
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">??</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck6}
-                    alt="Truck"
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">??</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck7}
-                    alt="Truck"
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">??</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck8}
-                    alt="Truck"
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          {
+            vehicles.map((v, i) => (
+              <table class="cs-table">
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2">
+                      {v.title}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="cs-table-row">
+                    <td colspan="2">
+                      <Image
+                        class="truck"
+                        width="410"
+                        height="150"
+                        src={truckImages[i % truckImages.length]}
+                        alt={truckAltMap[lang]}
+                      />
+                    </td>
+                    <td class="cs-table-cell">
+                      <ul>
+                        {v.specs?.map((s) => (
+                          <li>{s}</li>
+                        ))}
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            ))
+          }
         </div>
       </div>
     </section>
@@ -279,7 +174,7 @@ const mapAlt = {
     <br />
     <div class="cs-container">
       <div class="cs-content">
-        <h2 class="cs-title">Service coverage</h2>
+        <h2 class="cs-title">{coverage.heading}</h2>
       </div>
     </div>
     <br />
@@ -289,7 +184,7 @@ const mapAlt = {
         class="map-open"
         aria-haspopup="dialog"
         aria-controls="map-dialog"
-        aria-label="Open map full screen"
+        aria-label={coverage.openAria}
       >
         <Image
           class="map"
@@ -298,13 +193,21 @@ const mapAlt = {
           src={mapImage[lang]}
           alt={mapAlt[lang]}
         />
-        <span class="sr-only">Open map full screen</span>
+        <span class="sr-only">{coverage.srOpen}</span>
       </button>
-      <figcaption class="sr-only">Service coverage map</figcaption>
+      <figcaption class="sr-only">{coverage.figcaption}</figcaption>
     </figure>
-    <dialog id="map-dialog" class="map-dialog" aria-label="Map">
+    <dialog
+      id="map-dialog"
+      class="map-dialog"
+      aria-label={coverage.dialogAriaLabel}
+    >
       <div class="map-dialog__content">
-        <button type="button" class="map-dialog__close" aria-label="Close">Close</button>
+        <button
+          type="button"
+          class="map-dialog__close"
+          aria-label={coverage.dialogClose}>{coverage.dialogClose}</button
+        >
         <Image
           class="map-dialog__img"
           width="1900"
@@ -316,14 +219,18 @@ const mapAlt = {
     </dialog>
     <script is:inline>
       (function () {
-        const btn = document.querySelector('.map-open');
-        const dlg = document.getElementById('map-dialog');
-        const closeBtn = dlg?.querySelector('.map-dialog__close');
+        const btn = document.querySelector(".map-open");
+        const dlg = document.getElementById("map-dialog");
+        const closeBtn = dlg?.querySelector(".map-dialog__close");
         if (!btn || !dlg || !closeBtn) return;
-        btn.addEventListener('click', () => dlg.showModal());
-        closeBtn.addEventListener('click', () => dlg.close());
-        dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
-        dlg.addEventListener('keydown', (e) => { if (e.key === 'Escape') dlg.close(); });
+        btn.addEventListener("click", () => dlg.showModal());
+        closeBtn.addEventListener("click", () => dlg.close());
+        dlg.addEventListener("click", (e) => {
+          if (e.target === dlg) dlg.close();
+        });
+        dlg.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") dlg.close();
+        });
       })();
     </script>
   </section>

@@ -27,6 +27,36 @@ const mid = Math.ceil(items.length / 2);
 const group1 = items.slice(0, mid);
 const group2 = items.slice(mid);
 
+const transport = translations?.transport ?? {
+  heading: "",
+  labels: { dimensions: "", payload: "", loading: "", pallets: "", volume: "" },
+  vehicles: [] as { title: string; specs?: string[] }[],
+};
+console.log(translations?.transport);
+const vehicles =
+  transport.vehicles ?? ([] as { title: string; specs?: string[] }[]);
+const truckImages = [
+  truck1, // Bus
+  truck2, // SOLO
+  truck5, // STANDARD
+  truck8, // TANDEM
+  truck5, // CHŁODNIA
+  truck5, // IZOTERMA
+  truck5, // MEGA
+  truck3, // PLATFORMA
+  truck3, // Niskopodwozie
+  truck9, // Wywrotka
+] as const;
+
+const coverage = translations?.coverage ?? {
+  heading: "",
+  openAria: "",
+  srOpen: "",
+  figcaption: "",
+  dialogAriaLabel: "",
+  dialogClose: "",
+};
+
 const truckAltMap = {
   en: "Truck",
   de: "Lastwagen",
@@ -97,301 +127,46 @@ const mapAlt = {
     <br />
     <div class="cs-container">
       <div class="cs-content">
-        <h2 class="cs-title">Dostępne formy transportu</h2>
+        <h2 class="cs-title">{transport.heading}</h2>
       </div>
     </div>
     <br />
     <section id="timetable-1731">
       <div class="cs-container">
         <div class="cs-table-list">
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">Bus</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="cs-table-row">
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck1}
-                    alt={truckAltMap[lang]}
-                  />
-                </td>
-                <td class="cs-table-cell">
-                  <ul>
-                    <li>Wymiary: 4,2 – 4,8m x 2,1 – 2,4m x 2,2 – 2,6m</li>
-                    <li>Ładowność: do 1,2t</li>
-                    <li> Możliwość załadunku: tyłem, bokiem, górą</li>
-                    <li>Ilość palet: 8-10 euro palet 120x80</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">Pojazd typu SOLO</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="cs-table-row">
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck2}
-                    alt={truckAltMap[lang]}
-                  />
-                </td>
-                <td class="cs-table-cell">
-                  <ul>
-                    <li>Wymiary: 6,2 – 9,3m x 2,45m x 2,5 – 3m</li>
-                    <li>Ładowność: 3-12t</li>
-                    <li>Możliwość załadunku: tyłem, bokiem, górą</li>
-                    <li>Ilość palet: 15 (120 x 80), 16 (120 x 80), 18 (120 x 80), 23 (120 x 80)</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">Naczepa typu STANDRAD</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="cs-table-row">
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck3}
-                    alt={truckAltMap[lang]}
-                  />
-                </td>
-                <td class="cs-table-cell">
-                  <ul>
-                    <li>Wymiary: 13,6 x 2,45 x 2,6 – 2,85m</li>
-                    <li>Ładowność: 24,5t</li>
-                    <li>Kubatura: 88-94m<sup>3</sup></li>
-                    <li>Możliwość załadunku: bokiem, tyłem, górą</li>
-                    <li>Ilość palet: 33-34 euro palety 120x80</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table class="cs-table">
-            <thead>
-            <tr>
-              <th scope="col" colspan="2">Niskopodwozie</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="cs-table-row">
-              <td colspan="2">
-                <Image
-                  class="truck"
-                  width="410"
-                  height="150"
-                  src={truck3}
-                  alt={truckAltMap[lang]}
-                />
-              </td>
-              <td class="cs-table-cell">
-                <ul>
-                  <li>Wymiary: 12 – 18,2m x 2,55 – 3,2m x WYS. do 4m</li>
-                  <li>Ładowność: 24 – 60t</li>
-                  <li>Możliwość załadunku: bokiem, tyłem, górą</li>
-                </ul>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">Zestaw przestrzenny TANDEM</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="cs-table-row">
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck8}
-                    alt={truckAltMap[lang]}
-                  />
-                </td>
-                <td class="cs-table-cell">
-                  <ul>
-                    <li>Wymiary: 7,7 x 2,45m (solówka) + 7,7 x 2,45m (przyczepa) lub 6,8 x 2,45m (solówka) + 8,3 x</li>
-                    <li>2,45m (przyczepa)</li>
-                    <li>WYS. 2,65 - 3,0m </li>
-                    <li>Ładowność: 5-24t,</li>
-                    <li>Kubatura: 120m<sup>3</sup></li>
-                    <li>Możliwość załadunku: bokiem, tyłem, górą</li>
-                    <li>Ilość palet: 38 euro palety 120x80</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">Naczepa typu CHŁODNIA</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="cs-table-row">
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck5}
-                    alt={truckAltMap[lang]}
-                  />
-                </td>
-                <td class="cs-table-cell">
-                  <ul>
-                    <li>Wymiary: 13,6 x 2,45 x 2,6 – 2,75m</li>
-                    <li>Ładowność: 20-22t</li>
-                    <li>Długość przestrzeni ładunkowej: 7,75 m</li>
-                    <li>Kubatura: 86-88m<sup>3</sup></li>
-                    <li>Możliwość załadunku: tyłem.</li>
-                    <li>Ilość palet: 33 euro palety 120x80</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">Naczepa typu IZOTERMA</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="cs-table-row">
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck5}
-                    alt={truckAltMap[lang]}
-                  />
-                </td>
-                <td class="cs-table-cell">
-                  <ul>
-                    <li>Wymiary: 13,6 x 2,45 x 2,6 – 2,75m</li>
-                    <li>Ładowność: 20-22t</li>
-                    <li>Kubatura: 86-88m<sup>3</sup></li>
-                    <li>Kubatura: 51 m<sup>3</sup></li>
-                    <li>Możliwość załadunku: tyłem</li>
-                    <li>Ilość palet: 33 euro palety 120x80</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">Naczepa typu MEGA</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="cs-table-row">
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck5}
-                    alt={truckAltMap[lang]}
-                  />
-                </td>
-                <td class="cs-table-cell">
-                  <ul>
-                    <li>Wymiary: 13,6 x 2,45 – 2,48  x 2,9 – 3m</li>
-                    <li>Ładowność: 24,5t</li>
-                    <li>Kubatura: 98-101m<sup>3</sup></li>
-                    <li>Możliwość załadunku: bokiem, tyłem, górą</li>
-                    <li>Ilość palet: 33-34 euro palety 120x80</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-              <tr>
-                <th scope="col" colspan="2">Naczepa typu PLATFORMA</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="cs-table-row">
-                <td colspan="2">
-                  <Image
-                    class="truck"
-                    width="410"
-                    height="150"
-                    src={truck3}
-                    alt={truckAltMap[lang]}
-                  />
-                </td>
-                <td class="cs-table-cell">
-                  <ul>
-                    <li>Wymiary: 13,6m x SZER. do 2,5m x WYS. do 3,1m </li>
-                    <li>Ładowność: 24,5t</li>
-                    <li>Możliwość załadunku: bokiem, tyłem, górą</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="cs-table">
-            <thead>
-            <tr>
-              <th scope="col" colspan="2">Wywrotka</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="cs-table-row">
-              <td colspan="2">
-                <Image
-                  class="truck"
-                  width="410"
-                  height="150"
-                  src={truck9}
-                  alt={truckAltMap[lang]}
-                />
-              </td>
-              <td class="cs-table-cell">
-                <ul>
-                  <li>Ładowność: 24t </li>
-                  <li>Kubatura: 24-55 m<sup>3</sup></li>
-                  <li>Możliwość załadunku: górą</li>
-                </ul>
-              </td>
-            </tr>
-            </tbody>
-          </table>
+          {
+            vehicles.map((v, i) => (
+              <table class="cs-table">
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2">
+                      {v.title}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="cs-table-row">
+                    <td colspan="2">
+                      <Image
+                        class="truck"
+                        width="410"
+                        height="150"
+                        src={truckImages[i % truckImages.length]}
+                        alt={truckAltMap[lang]}
+                      />
+                    </td>
+                    <td class="cs-table-cell">
+                      <ul>
+                        {v.specs?.map((s) => (
+                          <li>{s}</li>
+                        ))}
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            ))
+          }
         </div>
       </div>
     </section>
@@ -400,7 +175,7 @@ const mapAlt = {
     <br />
     <div class="cs-container">
       <div class="cs-content">
-        <h2 class="cs-title">Zasięg usług</h2>
+        <h2 class="cs-title">{coverage.heading}</h2>
       </div>
     </div>
     <br />
@@ -410,7 +185,7 @@ const mapAlt = {
         class="map-open"
         aria-haspopup="dialog"
         aria-controls="map-dialog"
-        aria-label="Otwórz mapę na pełnym ekranie"
+        aria-label={coverage.openAria}
       >
         <Image
           class="map"
@@ -419,13 +194,21 @@ const mapAlt = {
           src={mapImage[lang]}
           alt={mapAlt[lang]}
         />
-        <span class="sr-only">Otwórz mapę na pełnym ekranie</span>
+        <span class="sr-only">{coverage.srOpen}</span>
       </button>
-      <figcaption class="sr-only">Mapa zasięgu usług</figcaption>
+      <figcaption class="sr-only">{coverage.figcaption}</figcaption>
     </figure>
-    <dialog id="map-dialog" class="map-dialog" aria-label="Mapa">
+    <dialog
+      id="map-dialog"
+      class="map-dialog"
+      aria-label={coverage.dialogAriaLabel}
+    >
       <div class="map-dialog__content">
-        <button type="button" class="map-dialog__close" aria-label="Zamknij">Zamknij</button>
+        <button
+          type="button"
+          class="map-dialog__close"
+          aria-label={coverage.dialogClose}>{coverage.dialogClose}</button
+        >
         <Image
           class="map-dialog__img"
           width="1900"
@@ -437,14 +220,18 @@ const mapAlt = {
     </dialog>
     <script is:inline>
       (function () {
-        const btn = document.querySelector('.map-open');
-        const dlg = document.getElementById('map-dialog');
-        const closeBtn = dlg?.querySelector('.map-dialog__close');
+        const btn = document.querySelector(".map-open");
+        const dlg = document.getElementById("map-dialog");
+        const closeBtn = dlg?.querySelector(".map-dialog__close");
         if (!btn || !dlg || !closeBtn) return;
-        btn.addEventListener('click', () => dlg.showModal());
-        closeBtn.addEventListener('click', () => dlg.close());
-        dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
-        dlg.addEventListener('keydown', (e) => { if (e.key === 'Escape') dlg.close(); });
+        btn.addEventListener("click", () => dlg.showModal());
+        closeBtn.addEventListener("click", () => dlg.close());
+        dlg.addEventListener("click", (e) => {
+          if (e.target === dlg) dlg.close();
+        });
+        dlg.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") dlg.close();
+        });
       })();
     </script>
   </section>
