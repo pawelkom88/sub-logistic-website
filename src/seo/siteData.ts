@@ -18,7 +18,7 @@ export const siteDataByLang: Record<Locale, SiteData> = {
     title: "Sub Logistic - Twój Partner w Efektywnym Transporcie i Logistyce",
     description:
       "Sub Logistic provides efficient logistics and transport solutions tailored to your needs. Discover our services and contact us for more details.",
-    url: "https://sub-logistic.netlify.app/",
+    url: "https://sublog.com.pl/en/",
     image: {
       alt: "Sub Logistic - Twój Partner w Efektywnym Transporcie i Logistyce",
     },
@@ -33,7 +33,7 @@ export const siteDataByLang: Record<Locale, SiteData> = {
     title: "Sub Logistic - Your Partner in Efficient Transport & Logistics",
     description:
       "Sub Logistic provides efficient logistics and transport solutions tailored to your needs. Discover our services and contact us for more details.",
-    url: "https://sub-logistic.netlify.app/",
+    url: "https://sublog.com.pl/en/",
     image: { alt: "Sub Logistic - Your Partner in Efficient Transport & Logistics" },
     telephone: "",
     streetAddress: "Marynarki Street",
@@ -46,7 +46,7 @@ export const siteDataByLang: Record<Locale, SiteData> = {
     title: "Sub Logistic – Ihr Partner für effizienten Transport und Logistik",
     description:
       "Sub Logistic bietet effiziente Logistik- und Transportlösungen, die auf Ihre Bedürfnisse zugeschnitten sind. Entdecken Sie unsere Leistungen und kontaktieren Sie uns für weitere Details.",
-    url: "https://sub-logistic.netlify.app/",
+    url: "https://sublog.com.pl/en/",
     image: { alt: "Sub Logistic – Ihr Partner für effizienten Transport und Logistik" },
     telephone: "",
     streetAddress: "Marynarki Straße",

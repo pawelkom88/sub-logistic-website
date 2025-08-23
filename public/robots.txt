@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sub.com.pl/sitemap-index.xml
+Sitemap: https://sublog.com.pl/sitemap-index.xml
