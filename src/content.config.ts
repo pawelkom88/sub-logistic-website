@@ -208,6 +208,39 @@ const translations = defineCollection({
         back: z.string(),
         confirmationMessage: z.string(),
       }),
+      aboutUs: z.object({
+        h1part1: z.string(),
+        h1part2: z.string(),
+        h2: z.string(),
+        h2Paragraph: z.string(),
+        h3: z.string(),
+        h3Paragraph: z.string(),
+        h3next: z.string(),
+        li: z.array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+          }),
+        ),
+        h4: z.string(),
+        h4Paragraph: z.string(),
+        link: z.object({
+          url: z.string(),
+          part1: z.string(),
+          part2: z.string(),
+        }),
+        documents: z.object({
+          heading: z.string(),
+          intro: z.string(),
+          items: z.array(
+            z.object({
+              title: z.string(),
+              alt: z.string(),
+            }),
+          ),
+          closingNote: z.string(),
+        }).optional(),
+      }),
     }),
   }),
 });
@@ -295,42 +328,8 @@ const quote = defineCollection({
   }),
 });
 
-const aboutUs = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/data/about-us" }),
-  schema: z.object({
-    languageCode: z
-      .literal("pl-PL")
-      .or(z.literal("en-GB"))
-      .or(z.literal("de-DE")),
-
-    translations: z.object({
-      h1part1: z.string(),
-      h1part2: z.string(),
-      h2: z.string(),
-      h2Paragraph: z.string(),
-      h3: z.string(),
-      h3Paragraph: z.string(),
-      h3next: z.string(),
-      li: z.array(
-        z.object({
-          title: z.string(),
-          description: z.string(),
-        }),
-      ),
-      h4: z.string(),
-      h4Paragraph: z.string(),
-      link: z.object({
-        url: z.string(),
-        part1: z.string(),
-        part2: z.string(),
-      }),
-    }),
-  }),
-});
-
 export const collections = {
   translations,
   privacyPolicyAndTermsOfUse,
   quote,
-  aboutUs,
 };

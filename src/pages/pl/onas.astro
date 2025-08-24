@@ -1,18 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import "../../styles/onas.css";
-import { getCollection } from "astro:content";
 import {
   getCountryCode,
   getCurrentLanguageTranslation,
 } from "../../utils/utils";
 import About from "../../components/about-us/About.astro";
 
-const aboutUsCollection = await getCollection("aboutUs");
-const aboutUs = await getCurrentLanguageTranslation(
-  getCountryCode(Astro.url.pathname),
-  aboutUsCollection,
-);
 const translations = await getCurrentLanguageTranslation(
   getCountryCode(Astro.url.pathname),
 );
@@ -26,5 +20,5 @@ const translations = await getCurrentLanguageTranslation(
   title="O Sub Trans - Logistyka z Pasją i Doświadczeniem"
   description="Poznaj historię Sub Trans założoną przez Piotra Subotowicza. Odkryj nasze zaangażowanie w spersonalizowane usługi logistyczne, innowacyjność i pasję, które nas napędzają."
 >
-  <About aboutUs={aboutUs} />
+  <About aboutUs={translations.aboutUs} />
 </Layout>

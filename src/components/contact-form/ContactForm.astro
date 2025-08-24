@@ -242,7 +242,6 @@ const lang = getCountryCode(Astro.url.pathname);
           body: formJSON,
         })
           .then(async (response) => {
-            console.log(response, "asd");
             if (response.status == 200) {
               spinner.style.display = "none";
               errorComponent.style.display = "none";

@@ -32,7 +32,6 @@ const transport = translations?.transport ?? {
   labels: { dimensions: "", payload: "", loading: "", pallets: "", volume: "" },
   vehicles: [] as { title: string; specs?: string[] }[],
 };
-console.log(translations?.transport);
 const vehicles =
   transport.vehicles ?? ([] as { title: string; specs?: string[] }[]);
 const truckImages = [

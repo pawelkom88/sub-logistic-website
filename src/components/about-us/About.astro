@@ -1,8 +1,10 @@
 ---
 import "../../styles/onas.css";
-import { getCountryCode, getHref } from "../../utils/utils";
+import { getCountryCode } from "../../utils/utils";
 import { Picture } from "astro:assets";
 import aboutImage from "../../assets/images/lorries-parked-in-warehouse-yard.jpg";
+import certificateImage1 from "../../assets/images/certyfikat.jpg";
+import certificateImage2 from "../../assets/images/licencja.jpg";
 
 interface Props {
   aboutUs: any;
@@ -15,23 +17,24 @@ const aboutAltMap = {
   de: "Lastwagen, die in einem Lagerhof parken",
   pl: "Ciężarówki zaparkowane na placu magazynowym",
 } as const;
+
 ---
 
 <section id="content-page-713">
   <div class="cs-container">
     <div class="cs-content">
       <h1 class="cs-title">
-        {aboutUs.h1part1}
-        <span class="cs-color">{aboutUs.h1part2}</span>.
+        {aboutUs?.h1part1}
+        <span class="cs-color">{aboutUs?.h1part2}</span>
       </h1>
-      <h2>{aboutUs.h2}</h2>
-      <p class="cs-text">{aboutUs.h2Paragraph}</p>
-      <h3>{aboutUs.h3}</h3>
-      <p class="cs-text">{aboutUs.h3Paragraph}</p>
-      <h3>{aboutUs.h3next}</h3>
+      <h2>{aboutUs?.h2}</h2>
+      <p class="cs-text">{aboutUs?.h2Paragraph}</p>
+      <h3>{aboutUs?.h3}</h3>
+      <p class="cs-text">{aboutUs?.h3Paragraph}</p>
+      <h3>{aboutUs?.h3next}</h3>
       <ul>
         {
-          aboutUs.li.map((item: any) => (
+          (aboutUs?.li || []).map((item: any) => (
             <li>
               {item.title}
               <p class="cs-text">{item.description}</p>
@@ -39,14 +42,38 @@ const aboutAltMap = {
           ))
         }
       </ul>
-      <h4>{aboutUs.h4}</h4>
-      <p class="cs-text">{aboutUs.h4Paragraph}</p>
+      <h4>{aboutUs?.h4}</h4>
+      <p class="cs-text">{aboutUs?.h4Paragraph}</p>
       <br />
       <p class="cs-text">
-        <!--lang here ?-->
-        <a href={getHref(currentLang, aboutUs.link.url)}>{aboutUs.link.part1}</a
-        >, {aboutUs.link.part2}
+        <!-- use localized url from translations -->
+        <a href={aboutUs?.link?.url}>{aboutUs?.link?.part1}</a
+        >, {aboutUs?.link?.part2}
       </p>
+      {aboutUs?.documents && (
+        <>
+          <h4>{aboutUs.documents?.heading}</h4>
+          <p class="cs-text">{aboutUs.documents?.intro}</p>
+          <ul class="cs-text">
+            {aboutUs.documents?.items?.map((doc: any, i: number) => (
+              <>
+                <li>{doc.title}</li>
+                <Picture
+                  src={i === 0 ? certificateImage2 : certificateImage1}
+                  alt={doc.alt}
+                  formats={["avif", "webp"]}
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                  sizes="(max-width: 600px) 100vw, 570px"
+                />
+              </>
+            ))}
+          </ul>
+          <p class="cs-text">{aboutUs.documents?.closingNote}</p>
+        </>
+      )}
+      <br />
     </div>
     <div class="cs-image-group">
       <Picture

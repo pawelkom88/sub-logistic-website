@@ -1,20 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import "../../styles/onas.css";
-import { getCollection } from "astro:content";
 import {
   getCountryCode,
   getCurrentLanguageTranslation,
 } from "../../utils/utils";
 import About from "../../components/about-us/About.astro";
 
-// TODO: add translation for layout props
-
-const aboutUsCollection = await getCollection("aboutUs");
-const aboutUs = await getCurrentLanguageTranslation(
-  getCountryCode(Astro.url.pathname),
-  aboutUsCollection,
-);
 const translations = await getCurrentLanguageTranslation(
   getCountryCode(Astro.url.pathname),
 );
@@ -25,8 +17,8 @@ const translations = await getCurrentLanguageTranslation(
   contact={translations.contact}
   links={translations.nav.links}
   footer={translations.footer}
-  title="??"
-  description="??"
+  title="Über Sub Trans – Logistik mit Leidenschaft und Erfahrung"
+  description="Erfahren Sie die Geschichte von Sub Trans, gegründet von Piotr Subotowicz. Entdecken Sie unser Engagement für personalisierte Logistik, moderne Arbeitsweisen und eine Reise, die von Hingabe und Expertise geprägt ist."
 >
-  <About aboutUs={aboutUs} />
+  <About aboutUs={translations.aboutUs} />
 </Layout>
