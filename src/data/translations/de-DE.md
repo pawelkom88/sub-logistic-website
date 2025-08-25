@@ -19,7 +19,7 @@ translations:
   hero:
     title: "Sub Logistics Gdańsk – Ihr lokaler Experte für Straßentransport"
     body: >
-      Piotr Subotowicz – ein Ein-Personen-Unternehmen mit 15 Jahren Erfahrung in der Logistikbranche. Wir bieten ADR-, Kühl- und Übermaßtransporte von Gdańsk in ganz Europa. Direkter, persönlicher Kontakt – ohne Zwischenhändler.
+      Piotr Subotowicz – ein Ein-Personen-Unternehmen mit über 10 Jahren Erfahrung in der Logistikbranche. Wir bieten ADR-, Kühl- und Übermaßtransporte von Gdańsk in ganz Europa. Direkter, persönlicher Kontakt – ohne Zwischenhändler.
     button: "Transport anfragen"
   services:
     topper: "Wir heben uns von der Konkurrenz ab."
@@ -179,17 +179,17 @@ translations:
     actionBtn: "Unser Angebot"
     stats:
       - number: "200+"
-        title: ""
+        title: "Zufriedene Kunden"
       - number: "100%"
-        title: ""
+        title: "Erfolgsquote bei Lieferungen"
   reviews:
     topper: "Ihr Feedback, Unsere Motivation"
-    heading: "Gemeinsam bessere dienstleistungen schaffen"
-    description: ""
+    heading: "Gemeinsam bessere Dienstleistungen schaffen"
+    description: "Wir arbeiten daran, zuverlässige Lösungen zu liefern, die auf Ihre Bedürfnisse zugeschnitten sind. Deshalb laden wir Sie ein, Ihr Feedback mit uns zu teilen. Ihre Worte haben einen echten Einfluss auf unser Handeln und helfen uns, uns ständig weiterzuentwickeln."
     review:
-      title: "Professioneller service und zuverlässigkeit"
-      body: " Wir arbeiten daran, zuverlässige Lösungen zu liefern, die auf Ihre Bedürfnisse zugeschnitten sind. Deshalb laden wir Sie ein, Ihr Feedback mit uns zu teilen. Ihre Worte haben einen echten Einfluss auf unser Handeln und helfen uns, uns ständig weiterzuentwickeln."
-      author: "Professioneller Service und Zuverlässigkeit"
+      title: "Professioneller Service und Zuverlässigkeit"
+      body: "Seit wir die Dienstleistungen von Sub Logistics nutzen, sind unsere Speditionsaufträge einfacher und effizienter geworden. Ihr professioneller Service und ihre Zuverlässigkeit bei der Zustellung unserer Produkte an Kunden sind unübertroffen. Das Team von Sub Logistics arbeitet effizient, sorgt für pünktliche Lieferungen und verfolgt unsere Sendungen in jeder Phase des Transports."
+      author: "Marek Kowalski"
       imageTitle: "Hafen voller Container bei Sonnenuntergang"
   team:
     topper: "Unser Team"

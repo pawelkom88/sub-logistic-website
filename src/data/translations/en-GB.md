@@ -19,7 +19,7 @@ translations:
   hero:
     title: "Sub Logistics Gdańsk – Your Local Road Transport Expert"
     body: >
-      Piotr Subotowicz — a one‑person forwarding company with 15 years of experience in the logistics industry. We provide ADR, refrigerated and oversized road transport from Gdańsk across Europe. A direct, personal approach without intermediaries.
+      Piotr Subotowicz — a one‑person forwarding company with over 10 years of experience in the logistics industry. We provide ADR, refrigerated and oversized road transport from Gdańsk across Europe. A direct, personal approach without intermediaries.
     button: "Get a Quote"
   services:
     topper: "We stand out from the competition."
@@ -177,9 +177,9 @@ translations:
     actionBtn: "Our Offer"
     stats:
       - number: "200+"
-        title: "Zufriedene Kunden"
+        title: "Satisfied clients"
       - number: "100%"
-        title: "Erfolgsquote bei Lieferungen"
+        title: "Delivery success rate"
   reviews:
     topper: "Your Feedback, Our Motivation"
     heading: "Together we build better services"

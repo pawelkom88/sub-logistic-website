@@ -17,9 +17,9 @@ translations:
         url: "/polityka-prywatnosci"
   contactBtn: "Wyślij wiadomość"
   hero:
-    title: "Sub Logistics Gdańsk - Twój Lokalny Expert w Transporcie Drogowym"
+    title: "Sub Logistics Gdańsk – Profesjonalny transport drogowy na ternie Europy."
     body: >
-      Piotr Subotowicz - jednoosobowa firma spedycyjna z 15-letnim doświadczeniem w branży logistycznej. Oferujemy transport drogowy ADR, chłodniczy i ponadgabarytowy z Gdańska do całej Europy. Indywidualne podejście bez pośredników..
+      Z wieloletnim doświadczeniem w spedycji oferujmy niezawodne rozwiązania transportowe: FTL, LTL, ADR, temperatury kontrolowanej oraz ładunków nienormatywnych.
     button: "Wyceń transport"
   services:
     topper: "Wyróżniamy się na tle konkurencji."
