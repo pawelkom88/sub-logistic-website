@@ -291,7 +291,7 @@ translations:
       Transport und Logistik. Mit umfassender Branchenerfahrung beschloss Piotr, ein
       Unternehmen zu schaffen, das ein Synonym für Zuverlässigkeit, Flexibilität und
       persönliche Hingabe an den Erfolg jedes Kunden ist.
-    h3: "Unser Versprechen"
+    h3: "Qualität vor Quantität"
     h3Paragraph: >
       Bei Sub Trans glauben wir, dass der Schlüssel zum Erfolg in der Logistik ein
       persönlicher Ansatz und Engagement für jede Aufgabe ist. Als Ein-Mann-Unternehmen,
@@ -351,11 +351,17 @@ translations:
     - question: "Fahren Sie national und international?"
       answer: "Ja. Wir organisieren Transporte innerhalb Polens sowie international in der EU/EWR. Für Relationen außerhalb der EU arbeiten wir mit Partnern zusammen, inkl. Zollformalitäten."
     - question: "Wie schnell können Sie eine Abholung organisieren?"
-      answer: "Oft am selben oder am nächsten Tag. Wir empfehlen eine Vorlaufzeit von 24–48 Stunden. Eilige Sendungen haben Priorität — am besten telefonisch anfragen."
+      answer: "Wir organisieren den Transport express – binnen weniger Stunden nach Bestätigung steht das Fahrzeug an der Ladeadresse."
     - question: "Welche Angaben sind für ADR-Transporte erforderlich?"
       answer: "UN‑Nummer, Gefahrgutklasse, Verpackungsgruppe, Sicherheitsdatenblatt (MSDS) sowie Angaben zu Verpackung und Kennzeichnung. Wir stellen ADR‑konforme Fahrzeuge und Dokumente bereit."
     - question: "Bieten Sie temperaturgeführte Transporte an?"
-      answer: "Ja, wir führen Kühltransporte durch. Statusinformationen erhalten Sie telefonisch oder per E‑Mail."
+      answer: "Ja, wir führen Kühltransporte durch. Statusinformationen erhalten Sie telefonisch oder per E‑Mail. Temperaturprotokolle der gesamten Strecke stellen wir dem Kunden zur Verfügung."
+    - question: "Ist eine Abtretung (Factoring) möglich?"
+      answer: "Ja. Wenn unser Partner mit einem Factoring‑Unternehmen zusammenarbeitet, erfolgt die Zahlung für die Transportleistung gemäß der Abtretung – auf das Konto des Zessionars."
+    - question: "Sind Scans der Transportdokumente ausreichend?"
+      answer: "Neben Scans benötigen wir außerdem die Zusendung der Originaldokumente per Post oder Kurier."
+    - question: "Wohin sollen die Originale der Transportdokumente gesendet werden?"
+      answer: "Bitte senden Sie die Originale an: Sub Logistics, ul. Marynarki Polskiej 136A/47, 80‑865 Gdańsk."
     - question: "Wie lang sind die üblichen Laufzeiten?"
       answer: "Je nach Relation und Service: national meist 1–2 Tage, innerhalb der EU 2–5 Tage. Dedizierte Transporte sind oft schneller. Teilen Sie uns die Strecke für eine genaue ETA mit."
     - question: "Welche Abmessungen und Gewichte können Sie befördern?"

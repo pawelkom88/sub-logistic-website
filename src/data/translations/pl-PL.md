@@ -28,16 +28,16 @@ translations:
       W Sub Logistics rozumiemy, jak ważna jest efektywna logistyka dla sukcesu Twojego biznesu. Oferujemy szeroki zakres usług transportowych i logistycznych, dostosowanych do Twoich oczekiwań. Nasz zespół to gwarancja profesjonalizmu i dostosowania do indywidualnych potrzeb każdego zlecenia.
     cards:
       - title: "Globalna Współpraca"
-        body: "W ciągu wielu lat stworzyliśmy rozległą sieć partnerów w branży logistycznej, zapewniając efektywny transport i przewóz towarów na każdą skalę. Nasze doświadczenie przekłada się również na logistykę międzynarodową."
+        body: "W ciągu wielu lat pracy stworzyliśmy rozległą sieć partnerów w branży logistycznej, zapewniając efektywny transport i przewóz towarów na każdą skalę."
         alt: "Cieżarówka jadąca przez góry z pięknym krajobrazem"
       - title: "Indywidualne Podejście"
         body: "W Sub Logistics nie tylko oferujemy usługi logistyczne najwyższej klasy, ale także budujemy relacje, zapewniając indywidualne podejście i wsparcie na każdym kroku."
         alt: "Skupiony kurier z tabletem w ręku na tle vana pełnego paczek"
       - title: "Atrakcyjne warunki współpracy"
-        body: "Oferujemy konkurencyjne ceny oraz elastyczne podejście do każdego klienta. Nasza oferta jest dostosowana do Twoich potrzeb biznesowych."
+        body: "Oferujemy konkurencyjne ceny oraz elastyczne podejście do każdego klienta."
         alt: "Wózek widłowy ładujący cieżarówkę"
       - title: "Bezpieczeństwo i Niezawodność"
-        body: "W Sub Logistics, priorytetem jest gwarancja bezpieczeństwa i punktualności Twoich przesyłek. Stosujemy sprawdzone protokoły bezpieczeństwa i skuteczne metody transportu, aby każdy ładunek dotarł na miejsce nienaruszony i terminowo."
+        body: "W Sub Logistics priorytetem jest gwarancja bezpieczeństwa i punktualności Twoich przesyłek. Stosujemy sprawdzone protokoły bezpieczeństwa i skuteczne metody transportu, aby każdy ładunek dotarł na miejsce nienaruszony i terminowo."
         alt: "Pracownik Sub Logistics w pracy"
   offer:
     title: "Usługi Transportowe Gdańsk - ADR, Chłodniczy, Ponadgabarytowy | Sub Logistics"
@@ -144,27 +144,9 @@ translations:
     topper: "Dostosowane rozwiązania dla każdej przesyłki."
     heading: "Transport Krajowy i Międzynarodowy"
     description:
-      - paragraph:
-          "W Sub Logistics, rozumiemy, że potrzeby transportowe mogą znacznie się różnić – od
-          prostego transportu drobnicowego, który wymaga szybkiej i sprawnej dostawy, po
-          złożone projekty logistyczne obejmujące transport całopojazdowy z wieloma punktami
-          załadunku i rozładunku. Właśnie dlatego nasz zespół ekspertów logistycznych jest
-          zaangażowany w ciągłe analizowanie i optymalizowanie tras oraz metod transportu,
-          aby zapewnić, że Twoje towary zostaną dostarczone w najbardziej efektywny i
-          ekonomiczny sposób"
-      - paragraph:
-          "Kluczowe jest tutaj indywidualne podejście do każdego zlecenia. Nasz zespół nie
-          tylko dopasowuje usługi do konkretnych wymagań i specyfikacji towarów, ale także
-          proaktywnie szuka sposobów na redukcję kosztów i czasu transportu. Dzięki temu
-          klient otrzymuje nie tylko usługę transportową najwyższej jakości, ale także
-          partnera biznesowego, który realnie przyczynia się do optymalizacji jego łańcucha
-          dostaw."
-      - paragraph:
-          "To właśnie zaangażowanie w dostarczanie spersonalizowanych rozwiązań
-          transportowych i logistycznych, połączone z ciągłym dążeniem do doskonałości
-          operacyjnej, wyróżnia Sub-Logistic na rynku jako lidera w branży. Każde zadanie,
-          niezależnie od jego rozmiaru, jest dla nas szansą na pokazanie, że zaufanie
-          klienta jest dla nas najważniejsze, a ich sukces jest również naszym sukcesem."
+      - paragraph: "W Sub Logistics, wiemy, że potrzeby transportowe mogą znacznie się różnić – od prostego transportu drobnicowego, który wymaga szybkiej i sprawnej dostawy, po złożone projekty logistyczne obejmujące transport całopojazdowy z wieloma punktami załadunku i rozładunku. Właśnie dlatego nasz zespół ekspertów logistycznych jest zaangażowany w ciągłe analizowanie i optymalizowanie tras oraz metod transportu, aby zapewnić, że Twoje towary zostaną dostarczone w najbardziej efektywny i ekonomiczny sposób"
+      - paragraph: "Kluczowe jest tutaj indywidualne podejście do każdego zlecenia. Jesteśmy do dyspozycji klienta przez 24 godziny / dobę przez 7 dni w tygodniu, monitorując każdą przesyłkę oraz zapewniamy wsparcie w sytuacji wymagającej natychmiastowej reakcji."
+      - paragraph: "Proaktywnie szukamy sposobów na redukcję kosztów i czasu transportu. Klient otrzymuje nie tylko usługę transportową najwyższej jakości, ale także partnera biznesowego, który realnie przyczynia się do optymalizacji jego łańcucha dostaw. Każde zadanie, niezależnie od jego rozmiaru, jest dla nas szansą na pokazanie, że zaufanie klienta jest dla nas najważniejsze, a ich sukces jest również naszym sukcesem."
     icons:
       - title: "Spedycja drogowa"
       - title: "Spedycja morska"
@@ -357,13 +339,17 @@ translations:
     - question: "Czy realizujecie przewozy w Polsce i za granicą?"
       answer: "Tak. Obsługujemy transport krajowy oraz międzynarodowy na terenie UE/EEA. W przypadku relacji spoza UE koordynujemy przewóz z partnerami, wraz z formalnościami celnymi."
     - question: "Jak szybko możecie zorganizować odbiór?"
-      answer: "Często tego samego lub następnego dnia. Zalecamy zgłoszenie 24–48 godzin wcześniej. Pilne zlecenia realizujemy priorytetowo — najlepiej zadzwoń."
+      answer: "Zapewniamy ekspresową organizację transportu – w ciągu kilku godzin od potwierdzenia auto jest na miejscu załadunku."
     - question: "Jakie dane są potrzebne przy transporcie ADR?"
       answer: "Numer UN, klasa zagrożenia, grupa pakowania, karta charakterystyki (MSDS) oraz informacje o opakowaniu i oznakowaniu. Zapewniamy pojazdy i dokumentację zgodną z ADR."
     - question: "Czy oferujecie transport w kontrolowanej temperaturze?"
-      answer: "Tak, realizujemy przewozy chłodnicze. Informujemy o statusie przesyłki telefonicznie lub e‑mailem."
-    - question: "Jakie są typowe czasy tranzytu?"
-      answer: "Zależnie od relacji i rodzaju usługi: krajowe zwykle 1–2 dni, w UE 2–5 dni. Przewozy dedykowane często szybciej. Podaj trasę, aby otrzymać precyzyjny termin."
+      answer: "Tak, realizujemy przewozy chłodnicze. Informujemy o statusie przesyłki telefonicznie lub e‑mailem. Wydruki temperatury z całej trasy udostępniamy klientowi."
+    - question: "Czy jest możliwość cesji?"
+      answer: "Tak, jeśli nasz Partner współpracuje z firmą faktoringową, płatność za usługę transportową realizujemy zgodnie z cesją – na rachunek cesjonariusza."
+    - question: "Czy wystarczy wysłać skany dokumentów transportowych?"
+      answer: "Poza skanami wymagamy również dostarczenia oryginałów dokumentów przesłanych pocztą tradycyjną lub kurierem."
+    - question: "Gdzie należy wysłać oryginały dokumentów transportowych ?"
+      answer: "Prosimy o przesłanie oryginałów dokumentów na adres: Sub Logistics ul. Marynarki Polskiej 136a/47 80-865 Gdańsk."
     - question: "Jakie są ograniczenia wymiarów i wagi?"
       answer: "Obsługujemy zarówno standardowe palety, jak i ładunki ponadgabarytowe/ciężkie. Przekaż wymiary i wagę, a dobierzemy odpowiedni pojazd i pozwolenia."
     - question: "Jak zabezpieczacie mój ładunek?"

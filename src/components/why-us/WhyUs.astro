@@ -1,11 +1,8 @@
 ---
-import { Image, Picture } from "astro:assets";
-import icon2 from "../../assets/icons/plane.svg";
-import icon1 from "../../assets/icons/ship-icon.svg";
-import icon3 from "../../assets/icons/truck.svg";
+import { Picture } from "astro:assets";
 import whyUsImage from "../../assets/images/dron-view-warehouse.jpg";
 import whyUsImage3 from "../../assets/images/loads-of-containers-at-port.jpg";
-import whyUsImage2 from "../../assets/images/lorries-parked-in-warehouse-yard.jpg";
+import whyUsImage2 from "../../assets/images/White-Scania-R-Semi-Truck.webp";
 import { type SelectedTranslation, getCountryCode } from "../../utils/utils";
 import "./whyus.css";
 
@@ -14,11 +11,6 @@ interface Props {
 }
 
 const { whyUs } = Astro.props;
-
-const icons = whyUs.icons.map((icon, index) => ({
-  title: icon.title,
-  image: [icon2, icon1, icon3][index],
-}));
 
 // Offer/Services localized slug and text
 const lang = getCountryCode(Astro.url.pathname);
@@ -57,28 +49,10 @@ const why3AltMap = {
       <span class="cs-topper">{whyUs?.topper}</span>
       <h2 class="cs-title">{whyUs?.heading}</h2>
       {
-        whyUs?.description.map((p, index) => (
+        whyUs?.description.map((p) => (
           <p class="cs-text">{p.paragraph}</p>
         ))
       }
-      <ul class="cs-ul">
-        {
-          icons.map((icon) => (
-            <li class="cs-li">
-              <Image
-                class="cm-icon"
-                src={icon.image}
-                alt={`${icon.title} icon`}
-                width="40"
-                height="40"
-                loading="lazy"
-                decoding="async"
-              />
-              {icon.title}
-            </li>
-          ))
-        }
-      </ul>
       <a href={offerHref} class="cs-button-solid">{offerText}</a>
     </div>
     <div class="cs-image-group">
