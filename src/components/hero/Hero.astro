@@ -1,6 +1,7 @@
 ---
 import { Picture } from "astro:assets";
 import heroImage from "../../assets/images/port-full-of-containers.jpeg";
+import heroImageMobile from "../../assets/images/port-full-of-containers_mobile.jpg";
 import "./hero.css";
 import { splitString, type SelectedTranslation, getCountryCode } from "../../utils/utils";
 
@@ -59,6 +60,16 @@ const heroAltMap = {
     src={heroImage}
     formats={["avif", "webp"]}
     class="cs-background"
+    alt={heroAltMap[lang]}
+    loading="eager"
+    decoding="async"
+    fetchpriority="high"
+    sizes="100vw"
+  />
+  <Picture
+    src={heroImageMobile}
+    formats={["avif", "webp"]}
+    class="cs-background-mobile"
     alt={heroAltMap[lang]}
     loading="eager"
     decoding="async"
