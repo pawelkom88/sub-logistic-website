@@ -2,9 +2,9 @@
 languageCode: en-GB
 languageName: English
 translations:
-  seoTitle: "Sub-Logistic Gdańsk: Road Freight in Poland and Europe | Your Logistics Partner"
+  seoTitle: "Sub Logistic Gdańsk – Piotr Subotowicz | ADR, Refrigerated Road Transport Tricity"
   seoDescription: >
-    "Sub-Logistic Gdańsk provides professional road freight services in Poland and Europe. As your logistics partner, we offer fast and secure transportation."
+    One-person transport company by Piotr Subotowicz — freight forwarding in Gdańsk; ADR, refrigerated and oversized road transport. Personal approach, competitive pricing. +48 510 482 468.
   nav:
     links:
       - name: "Home"
@@ -17,11 +17,9 @@ translations:
         url: "/terms-of-use"
   contactBtn: "Contact us"
   hero:
-    title: "Sub Logistic Gdańsk - Your Partner for Road Freight in Poland and Europe"
+    title: "Sub Logistic Gdańsk – Your Local Road Transport Expert"
     body: >
-      At Sub-Logistic, we combine our passion for transport with modern logistics solutions,
-      offering our clients comprehensive road freight services. Thanks to our strategic location in Gdańsk,
-      we serve as the gateway to Poland and Europe, ensuring seamless deliveries at every stage of the journey.
+      Piotr Subotowicz — a one‑person forwarding company with 15 years of experience in the logistics industry. We provide ADR, refrigerated and oversized road transport from Gdańsk across Europe. A direct, personal approach without intermediaries.
     button: "Get a Quote"
   services:
     topper: "We stand out from the competition."
@@ -50,7 +48,7 @@ translations:
           We use proven safety protocols and effective transport methods to ensure every shipment arrives intact and on time.
         alt: "A Sub Logistic employee at work"
   offer:
-    title: "Our Offer:"
+    title: "Transport Services Gdańsk – ADR, Refrigerated, Oversized | Sub Logistic"
     items:
       - lead: "Full Truck Load (FTL) transport is a mode of freight in which the vehicle’s entire cargo space is allocated to a single client or shipment."
         text: "The optimal solution for large consignments. The client receives a punctual and secure delivery. No transshipments occur en route."
@@ -284,13 +282,13 @@ translations:
   aboutUs:
     h1part1: "Sub Trans - Your partner in logistics driven by"
     h1part2: "passion and experience."
-    h2: "A journey full of passion"
+    h2: "History and Experience in Transport"
     h2Paragraph: >
       Founded by Piotr Subotowicz, Sub Trans is the result of years of hard work, passion,
       and a relentless pursuit of excellence in transport and logistics. With vast
       industry experience, Piotr decided to create a company synonymous with
       reliability, flexibility, and personal dedication to every client's success.
-    h3: "Our promise"
+    h3: "Quality over Quantity"
     h3Paragraph: >
       At Sub Trans, we believe that the key to success in logistics is a personal approach
       and commitment to each assignment. As a one-man company, led by an experienced

@@ -2,9 +2,9 @@
 languageCode: pl-PL
 languageName: Polski
 translations:
-  seoTitle: "Sub-Logistic Gdańsk: Spedycja Drogowa w Polsce i Europie | Twój Partner w Logistyce"
+  seoTitle: "Sub Logistic Gdańsk - Piotr Subotowicz | Transport Drogowy ADR Chłodniczy Trójmiasto"
   seoDescription: >
-    Sub-Logistic Gdańsk zapewnia profesjonalną spedycję drogową w Polsce i Europie. Jako Twój partner w logistyce, oferujemy szybki i bezpieczny transport.
+    jednoosobowa firma transportowa Piotr Subotowicz - spedycja Gdańsk, transport ADR, chłodniczy, ponadgabarytowy. Indywidualne podejście, konkurencyjne ceny. 510-482-468.
   nav:
     links:
       - name: "Strona Główna"
@@ -17,12 +17,9 @@ translations:
         url: "/polityka-prywatnosci"
   contactBtn: "Wyślij wiadomość"
   hero:
-    title: "Sub Logistic Gdańsk - Twój Partner w Spedycji Drogowej w Polsce i Europie"
+    title: "Sub Logistic Gdańsk - Twój Lokalny Expert w Transporcie Drogowym"
     body: >
-      W Sub-Logistic łączymy pasję do transportu z nowoczesnymi rozwiązaniami
-      logistycznymi, oferując naszym klientom kompleksowe usługi spedycyjne drogowe.
-      Dzięki naszemu strategicznemu położeniu w Gdańsku, jesteśmy bramą do Polski i
-      Europy, gwarantując płynność Twoich dostaw na każdym etapie drogi.
+      Piotr Subotowicz - jednoosobowa firma spedycyjna z 15-letnim doświadczeniem w branży logistycznej. Oferujemy transport drogowy ADR, chłodniczy i ponadgabarytowy z Gdańska do całej Europy. Indywidualne podejście bez pośredników..
     button: "Wyceń transport"
   services:
     topper: "Wyróżniamy się na tle konkurencji."
@@ -43,7 +40,7 @@ translations:
         body: "W Sub Logistic, priorytetem jest gwarancja bezpieczeństwa i punktualności Twoich przesyłek. Stosujemy sprawdzone protokoły bezpieczeństwa i skuteczne metody transportu, aby każdy ładunek dotarł na miejsce nienaruszony i terminowo."
         alt: "Pracownik Sub Logistic w pracy"
   offer:
-    title: "Nasza oferta:"
+    title: "Usługi Transportowe Gdańsk - ADR, Chłodniczy, Ponadgabarytowy | Sub Logistic"
     items:
       - lead: "Transport całopojazdowy (ang. FTL – Full Truck Load) to rodzaj przewozu towarów, w którym cała przestrzeń ładunkowa pojazdu jest przeznaczona dla jednego klienta lub jednej przesyłki."
         text: "Optymalne rozwiązanie dla dużych partii towaru. Klient uzyskuje punktualną i bezpieczną dostawę. Występuje brak przeładunków po drodze przewozu."
@@ -294,14 +291,14 @@ translations:
   aboutUs:
     h1part1: "Sub Trans - Twój partner w logistyce prowadzony przez"
     h1part2: "pasję i doświadczenie."
-    h2: "Podróż pełna pasji"
+    h2: "Historia i Doświadczenie w Transporcie"
     h2Paragraph: >
       Założona przez Piotra Subotowicza, Sub Trans to owoc wieloletniej pracy, pasji i
       nieustannego dążenia do doskonałości w obszarze transportu i logistyki. Piotr, z
       bogatym doświadczeniem w branży, postanowił stworzyć firmę, która będzie
       synonimem niezawodności, elastyczności i osobistego zaangażowania w sukces
       każdego klienta.
-    h3: "Nasza obietnica"
+    h3: "Jakość Ponad Ilość"
     h3Paragraph: >
       W Sub Trans wierzymy, że kluczem do sukcesu w dziedzinie logistyki jest
       indywidualne podejście i zaangażowanie w każde zlecenie. Jako jednoosobowa

@@ -2,10 +2,9 @@
 languageCode: de-DE
 languageName: Deutsch
 translations:
-  seoTitle: "Sub-Logistic Gdańsk: Straßenspedition in Polen und Europa | Ihr Logistikpartner"
+  seoTitle: "Sub Logistic Gdańsk – Piotr Subotowicz | ADR, Kühl- und Schwertransport"
   seoDescription: >
-    Sub-Logistic Gdańsk bietet professionelle Straßenspeditionen in Polen und Europa.
-    Als Ihr Logistikpartner garantieren wir schnelle und sichere Transporte.
+    Ein-Personen-Transportunternehmen von Piotr Subotowicz – Spedition Gdańsk, ADR, Kühl- und Schwertransport. Individueller Ansatz, wettbewerbsfähige Preise. +48 510 482 468.
   nav:
     links:
       - name: "Startseite"
@@ -18,11 +17,9 @@ translations:
         url: "/datenschutz"
   contactBtn: "Kontakt"
   hero:
-    title: "Sub Logistic Gdańsk - Ihr Partner für Straßenspedition in Polen und Europa"
+    title: "Sub Logistic Gdańsk – Ihr lokaler Experte für Straßentransport"
     body: >
-      Bei Sub-Logistic verbinden wir unsere Leidenschaft für Transport mit modernen Logistiklösungen,
-      um unseren Kunden umfassende Straßenspeditionsdienstleistungen anzubieten. Dank unseres strategischen Standorts in Gdańsk
-      sind wir das Tor zu Polen und Europa und gewährleisten reibungslose Lieferungen in jeder Phase des Transports.
+      Piotr Subotowicz – ein Ein-Personen-Unternehmen mit 15 Jahren Erfahrung in der Logistikbranche. Wir bieten ADR-, Kühl- und Übermaßtransporte von Gdańsk in ganz Europa. Direkter, persönlicher Kontakt – ohne Zwischenhändler.
     button: "Transport anfragen"
   services:
     topper: "Wir heben uns von der Konkurrenz ab."
@@ -52,7 +49,7 @@ translations:
           damit jede Lieferung unversehrt und termingerecht ankommt.
         alt: "Ein Sub Logistic Mitarbeiter bei der Arbeit"
   offer:
-    title: "Unser Angebot:"
+    title: "Transportdienstleistungen Gdańsk – ADR, Kühl, Übermaß | Sub Logistic"
     items:
       - lead: "Der Komplettladungsverkehr (FTL – Full Truck Load) ist eine Transportart, bei der der gesamte Laderaum eines Fahrzeugs einem einzelnen Kunden oder einer Sendung vorbehalten ist."
         text: "Die optimale Lösung für große Sendungen. Der Kunde erhält eine pünktliche und sichere Zustellung. Unterwegs finden keine Umladungen statt."
@@ -287,7 +284,7 @@ translations:
   aboutUs:
     h1part1: "Sub Trans - Ihr Partner in der Logistik,"
     h1part2: "angetrieben von Leidenschaft und Erfahrung."
-    h2: "Eine Reise voller Leidenschaft"
+    h2: "Geschichte und Erfahrung im Transport"
     h2Paragraph: >
       Gegründet von Piotr Subotowicz, ist Sub Trans das Ergebnis jahrelanger harter
       Arbeit, Leidenschaft und eines unermüdlichen Strebens nach Exzellenz im Bereich
