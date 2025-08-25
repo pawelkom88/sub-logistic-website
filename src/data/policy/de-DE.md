@@ -3,10 +3,10 @@ languageCode: de-DE
 translations:
   policy:
     title: "Datenschutzerklärung"
-    description: "Wir legen Wert auf den Schutz der Privatsphäre der Besucher der Website von Sub Logistic. Nachfolgend finden Sie die Grundsätze der Verarbeitung personenbezogener Daten bei der Nutzung unserer Website (einschließlich Kontakt- und Angebotsformular) sowie grundlegende Informationen zu Cookies. Wir verkaufen keine Daten und speichern sie nur so lange, wie es erforderlich ist oder gesetzlich vorgeschrieben."
+    description: "Wir legen Wert auf den Schutz der Privatsphäre der Besucher der Website von Sub Logistics. Nachfolgend finden Sie die Grundsätze der Verarbeitung personenbezogener Daten bei der Nutzung unserer Website (einschließlich Kontakt- und Angebotsformular) sowie grundlegende Informationen zu Cookies. Wir verkaufen keine Daten und speichern sie nur so lange, wie es erforderlich ist oder gesetzlich vorgeschrieben."
     administrator:
       label: "Verantwortlicher"
-      content: "Verantwortlicher ist Sub Logistic (Inhaber: Piotr Subotowicz), ul. Marynarki Polskiej 136A/47, 80‑865 Gdańsk, Polen. Kontakt: piotr.subotowicz@sublog.com.pl, Tel. +48 510 482 468."
+      content: "Verantwortlicher ist Sub Logistics (Inhaber: Piotr Subotowicz), ul. Marynarki Polskiej 136A/47, 80‑865 Gdańsk, Polen. Kontakt: piotr.subotowicz@sublog.com.pl, Tel. +48 510 482 468."
     dataProcessing:
       purpose: "Nutzung der Website und Erbringung elektronischer Dienste (einschließlich Kontaktformular und Angebotsformular)"
       scope:

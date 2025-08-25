@@ -18,9 +18,9 @@ const { contact, footer, links } = Astro.props;
 const currentLang = getCountryCode(Astro.url.pathname);
 
 const logoAltMap = {
-  en: "Sub Logistic logo",
-  pl: "Logo Sub Logistic",
-  de: "Sub Logistic Logo",
+  en: "Sub Logistics logo",
+  pl: "Logo Sub Logistics",
+  de: "Sub Logistics Logo",
 } as const;
 
 const footerBgAltMap = {
@@ -136,7 +136,7 @@ const todaysDate = new Date().getFullYear();
   <div class="cs-bottom">
     <span class="cs-copyright"
       >© {footer?.copyright}
-      {todaysDate} - <a class="cs-copyright-link" href="/">Sub Logistic</a
+      {todaysDate} - <a class="cs-copyright-link" href="/">Sub Logistics</a
       ></span
     >
   </div>

@@ -2,7 +2,7 @@
 languageCode: en-GB
 languageName: English
 translations:
-  seoTitle: "Sub Logistic Gdańsk – Piotr Subotowicz | ADR, Refrigerated Road Transport Tricity"
+  seoTitle: "Sub Logistics Gdańsk – Piotr Subotowicz | ADR, Refrigerated Road Transport Tricity"
   seoDescription: >
     One-person transport company by Piotr Subotowicz — freight forwarding in Gdańsk; ADR, refrigerated and oversized road transport. Personal approach, competitive pricing. +48 510 482 468.
   nav:
@@ -17,7 +17,7 @@ translations:
         url: "/terms-of-use"
   contactBtn: "Contact us"
   hero:
-    title: "Sub Logistic Gdańsk – Your Local Road Transport Expert"
+    title: "Sub Logistics Gdańsk – Your Local Road Transport Expert"
     body: >
       Piotr Subotowicz — a one‑person forwarding company with 15 years of experience in the logistics industry. We provide ADR, refrigerated and oversized road transport from Gdańsk across Europe. A direct, personal approach without intermediaries.
     button: "Get a Quote"
@@ -25,7 +25,7 @@ translations:
     topper: "We stand out from the competition."
     heading: "Why choose our freight forwarding services?"
     description: >
-      At Sub Logistic, we understand how crucial efficient logistics is to the success of your business. We offer a wide range of transport and logistics services tailored to your expectations. Our team guarantees professionalism and adapts to the individual needs of every project.
+      At Sub Logistics, we understand how crucial efficient logistics is to the success of your business. We offer a wide range of transport and logistics services tailored to your expectations. Our team guarantees professionalism and adapts to the individual needs of every project.
     cards:
       - title: "Global Collaboration"
         body: >
@@ -34,7 +34,7 @@ translations:
         alt: "A truck driving through mountains with a beautiful landscape"
       - title: "Personalised Approach"
         body: >
-          At Sub Logistic, we not only provide top-class logistics services but also build relationships,
+          At Sub Logistics, we not only provide top-class logistics services but also build relationships,
           offering a personalised approach and support at every step.
         alt: "A focused courier with a tablet in hand against the backdrop of a van full of packages"
       - title: "Attractive Cooperation Terms"
@@ -44,11 +44,11 @@ translations:
         alt: "A forklift loading a truck"
       - title: "Safety and Reliability"
         body: >
-          At Sub Logistic, ensuring the safety and punctuality of your shipments is a priority.
+          At Sub Logistics, ensuring the safety and punctuality of your shipments is a priority.
           We use proven safety protocols and effective transport methods to ensure every shipment arrives intact and on time.
-        alt: "A Sub Logistic employee at work"
+        alt: "A Sub Logistics employee at work"
   offer:
-    title: "Transport Services Gdańsk – ADR, Refrigerated, Oversized | Sub Logistic"
+    title: "Transport Services Gdańsk – ADR, Refrigerated, Oversized | Sub Logistics"
     items:
       - lead: "Full Truck Load (FTL) transport is a mode of freight in which the vehicle’s entire cargo space is allocated to a single client or shipment."
         text: "The optimal solution for large consignments. The client receives a punctual and secure delivery. No transshipments occur en route."
@@ -153,7 +153,7 @@ translations:
     heading: "Domestic and International Transport"
     description:
       - paragraph: >
-          At Sub Logistic, we understand that transport needs can vary greatly – from simple
+          At Sub Logistics, we understand that transport needs can vary greatly – from simple
           small-scale deliveries requiring swift and efficient service to complex logistics
           projects involving full-truckload transport with multiple loading and unloading points.
           This is why our team of logistics experts is committed to continuously analysing and
@@ -167,7 +167,7 @@ translations:
           to the optimisation of their supply chain.
       - paragraph: >
           This dedication to delivering personalised transport and logistics solutions, combined
-          with a constant pursuit of operational excellence, distinguishes Sub Logistic as an
+          with a constant pursuit of operational excellence, distinguishes Sub Logistics as an
           industry leader. Every task, regardless of its scale, is an opportunity for us to
           demonstrate that our clients' trust is our top priority, and their success is our success.
     icons:
@@ -186,14 +186,14 @@ translations:
     description: "We work to deliver reliable solutions tailored to your needs. That’s why we encourage you to share your feedback. Your words have a real impact on our actions and help us constantly improve."
     review:
       title: "Professional service and reliability"
-      body: "Since we started using Sub Logistic's services, our freight forwarding has become simpler and more efficient. Their professional service and reliability in delivering our products to customers are unmatched. The Sub Logistic team operates efficiently, ensuring timely deliveries and tracking our shipments at every stage of transport."
+      body: "Since we started using Sub Logistics services, our freight forwarding has become simpler and more efficient. Their professional service and reliability in delivering our products to customers are unmatched. The Sub Logistic team operates efficiently, ensuring timely deliveries and tracking our shipments at every stage of transport."
       author: "Marek Kowalski"
       imageTitle: "port full of containers during sunset"
   team:
     topper: "Our Team"
     heading1: "Commitment and passion"
     heading2: "Meet Piotr"
-    description: "As a one-person team, Piotr combines a passion for logistics with a deep understanding of market needs, delivering solutions tailored to the unique requirements of each project. His commitment to reliability and efficiency at every stage of the supply chain ensures that every Sub Logistic client feels valued and special."
+    description: "As a one-person team, Piotr combines a passion for logistics with a deep understanding of market needs, delivering solutions tailored to the unique requirements of each project. His commitment to reliability and efficiency at every stage of the supply chain ensures that every Sub Logistics client feels valued and special."
     actionBtn: "Discover our story"
     imageTitle: "Piotr Subotowicz"
     jobTitle: "Piotr Subotowicz - Your logistics and transport specialist"
@@ -336,7 +336,7 @@ translations:
   footer:
     body: >
       We invite you to get in touch and work with us. Whether you are looking for a partner for ongoing collaboration
-      or need support for a one-off project, Sub Logistic is ready to support your business on the roads of Poland,
+      or need support for a one-off project, Sub Logistics is ready to support your business on the roads of Poland,
       Europe, and the world.
     copyright: "All rights reserved."
   faq:

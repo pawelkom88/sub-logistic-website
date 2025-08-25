@@ -15,12 +15,12 @@ export type SiteData = {
 
 export const siteDataByLang: Record<Locale, SiteData> = {
   pl: {
-    title: "Sub Logistic - Twój Partner w Efektywnym Transporcie i Logistyce",
+    title: "Sub Logistics - Twój Partner w Efektywnym Transporcie i Logistyce",
     description:
-      "Sub Logistic provides efficient logistics and transport solutions tailored to your needs. Discover our services and contact us for more details.",
+      "Sub Logistics provides efficient logistics and transport solutions tailored to your needs. Discover our services and contact us for more details.",
     url: "https://sublog.com.pl/en/",
     image: {
-      alt: "Sub Logistic - Twój Partner w Efektywnym Transporcie i Logistyce",
+      alt: "Sub Logistics - Twój Partner w Efektywnym Transporcie i Logistyce",
     },
     telephone: "",
     streetAddress: "ul. Marynarki",
@@ -30,11 +30,11 @@ export const siteDataByLang: Record<Locale, SiteData> = {
     country: "Polska",
   },
   en: {
-    title: "Sub Logistic - Your Partner in Efficient Transport & Logistics",
+    title: "Sub Logistics - Your Partner in Efficient Transport & Logistics",
     description:
-      "Sub Logistic provides efficient logistics and transport solutions tailored to your needs. Discover our services and contact us for more details.",
+      "Sub Logistics provides efficient logistics and transport solutions tailored to your needs. Discover our services and contact us for more details.",
     url: "https://sublog.com.pl/en/",
-    image: { alt: "Sub Logistic - Your Partner in Efficient Transport & Logistics" },
+    image: { alt: "Subs Logistic - Your Partner in Efficient Transport & Logistics" },
     telephone: "",
     streetAddress: "Marynarki Street",
     city: "Gdansk",
@@ -43,11 +43,11 @@ export const siteDataByLang: Record<Locale, SiteData> = {
     country: "Poland",
   },
   de: {
-    title: "Sub Logistic – Ihr Partner für effizienten Transport und Logistik",
+    title: "Sub Logistics – Ihr Partner für effizienten Transport und Logistik",
     description:
-      "Sub Logistic bietet effiziente Logistik- und Transportlösungen, die auf Ihre Bedürfnisse zugeschnitten sind. Entdecken Sie unsere Leistungen und kontaktieren Sie uns für weitere Details.",
+      "Sub Logistics bietet effiziente Logistik- und Transportlösungen, die auf Ihre Bedürfnisse zugeschnitten sind. Entdecken Sie unsere Leistungen und kontaktieren Sie uns für weitere Details.",
     url: "https://sublog.com.pl/en/",
-    image: { alt: "Sub Logistic – Ihr Partner für effizienten Transport und Logistik" },
+    image: { alt: "Sub Logistics – Ihr Partner für effizienten Transport und Logistik" },
     telephone: "",
     streetAddress: "Marynarki Straße",
     city: "Danzig",

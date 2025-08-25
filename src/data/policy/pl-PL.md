@@ -3,10 +3,10 @@ languageCode: pl-PL
 translations:
   policy:
     title: "Polityka prywatności"
-    description: "Dbamy o prywatność Gości Serwisu Sub Logistic. Poniżej znajdziesz zasady przetwarzania danych osobowych w ramach korzystania z naszej strony (w tym formularzy: kontaktu i wyceny) oraz podstawowe informacje o plikach cookies. Nie sprzedajemy danych, a przechowujemy je wyłącznie tak długo, jak jest to konieczne albo wymagane przepisami."
+    description: "Dbamy o prywatność Gości Serwisu Sub Logistics. Poniżej znajdziesz zasady przetwarzania danych osobowych w ramach korzystania z naszej strony (w tym formularzy: kontaktu i wyceny) oraz podstawowe informacje o plikach cookies. Nie sprzedajemy danych, a przechowujemy je wyłącznie tak długo, jak jest to konieczne albo wymagane przepisami."
     administrator:
       label: "Administrator danych"
-      content: "Administratorem danych jest Sub Logistic (właściciel: Piotr Subotowicz), ul. Marynarki Polskiej 136A/47, 80‑865 Gdańsk. Kontakt: piotr.subotowicz@sublog.com.pl, tel. +48 510 482 468."
+      content: "Administratorem danych jest Sub Logistics (właściciel: Piotr Subotowicz), ul. Marynarki Polskiej 136A/47, 80‑865 Gdańsk. Kontakt: piotr.subotowicz@sublog.com.pl, tel. +48 510 482 468."
     dataProcessing:
       purpose: "Korzystanie z Serwisu oraz obsługa usług świadczonych drogą elektroniczną (w tym formularz kontaktowy i formularz wyceny)"
       scope:

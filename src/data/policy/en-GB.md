@@ -3,10 +3,10 @@ languageCode: en-GB
 translations:
   policy:
     title: "Privacy Policy"
-    description: "We care about the privacy of visitors to the Sub Logistic website. Below you will find the rules for processing personal data when using our site (including the contact and quote request forms) and basic information about cookies. We do not sell data and we keep it only as long as necessary or as required by law."
+    description: "We care about the privacy of visitors to the Sub Logistics website. Below you will find the rules for processing personal data when using our site (including the contact and quote request forms) and basic information about cookies. We do not sell data and we keep it only as long as necessary or as required by law."
     administrator:
       label: "Data Controller"
-      content: "The data controller is Sub Logistic (owner: Piotr Subotowicz), ul. Marynarki Polskiej 136A/47, 80‑865 Gdańsk, Poland. Contact: piotr.subotowicz@sublog.com.pl, phone +48 510 482 468."
+      content: "The data controller is Sub Logistics (owner: Piotr Subotowicz), ul. Marynarki Polskiej 136A/47, 80‑865 Gdańsk, Poland. Contact: piotr.subotowicz@sublog.com.pl, phone +48 510 482 468."
     dataProcessing:
       purpose: "Use of the Website and provision of electronic services (including the contact form and the quote request form)"
       scope:
