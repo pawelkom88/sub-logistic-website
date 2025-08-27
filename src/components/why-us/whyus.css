@@ -60,6 +60,10 @@
     align-items: center;
     gap: 2rem;
   }
+  .cs-button-group {
+    display: flex;
+    gap: 1rem;
+  }
   #sbsr-516 .cs-button-solid {
     font-size: 1rem;
     /* 46px - 56px */
@@ -78,6 +82,12 @@
     z-index: 1;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
+  }
+  #sbsr-516 .cs-button-solid:nth-child(2) {
+    background-color: var(--secondary);
+  }
+  #sbsr-516 .cs-button-solid:nth-child(2):before {
+    background: var(--primary);
   }
   #sbsr-516 .cs-button-solid:before {
     content: "";
@@ -153,6 +163,9 @@
     height: 100%;
     width: 100%;
     /* object-fit: cover; */
+  }
+  #sbsr-516 .xxx {
+    object-position: 50%;
   }
   .grid {
     display: grid;

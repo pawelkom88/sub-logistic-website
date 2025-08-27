@@ -17,9 +17,9 @@ translations:
         url: "/polityka-prywatnosci"
   contactBtn: "Wyślij wiadomość"
   hero:
-    title: "Sub Logistics Gdańsk – Profesjonalny transport drogowy na ternie Europy."
+    title: "Sub Logistics Gdańsk – Profesjonalny transport drogowy na terenie Europy."
     body: >
-      Z wieloletnim doświadczeniem w spedycji oferujmy niezawodne rozwiązania transportowe: FTL, LTL, ADR, temperatury kontrolowanej oraz ładunków nienormatywnych.
+      Bazując na wieloletnim doświadczeniu w spedycji, oferujemy sprawdzone i niezawodne rozwiązania transportowe. Realizujemy przewozy FTL, LTL, ADR, w kontrolowanej temperaturze oraz transport ładunków nienormatywnych.
     button: "Wyceń transport"
   services:
     topper: "Wyróżniamy się na tle konkurencji."
@@ -28,16 +28,16 @@ translations:
       W Sub Logistics rozumiemy, jak ważna jest efektywna logistyka dla sukcesu Twojego biznesu. Oferujemy szeroki zakres usług transportowych i logistycznych, dostosowanych do Twoich oczekiwań. Nasz zespół to gwarancja profesjonalizmu i dostosowania do indywidualnych potrzeb każdego zlecenia.
     cards:
       - title: "Globalna Współpraca"
-        body: "W ciągu wielu lat pracy stworzyliśmy rozległą sieć partnerów w branży logistycznej, zapewniając efektywny transport i przewóz towarów na każdą skalę."
+        body: "Przez lata zbudowaliśmy szeroką sieć partnerów w branży logistycznej, co pozwala nam realizować efektywny transport i przewóz towarów w każdej skali."
         alt: "Cieżarówka jadąca przez góry z pięknym krajobrazem"
       - title: "Indywidualne Podejście"
-        body: "W Sub Logistics nie tylko oferujemy usługi logistyczne najwyższej klasy, ale także budujemy relacje, zapewniając indywidualne podejście i wsparcie na każdym kroku."
+        body: "W Sub Logistics oferujemy nie tylko usługi logistyczne najwyższej klasy, lecz także budujemy trwałe relacje, zapewniając indywidualne podejście i wsparcie na każdym etapie."
         alt: "Skupiony kurier z tabletem w ręku na tle vana pełnego paczek"
       - title: "Atrakcyjne warunki współpracy"
-        body: "Oferujemy konkurencyjne ceny oraz elastyczne podejście do każdego klienta."
+        body: "Oferujemy konkurencyjne ceny oraz indywidualne, elastyczne podejście do każdego klienta."
         alt: "Wózek widłowy ładujący cieżarówkę"
       - title: "Bezpieczeństwo i Niezawodność"
-        body: "W Sub Logistics priorytetem jest gwarancja bezpieczeństwa i punktualności Twoich przesyłek. Stosujemy sprawdzone protokoły bezpieczeństwa i skuteczne metody transportu, aby każdy ładunek dotarł na miejsce nienaruszony i terminowo."
+        body: "W Sub Logistics naszym priorytetem jest bezpieczeństwo i punktualność Twoich przesyłek. Stosujemy sprawdzone protokoły oraz skuteczne metody transportu, aby każdy ładunek dotarł na miejsce nienaruszony i na czas."
         alt: "Pracownik Sub Logistics w pracy"
   offer:
     title: "Usługi Transportowe Gdańsk - ADR, Chłodniczy, Ponadgabarytowy | Sub Logistics"
@@ -144,9 +144,9 @@ translations:
     topper: "Dostosowane rozwiązania dla każdej przesyłki."
     heading: "Transport Krajowy i Międzynarodowy"
     description:
-      - paragraph: "W Sub Logistics, wiemy, że potrzeby transportowe mogą znacznie się różnić – od prostego transportu drobnicowego, który wymaga szybkiej i sprawnej dostawy, po złożone projekty logistyczne obejmujące transport całopojazdowy z wieloma punktami załadunku i rozładunku. Właśnie dlatego nasz zespół ekspertów logistycznych jest zaangażowany w ciągłe analizowanie i optymalizowanie tras oraz metod transportu, aby zapewnić, że Twoje towary zostaną dostarczone w najbardziej efektywny i ekonomiczny sposób"
-      - paragraph: "Kluczowe jest tutaj indywidualne podejście do każdego zlecenia. Jesteśmy do dyspozycji klienta przez 24 godziny / dobę przez 7 dni w tygodniu, monitorując każdą przesyłkę oraz zapewniamy wsparcie w sytuacji wymagającej natychmiastowej reakcji."
-      - paragraph: "Proaktywnie szukamy sposobów na redukcję kosztów i czasu transportu. Klient otrzymuje nie tylko usługę transportową najwyższej jakości, ale także partnera biznesowego, który realnie przyczynia się do optymalizacji jego łańcucha dostaw. Każde zadanie, niezależnie od jego rozmiaru, jest dla nas szansą na pokazanie, że zaufanie klienta jest dla nas najważniejsze, a ich sukces jest również naszym sukcesem."
+      - paragraph: "W Sub Logistics wiemy, że potrzeby transportowe mogą być bardzo różne – od prostego transportu drobnicowego, wymagającego szybkiej i sprawnej dostawy, po złożone projekty logistyczne obejmujące transport całopojazdowy z wieloma punktami załadunku i rozładunku. Dlatego nasz zespół ekspertów nieustannie analizuje i optymalizuje trasy oraz metody transportu, aby Twoje towary dotarły w sposób najbardziej efektywny i ekonomiczny."
+      - paragraph: "Kluczowe jest dla nas indywidualne podejście do każdego zlecenia. Jesteśmy do dyspozycji klientów 24 godziny na dobę, 7 dni w tygodniu, monitorując każdą przesyłkę i zapewniając wsparcie w sytuacjach wymagających natychmiastowej reakcji."
+      - paragraph: "Proaktywnie szukamy sposobów na redukcję kosztów i czasu transportu. Klient otrzymuje nie tylko usługę transportową najwyższej jakości, ale także partnera biznesowego, który realnie wspiera optymalizację jego łańcucha dostaw. Każde zlecenie, niezależnie od wielkości, jest dla nas okazją, by udowodnić, że zaufanie klienta jest dla nas najważniejsze, a jego sukces – naszym sukcesem."
     icons:
       - title: "Spedycja drogowa"
       - title: "Spedycja morska"
