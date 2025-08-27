@@ -36,14 +36,14 @@ const serviceCards = service?.cards.map((card, index) => ({
     </div>
     <ul class="cs-card-group">
       {
-        serviceCards?.map((card) => (
+        serviceCards?.map((card, index) => (
           <li class="cs-item">
             <Picture
               src={card.image}
               alt={card.alt}
               width="813"
               height="820"
-              class="cs-picture"
+              class={index > 0 ? "cs-picture position" : "cs-picture"}
               formats={["avif", "webp"]}
               loading="lazy"
               decoding="async"

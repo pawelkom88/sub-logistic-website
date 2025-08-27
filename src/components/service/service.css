@@ -87,6 +87,10 @@
     object-position: right;
   }
 
+  #services-1628 .position {
+    object-position: 50%;
+  }
+
   #services-1628 .cs-h3 {
     font-size: 1.25rem;
     line-height: 1.2em;

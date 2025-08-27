@@ -30,9 +30,9 @@ const offerTextMap = {
   de: "Leistungen",
 } as const;
 const historyTextMap = {
-  en: "Discover our history",
+  en: "Our History",
   pl: "Nasza historia",
-  de: "Unsere Geschichte entdecken",
+  de: "Unsere Geschichte",
 } as const;
 const offerHref = `/${lang}${offerSlugMap[lang]}`;
 const historyHref = `/${lang}${historySlugMap[lang]}`;
@@ -104,7 +104,7 @@ const why3AltMap = {
             width="630"
             height="461"
             src={whyUsImage2}
-            class="cs-picture xxx"
+            class="cs-picture position"
             alt={why2AltMap[lang]}
             formats={["avif", "webp"]}
             loading="lazy"
