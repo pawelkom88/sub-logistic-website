@@ -215,15 +215,12 @@ const translations = defineCollection({
         h2Paragraph: z.string(),
         h3: z.string(),
         h3Paragraph: z.string(),
-        h3next: z.string(),
-        li: z.array(
-          z.object({
-            title: z.string(),
-            description: z.string(),
-          }),
-        ),
         h4: z.string(),
         h4Paragraph: z.string(),
+        h5: z.string(),
+        h5Paragraph: z.string(),
+        h6: z.string(),
+        h6Paragraph: z.string(),
         link: z.object({
           url: z.string(),
           part1: z.string(),

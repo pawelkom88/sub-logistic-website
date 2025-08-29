@@ -25,7 +25,7 @@ translations:
     topper: "Wyróżniamy się na tle konkurencji."
     heading: "Dlaczego nasze usługi spedycyjne?"
     description: >
-      W Sub Logistics rozumiemy, jak ważna jest efektywna logistyka dla sukcesu Twojego biznesu. Oferujemy szeroki zakres usług transportowych i logistycznych, dostosowanych do Twoich oczekiwań. Nasz zespół to gwarancja profesjonalizmu i dostosowania do indywidualnych potrzeb każdego zlecenia.
+      W Sub Logistics wiemy, że sprawna logistyka to klucz do sukcesu Twojego biznesu. Oferujemy kompleksowe usługi transportowe i spedycyjne, dopasowane do specyfiki każdego zlecenia. Nasza flota i doświadczenie zespołu gwarantują terminowość, bezpieczeństwo ładunku i pełną elastyczność w realizacji Twoich potrzeb.
     cards:
       - title: "Globalna Współpraca"
         body: "Przez lata zbudowaliśmy szeroką sieć partnerów w branży logistycznej, co pozwala nam realizować efektywny transport i przewóz towarów w każdej skali."
@@ -42,25 +42,28 @@ translations:
   offer:
     title: "Usługi Transportowe Gdańsk - ADR, Chłodniczy, Ponadgabarytowy | Sub Logistics"
     items:
-      - lead: "Transport całopojazdowy (ang. FTL – Full Truck Load) to rodzaj przewozu towarów, w którym cała przestrzeń ładunkowa pojazdu jest przeznaczona dla jednego klienta lub jednej przesyłki."
-        text: "Optymalne rozwiązanie dla dużych partii towaru. Klient uzyskuje punktualną i bezpieczną dostawę. Występuje brak przeładunków po drodze przewozu."
-      - lead: "Transport LTL (Less Than Truck Load), czyli transport drobnicowy lub częściowy, to rodzaj przewozu, w którym jedna przesyłka nie zajmuje całej przestrzeni ładunkowej pojazdu."
-        text: "Transport opłacalny przy mniejszych ilościach towaru. Klient uzyskuje niższy koszt jednostkowy, płaci tylko za faktycznie zajętą przestrzeń lub wagę przesyłki. Występują przeładunki, dłuższy czas dostawy niż w transporcie całopojazdowym."
-      - lead: "Transport Just In Time (JIT) to strategia logistyczna, która polega na dostarczaniu towarów dokładnie w momencie, gdy są potrzebne w procesie produkcji lub sprzedaży, bez konieczności magazynowania dużych zapasów."
-      - lead: "Transport ładunków ADR, czyli przewóz materiałów niebezpiecznych zgodnie z międzynarodową umową ADR (Accord Dangereux Routier), która określa zasady ich bezpiecznego pakowania, oznakowania, załadunku i przewozu."
-      - lead: "Ubezpiecznie Cargo- gwarancja, że w razie nieprzewidzianych zdarzeń klient nie poniesie straty finansowej."
-        text: "Klient zyskuje spokój oraz ochronę. Dotyczy przewozów odbywających się drogą lądową, morską, lotniczą oraz kolejową."
-      - lead: "Transport chłodniczy- rodzaj przewozu, w którym ładunek przewożony jest w kontrolowanej, obniżonej temperaturze, przy użyciu pojazdów typu chłodnia."
-        text: "Celem jest zachowanie świeżości, jakości i bezpieczeństwa produktów wrażliwych na ciepło."
-      - lead: "Transport dedykowany z windą załadowczą i rozładowczą- Dostawa „od drzwi do drzwi” klienta."
-        text: "Gwarancja szybkiej dostawy do klienta."
-      - lead: "Transport towarów sypkich - oferujemy bezpieczny i szybki przewóz materiałów luzem, takich jak zboża, kruszywa, piasek, cement czy inne surowce masowe."
-        text: "Korzystamy ze specjalistycznych pojazdów – wywrotek, silosów i cystern."
-      - lead: "Transport towarów ponadgabarytowych - przewozimy ładunki o niestandardowych wymiarach lub wadze – od maszyn i urządzeń przemysłowych, przez konstrukcje stalowe, po elementy turbin i infrastruktury."
-        text: "Zapewniamy odpowiedni sprzęt, niezbędne zezwolenia oraz, jeśli trzeba, pilotaż drogowy."
-      - lead: "Zapewniamy pełne wsparcie w zakresie odprawy celnej, umożliwiające sprawne i bezproblemowe wprowadzenie lub wywóz towarów przez granice Unii Europejskiej."
+      - lead: "Transport całopojazdowy (ang. FTL – Full Truck Load)"
+        text: "Przewóz, w którym cała przestrzeń ładunkowa pojazdu jest przeznaczona dla jednego klienta lub jednej przesyłki. Optymalne rozwiązanie dla dużych partii towaru. Klient uzyskuje punktualną i bezpieczną dostawę bez przeładunków po drodze."
+      - lead: "Transport drobnicowy (LTL – Less Than Truck Load)."
+        text: "Przewóz, w którym jedna przesyłka nie zajmuje całej przestrzeni ładunkowej pojazdu. Opłacalny przy mniejszych ilościach towaru. Klient płaci tylko za faktycznie zajętą przestrzeń lub wagę przesyłki. Występują przeładunki, a czas dostawy jest dłuższy niż w transporcie całopojazdowym."
+      - lead: "Transport Just In Time (JIT)"
+        text: "Strategia logistyczna polegająca na dostarczaniu towarów dokładnie w momencie, gdy są potrzebne w procesie produkcji lub sprzedaży, bez konieczności magazynowania dużych zapasów."
+      - lead: "Transport ładunków ADR"
+        text: "Przewóz materiałów niebezpiecznych zgodnie z międzynarodową umową ADR, która określa zasady ich bezpiecznego pakowania, oznakowania, załadunku i przewozu."
+      - lead: "Ubezpiecznie Cargo"
+        text: "Gwarancja ochrony finansowej w razie nieprzewidzianych zdarzeń. Dotyczy przewozów drogowych, morskich, lotniczych oraz kolejowych. Klient zyskuje spokój i pewność bezpieczeństwa swojego ładunku."
+      - lead: "Transport chłodniczy"
+        text: "Przewóz ładunku w kontrolowanej temperaturze przy użyciu pojazdów typu chłodnia. Celem jest zachowanie świeżości, jakości i bezpieczeństwa produktów wrażliwych na ciepło."
+      - lead: "Transport dedykowany z windą załadowczą i rozładowczą."
+        text: "Dostawa „od drzwi do drzwi” klienta z gwarancją szybkiej i bezpiecznej obsługi ładunku."
+      - lead: "Transport towarów sypkich."
+        text: "Bezpieczny przewóz materiałów luzem, takich jak zboża, kruszywa, piasek, cement czy inne surowce masowe. Wykorzystujemy specjalistyczne pojazdy – wywrotki, silosy i cysterny."
+      - lead: "Transport towarów ponadgabarytowych"
+        text: "Przewóz ładunków o niestandardowych wymiarach lub wadze – od maszyn i urządzeń przemysłowych, przez konstrukcje stalowe, po elementy turbin i infrastruktury. Zapewniamy odpowiedni sprzęt, niezbędne zezwolenia oraz pilotaż drogowy, jeśli jest wymagany."
+      - lead: "Odprawa celna"
+        text: "Pełne wsparcie w zakresie odprawy celnej, umożliwiające sprawne i bezproblemowe wprowadzenie lub wywóz towarów przez granice Unii Europejskiej."
   transport:
-    heading: "Dostępne formy transportu"
+    heading: "Pojazdy i możliwości transportowe"
     labels:
       dimensions: "Wymiary"
       payload: "Ładowność"
@@ -79,8 +82,8 @@ translations:
           - "Wymiary: 6,2 – 9,3m x 2,45m x 2,5 – 3m"
           - "Ładowność: 3-12t"
           - "Możliwość załadunku: tyłem, bokiem, górą"
-          - "Ilość palet: 15 (120 x 80), 16 (120 x 80), 18 (120 x 80), 23 (120 x 80)"
-      - title: "Naczepa typu STANDRAD"
+          - "Ilość palet: 15, 16, 18, 23 – euro palety 120×80"
+      - title: "Naczepa typu STANDARD"
         specs:
           - "Wymiary: 13,6 x 2,45 x 2,6 – 2,85m"
           - "Ładowność: 24,5t"
@@ -89,13 +92,13 @@ translations:
           - "Ilość palet: 33-34 euro palety 120x80"
       - title: "Niskopodwozie"
         specs:
-          - "Wymiary: 12 – 18,2m x 2,55 – 3,2m x WYS. do 4m"
+          - "Wymiary: 12 – 18,2m x 2,55 – 3,2m x Wysokość do 4m"
           - "Ładowność: 24 – 60t"
           - "Możliwość załadunku: bokiem, tyłem, górą"
       - title: "Zestaw przestrzenny TANDEM"
         specs:
           - "Wymiary: 7,7 x 2,45m (solówka) + 7,7 x 2,45m (przyczepa) lub 6,8 x 2,45m (solówka) + 8,3 x 2,45m (przyczepa)"
-          - "WYS. 2,65 - 3,0m"
+          - "Wysokość 2,65 - 3,0m"
           - "Ładowność: 5-24t"
           - "Kubatura: 120m³"
           - "Możliwość załadunku: bokiem, tyłem, górą"
@@ -113,7 +116,6 @@ translations:
           - "Wymiary: 13,6 x 2,45 x 2,6 – 2,75m"
           - "Ładowność: 20-22t"
           - "Kubatura: 86-88m³"
-          - "Kubatura: 51 m³"
           - "Możliwość załadunku: tyłem"
           - "Ilość palet: 33 euro palety 120x80"
       - title: "Naczepa typu MEGA"
@@ -125,7 +127,7 @@ translations:
           - "Ilość palet: 33-34 euro palety 120x80"
       - title: "Naczepa typu PLATFORMA"
         specs:
-          - "Wymiary: 13,6m x SZER. do 2,5m x WYS. do 3,1m"
+          - "Wymiary: 13,6m x SZER. do 2,5m x Wysokość do 3,1m"
           - "Ładowność: 24,5t"
           - "Możliwość załadunku: bokiem, tyłem, górą"
       - title: "Wywrotka"
@@ -271,47 +273,23 @@ translations:
     back: "Wstecz"
     confirmationMessage: "Twoje zapytanie zostało pomyślnie wysłane!"
   aboutUs:
-    h1part1: "Sub Trans - Twój partner w logistyce prowadzony przez"
-    h1part2: "pasję i doświadczenie."
+    h1part1: "Sub Trans - Twój partner w logistyce oparty na"
+    h1part2: "doświadczeniu i pasji."
     h2: "Historia i Doświadczenie w Transporcie"
     h2Paragraph: >
-      Założona przez Piotra Subotowicza, Sub Trans to owoc wieloletniej pracy, pasji i
-      nieustannego dążenia do doskonałości w obszarze transportu i logistyki. Piotr, z
-      bogatym doświadczeniem w branży, postanowił stworzyć firmę, która będzie
-      synonimem niezawodności, elastyczności i osobistego zaangażowania w sukces
-      każdego klienta.
-    h3: "Jakość Ponad Ilość"
+      Sub Logistics została założona w 2018 roku przez Piotra Subotowicza, od lat związanego z branżą transportu i logistyki. Firma narodziła się z pasji i doświadczenia, szybko zdobywając opinię niezawodnego i elastycznego partnera biznesowego.Od początku działalności konsekwentnie stawiamy na nowoczesne rozwiązania, indywidualne podejście do klienta oraz ciągły rozwój. Dziś Sub Logistics to nie tylko firma spedycyjna, ale przede wszystkim zespół specjalistów, dla których jakość i terminowość stanowią fundament każdej współpracy.
+    h3: "Nasza specjalizacja"
     h3Paragraph: >
-      W Sub Trans wierzymy, że kluczem do sukcesu w dziedzinie logistyki jest
-      indywidualne podejście i zaangażowanie w każde zlecenie. Jako jednoosobowa
-      firma, prowadzona przez doświadczonego specjalistę w branży logistycznej, Piotra
-      Subotowicza, stawiamy na osobiste relacje z klientami i dopasowane rozwiązania
-      logistyczne.
-    h3next: "Dlaczego Sub Trans?"
-    li:
-      - title: "Personalizowane rozwiązania"
-        description: >
-          Nasze usługi logistyczne są dostosowane do specyficznych potrzeb każdego klienta w Polsce, zapewniając niezawodne i skuteczne rozwiązania transportowe. Współpracujemy z nowoczesnymi technologiami, aby zoptymalizować procesy logistyczne w zgodzie z lokalnymi przepisami i zwyczajami.
-      - title: "Nowoczesność i innowacja"
-        description: >
-          W Sub Trans łączymy sprawdzone metody pracy z nowoczesnymi narzędziami, co
-          pozwala nam na optymalizację procesów logistycznych i zapewnienie najwyższej
-          jakości usług.
-      - title: "Zrównoważony rozwój"
-        description: >
-          Jesteśmy świadomi wpływu, jaki branża transportowa ma na środowisko. Dlatego
-          też staramy się minimalizować nasz ślad węglowy poprzez efektywne planowanie
-          tras i dbałość o stan techniczny pojazdów.
-      - title: "Ekspert w branży"
-        description: >
-          Piotr Subotowicz, z swoją niezrównaną wiedzą i doświadczeniem, jest sercem
-          Sub Trans. Jego osobiste zaangażowanie w każde zlecenie gwarantuje, że Twoje
-          towary są zawsze w dobrych rękach.
-    h4: "Dołącz do nas"
+      Specjalizujemy się w organizacji transportu krajowego i międzynarodowego, oferując kompleksowe rozwiązania spedycyjne dopasowane do potrzeb zarówno małych firm, jak i dużych przedsiębiorstw. Każde zlecenie realizujemy z wykorzystaniem nowoczesnego i starannie wyselekcjonowanego taboru. Pojazdy regularnie poddawane są przeglądom technicznym i spełniają najwyższe standardy bezpieczeństwa oraz ekologii. Dzięki temu możemy zagwarantować niezawodność i terminowość realizowanych usług.
+    h4: "Dlaczego my?"
     h4Paragraph: >
-      Zapraszamy do współpracy z Sub Trans, gdzie tradycyjne wartości spotykają się z
-      nowoczesnym podejściem do logistyki. Odkryj różnicę, jaką może wprowadzić
-      osobiste zaangażowanie i pasja do Twojego łańcucha dostaw.
+      Sub Logistics to elastyczność, szybka reakcja na potrzeby klienta i pełne zaangażowanie na każdym etapie współpracy. Wyróżnia nas indywidualne podejście do każdego klienta, transparentna komunikacja oraz umiejętność znajdowania efektywnych rozwiązań nawet w najbardziej wymagających projektach. Niezależnie od skali zlecenia, zawsze dbamy o najwyższy poziom obsługi i terminową realizację.
+    h5: "Nowoczesność i innowacja"
+    h5Paragraph: >
+      W Sub Logistics łączymy sprawdzone metody pracy z nowoczesnymi narzędziami i technologiami logistycznymi, co pozwala na optymalizację procesów transportowych i zapewnienie usług najwyższej jakości.Inwestując w innowacyjne rozwiązania, dbamy o bezpieczeństwo i terminowość przewozów, jednocześnie nieustannie rozwijając firmę, aby sprostać rosnącym wymaganiom rynku i oczekiwaniom klientów.
+    h6: "Dołącz do nas"
+    h6Paragraph: >
+      Zapraszamy do współpracy z Sub Logistics, gdzie tradycyjne wartości spotykają się z nowoczesnym podejściem do logistyki. Odkryj, jak pasja i zaangażowanie mogą usprawnić Twój łańcuch dostaw.Skontaktuj się z nami, aby dowiedzieć się więcej o naszych usługach i sprawdzić, jak możemy wspomóc Twój biznes.
     link:
       url: "/pl/#cs-contact-490"
       part1: "Skontaktuj się z nami"

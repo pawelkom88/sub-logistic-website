@@ -25,7 +25,7 @@ translations:
     topper: "Wir heben uns von der Konkurrenz ab."
     heading: "Warum unsere Speditionsdienstleistungen?"
     description: >
-      Bei Sub Logistics verstehen wir, wie entscheidend eine effiziente Logistik für den Erfolg Ihres Unternehmens ist. Wir bieten ein breites Spektrum an Transport- und Logistikdienstleistungen, die auf Ihre Erwartungen zugeschnitten sind. Unser Team garantiert Professionalität und passt sich den individuellen Anforderungen jedes Auftrags an.
+      Bei Sub Logistics wissen wir, dass effiziente Logistik der Schlüssel zum Erfolg Ihres Unternehmens ist. Wir bieten umfassende Transport- und Speditionsleistungen, die auf die Besonderheiten jedes Auftrags zugeschnitten sind. Unsere Flotte und die Erfahrung des Teams gewährleisten Pünktlichkeit, Ladungssicherheit und volle Flexibilität bei der Umsetzung Ihrer Anforderungen.
     cards:
       - title: "Globale Zusammenarbeit"
         body: >
@@ -51,25 +51,28 @@ translations:
   offer:
     title: "Transportdienstleistungen Gdańsk – ADR, Kühl, Übermaß | Sub Logistics"
     items:
-      - lead: "Der Komplettladungsverkehr (FTL – Full Truck Load) ist eine Transportart, bei der der gesamte Laderaum eines Fahrzeugs einem einzelnen Kunden oder einer Sendung vorbehalten ist."
-        text: "Die optimale Lösung für große Sendungen. Der Kunde erhält eine pünktliche und sichere Zustellung. Unterwegs finden keine Umladungen statt."
-      - lead: "Der Teilladungsverkehr (LTL – Less Than Truck Load), auch Sammel- oder Teilpartien genannt, ist eine Transportart, bei der eine Sendung nicht den gesamten Laderaum belegt."
-        text: "Kosteneffizient für kleinere Volumina. Der Kunde profitiert von geringeren Stückkosten und zahlt nur für den tatsächlich genutzten Platz oder das Gewicht. Es kommt zu Umladungen, die Laufzeit ist länger als beim Komplettladungsverkehr."
-      - lead: "Just-in-Time (JIT) ist eine Logistikstrategie, die darauf abzielt, Waren genau dann zu liefern, wenn sie in der Produktion oder im Verkauf benötigt werden – ohne große Lagerbestände aufzubauen."
-      - lead: "Transport gefährlicher Güter (ADR) gemäß dem internationalen Übereinkommen ADR (Accord Dangereux Routier), das die Regeln für sicheres Verpacken, Kennzeichnen, Verladen und Befördern festlegt."
-      - lead: "Transportversicherung (Cargo) – eine Garantie, dass der Kunde bei unvorhergesehenen Ereignissen keinen finanziellen Schaden erleidet."
-        text: "Der Kunde gewinnt Ruhe und Schutz. Gilt für Sendungen auf dem Land-, See-, Luft- und Schienenweg."
-      - lead: "Kühltransport – Beförderung in kontrolliert abgesenkter Temperatur mit Kühlfahrzeugen."
-        text: "Ziel ist es, die Frische, Qualität und Sicherheit temperaturempfindlicher Produkte zu gewährleisten."
-      - lead: "Dedizierter Transport mit Ladebordwand – Lieferung von Tür zu Tür."
-        text: "Garantie für eine schnelle Zustellung."
-      - lead: "Transport von Schüttgütern – wir bieten sicheren und schnellen Transport von Schüttgütern wie Getreide, Schotter, Sand, Zement und anderen Massenrohstoffen."
-        text: "Wir nutzen Spezialfahrzeuge – Kipper, Silozüge und Tankauflieger."
-      - lead: "Transport von Übermaß- und Schwerlastgütern – wir befördern Ladungen mit nicht standardmäßigen Abmessungen oder Gewichten, von Industrieanlagen und Maschinen über Stahlkonstruktionen bis hin zu Turbinen- und Infrastrukturelementen."
-        text: "Wir stellen geeignete Ausrüstung, notwendige Genehmigungen und bei Bedarf Begleitfahrzeuge bereit."
-      - lead: "Umfassende Unterstützung bei der Zollabfertigung, die eine reibungslose Ein- oder Ausfuhr von Waren über die Grenzen der Europäischen Union hinweg ermöglicht."
+      - lead: "Komplettladungsverkehr (FTL – Full Truck Load)"
+        text: "Der gesamte Laderaum ist einer Sendung/einem Kunden vorbehalten. Optimal für große Partien. Pünktliche, sichere Lieferung ohne Umladungen."
+      - lead: "Teilladungsverkehr (LTL – Less Than Truck Load)"
+        text: "Eine Sendung belegt nicht den gesamten Laderaum. Kosteneffizient bei kleineren Volumina – Sie zahlen nur für den genutzten Platz oder das Gewicht. Es kommt zu Umladungen, die Laufzeit ist länger als bei FTL."
+      - lead: "Just‑in‑Time (JIT)"
+        text: "Logistikstrategie: Lieferung genau zum Zeitpunkt des Bedarfs in Produktion/Verkauf – ohne große Lagerbestände."
+      - lead: "Gefahrguttransport (ADR)"
+        text: "Beförderung gefährlicher Güter gemäß ADR – Regeln für sicheres Verpacken, Kennzeichnen, Verladen und Transport."
+      - lead: "Transportversicherung (Cargo)"
+        text: "Finanzieller Schutz bei unvorhergesehenen Ereignissen. Gilt für Straßen‑, See‑, Luft‑ und Bahntransporte."
+      - lead: "Kühltransport"
+        text: "Beförderung in kontrollierter Temperatur mit Kühlfahrzeugen – für Frische, Qualität und Sicherheit temperaturempfindlicher Produkte."
+      - lead: "Dedizierter Transport mit Ladebordwand"
+        text: "Tür‑zu‑Tür‑Zustellung mit schneller und sicherer Abwicklung der Ladung."
+      - lead: "Transport von Schüttgütern"
+        text: "Sicherer Transport von Schüttgütern wie Getreide, Schotter, Sand, Zement u. a. Mit Spezialfahrzeugen – Kippern, Silos und Tankaufliegern."
+      - lead: "Transport von Übermaßgütern"
+        text: "Beförderung von Ladungen mit nicht standardmäßigen Abmessungen oder Gewichten – von Maschinen und Industrieanlagen über Stahlkonstruktionen bis zu Turbinen‑/Infrastrukturelementen. Mit geeigneter Ausrüstung, Genehmigungen und ggf. Begleitfahrzeugen."
+      - lead: "Zollabfertigung"
+        text: "Volle Unterstützung bei der Zollabfertigung für reibungslose, problemlose Ein‑/Ausfuhr über EU‑Grenzen."
   transport:
-    heading: "Verfügbare Transportarten"
+    heading: "Fahrzeuge und Transportmöglichkeiten"
     labels:
       dimensions: "Abmessungen"
       payload: "Nutzlast"
@@ -88,7 +91,7 @@ translations:
           - "Abmessungen: 6,2–9,3 m × 2,45 m × 2,5–3 m"
           - "Nutzlast: 3–12 t"
           - "Ladeoptionen: hinten, seitlich, oben"
-          - "Paletten: 15 (120×80), 16 (120×80), 18 (120×80), 23 (120×80)"
+          - "Paletten: 15, 16, 18, 23 – Europaletten 120×80"
       - title: "Standard‑Sattelauflieger"
         specs:
           - "Abmessungen: 13,6 × 2,45 × 2,6–2,85 m"
@@ -122,7 +125,6 @@ translations:
           - "Abmessungen: 13,6 × 2,45 × 2,6–2,75 m"
           - "Nutzlast: 20–22 t"
           - "Volumen: 86–88 m³"
-          - "Volumen: 51 m³"
           - "Ladeoptionen: hinten"
           - "Paletten: 33 Europaletten 120×80"
       - title: "Mega‑Sattelauflieger"
@@ -286,43 +288,41 @@ translations:
     h1part2: "angetrieben von Leidenschaft und Erfahrung."
     h2: "Geschichte und Erfahrung im Transport"
     h2Paragraph: >
-      Gegründet von Piotr Subotowicz, ist Sub Trans das Ergebnis jahrelanger harter
-      Arbeit, Leidenschaft und eines unermüdlichen Strebens nach Exzellenz im Bereich
-      Transport und Logistik. Mit umfassender Branchenerfahrung beschloss Piotr, ein
-      Unternehmen zu schaffen, das ein Synonym für Zuverlässigkeit, Flexibilität und
-      persönliche Hingabe an den Erfolg jedes Kunden ist.
-    h3: "Qualität vor Quantität"
+      Sub Logistics wurde 2018 von Piotr Subotowicz gegründet, der seit vielen Jahren eng mit
+      der Transport- und Logistikbranche verbunden ist. Das Unternehmen entstand aus Leidenschaft
+      und Erfahrung und erwarb sich schnell den Ruf eines zuverlässigen und flexiblen
+      Geschäftspartners. Von Beginn an setzen wir konsequent auf moderne Lösungen, einen
+      individuellen Ansatz für jeden Kunden sowie kontinuierliche Weiterentwicklung. Heute ist
+      Sub Logistics nicht nur ein Speditionsunternehmen, sondern vor allem ein Team von
+      Spezialisten, für die Qualität und Pünktlichkeit die Grundlage jeder Zusammenarbeit bilden.
+    h3: "Unsere Spezialisierung"
     h3Paragraph: >
-      Bei Sub Trans glauben wir, dass der Schlüssel zum Erfolg in der Logistik ein
-      persönlicher Ansatz und Engagement für jede Aufgabe ist. Als Ein-Mann-Unternehmen,
-      geführt von einem erfahrenen Spezialisten in der Logistikbranche, Piotr Subotowicz,
-      setzen wir auf persönliche Beziehungen zu unseren Kunden und maßgeschneiderte
-      Logistiklösungen.
-    h3next: "Warum Sub Trans?"
-    li:
-      - title: "Personalisierte Lösungen"
-        description: >
-          Unsere Logistikdienstleistungen sind auf die spezifischen Anforderungen unserer Kunden in Deutschland abgestimmt und bieten zuverlässige und effiziente Transportlösungen. Wir integrieren moderne Technologien, um logistische Prozesse zu optimieren.
-      - title: "Modernität und Innovation"
-        description: >
-          Bei Sub Trans kombinieren wir bewährte Arbeitsmethoden mit modernen Werkzeugen,
-          die es uns ermöglichen, logistische Prozesse zu optimieren und Dienstleistungen
-          von höchster Qualität zu gewährleisten.
-      - title: "Nachhaltige Entwicklung"
-        description: >
-          Uns ist bewusst, welchen Einfluss die Transportbranche auf die Umwelt hat. Deshalb
-          bemühen wir uns, unseren CO2-Fußabdruck durch effiziente Routenplanung und eine
-          sorgfältige Wartung der Fahrzeuge zu minimieren.
-      - title: "Branchenerfahrung"
-        description: >
-          Piotr Subotowicz, mit seinem unvergleichlichen Wissen und seiner Erfahrung, ist das Herz
-          von Sub Trans. Sein persönliches Engagement bei jeder Aufgabe garantiert, dass Ihre
-          Waren immer in sicheren Händen sind.
-    h4: "Schließen Sie sich uns an"
+      Wir spezialisieren uns auf die Organisation von nationalen und internationalen Transporten
+      und bieten umfassende Speditionslösungen, die auf die Bedürfnisse kleiner Unternehmen wie
+      auch großer Konzerne zugeschnitten sind. Jeder Auftrag wird mit einem modernen und sorgfältig
+      ausgewählten Fuhrpark durchgeführt. Die Fahrzeuge werden regelmäßig gewartet und erfüllen die
+      höchsten Sicherheits- und Umweltstandards. So können wir Zuverlässigkeit und Termintreue der
+      erbrachten Leistungen garantieren.
+    h4: "Warum Sub Trans?"
     h4Paragraph: >
-      Wir laden Sie ein, mit Sub Trans zusammenzuarbeiten, wo traditionelle Werte auf einen
-      modernen Ansatz in der Logistik treffen. Entdecken Sie den Unterschied, den persönliches
-      Engagement und Leidenschaft in Ihrer Lieferkette bewirken können.
+      Sub Logistics steht für Flexibilität, schnelle Reaktion auf Kundenbedürfnisse und volles
+      Engagement in jeder Phase der Zusammenarbeit. Wir zeichnen uns durch einen individuellen
+      Ansatz für jeden Kunden, transparente Kommunikation und die Fähigkeit aus, selbst in sehr
+      anspruchsvollen Projekten effektive Lösungen zu finden. Unabhängig vom Umfang des Auftrags
+      gewährleisten wir stets den höchsten Servicestandard und termingerechte Lieferung.
+    h5: "Modernität und Innovation"
+    h5Paragraph: >
+      Bei Sub Logistics verbinden wir bewährte Arbeitsmethoden mit modernen Werkzeugen und
+      Logistiktechnologien. Dadurch optimieren wir Transportprozesse und gewährleisten die
+      höchste Servicequalität. Durch Investitionen in innovative Lösungen sorgen wir für
+      Sicherheit und Pünktlichkeit der Sendungen und entwickeln das Unternehmen kontinuierlich
+      weiter, um den wachsenden Marktanforderungen und Kundenerwartungen gerecht zu werden.
+    h6: "Schließen Sie sich uns an"
+    h6Paragraph: >
+      Wir laden Sie zur Zusammenarbeit mit Sub Logistics ein, wo traditionelle Werte auf einen
+      modernen Ansatz in der Logistik treffen. Entdecken Sie, wie Leidenschaft und Engagement
+      Ihre Lieferkette verbessern können. Kontaktieren Sie uns, um mehr über unsere Leistungen
+      und unsere Unterstützung für Ihr Unternehmen zu erfahren.
     link:
       url: "/de/#cs-contact-490"
       part1: "Kontaktieren Sie uns"

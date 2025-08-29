@@ -29,21 +29,19 @@ const aboutAltMap = {
       </h1>
       <h2>{aboutUs?.h2}</h2>
       <p class="cs-text">{aboutUs?.h2Paragraph}</p>
+
       <h3>{aboutUs?.h3}</h3>
       <p class="cs-text">{aboutUs?.h3Paragraph}</p>
-      <h3>{aboutUs?.h3next}</h3>
-      <ul>
-        {
-          (aboutUs?.li || []).map((item: any) => (
-            <li>
-              {item.title}
-              <p class="cs-text">{item.description}</p>
-            </li>
-          ))
-        }
-      </ul>
+
       <h4>{aboutUs?.h4}</h4>
       <p class="cs-text">{aboutUs?.h4Paragraph}</p>
+
+      <h5>{aboutUs?.h5}</h5>
+      <p class="cs-text">{aboutUs?.h5Paragraph}</p>
+
+      <h6>{aboutUs?.h6}</h6>
+      <p class="cs-text">{aboutUs?.h6Paragraph}</p>
+
       <br />
       <p class="cs-text">
         <!-- use localized url from translations -->

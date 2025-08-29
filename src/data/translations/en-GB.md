@@ -25,7 +25,7 @@ translations:
     topper: "We stand out from the competition."
     heading: "Why choose our freight forwarding services?"
     description: >
-      At Sub Logistics, we understand how crucial efficient logistics is to the success of your business. We offer a wide range of transport and logistics services tailored to your expectations. Our team guarantees professionalism and adapts to the individual needs of every project.
+      At Sub Logistics, we know that efficient logistics is key to your business success. We offer comprehensive transport and forwarding services tailored to the specifics of each assignment. Our fleet and team’s experience ensure punctuality, cargo safety and full flexibility in meeting your needs.
     cards:
       - title: "Global Collaboration"
         body: >
@@ -50,25 +50,28 @@ translations:
   offer:
     title: "Transport Services Gdańsk – ADR, Refrigerated, Oversized | Sub Logistics"
     items:
-      - lead: "Full Truck Load (FTL) transport is a mode of freight in which the vehicle’s entire cargo space is allocated to a single client or shipment."
-        text: "The optimal solution for large consignments. The client receives a punctual and secure delivery. No transshipments occur en route."
-      - lead: "Less Than Truck Load (LTL) transport—also known as groupage or partial loads—is a mode where a single shipment does not occupy the vehicle’s full cargo space."
-        text: "Cost‑effective for smaller volumes. The client benefits from a lower unit cost, paying only for the actual space or weight used. Transshipments occur, and transit time is longer than with full‑truckload transport."
-      - lead: "Just‑In‑Time (JIT) transport is a logistics strategy focused on delivering goods precisely when they are needed in production or sales, without the need to hold large inventories."
-      - lead: "ADR dangerous goods transport in accordance with the international ADR agreement (Accord Dangereux Routier), which sets out rules for safe packaging, labelling, loading, and carriage."
-      - lead: "Cargo insurance—a guarantee that, in the event of unforeseen incidents, the client will not incur financial loss."
-        text: "The client gains peace of mind and protection. Applies to shipments by road, sea, air, and rail."
-      - lead: "Refrigerated transport—a mode of carriage in controlled, reduced temperature using refrigerated vehicles."
-        text: "The aim is to preserve the freshness, quality, and safety of temperature‑sensitive products."
-      - lead: "Dedicated transport with a tail lift—door‑to‑door delivery to the client."
-        text: "A guarantee of rapid delivery."
-      - lead: "Bulk cargo transport—we offer safe and fast haulage of loose materials such as grain, aggregates, sand, cement, and other bulk commodities."
-        text: "We use specialised vehicles—tippers, silo trailers, and tankers."
-      - lead: "Oversized cargo transport—we carry loads with non‑standard dimensions or weight—from industrial machinery and equipment to steel structures and components of turbines and infrastructure."
-        text: "We provide appropriate equipment, the required permits, and, where necessary, road escort."
-      - lead: "We provide full support with customs clearance, enabling smooth and hassle‑free import or export of goods across the borders of the European Union."
+      - lead: "Full Truck Load (FTL) transport"
+        text: "The entire cargo space is dedicated to one client or shipment. Optimal for large consignments. Punctual, secure delivery without transshipments."
+      - lead: "Less Than Truck Load (LTL) transport"
+        text: "A shipment does not occupy the full cargo space. Cost‑effective for smaller volumes — you pay only for the space or weight used. Transshipments occur and transit time is longer than FTL."
+      - lead: "Just‑In‑Time (JIT) transport"
+        text: "A logistics strategy of delivering goods exactly when needed in production or sales, without holding large inventories."
+      - lead: "ADR dangerous goods transport"
+        text: "Carriage of hazardous materials in accordance with the ADR agreement — rules for safe packaging, labelling, loading and transport."
+      - lead: "Cargo insurance"
+        text: "Financial protection in case of unforeseen incidents. Applies to road, sea, air and rail shipments. Peace of mind and assurance for your cargo."
+      - lead: "Refrigerated transport"
+        text: "Carriage in a controlled temperature using refrigerated vehicles to maintain freshness, quality and safety of temperature‑sensitive goods."
+      - lead: "Dedicated transport with tail lift"
+        text: "Door‑to‑door delivery with guaranteed fast and safe handling of the cargo."
+      - lead: "Bulk cargo transport"
+        text: "Safe haulage of loose materials such as grain, aggregates, sand, cement and other bulk commodities using specialised vehicles — tippers, silos and tankers."
+      - lead: "Oversized cargo transport"
+        text: "Transport of loads with non‑standard dimensions or weight — from industrial machinery and equipment to steel structures and turbine/infrastructure components. We provide the right equipment, required permits and, if needed, road escort."
+      - lead: "Customs clearance"
+        text: "Full support with customs clearance for smooth, hassle‑free import or export of goods across EU borders."
   transport:
-    heading: "Available transport types"
+    heading: "Vehicles and transport capabilities"
     labels:
       dimensions: "Dimensions"
       payload: "Payload"
@@ -87,7 +90,7 @@ translations:
           - "Dimensions: 6.2–9.3 m × 2.45 m × 2.5–3 m"
           - "Payload: 3–12 t"
           - "Loading: rear, side, top"
-          - "Pallets: 15 (120×80), 16 (120×80), 18 (120×80), 23 (120×80)"
+          - "Pallets: 15, 16, 18, 23 — euro pallets 120×80"
       - title: "Standard semi‑trailer"
         specs:
           - "Dimensions: 13.6 × 2.45 × 2.6–2.85 m"
@@ -121,7 +124,6 @@ translations:
           - "Dimensions: 13.6 × 2.45 × 2.6–2.75 m"
           - "Payload: 20–22 t"
           - "Volume: 86–88 m³"
-          - "Volume: 51 m³"
           - "Loading: rear"
           - "Pallets: 33 euro pallets 120×80"
       - title: "Mega semi‑trailer"
@@ -284,40 +286,39 @@ translations:
     h1part2: "passion and experience."
     h2: "History and Experience in Transport"
     h2Paragraph: >
-      Founded by Piotr Subotowicz, Sub Trans is the result of years of hard work, passion,
-      and a relentless pursuit of excellence in transport and logistics. With vast
-      industry experience, Piotr decided to create a company synonymous with
-      reliability, flexibility, and personal dedication to every client's success.
-    h3: "Quality over Quantity"
+      Sub Logistics was founded in 2018 by Piotr Subotowicz, who has been closely connected
+      to the transport and logistics industry for years. The company was born out of passion
+      and experience, quickly earning a reputation as a reliable and flexible business partner.
+      From the very beginning, we have consistently focused on modern solutions, an individual
+      approach to each client, and continuous development. Today, Sub Logistics is not only a
+      forwarding company but above all a team of specialists for whom quality and punctuality are
+      the foundation of every collaboration.
+    h3: "Our Specialisation"
     h3Paragraph: >
-      At Sub Trans, we believe that the key to success in logistics is a personal approach
-      and commitment to each assignment. As a one-man company, led by an experienced
-      specialist in the logistics field, Piotr Subotowicz, we focus on building personal
-      relationships with clients and providing tailored logistics solutions.
-    h3next: "Why Sub Trans?"
-    li:
-      - title: "Personalised solutions"
-        description: >
-          Our logistics services are tailored to meet the specific needs of clients across Europe. By leveraging modern technology and innovative solutions, we optimize logistics processes, ensuring reliable and efficient transportation.
-      - title: "Modernity and innovation"
-        description: >
-          At Sub Trans, we combine proven work methods with modern tools, enabling us
-          to optimise logistics processes and ensure the highest quality services.
-      - title: "Sustainable development"
-        description: >
-          We are aware of the impact the transport industry has on the environment. 
-          That’s why we strive to minimise our carbon footprint through efficient route 
-          planning and proper vehicle maintenance.
-      - title: "Industry expertise"
-        description: >
-          Piotr Subotowicz, with his unmatched knowledge and experience, is the heart 
-          of Sub Trans. His personal involvement in every assignment ensures that your 
-          goods are always in safe hands.
-    h4: "Join us"
+      We specialise in organising domestic and international transport, offering comprehensive
+      forwarding solutions tailored to the needs of both small businesses and large enterprises.
+      Every assignment is carried out using a modern and carefully selected fleet. Vehicles are
+      regularly serviced and meet the highest safety and environmental standards. This allows us
+      to guarantee the reliability and timeliness of the services we provide.
+    h4: "Why us?"
     h4Paragraph: >
-      We invite you to collaborate with Sub Trans, where traditional values meet a 
-      modern approach to logistics. Discover the difference personal dedication and 
-      passion can make in your supply chain.
+      Sub Logistics stands for flexibility, a swift response to client needs, and full
+      commitment at every stage of cooperation. We stand out through our individual approach
+      to each client, transparent communication, and the ability to find effective solutions
+      even in the most demanding projects. Regardless of the scope of the assignment, we
+      always ensure the highest level of service and on‑time delivery.
+    h5: "Modernity and innovation"
+    h5Paragraph: >
+      At Sub Logistics, we combine proven working methods with modern tools and logistics
+      technologies, which allows us to optimise transport processes and ensure the highest
+      quality of service. By investing in innovative solutions, we take care of the safety
+      and timeliness of shipments while continuously developing the company to meet growing
+      market demands and client expectations.
+    h6: "Join us"
+    h6Paragraph: >
+      We invite you to cooperate with Sub Logistics, where traditional values meet a modern
+      approach to logistics. Discover how passion and commitment can streamline your supply
+      chain. Contact us to learn more about our services and how we can support your business.
     link:
       url: "/en/#cs-contact-490"
       part1: "Contact us"
