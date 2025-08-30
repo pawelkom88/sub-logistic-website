@@ -308,14 +308,13 @@ translations:
       Sub Logistics steht für Flexibilität, schnelle Reaktion auf Kundenbedürfnisse und volles
       Engagement in jeder Phase der Zusammenarbeit. Wir zeichnen uns durch einen individuellen
       Ansatz für jeden Kunden, transparente Kommunikation und die Fähigkeit aus, selbst in sehr
-      anspruchsvollen Projekten effektive Lösungen zu finden. Unabhängig vom Umfang des Auftrags
-      gewährleisten wir stets den höchsten Servicestandard und termingerechte Lieferung.
+      anspruchsvollen Projekten effektive Lösungen zu finden. Dadurch ist unsere Zusammenarbeit reibungslos, vorhersagbar und problemlos.
     h5: "Modernität und Innovation"
     h5Paragraph: >
       Bei Sub Logistics verbinden wir bewährte Arbeitsmethoden mit modernen Werkzeugen und
       Logistiktechnologien. Dadurch optimieren wir Transportprozesse und gewährleisten die
       höchste Servicequalität. Durch Investitionen in innovative Lösungen sorgen wir für
-      Sicherheit und Pünktlichkeit der Sendungen und entwickeln das Unternehmen kontinuierlich
+      Sicherheit und Pünktlichkeit der Sendungen. Gleichzeitig entwickeln wir das Unternehmen kontinuierlich
       weiter, um den wachsenden Marktanforderungen und Kundenerwartungen gerecht zu werden.
     h6: "Schließen Sie sich uns an"
     h6Paragraph: >
@@ -349,31 +348,31 @@ translations:
     - question: "Welche Dienstleistungen bieten Sie an?"
       answer: "Straßentransport FTL und LTL, dedizierte Transporte mit Ladebordwand, Kühltransporte, Gefahrgut (ADR), Schüttgut und Schwer-/Übermaßtransporte, Unterstützung bei der Zollabfertigung sowie Transportversicherung (Cargo)."
     - question: "Fahren Sie national und international?"
-      answer: "Ja. Wir organisieren Transporte innerhalb Polens sowie international in der EU/EWR. Für Relationen außerhalb der EU arbeiten wir mit Partnern zusammen, inkl. Zollformalitäten."
+      answer: "Ja. Wir organisieren Transporte national sowie international in der EU und EWR. Für Strecken außerhalb der EU koordinieren wir mit unseren Partnern und bieten vollständige Unterstützung bei Zollformalitäten."
     - question: "Wie schnell können Sie eine Abholung organisieren?"
-      answer: "Wir organisieren den Transport express – binnen weniger Stunden nach Bestätigung steht das Fahrzeug an der Ladeadresse."
+      answer: "Wir organisieren den Transport express – binnen weniger Stunden nach Bestätigung kann das Fahrzeug an der Ladeadresse bereitgestellt werden."
     - question: "Welche Angaben sind für ADR-Transporte erforderlich?"
       answer: "UN‑Nummer, Gefahrgutklasse, Verpackungsgruppe, Sicherheitsdatenblatt (MSDS) sowie Angaben zu Verpackung und Kennzeichnung. Wir stellen ADR‑konforme Fahrzeuge und Dokumente bereit."
     - question: "Bieten Sie temperaturgeführte Transporte an?"
-      answer: "Ja, wir führen Kühltransporte durch. Statusinformationen erhalten Sie telefonisch oder per E‑Mail. Temperaturprotokolle der gesamten Strecke stellen wir dem Kunden zur Verfügung."
+      answer: "Ja, wir führen Kühltransporte mit vollständiger Überwachung durch. Wir informieren Sie telefonisch oder per E‑Mail über den Sendungsstatus, und nach Abschluss des Transports stellen wir Temperaturprotokolle der gesamten Strecke zur Verfügung."
     - question: "Ist eine Abtretung (Factoring) möglich?"
-      answer: "Ja. Wenn unser Partner mit einem Factoring‑Unternehmen zusammenarbeitet, erfolgt die Zahlung für die Transportleistung gemäß der Abtretung – auf das Konto des Zessionars."
+      answer: "Ja. Wenn unser Partner mit einem Factoring‑Unternehmen zusammenarbeitet, erfolgt die Zahlung für die Transportleistung gemäß den Abtretungsbedingungen – direkt auf das Konto des Zessionars."
     - question: "Sind Scans der Transportdokumente ausreichend?"
-      answer: "Neben Scans benötigen wir außerdem die Zusendung der Originaldokumente per Post oder Kurier."
+      answer: "Scans der Dokumente werden benötigt, aber wir benötigen auch die Zusendung der Originaldokumente per Post oder Kurier."
     - question: "Wohin sollen die Originale der Transportdokumente gesendet werden?"
       answer: "Bitte senden Sie die Originale an: Sub Logistics, ul. Marynarki Polskiej 136A/47, 80‑865 Gdańsk."
     - question: "Wie lang sind die üblichen Laufzeiten?"
       answer: "Je nach Relation und Service: national meist 1–2 Tage, innerhalb der EU 2–5 Tage. Dedizierte Transporte sind oft schneller. Teilen Sie uns die Strecke für eine genaue ETA mit."
     - question: "Welche Abmessungen und Gewichte können Sie befördern?"
-      answer: "Von Standardpaletten bis zu Schwer- und Übermaßladung. Nennen Sie Abmessungen und Gewicht, wir wählen das passende Fahrzeug und ggf. erforderliche Genehmigungen."
+      answer: "Wir befördern sowohl Standardpaletten als auch schwere oder übergroße Ladungen. Senden Sie uns Abmessungen und Gewicht, und wir wählen das geeignete Fahrzeug sowie die erforderlichen Genehmigungen aus."
     - question: "Wie wird meine Ware abgesichert?"
-      answer: "Alle Transporte unterliegen der Haftung des Frachtführers; zusätzlich bieten wir eine optionale Transportversicherung. Für empfindliche oder hochwertige Waren empfehlen wir sie ausdrücklich."
+      answer: "Jeder Transport unterliegt der Haftung des Frachtführers. Zusätzlich bieten wir eine Transportversicherung an, die wir besonders für empfindliche oder hochwertige Waren empfehlen."
     - question: "Wie bereite ich die Ware für die Verladung vor?"
-      answer: "Ware sichern, kennzeichnen und — wenn möglich — palettieren. Wir unterstützen beim Be- und Entladen, inkl. Ladebordwand und Zustellung bis zur Tür (nach Vereinbarung)."
+      answer: "Ware sichern, kennzeichnen und – wenn möglich – palettieren. Wir bieten auch Unterstützung beim Be- und Entladen, einschließlich Ladebordwand und Zustellung bis zur Tür (nach vorheriger Vereinbarung)."
     - question: "Welche Zahlungsbedingungen gelten?"
-      answer: "Werden individuell vereinbart. Standard ist Banküberweisung; bei Neukunden kann Vorkasse gelten."
+      answer: "Zahlungsbedingungen werden individuell vereinbart. Standardmäßig verwenden wir Banküberweisung, und für Neukunden ist Vorkasse möglich."
     - question: "Wie werde ich über den Sendungsstatus informiert?"
-      answer: "Wir informieren telefonisch und per E‑Mail an wichtigen Meilensteinen. Sie erhalten einen festen Ansprechpartner für Ihren Auftrag."
+      answer: "Wir informieren telefonisch und per E‑Mail an wichtigen Transportmeilensteinen. Jeder Auftrag hat einen zugewiesenen festen Ansprechpartner, mit dem Sie sich in Verbindung setzen können."
   contact:
     phone: "+48510482468"
     email: "piotr.subotowicz@sublog.com.pl"

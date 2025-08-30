@@ -305,14 +305,13 @@ translations:
       Sub Logistics stands for flexibility, a swift response to client needs, and full
       commitment at every stage of cooperation. We stand out through our individual approach
       to each client, transparent communication, and the ability to find effective solutions
-      even in the most demanding projects. Regardless of the scope of the assignment, we
-      always ensure the highest level of service and on‑time delivery.
+      even in the most demanding projects. This makes our cooperation smooth, predictable and trouble-free.
     h5: "Modernity and innovation"
     h5Paragraph: >
       At Sub Logistics, we combine proven working methods with modern tools and logistics
       technologies, which allows us to optimise transport processes and ensure the highest
       quality of service. By investing in innovative solutions, we take care of the safety
-      and timeliness of shipments while continuously developing the company to meet growing
+      and timeliness of shipments. At the same time, we continuously develop the company to meet growing
       market demands and client expectations.
     h6: "Join us"
     h6Paragraph: >
@@ -346,17 +345,17 @@ translations:
     - question: "What services do you offer?"
       answer: "Road freight FTL and LTL, dedicated transport with tail lift, refrigerated transport, ADR dangerous goods, bulk cargo and oversized/heavy loads, customs clearance support, and cargo insurance."
     - question: "Do you operate domestically and internationally?"
-      answer: "Yes. We handle domestic transport in Poland and international transport across the EU/EEA. For non‑EU lanes we coordinate with partners, including customs formalities."
+      answer: "Yes. We handle domestic transport and international transport across the EU and EEA. For routes outside the EU we coordinate with our partners and provide full customs clearance support."
     - question: "How quickly can you arrange pickup?"
-      answer: "We provide express arrangement — within a few hours of confirmation the truck is at the loading site."
+      answer: "We provide express transport arrangement — within a few hours of confirmation the vehicle can be positioned at the loading location."
     - question: "What information is required for ADR shipments?"
       answer: "UN number, hazard class, packing group, safety data sheet (MSDS), plus packaging and labelling details. We provide ADR‑compliant vehicles and documentation."
     - question: "Do you offer temperature‑controlled transport?"
-      answer: "Yes, we handle refrigerated transport. We share shipment updates by phone or email. Temperature logs for the entire route are available to the client."
+      answer: "Yes, we handle refrigerated transport with full monitoring. We provide shipment status updates by phone or email, and after transport completion we provide temperature logs for the entire route."
     - question: "Is assignment (factoring) possible?"
       answer: "Yes. If our Partner cooperates with a factoring company, payment for the transport service can be made according to the assignment — to the assignee’s account."
     - question: "Are scanned copies of transport documents sufficient?"
-      answer: "In addition to scans, we also require original documents to be sent by traditional post or courier."
+      answer: "Scanned documents are needed, but we also require delivery of original documents by traditional post or courier."
     - question: "Where should original transport documents be sent?"
       answer: "Please send the original documents to: Sub Logistics, ul. Marynarki Polskiej 136A/47, 80-865 Gdańsk."
     - question: "What are typical transit times?"

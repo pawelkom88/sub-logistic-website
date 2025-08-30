@@ -25,7 +25,7 @@ translations:
     topper: "Wyróżniamy się na tle konkurencji."
     heading: "Dlaczego nasze usługi spedycyjne?"
     description: >
-      W Sub Logistics wiemy, że sprawna logistyka to klucz do sukcesu Twojego biznesu. Oferujemy kompleksowe usługi transportowe i spedycyjne, dopasowane do specyfiki każdego zlecenia. Nasza flota i doświadczenie zespołu gwarantują terminowość, bezpieczeństwo ładunku i pełną elastyczność w realizacji Twoich potrzeb.
+      W Sub Logistics wiemy, że sprawna logistyka to klucz do sukcesu Twojego biznesu. Oferujemy kompleksowe usługi transportowe i spedycyjne, dopasowane do specyfiki każdego zlecenia. Nasza flota i doświadczenie zespołu gwarantują terminowość, bezpieczeństwo i pełną elastyczność w realizacji zleceń.
     cards:
       - title: "Globalna Współpraca"
         body: "Przez lata zbudowaliśmy szeroką sieć partnerów w branży logistycznej, co pozwala nam realizować efektywny transport i przewóz towarów w każdej skali."
@@ -40,11 +40,11 @@ translations:
         body: "W Sub Logistics naszym priorytetem jest bezpieczeństwo i punktualność Twoich przesyłek. Stosujemy sprawdzone protokoły oraz skuteczne metody transportu, aby każdy ładunek dotarł na miejsce nienaruszony i na czas."
         alt: "Pracownik Sub Logistics w pracy"
   offer:
-    title: "Usługi Transportowe Gdańsk - ADR, Chłodniczy, Ponadgabarytowy | Sub Logistics"
+    title: "Nasza oferta"
     items:
       - lead: "Transport całopojazdowy (ang. FTL – Full Truck Load)"
         text: "Przewóz, w którym cała przestrzeń ładunkowa pojazdu jest przeznaczona dla jednego klienta lub jednej przesyłki. Optymalne rozwiązanie dla dużych partii towaru. Klient uzyskuje punktualną i bezpieczną dostawę bez przeładunków po drodze."
-      - lead: "Transport drobnicowy (LTL – Less Than Truck Load)."
+      - lead: "Transport drobnicowy (LTL – Less Than Truck Load)"
         text: "Przewóz, w którym jedna przesyłka nie zajmuje całej przestrzeni ładunkowej pojazdu. Opłacalny przy mniejszych ilościach towaru. Klient płaci tylko za faktycznie zajętą przestrzeń lub wagę przesyłki. Występują przeładunki, a czas dostawy jest dłuższy niż w transporcie całopojazdowym."
       - lead: "Transport Just In Time (JIT)"
         text: "Strategia logistyczna polegająca na dostarczaniu towarów dokładnie w momencie, gdy są potrzebne w procesie produkcji lub sprzedaży, bez konieczności magazynowania dużych zapasów."
@@ -54,9 +54,9 @@ translations:
         text: "Gwarancja ochrony finansowej w razie nieprzewidzianych zdarzeń. Dotyczy przewozów drogowych, morskich, lotniczych oraz kolejowych. Klient zyskuje spokój i pewność bezpieczeństwa swojego ładunku."
       - lead: "Transport chłodniczy"
         text: "Przewóz ładunku w kontrolowanej temperaturze przy użyciu pojazdów typu chłodnia. Celem jest zachowanie świeżości, jakości i bezpieczeństwa produktów wrażliwych na ciepło."
-      - lead: "Transport dedykowany z windą załadowczą i rozładowczą."
+      - lead: "Transport dedykowany z windą załadowczą i rozładowczą"
         text: "Dostawa „od drzwi do drzwi” klienta z gwarancją szybkiej i bezpiecznej obsługi ładunku."
-      - lead: "Transport towarów sypkich."
+      - lead: "Transport towarów sypkich"
         text: "Bezpieczny przewóz materiałów luzem, takich jak zboża, kruszywa, piasek, cement czy inne surowce masowe. Wykorzystujemy specjalistyczne pojazdy – wywrotki, silosy i cysterny."
       - lead: "Transport towarów ponadgabarytowych"
         text: "Przewóz ładunków o niestandardowych wymiarach lub wadze – od maszyn i urządzeń przemysłowych, przez konstrukcje stalowe, po elementy turbin i infrastruktury. Zapewniamy odpowiedni sprzęt, niezbędne zezwolenia oraz pilotaż drogowy, jeśli jest wymagany."
@@ -146,9 +146,9 @@ translations:
     topper: "Dostosowane rozwiązania dla każdej przesyłki."
     heading: "Transport Krajowy i Międzynarodowy"
     description:
-      - paragraph: "W Sub Logistics wiemy, że potrzeby transportowe mogą być bardzo różne – od prostego transportu drobnicowego, wymagającego szybkiej i sprawnej dostawy, po złożone projekty logistyczne obejmujące transport całopojazdowy z wieloma punktami załadunku i rozładunku. Dlatego nasz zespół ekspertów nieustannie analizuje i optymalizuje trasy oraz metody transportu, aby Twoje towary dotarły w sposób najbardziej efektywny i ekonomiczny."
-      - paragraph: "Kluczowe jest dla nas indywidualne podejście do każdego zlecenia. Jesteśmy do dyspozycji klientów 24 godziny na dobę, 7 dni w tygodniu, monitorując każdą przesyłkę i zapewniając wsparcie w sytuacjach wymagających natychmiastowej reakcji."
-      - paragraph: "Proaktywnie szukamy sposobów na redukcję kosztów i czasu transportu. Klient otrzymuje nie tylko usługę transportową najwyższej jakości, ale także partnera biznesowego, który realnie wspiera optymalizację jego łańcucha dostaw. Każde zlecenie, niezależnie od wielkości, jest dla nas okazją, by udowodnić, że zaufanie klienta jest dla nas najważniejsze, a jego sukces – naszym sukcesem."
+      - paragraph: "W Sub Logistics realizujemy transport dopasowany do potrzeb Twojego biznesu – od drobnicowego po całopojazdowy, z wieloma punktami załadunku i rozładunku. Nasz zespół ekspertów analizuje i optymalizuje trasy oraz metody transportu, aby Twoje towary dotarły szybko, bezpiecznie i ekonomicznie."
+      - paragraph: "Dbamy o indywidualne podejście do każdego zlecenia i jesteśmy dostępni 24/7, monitorując przesyłki i wspierając w sytuacjach wymagających natychmiastowej reakcji."
+      - paragraph: "Proaktywnie szukamy sposobów na redukcję kosztów i czasu transportu. Oferujemy nie tylko usługę transportową najwyższej jakości, ale także partnerstwo biznesowe, które realnie wspiera optymalizację Twojego łańcucha dostaw. Każde zlecenie, niezależnie od wielkości, traktujemy jako okazję do udowodnienia, że sukces klienta jest naszym sukcesem."
     icons:
       - title: "Spedycja drogowa"
       - title: "Spedycja morska"
@@ -275,21 +275,21 @@ translations:
   aboutUs:
     h1part1: "Sub Trans - Twój partner w logistyce oparty na"
     h1part2: "doświadczeniu i pasji."
-    h2: "Historia i Doświadczenie w Transporcie"
+    h2: "Nasza historia i doświadczenie"
     h2Paragraph: >
-      Sub Logistics została założona w 2018 roku przez Piotra Subotowicza, od lat związanego z branżą transportu i logistyki. Firma narodziła się z pasji i doświadczenia, szybko zdobywając opinię niezawodnego i elastycznego partnera biznesowego.Od początku działalności konsekwentnie stawiamy na nowoczesne rozwiązania, indywidualne podejście do klienta oraz ciągły rozwój. Dziś Sub Logistics to nie tylko firma spedycyjna, ale przede wszystkim zespół specjalistów, dla których jakość i terminowość stanowią fundament każdej współpracy.
+      Sub Logistics powstała w 2018 roku z inicjatywy Piotra Subotowicza – przedsiębiorcy od lat związanego z branżą transportową. Od początku kierujemy się pasją do logistyki oraz przekonaniem, że rzetelność i elastyczność są fundamentem udanej współpracy.Dzięki nowoczesnym rozwiązaniom i indywidualnemu podejściu szybko zdobyliśmy zaufanie partnerów i ugruntowaliśmy pozycję solidnego dostawcy usług spedycyjnych.Dziś Sub Logistics to zespół specjalistów, dla których jakość, terminowość i bezpieczeństwo dostaw są priorytetem. Naszą misją jest wspieranie biznesów klientów poprzez niezawodne i skuteczne rozwiązania logistyczne.
     h3: "Nasza specjalizacja"
     h3Paragraph: >
       Specjalizujemy się w organizacji transportu krajowego i międzynarodowego, oferując kompleksowe rozwiązania spedycyjne dopasowane do potrzeb zarówno małych firm, jak i dużych przedsiębiorstw. Każde zlecenie realizujemy z wykorzystaniem nowoczesnego i starannie wyselekcjonowanego taboru. Pojazdy regularnie poddawane są przeglądom technicznym i spełniają najwyższe standardy bezpieczeństwa oraz ekologii. Dzięki temu możemy zagwarantować niezawodność i terminowość realizowanych usług.
     h4: "Dlaczego my?"
     h4Paragraph: >
-      Sub Logistics to elastyczność, szybka reakcja na potrzeby klienta i pełne zaangażowanie na każdym etapie współpracy. Wyróżnia nas indywidualne podejście do każdego klienta, transparentna komunikacja oraz umiejętność znajdowania efektywnych rozwiązań nawet w najbardziej wymagających projektach. Niezależnie od skali zlecenia, zawsze dbamy o najwyższy poziom obsługi i terminową realizację.
+      Sub Logistics to elastyczność, szybka reakcja na potrzeby klienta i pełne zaangażowanie na każdym etapie współpracy. Wyróżnia nas indywidualne podejście do każdego klienta, transparentna komunikacja oraz umiejętność znajdowania efektywnych rozwiązań nawet w najbardziej wymagających projektach. Dzięki temu współpraca z nami jest sprawna, przewidywalna i bezproblemowa.
     h5: "Nowoczesność i innowacja"
     h5Paragraph: >
-      W Sub Logistics łączymy sprawdzone metody pracy z nowoczesnymi narzędziami i technologiami logistycznymi, co pozwala na optymalizację procesów transportowych i zapewnienie usług najwyższej jakości.Inwestując w innowacyjne rozwiązania, dbamy o bezpieczeństwo i terminowość przewozów, jednocześnie nieustannie rozwijając firmę, aby sprostać rosnącym wymaganiom rynku i oczekiwaniom klientów.
+      W Sub Logistics łączymy sprawdzone metody pracy z nowoczesnymi narzędziami i technologiami logistycznymi, co pozwala na optymalizację procesów transportowych i zapewnienie usług najwyższej jakości. Inwestując w innowacyjne rozwiązania, dbamy o bezpieczeństwo i terminowość przewozów. Jednocześnie nieustannie rozwijamy firmę, aby sprostać rosnącym wymaganiom rynku i oczekiwaniom klientów.
     h6: "Dołącz do nas"
     h6Paragraph: >
-      Zapraszamy do współpracy z Sub Logistics, gdzie tradycyjne wartości spotykają się z nowoczesnym podejściem do logistyki. Odkryj, jak pasja i zaangażowanie mogą usprawnić Twój łańcuch dostaw.Skontaktuj się z nami, aby dowiedzieć się więcej o naszych usługach i sprawdzić, jak możemy wspomóc Twój biznes.
+      Zapraszamy do współpracy z Sub Logistics, gdzie tradycyjne wartości spotykają się z nowoczesnym podejściem do logistyki. Odkryj, jak pasja i zaangażowanie mogą usprawnić Twój łańcuch dostaw. Skontaktuj się z nami, aby dowiedzieć się więcej o naszych usługach i sprawdzić, jak możemy wspomóc Twój biznes.
     link:
       url: "/pl/#cs-contact-490"
       part1: "Skontaktuj się z nami"
@@ -315,29 +315,29 @@ translations:
     - question: "Jakie usługi spedycyjne oferujecie?"
       answer: "Transport drogowy FTL i LTL, transport dedykowany z windą, transport chłodniczy, przewóz ładunków ADR, ładunków sypkich i ponadgabarytowych, wsparcie w odprawie celnej oraz ubezpieczenie cargo."
     - question: "Czy realizujecie przewozy w Polsce i za granicą?"
-      answer: "Tak. Obsługujemy transport krajowy oraz międzynarodowy na terenie UE/EEA. W przypadku relacji spoza UE koordynujemy przewóz z partnerami, wraz z formalnościami celnymi."
+      answer: "Tak. Obsługujemy transport krajowy oraz międzynarodowy na terenie UE i EOG. W przypadku tras spoza UE koordynujemy przewóz z naszymi partnerami i zapewniamy pełną obsługę formalności celnych."
     - question: "Jak szybko możecie zorganizować odbiór?"
-      answer: "Zapewniamy ekspresową organizację transportu – w ciągu kilku godzin od potwierdzenia auto jest na miejscu załadunku."
+      answer: "Zapewniamy ekspresową organizację transportu – w ciągu kilku godzin od potwierdzenia pojazd może zostać podstawiony na miejsce załadunku."
     - question: "Jakie dane są potrzebne przy transporcie ADR?"
       answer: "Numer UN, klasa zagrożenia, grupa pakowania, karta charakterystyki (MSDS) oraz informacje o opakowaniu i oznakowaniu. Zapewniamy pojazdy i dokumentację zgodną z ADR."
     - question: "Czy oferujecie transport w kontrolowanej temperaturze?"
-      answer: "Tak, realizujemy przewozy chłodnicze. Informujemy o statusie przesyłki telefonicznie lub e‑mailem. Wydruki temperatury z całej trasy udostępniamy klientowi."
+      answer: "Tak, realizujemy przewozy chłodnicze z pełnym monitoringiem. Informujemy o statusie przesyłki telefonicznie lub e-mailem, a po zakończeniu transportu udostępniamy wydruki temperatury z całej trasy."
     - question: "Czy jest możliwość cesji?"
-      answer: "Tak, jeśli nasz Partner współpracuje z firmą faktoringową, płatność za usługę transportową realizujemy zgodnie z cesją – na rachunek cesjonariusza."
+      answer: "Tak. Jeśli nasz Partner współpracuje z firmą faktoringową, płatność za usługę transportową realizujemy zgodnie z warunkami cesji – bezpośrednio na rachunek cesjonariusza."
     - question: "Czy wystarczy wysłać skany dokumentów transportowych?"
-      answer: "Poza skanami wymagamy również dostarczenia oryginałów dokumentów przesłanych pocztą tradycyjną lub kurierem."
+      answer: "Skany dokumentów są potrzebne, ale wymagamy także dostarczenia ich oryginałów pocztą tradycyjną lub kurierem."
     - question: "Gdzie należy wysłać oryginały dokumentów transportowych ?"
       answer: "Prosimy o przesłanie oryginałów dokumentów na adres: Sub Logistics ul. Marynarki Polskiej 136a/47 80-865 Gdańsk."
     - question: "Jakie są ograniczenia wymiarów i wagi?"
-      answer: "Obsługujemy zarówno standardowe palety, jak i ładunki ponadgabarytowe/ciężkie. Przekaż wymiary i wagę, a dobierzemy odpowiedni pojazd i pozwolenia."
+      answer: "Obsługujemy zarówno standardowe palety, jak i ładunki ponadgabarytowe lub ciężkie. Prześlij wymiary i wagę, a my dobierzemy odpowiedni pojazd oraz niezbędne pozwolenia."
     - question: "Jak zabezpieczacie mój ładunek?"
-      answer: "Każdy przewóz objęty jest odpowiedzialnością przewoźnika; dodatkowo oferujemy ubezpieczenie cargo. Rekomendujemy je przy ładunkach wrażliwych lub wysokiej wartości."
+      answer: "Każdy przewóz objęty jest odpowiedzialnością przewoźnika. Dodatkowo oferujemy ubezpieczenie cargo, które szczególnie rekomendujemy dla ładunków wrażliwych lub o wysokiej wartości."
     - question: "Jak przygotować towar do załadunku?"
-      answer: "Zabezpiecz, opisz i — jeśli to możliwe — zapaletuj towar. Oferujemy pomoc przy załadunku/rozładunku, w tym windę załadowczą i dostawę pod drzwi (po uzgodnieniu)."
+      answer: "Zabezpiecz, opisz i – jeśli to możliwe – zapaletuj towar. Oferujemy również pomoc przy załadunku i rozładunku, w tym windę załadowczą oraz dostawę pod drzwi (po wcześniejszym uzgodnieniu)."
     - question: "Jakie są warunki płatności?"
-      answer: "Ustalamy indywidualnie. Standardowo przelew bankowy; dla nowych klientów możliwa przedpłata."
+      answer: "Warunki płatności ustalamy indywidualnie. Standardowo stosujemy przelew bankowy, a dla nowych klientów możliwa jest przedpłata."
     - question: "W jaki sposób będę informowany o statusie przesyłki?"
-      answer: "Przekazujemy aktualizacje telefonicznie i e‑mailem na kluczowych etapach. Masz dedykowany kontakt do opiekuna zlecenia."
+      answer: "Przekazujemy aktualizacje telefonicznie i e-mailem na kluczowych etapach transportu. Każde zlecenie ma przypisanego dedykowanego opiekuna, z którym możesz się kontaktować."
   contact:
     phone: "+48510482468"
     email: "piotr.subotowicz@sublog.com.pl"
