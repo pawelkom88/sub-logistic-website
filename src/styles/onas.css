@@ -146,6 +146,7 @@
     display: block;
     position: absolute;
     left: 8rem;
+      transform: scaleX(-1)
   }
 
   #content-page-713 .cs-background {
