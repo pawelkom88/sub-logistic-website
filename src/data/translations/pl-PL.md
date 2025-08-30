@@ -307,7 +307,7 @@ translations:
       closingNote: "Na życzenie udostępniamy certyfikat ubezpieczeniowy."
   footer:
     body: >
-      Zapraszamy do kontaktu i współpracy. Niezależnie od tego, czy szukasz partnera do stałej współpracy, czy potrzebujesz wsparcia przy jednorazowym zleceniu, Sub Logistics jest gotowy, aby wspierać Twój biznes na drogach Polski, Europy i świata.
+      Zapraszamy do kontaktu i współpracy. Niezależnie od tego, czy szukasz partnera do stałej współpracy, czy potrzebujesz wsparcia przy jednorazowym zleceniu, Sub Logistics jest gotowy, aby wspierać Twój biznes na drogach Polski i Europy.
     copyright: "Wszelkie prawa zastrzeżone."
   faq:
     - question: "Jak otrzymać wycenę transportu?"

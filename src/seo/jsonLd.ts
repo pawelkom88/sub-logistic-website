@@ -36,13 +36,13 @@ export default function jsonLDGenerator({
       headline: post?.title,
       description: post?.description,
       image: post?.image?.src || image,
-      author: post?.author
-        ? {
-            "@type": "Person",
-            name: post.author,
-            url: `${s.url}/author/${slugify(post.author)}`,
-          }
-        : undefined,
+      ...(post?.author && {
+        author: {
+          "@type": "Person",
+          name: post.author,
+          url: `${s.url}/author/${slugify(post.author)}`,
+        },
+      }),
       datePublished: post?.date,
     } as const;
     return `<script type="application/ld+json">${JSON.stringify(data)}</script>`;
@@ -61,12 +61,12 @@ export default function jsonLDGenerator({
         addressLocality: s.city,
         addressRegion: s.region,
         addressCountry: s.country,
-        postalCode: s.postalCode,
+        ...(s.postalCode && { postalCode: s.postalCode }),
         streetAddress: s.streetAddress,
       },
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: s.telephone,
+        ...(s.telephone && { telephone: s.telephone }),
         contactType: "customer support",
         areaServed: "PL",
         availableLanguage: ["en-GB", "pl-PL", "de-DE"],

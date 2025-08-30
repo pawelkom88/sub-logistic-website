@@ -340,7 +340,7 @@ translations:
       closingNote: "Auf Wunsch stellen wir eine Versicherungsbestätigung zur Verfügung."
   footer:
     body: >
-      Wir laden Sie ein, mit uns Kontakt aufzunehmen und zusammenzuarbeiten. Egal, ob Sie einen Partner für eine dauerhafte Zusammenarbeit suchen oder Unterstützung bei einem einmaligen Auftrag benötigen, Sub Logistics ist bereit, Ihr Unternehmen auf den Straßen Polens, Europas und der Welt zu unterstützen.
+      Wir laden Sie ein, mit uns Kontakt aufzunehmen und zusammenzuarbeiten. Egal, ob Sie einen Partner für eine dauerhafte Zusammenarbeit suchen oder Unterstützung bei einem einmaligen Auftrag benötigen, Sub Logistics ist bereit, Ihr Unternehmen auf den Straßen Polens und Europas zu unterstützen.
     copyright: "Alle Rechte vorbehalten."
   faq:
     - question: "Wie erhalte ich ein Transportangebot?"

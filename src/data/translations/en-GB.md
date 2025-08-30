@@ -336,8 +336,8 @@ translations:
   footer:
     body: >
       We invite you to get in touch and work with us. Whether you are looking for a partner for ongoing collaboration
-      or need support for a one-off project, Sub Logistics is ready to support your business on the roads of Poland,
-      Europe, and the world.
+      or need support for a one-off project, Sub Logistics is ready to support your business on the roads of Poland
+      and Europe.
     copyright: "All rights reserved."
   faq:
     - question: "How do I get a transport quote?"
