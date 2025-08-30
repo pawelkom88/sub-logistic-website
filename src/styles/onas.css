@@ -136,7 +136,8 @@
   }
   #content-page-713 .cs-picture {
     width: 29em;
-    height: 40.4375em;
+    height: 43.5em;
+    aspect-ratio: 1900 / 2850;
     border-radius: 1em;
     border: 0.75em solid #ffffff;
     background-color: #f7f7f7;
