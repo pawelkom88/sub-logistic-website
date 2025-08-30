@@ -1,7 +1,7 @@
 ---
 import { Image} from "astro:assets";
 import logo from "../../assets/images/logo-footer.png";
-// import footerBg from "../../assets/images/footer.webp";
+import footerBg from "../../assets/images/footer.webp";
 import type { SelectedTranslation } from "../../utils/utils";
 import { getCountryCode, getHref } from "../../utils/utils";
 import { googleMapsLink } from "../contact-form/ContactForm.astro";
@@ -45,7 +45,6 @@ const todaysDate = new Date().getFullYear();
       >
         <Image
           class="cs-logo-img"
-          format="webp"
           src={logo}
           alt={logoAltMap[currentLang]}
           width="197"
@@ -141,8 +140,8 @@ const todaysDate = new Date().getFullYear();
     >
   </div>
 
-  <img
-    src="../../assets/images/footer.webp"
+  <Image
+    src={footerBg}
     class="cs-background"
     alt={footerBgAltMap[currentLang]}
     loading="lazy"
