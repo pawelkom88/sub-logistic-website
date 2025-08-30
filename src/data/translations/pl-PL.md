@@ -2,7 +2,7 @@
 languageCode: pl-PL
 languageName: Polski
 translations:
-  seoTitle: "Sub Logistics Gdańsk - Piotr Subotowicz | Transport Drogowy ADR Chłodniczy Trójmiasto"
+  seoTitle: "Sub Logistics Gdańsk – Profesjonalny transport drogowy w całej Europie"
   seoDescription: >
     jednoosobowa firma transportowa Piotr Subotowicz - spedycja Gdańsk, transport ADR, chłodniczy, ponadgabarytowy. Indywidualne podejście, konkurencyjne ceny. 510-482-468.
   nav:
@@ -17,9 +17,9 @@ translations:
         url: "/polityka-prywatnosci"
   contactBtn: "Wyślij wiadomość"
   hero:
-    title: "Sub Logistics Gdańsk – Profesjonalny transport drogowy na terenie Europy."
+    title: "Sub Logistics Gdańsk – Profesjonalny transport drogowy w całej Europie"
     body: >
-      Bazując na wieloletnim doświadczeniu w spedycji, oferujemy sprawdzone i niezawodne rozwiązania transportowe. Realizujemy przewozy FTL, LTL, ADR, w kontrolowanej temperaturze oraz transport ładunków nienormatywnych.
+      Bazując na wieloletnim doświadczeniu w spedycji, oferujemy sprawdzone i niezawodne rozwiązania transportowe. Realizujemy przewozy FTL, LTL, ADR, transport w kontrolowanej temperaturze oraz ładunków nienormatywnych.
     button: "Wyceń transport"
   services:
     topper: "Wyróżniamy się na tle konkurencji."
@@ -42,26 +42,26 @@ translations:
   offer:
     title: "Nasza oferta"
     items:
-      - lead: "Transport całopojazdowy (ang. FTL – Full Truck Load)"
-        text: "Przewóz, w którym cała przestrzeń ładunkowa pojazdu jest przeznaczona dla jednego klienta lub jednej przesyłki. Optymalne rozwiązanie dla dużych partii towaru. Klient uzyskuje punktualną i bezpieczną dostawę bez przeładunków po drodze."
-      - lead: "Transport drobnicowy (LTL – Less Than Truck Load)"
-        text: "Przewóz, w którym jedna przesyłka nie zajmuje całej przestrzeni ładunkowej pojazdu. Opłacalny przy mniejszych ilościach towaru. Klient płaci tylko za faktycznie zajętą przestrzeń lub wagę przesyłki. Występują przeładunki, a czas dostawy jest dłuższy niż w transporcie całopojazdowym."
-      - lead: "Transport Just In Time (JIT)"
-        text: "Strategia logistyczna polegająca na dostarczaniu towarów dokładnie w momencie, gdy są potrzebne w procesie produkcji lub sprzedaży, bez konieczności magazynowania dużych zapasów."
-      - lead: "Transport ładunków ADR"
-        text: "Przewóz materiałów niebezpiecznych zgodnie z międzynarodową umową ADR, która określa zasady ich bezpiecznego pakowania, oznakowania, załadunku i przewozu."
-      - lead: "Ubezpiecznie Cargo"
-        text: "Gwarancja ochrony finansowej w razie nieprzewidzianych zdarzeń. Dotyczy przewozów drogowych, morskich, lotniczych oraz kolejowych. Klient zyskuje spokój i pewność bezpieczeństwa swojego ładunku."
-      - lead: "Transport chłodniczy"
-        text: "Przewóz ładunku w kontrolowanej temperaturze przy użyciu pojazdów typu chłodnia. Celem jest zachowanie świeżości, jakości i bezpieczeństwa produktów wrażliwych na ciepło."
-      - lead: "Transport dedykowany z windą załadowczą i rozładowczą"
-        text: "Dostawa „od drzwi do drzwi” klienta z gwarancją szybkiej i bezpiecznej obsługi ładunku."
-      - lead: "Transport towarów sypkich"
-        text: "Bezpieczny przewóz materiałów luzem, takich jak zboża, kruszywa, piasek, cement czy inne surowce masowe. Wykorzystujemy specjalistyczne pojazdy – wywrotki, silosy i cysterny."
-      - lead: "Transport towarów ponadgabarytowych"
-        text: "Przewóz ładunków o niestandardowych wymiarach lub wadze – od maszyn i urządzeń przemysłowych, przez konstrukcje stalowe, po elementy turbin i infrastruktury. Zapewniamy odpowiedni sprzęt, niezbędne zezwolenia oraz pilotaż drogowy, jeśli jest wymagany."
-      - lead: "Odprawa celna"
-        text: "Pełne wsparcie w zakresie odprawy celnej, umożliwiające sprawne i bezproblemowe wprowadzenie lub wywóz towarów przez granice Unii Europejskiej."
+      - lead: "Transport całopojazdowy (ang. FTL – Full Truck Load):"
+        text: "przewóz, w którym cała przestrzeń ładunkowa pojazdu jest przeznaczona dla jednego klienta lub jednej przesyłki. Optymalne rozwiązanie dla dużych partii towaru. Klient uzyskuje punktualną i bezpieczną dostawę bez przeładunków po drodze."
+      - lead: "Transport drobnicowy (ang. LTL – Less Than Truck Load):"
+        text: "przewóz, w którym jedna przesyłka nie zajmuje całej przestrzeni ładunkowej pojazdu. Opłacalny przy mniejszych ilościach towaru. Klient płaci tylko za faktycznie zajętą przestrzeń lub wagę przesyłki. Występują przeładunki, a czas dostawy jest dłuższy niż w transporcie całopojazdowym."
+      - lead: "Transport Just In Time (JIT):"
+        text: "strategia logistyczna polegająca na dostarczaniu towarów dokładnie w momencie, gdy są potrzebne w procesie produkcji lub sprzedaży, bez konieczności magazynowania dużych zapasów."
+      - lead: "Transport ładunków ADR:"
+        text: "przewóz materiałów niebezpiecznych zgodnie z międzynarodową umową ADR, która określa zasady ich bezpiecznego pakowania, oznakowania, załadunku i przewozu."
+      - lead: "Ubezpieczenie Cargo:"
+        text: "gwarancja ochrony finansowej w razie nieprzewidzianych zdarzeń. Dotyczy przewozów drogowych, morskich, lotniczych oraz kolejowych. Klient zyskuje spokój i pewność bezpieczeństwa swojego ładunku."
+      - lead: "Transport chłodniczy:"
+        text: "przewóz ładunku w kontrolowanej temperaturze przy użyciu pojazdów typu chłodnia. Celem jest zachowanie świeżości, jakości i bezpieczeństwa produktów wrażliwych na ciepło."
+      - lead: "Transport dedykowany z windą załadowczą i rozładowczą:"
+        text: "dostawa „od drzwi do drzwi” klienta z gwarancją szybkiej i bezpiecznej obsługi ładunku."
+      - lead: "Transport towarów sypkich:"
+        text: "bezpieczny przewóz materiałów luzem, takich jak zboża, kruszywa, piasek, cement czy inne surowce masowe. Wykorzystujemy specjalistyczne pojazdy – wywrotki, silosy i cysterny."
+      - lead: "Transport towarów ponadgabarytowych:"
+        text: "przewóz ładunków o niestandardowych wymiarach lub wadze – od maszyn i urządzeń przemysłowych, przez konstrukcje stalowe, po elementy turbin i infrastruktury. Zapewniamy odpowiedni sprzęt, niezbędne zezwolenia oraz pilotaż drogowy, jeśli jest wymagany."
+      - lead: "Odprawa celna:"
+        text: "pełne wsparcie w zakresie odprawy celnej, umożliwiające sprawne i bezproblemowe wprowadzenie lub wywóz towarów przez granice Unii Europejskiej."
   transport:
     heading: "Pojazdy i możliwości transportowe"
     labels:
@@ -273,7 +273,7 @@ translations:
     back: "Wstecz"
     confirmationMessage: "Twoje zapytanie zostało pomyślnie wysłane!"
   aboutUs:
-    h1part1: "Sub Trans - Twój partner w logistyce oparty na"
+    h1part1: "Sub Logistics - Twój partner w logistyce oparty na"
     h1part2: "doświadczeniu i pasji."
     h2: "Nasza historia i doświadczenie"
     h2Paragraph: >

@@ -1,7 +1,7 @@
 ---
-import { Image, Picture } from "astro:assets";
+import { Image} from "astro:assets";
 import logo from "../../assets/images/logo-footer.png";
-import footerBg from "../../assets/images/footer.webp";
+// import footerBg from "../../assets/images/footer.webp";
 import type { SelectedTranslation } from "../../utils/utils";
 import { getCountryCode, getHref } from "../../utils/utils";
 import { googleMapsLink } from "../contact-form/ContactForm.astro";
@@ -141,14 +141,13 @@ const todaysDate = new Date().getFullYear();
     >
   </div>
 
-  <Picture
-    src={footerBg}
+  <img
+    src="../../assets/images/footer.webp"
     class="cs-background"
     alt={footerBgAltMap[currentLang]}
     loading="lazy"
     decoding="async"
     fetchpriority="low"
     sizes="100vw"
-    formats={["avif", "webp"]}
   />
 </footer>

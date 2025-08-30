@@ -2,7 +2,7 @@
 languageCode: en-GB
 languageName: English
 translations:
-  seoTitle: "Sub Logistics Gdańsk – Piotr Subotowicz | ADR, Refrigerated Road Transport Tricity"
+  seoTitle: "Sub Logistics Gdańsk – Professional road transport throughout Europe"
   seoDescription: >
     One-person transport company by Piotr Subotowicz — freight forwarding in Gdańsk; ADR, refrigerated and oversized road transport. Personal approach, competitive pricing. +48 510 482 468.
   nav:
@@ -17,9 +17,9 @@ translations:
         url: "/terms-of-use"
   contactBtn: "Contact us"
   hero:
-    title: "Sub Logistics Gdańsk – Your Local Road Transport Expert"
+    title: "Sub Logistics Gdańsk – Professional road transport throughout Europe"
     body: >
-      Piotr Subotowicz — a one‑person forwarding company with over 10 years of experience in the logistics industry. We provide ADR, refrigerated and oversized road transport from Gdańsk across Europe. A direct, personal approach without intermediaries.
+      Based on years of experience in freight forwarding, we offer proven and reliable transport solutions. We handle FTL, LTL, ADR transports, temperature-controlled transport, and oversized cargo.
     button: "Get a Quote"
   services:
     topper: "We stand out from the competition."
@@ -50,26 +50,26 @@ translations:
   offer:
     title: "Transport Services Gdańsk – ADR, Refrigerated, Oversized | Sub Logistics"
     items:
-      - lead: "Full Truck Load (FTL) transport"
-        text: "The entire cargo space is dedicated to one client or shipment. Optimal for large consignments. Punctual, secure delivery without transshipments."
-      - lead: "Less Than Truck Load (LTL) transport"
-        text: "A shipment does not occupy the full cargo space. Cost‑effective for smaller volumes — you pay only for the space or weight used. Transshipments occur and transit time is longer than FTL."
-      - lead: "Just‑In‑Time (JIT) transport"
-        text: "A logistics strategy of delivering goods exactly when needed in production or sales, without holding large inventories."
-      - lead: "ADR dangerous goods transport"
-        text: "Carriage of hazardous materials in accordance with the ADR agreement — rules for safe packaging, labelling, loading and transport."
-      - lead: "Cargo insurance"
-        text: "Financial protection in case of unforeseen incidents. Applies to road, sea, air and rail shipments. Peace of mind and assurance for your cargo."
-      - lead: "Refrigerated transport"
-        text: "Carriage in a controlled temperature using refrigerated vehicles to maintain freshness, quality and safety of temperature‑sensitive goods."
-      - lead: "Dedicated transport with tail lift"
-        text: "Door‑to‑door delivery with guaranteed fast and safe handling of the cargo."
-      - lead: "Bulk cargo transport"
-        text: "Safe haulage of loose materials such as grain, aggregates, sand, cement and other bulk commodities using specialised vehicles — tippers, silos and tankers."
-      - lead: "Oversized cargo transport"
-        text: "Transport of loads with non‑standard dimensions or weight — from industrial machinery and equipment to steel structures and turbine/infrastructure components. We provide the right equipment, required permits and, if needed, road escort."
-      - lead: "Customs clearance"
-        text: "Full support with customs clearance for smooth, hassle‑free import or export of goods across EU borders."
+      - lead: "Full Truck Load (FTL) transport:"
+        text: "the entire cargo space is dedicated to one client or shipment. Optimal for large consignments. Punctual, secure delivery without transshipments."
+      - lead: "Less Than Truck Load (LTL) transport:"
+        text: "a shipment does not occupy the full cargo space. Cost‑effective for smaller volumes — you pay only for the space or weight used. Transshipments occur and transit time is longer than FTL."
+      - lead: "Just‑In‑Time (JIT) transport:"
+        text: "a logistics strategy of delivering goods exactly when needed in production or sales, without holding large inventories."
+      - lead: "ADR dangerous goods transport:"
+        text: "carriage of hazardous materials in accordance with the ADR agreement — rules for safe packaging, labelling, loading and transport."
+      - lead: "Cargo insurance:"
+        text: "financial protection in case of unforeseen incidents. Applies to road, sea, air and rail shipments. Peace of mind and assurance for your cargo."
+      - lead: "Refrigerated transport:"
+        text: "carriage in a controlled temperature using refrigerated vehicles to maintain freshness, quality and safety of temperature‑sensitive goods."
+      - lead: "Dedicated transport with tail lift:"
+        text: "door‑to‑door delivery with guaranteed fast and safe handling of the cargo."
+      - lead: "Bulk cargo transport:"
+        text: "safe haulage of loose materials such as grain, aggregates, sand, cement and other bulk commodities using specialised vehicles — tippers, silos and tankers."
+      - lead: "Oversized cargo transport:"
+        text: "transport of loads with non‑standard dimensions or weight — from industrial machinery and equipment to steel structures and turbine/infrastructure components. We provide the right equipment, required permits and, if needed, road escort."
+      - lead: "Customs clearance:"
+        text: "full support with customs clearance for smooth, hassle‑free import or export of goods across EU borders."
   transport:
     heading: "Vehicles and transport capabilities"
     labels:
@@ -282,7 +282,7 @@ translations:
     back: "Back"
     confirmationMessage: "Your request has been successfully submitted!"
   aboutUs:
-    h1part1: "Sub Trans - Your partner in logistics driven by"
+    h1part1: "Sub Logistics - Your partner in logistics driven by"
     h1part2: "passion and experience."
     h2: "History and Experience in Transport"
     h2Paragraph: >

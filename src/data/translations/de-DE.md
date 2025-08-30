@@ -2,7 +2,7 @@
 languageCode: de-DE
 languageName: Deutsch
 translations:
-  seoTitle: "Sub Logistics Gdańsk – Piotr Subotowicz | ADR, Kühl- und Schwertransport"
+  seoTitle: "Sub Logistics Gdańsk – Professioneller Straßentransport in ganz Europa"
   seoDescription: >
     Ein-Personen-Transportunternehmen von Piotr Subotowicz – Spedition Gdańsk, ADR, Kühl- und Schwertransport. Individueller Ansatz, wettbewerbsfähige Preise. +48 510 482 468.
   nav:
@@ -17,9 +17,9 @@ translations:
         url: "/datenschutz"
   contactBtn: "Kontakt"
   hero:
-    title: "Sub Logistics Gdańsk – Ihr lokaler Experte für Straßentransport"
+    title: "Sub Logistics Gdańsk – Professioneller Straßentransport in ganz Europa"
     body: >
-      Piotr Subotowicz – ein Ein-Personen-Unternehmen mit über 10 Jahren Erfahrung in der Logistikbranche. Wir bieten ADR-, Kühl- und Übermaßtransporte von Gdańsk in ganz Europa. Direkter, persönlicher Kontakt – ohne Zwischenhändler.
+      Basierend auf langjähriger Erfahrung in der Spedition bieten wir bewährte und zuverlässige Transportlösungen. Wir führen FTL-, LTL-, ADR-Transporte, Transport bei kontrollierter Temperatur und übermaßige Ladungen durch.
     button: "Transport anfragen"
   services:
     topper: "Wir heben uns von der Konkurrenz ab."
@@ -51,26 +51,26 @@ translations:
   offer:
     title: "Transportdienstleistungen Gdańsk – ADR, Kühl, Übermaß | Sub Logistics"
     items:
-      - lead: "Komplettladungsverkehr (FTL – Full Truck Load)"
-        text: "Der gesamte Laderaum ist einer Sendung/einem Kunden vorbehalten. Optimal für große Partien. Pünktliche, sichere Lieferung ohne Umladungen."
-      - lead: "Teilladungsverkehr (LTL – Less Than Truck Load)"
-        text: "Eine Sendung belegt nicht den gesamten Laderaum. Kosteneffizient bei kleineren Volumina – Sie zahlen nur für den genutzten Platz oder das Gewicht. Es kommt zu Umladungen, die Laufzeit ist länger als bei FTL."
-      - lead: "Just‑in‑Time (JIT)"
-        text: "Logistikstrategie: Lieferung genau zum Zeitpunkt des Bedarfs in Produktion/Verkauf – ohne große Lagerbestände."
-      - lead: "Gefahrguttransport (ADR)"
-        text: "Beförderung gefährlicher Güter gemäß ADR – Regeln für sicheres Verpacken, Kennzeichnen, Verladen und Transport."
-      - lead: "Transportversicherung (Cargo)"
-        text: "Finanzieller Schutz bei unvorhergesehenen Ereignissen. Gilt für Straßen‑, See‑, Luft‑ und Bahntransporte."
-      - lead: "Kühltransport"
-        text: "Beförderung in kontrollierter Temperatur mit Kühlfahrzeugen – für Frische, Qualität und Sicherheit temperaturempfindlicher Produkte."
-      - lead: "Dedizierter Transport mit Ladebordwand"
-        text: "Tür‑zu‑Tür‑Zustellung mit schneller und sicherer Abwicklung der Ladung."
-      - lead: "Transport von Schüttgütern"
-        text: "Sicherer Transport von Schüttgütern wie Getreide, Schotter, Sand, Zement u. a. Mit Spezialfahrzeugen – Kippern, Silos und Tankaufliegern."
-      - lead: "Transport von Übermaßgütern"
-        text: "Beförderung von Ladungen mit nicht standardmäßigen Abmessungen oder Gewichten – von Maschinen und Industrieanlagen über Stahlkonstruktionen bis zu Turbinen‑/Infrastrukturelementen. Mit geeigneter Ausrüstung, Genehmigungen und ggf. Begleitfahrzeugen."
-      - lead: "Zollabfertigung"
-        text: "Volle Unterstützung bei der Zollabfertigung für reibungslose, problemlose Ein‑/Ausfuhr über EU‑Grenzen."
+      - lead: "Komplettladungsverkehr (FTL – Full Truck Load):"
+        text: "der gesamte Laderaum ist einer Sendung/einem Kunden vorbehalten. Optimal für große Partien. Pünktliche, sichere Lieferung ohne Umladungen."
+      - lead: "Teilladungsverkehr (LTL – Less Than Truck Load):"
+        text: "eine Sendung belegt nicht den gesamten Laderaum. Kosteneffizient bei kleineren Volumina – Sie zahlen nur für den genutzten Platz oder das Gewicht. Es kommt zu Umladungen, die Laufzeit ist länger als bei FTL."
+      - lead: "Just‑in‑Time (JIT):"
+        text: "logistikstrategie: Lieferung genau zum Zeitpunkt des Bedarfs in Produktion/Verkauf – ohne große Lagerbestände."
+      - lead: "Gefahrguttransport (ADR):"
+        text: "beförderung gefährlicher Güter gemäß ADR – Regeln für sicheres Verpacken, Kennzeichnen, Verladen und Transport."
+      - lead: "Transportversicherung (Cargo):"
+        text: "finanzieller Schutz bei unvorhergesehenen Ereignissen. Gilt für Straßen‑, See‑, Luft‑ und Bahntransporte."
+      - lead: "Kühltransport:"
+        text: "beförderung in kontrollierter Temperatur mit Kühlfahrzeugen – für Frische, Qualität und Sicherheit temperaturempfindlicher Produkte."
+      - lead: "Dedizierter Transport mit Ladebordwand:"
+        text: "tür‑zu‑tür‑Zustellung mit schneller und sicherer Abwicklung der Ladung."
+      - lead: "Transport von Schüttgütern:"
+        text: "sicherer Transport von Schüttgütern wie Getreide, Schotter, Sand, Zement u. a. Mit Spezialfahrzeugen – Kippern, Silos und Tankaufliegern."
+      - lead: "Transport von Übermaßgütern:"
+        text: "beförderung von Ladungen mit nicht standardmäßigen Abmessungen oder Gewichten – von Maschinen und Industrieanlagen über Stahlkonstruktionen bis zu Turbinen‑/Infrastrukturelementen. Mit geeigneter Ausrüstung, Genehmigungen und ggf. Begleitfahrzeugen."
+      - lead: "Zollabfertigung:"
+        text: "volle Unterstützung bei der Zollabfertigung für reibungslose, problemlose Ein‑/Ausfuhr über EU‑Grenzen."
   transport:
     heading: "Fahrzeuge und Transportmöglichkeiten"
     labels:
@@ -284,7 +284,7 @@ translations:
     back: "Zurück"
     confirmationMessage: "Ihre Anfrage wurde erfolgreich gesendet!"
   aboutUs:
-    h1part1: "Sub Trans - Ihr Partner in der Logistik,"
+    h1part1: "Sub Logistics - Ihr Partner in der Logistik,"
     h1part2: "angetrieben von Leidenschaft und Erfahrung."
     h2: "Geschichte und Erfahrung im Transport"
     h2Paragraph: >
