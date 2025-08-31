@@ -4,7 +4,7 @@ languageName: Polski
 translations:
   seoTitle: "Sub Logistics Gdańsk – Profesjonalny transport drogowy w całej Europie"
   seoDescription: >
-    jednoosobowa firma transportowa Piotr Subotowicz - spedycja Gdańsk, transport ADR, chłodniczy, ponadgabarytowy. Indywidualne podejście, konkurencyjne ceny. 510-482-468.
+    Bazując na wieloletnim doświadczeniu w spedycji, oferujemy sprawdzone i niezawodne rozwiązania transportowe. Realizujemy przewozy FTL, LTL, ADR, transport w kontrolowanej temperaturze oraz ładunków nienormatywnych.
   nav:
     links:
       - name: "Strona Główna"
