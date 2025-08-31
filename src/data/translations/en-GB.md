@@ -100,7 +100,7 @@ translations:
           - "Pallets: 33–34 euro pallets 120×80"
       - title: "Lowbed trailer"
         specs:
-          - "Dimensions: 12–18.2 m × 2.55–3.2 m × height up to 4 m"
+          - "Dimensions: 12–18.2 m × 2.55–3.2 m × Height: up to 4 m"
           - "Payload: 24–60 t"
           - "Loading: side, rear, top"
       - title: "Tandem set (road train)"
@@ -115,7 +115,6 @@ translations:
         specs:
           - "Dimensions: 13.6 × 2.45 × 2.6–2.75 m"
           - "Payload: 20–22 t"
-          - "Load space length: 7.75 m"
           - "Volume: 86–88 m³"
           - "Loading: rear"
           - "Pallets: 33 euro pallets 120×80"
@@ -135,7 +134,7 @@ translations:
           - "Pallets: 33–34 euro pallets 120×80"
       - title: "Flatbed semi‑trailer"
         specs:
-          - "Dimensions: 13.6 m × width up to 2.5 m × height up to 3.1 m"
+          - "Dimensions: 13.6 m × Width: up to 2.5 m × Height: up to 3.1 m"
           - "Payload: 24.5 t"
           - "Loading: side, rear, top"
       - title: "Tipper"
@@ -147,7 +146,8 @@ translations:
     heading: "Service coverage"
     openAria: "Open map full screen"
     srOpen: "Open map full screen"
-    figcaption: "Service coverage map"
+    figcaption: "*Transit times are approximate and may vary depending on conditions along the route, drivers’ hours‑of‑service regulations, and delays at ports — particularly on routes to the United Kingdom and the Nordic countries."
+    figcaption1: "**For the longest routes from Poland, we recommend vehicles with a two‑driver crew, which enables continuous driving and increases the likelihood of on‑time delivery."
     dialogAriaLabel: "Map"
     dialogClose: "Close"
   whyUs:

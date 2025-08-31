@@ -101,7 +101,7 @@ translations:
           - "Paletten: 33–34 Europaletten 120×80"
       - title: "Tiefbettauflieger"
         specs:
-          - "Abmessungen: 12–18,2 m × 2,55–3,2 m × Höhe bis 4 m"
+          - "Abmessungen: 12–18,2 m × 2,55–3,2 m × Höhe: bis 4 m"
           - "Nutzlast: 24–60 t"
           - "Ladeoptionen: seitlich, hinten, oben"
       - title: "Gliederzug (Tandem)"
@@ -116,7 +116,6 @@ translations:
         specs:
           - "Abmessungen: 13,6 × 2,45 × 2,6–2,75 m"
           - "Nutzlast: 20–22 t"
-          - "Laderaumlänge: 7,75 m"
           - "Volumen: 86–88 m³"
           - "Ladeoptionen: hinten"
           - "Paletten: 33 Europaletten 120×80"
@@ -136,7 +135,7 @@ translations:
           - "Paletten: 33–34 Europaletten 120×80"
       - title: "Plattform‑Sattelauflieger"
         specs:
-          - "Abmessungen: 13,6 m × Breite bis 2,5 m × Höhe bis 3,1 m"
+          - "Abmessungen: 13,6 m × Breite: bis 2,5 m × Höhe: bis 3,1 m"
           - "Nutzlast: 24,5 t"
           - "Ladeoptionen: seitlich, hinten, oben"
       - title: "Kipper"
@@ -148,7 +147,8 @@ translations:
     heading: "Leistungsabdeckung"
     openAria: "Karte im Vollbild öffnen"
     srOpen: "Karte im Vollbild öffnen"
-    figcaption: "Karte der Leistungsabdeckung"
+    figcaption: "*Die Lieferzeiten sind Richtwerte und können sich je nach Bedingungen auf der Strecke, Vorschriften zu Lenk- und Ruhezeiten sowie Verzögerungen in Häfen ändern – insbesondere auf Strecken nach Großbritannien und in die skandinavischen Länder."
+    figcaption1: "**Für die am weitesten von Polen entfernten Strecken empfehlen wir Fahrzeuge mit Doppelbesatzung, was durchgehendes Fahren ermöglicht und die Chance auf eine termingerechte Zustellung erhöht."
     dialogAriaLabel: "Karte"
     dialogClose: "Schließen"
   whyUs:

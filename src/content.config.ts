@@ -69,6 +69,7 @@ const translations = defineCollection({
         openAria: z.string(),
         srOpen: z.string(),
         figcaption: z.string(),
+        figcaption1: z.string(),
         dialogAriaLabel: z.string(),
         dialogClose: z.string(),
       }),

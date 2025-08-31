@@ -92,13 +92,13 @@ translations:
           - "Ilość palet: 33-34 euro palety 120x80"
       - title: "Niskopodwozie"
         specs:
-          - "Wymiary: 12 – 18,2m x 2,55 – 3,2m x Wysokość do 4m"
+          - "Wymiary: 12 – 18,2m x 2,55 – 3,2m x Wysokość: do 4 m"
           - "Ładowność: 24 – 60t"
           - "Możliwość załadunku: bokiem, tyłem, górą"
       - title: "Zestaw przestrzenny TANDEM"
         specs:
           - "Wymiary: 7,7 x 2,45m (solówka) + 7,7 x 2,45m (przyczepa) lub 6,8 x 2,45m (solówka) + 8,3 x 2,45m (przyczepa)"
-          - "Wysokość 2,65 - 3,0m"
+          - "Wysokość: 2,65 - 3,0m"
           - "Ładowność: 5-24t"
           - "Kubatura: 120m³"
           - "Możliwość załadunku: bokiem, tyłem, górą"
@@ -107,7 +107,6 @@ translations:
         specs:
           - "Wymiary: 13,6 x 2,45 x 2,6 – 2,75m"
           - "Ładowność: 20-22t"
-          - "Długość przestrzeni ładunkowej: 7,75 m"
           - "Kubatura: 86-88m³"
           - "Możliwość załadunku: tyłem"
           - "Ilość palet: 33 euro palety 120x80"
@@ -127,7 +126,7 @@ translations:
           - "Ilość palet: 33-34 euro palety 120x80"
       - title: "Naczepa typu PLATFORMA"
         specs:
-          - "Wymiary: 13,6m x SZER. do 2,5m x Wysokość do 3,1m"
+          - "Wymiary: 13,6m x Szerokość: do 2,5 m x Wysokość do 3,1m"
           - "Ładowność: 24,5t"
           - "Możliwość załadunku: bokiem, tyłem, górą"
       - title: "Wywrotka"
@@ -139,7 +138,8 @@ translations:
     heading: "Zasięg usług"
     openAria: "Otwórz mapę na pełnym ekranie"
     srOpen: "Otwórz mapę na pełnym ekranie"
-    figcaption: "Mapa zasięgu usług"
+    figcaption: "*Czasy dostaw są orientacyjne i mogą się zmieniać w zależności od sytuacji na trasie, przepisów dotyczących czasu pracy kierowców oraz opóźnień w portach, szczególnie przy trasach do Wielkiej Brytanii i krajów skandynawskich." 
+    figcaption1 : "**Dla tras najbardziej oddalonych od Polski zalecamy pojazdy z podwójną obsadą kierowców, co umożliwia nieprzerwaną jazdę i zwiększa szansę na terminową dostawę."
     dialogAriaLabel: "Mapa"
     dialogClose: "Zamknij"
   whyUs:
