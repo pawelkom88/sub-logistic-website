@@ -158,7 +158,7 @@ translations:
       - number: "200+"
         title: "Zadowolonych klientów"
       - number: "100%"
-        title: "Skutcznosc dostaw"
+        title: "Skuteczność dostaw"
   reviews:
     topper: "Twoja Opinia, Nasza Motywacja"
     heading: "Wspólnie budujemy lepsze usługi"
